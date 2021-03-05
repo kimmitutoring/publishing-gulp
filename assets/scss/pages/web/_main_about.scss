@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+.item_about {
+    overflow: hidden;
+
+    .emph_sub {
+        display: block;
+        font-size: 16px;
+        line-height: 1em;
+        margin-bottom: 16px;
+
+        @include all_desktop {
+            font-size: 28px;
+        }
+        @include big_desktop {
+            font-size: 20px;
+        }
+    }
+    .tit_about {
+        display: block;
+        margin-bottom: 30px;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 1.4em;
+        letter-spacing: -2px;
+
+        @include all_desktop {
+            font-size: 58px;
+            line-height: 1.34em;
+        }
+        @include big_desktop {
+            font-size: 48px;
+        }
+    }
+
+    .bg_txt {
+        display: none;
+        position: absolute; bottom: 0;
+        height: 301px;
+        color: transparent;
+        font-size: 0;
+        background-repeat: no-repeat;
+    }
+
+    .inner_box {
+        padding: 80px 30px 120px;
+        letter-spacing: -1px;
+        box-sizing: border-box;
+
+        @include all_desktop {
+            padding: 120px 60px 190px;
+        }
+        @include big_desktop {
+            height: 850px;
+            padding: 80px 0 0 0;
+        }
+    }
+    @include big_desktop {
+        .box_g {
+            float: left;
+            width: 50%; height: 850px;
+        }
+    }
+    .box_before {
+        position: relative;
+        color: #666;
+        background-color: #f5f5fa;
+
+        .tit_about {
+            color: #333;
+        }
+
+        .inner_box {
+            background: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/bg_about_no.png) 76% 96% no-repeat;
+            background-size: 91% auto;
+
+            @include all_desktop {
+                background-position: 102% 98%;
+                background-size: 76% auto;
+            }
+            @include big_desktop {
+                float: right;
+                width: 480px;
+                background-image: none;
+            }
+        }
+
+        @include big_desktop {
+            .bg_slice {margin-left: -55px;}
+            .bg_txt {display: block; right: 150px; width: 550px; background-image: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/bg_about_no_pc.png);}
+        }
+    }
+    .box_after {
+        position: relative;
+        color: #fff;
+        background-color: $point-color;
+
+        @include big_desktop {
+            &:before {
+                content: " ";
+                position: absolute; top: 0; left: -55px; z-index: 10;
+                width: 55px; height: 100%;
+                background: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/bg_length02.png) 0 0 no-repeat;
+            }
+        }
+
+        .inner_box {
+            position: relative; z-index: 20;
+            background: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/bg_about_yes.png) 50% 96% no-repeat;
+            background-size: 115% auto;
+
+            @include all_desktop {
+                background-position: 230% 94.7%;
+                background-size: 98% auto;
+            }
+            @include big_desktop {
+                width: 480px;
+                margin-left: 78px;
+                background-image: none;
+
+                .list_about {margin-left: -120px;}
+                .list_about li {padding-left: 120px;}
+            }
+        }
+
+        @include big_desktop {
+            .bg_slice {left: -55px; width: 108%;}
+            .bg_txt {display: block; left: 105px; width: 705px;}
+        }
+    }
+    .bg_txt {
+         display: none;
+    }
+} // .item_about
+.list_about {
+    li {
+        padding: 20px 0;
+        border-top: 1px solid #dee1eb;
+        font-size: 15px;
+        line-height: 1.6em;
+
+        @include all_desktop {
+            font-size: 26px;
+        }
+        @include big_desktop {
+            padding: 30px 0;
+            font-size: 18px;
+        }
+
+        &:first-child {border-top: 0;}
+
+        @at-root .box_after & {border-color: rgba(255, 255 , 255, 0.3);}
+    }
+    strong {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 600;
+
+        @include all_desktop {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        @include big_desktop {
+            margin-bottom: 6px;
+            font-size: 20px;
+        }
+
+        @at-root .box_after & {color: #ffe812;}
+    }
+}

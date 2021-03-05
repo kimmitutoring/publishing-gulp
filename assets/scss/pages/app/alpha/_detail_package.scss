@@ -1,0 +1,356 @@
+@charset "utf-8";
+
+.alpha-detail__package {
+    overflow: hidden;
+    padding-top: $alpha-detail-vspace;
+    padding-right: $alpha-detail-hspace;
+    padding-left: $alpha-detail-hspace;
+
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    @include all_desktop {
+        padding-right: $alpha-detail-tablet-hspace;
+        padding-left: $alpha-detail-tablet-hspace;
+    }
+
+    .package__title {
+        @include alphaDetailHeading('package');
+    }
+    .package__content {
+        margin-top: 56px;
+
+        &:after {
+            content: "";
+            display: block;
+            clear: both;
+		}
+		
+		& + .package__content .package__heading__sub {
+			background-color: #fff;
+			color: #38C4FF;
+		}
+
+        @include all_desktop {
+            float: left;
+            width: 50%;
+            margin-top: 0;
+            padding-right: 8px;
+            box-sizing: border-box;
+
+            & + .package__content {
+                margin-top: 0;
+                padding-right: 0;
+                padding-left: 8px;
+            }
+        }
+    }
+    .package__box {
+        position: relative;
+        margin-top: 8px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
+    }
+    .package__notice {
+        display: flex;
+        height: 40px;
+        margin-bottom: -8px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+        text-align: center;
+        background-color: $main-color;
+        border-radius: 10px 10px 0 0;
+        align-items: center;
+        justify-content: center;
+    }
+    .package__inner {
+        float: left;
+        width: 50%;
+        text-align: center;
+        letter-spacing: -0.5px;
+		box-sizing: border-box;
+		
+		&:nth-child(odd) {padding-left: 8px;}
+		&:nth-child(even) {padding-right: 8px;}
+        
+        &--native {
+            .package__tutor .tutor__title:before {background-position: -73px 0;}
+        }
+    }
+    .package__tutor {
+		padding: 10px 20px;
+		border: 1px solid #D8DBDB;
+		background-color: #f7f7f7;
+		border-radius: 10px 10px 0 0;
+        color: #666;
+        font-size: 12px;
+		line-height: 1.5em;
+		box-sizing: border-box;
+
+        .tutor__title {
+            display: block;
+            margin-bottom: 6px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #dddbdb;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.6em;
+
+            &:before {
+                content: "";
+                display: inline-block;
+                width: 17px; height: 17px;
+                margin: -1px 5px 1px 0;
+                background: url(//cdn.tutoring.co.kr/uploads/home/img/plans/career/ico_employee.png) -52px 0 no-repeat;
+                background-size: 180px 90px;
+                vertical-align: middle;
+            }
+        }
+        .tutor__live {
+            display: flex;
+            color: #919191;
+            justify-content: center;
+            align-items: center;
+            white-space: nowrap;
+
+            .photo {
+                height: 20px;
+                margin-right: 5px;
+                vertical-align: middle;
+            }
+            .icon {
+                height: 16px;
+                margin-left: 5px;
+                padding-right: 5px;
+                padding-left: 5px;
+                color: #fff;
+                font-size: 9px;
+                font-weight: 600;
+                letter-spacing: 0;
+                line-height: 15px;
+                background-color: #50e3a9;
+                border-radius: 16px;
+            }
+        }
+    } // .package__tutor
+    .package__ticket {
+        width: 101px; height: 65px;
+        margin: 10px auto 0;
+        padding: 18px 33px 0 0;
+        text-align: center;
+        background: url(//res.tutoring.co.kr/res/images/evt/202011/alpha/alpha_coupon.png) 0 0 no-repeat;
+        background-size: 101px 51px;
+		box-sizing: border-box;
+		
+		&--20m {background-image: url("//res.tutoring.co.kr/res/images/evt/202011/alpha/alpha_coupon_20.png");}
+
+        .ticket__title {
+            position: absolute;
+            color: transparent;
+        }
+        .ticket__count {
+            color: #5828df;
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 1em;
+            letter-spacing: -1px;
+
+            &:after {
+                content: "회";
+                display: inline-block;
+                margin-bottom: -2px;
+                padding-left: 1px;
+                font-size: 9px;
+                vertical-align: bottom;
+            }
+        }
+    } // .package__ticket
+    .package__special {
+        display: inline-block;
+        position: relative; top: -12px;
+        min-width: 75px; height: 23px;
+        margin: 0 auto;
+        color: #fff;
+        font-size: 12px;
+        line-height: 23px;
+        background-color: #c3c3c3;
+        border-radius: 23px;
+
+        &:before {
+            content: "+";
+            display: inline-block;
+            padding-right: 3px;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 22px;
+            vertical-align: top;
+        }
+    }
+    .package__discount {
+        position: absolute; top: -27px; right: -15px;
+        width: 56px; height: 56px;
+        padding-top: 5px;
+        background: linear-gradient(#ffe603, #ffd3d3);
+        box-shadow: 0 5px 8px 0 rgba(248, 67, 74, 0.4);
+        border-radius: 56px;
+        box-sizing: border-box;
+
+        &:before {
+            content: "";
+            position: absolute; top: 0; right: 0; bottom: 0; left:0; z-index: 10;
+            display: block;
+            background-image: 
+                url('//res.tutoring.co.kr/res/images/pay/home3.0/alpha/arrow_down.png'),
+                linear-gradient(#f8434a, #f85240);
+            background-size: 24px auto, 100% auto;
+            background-position: 50% 30px, 50% 0;
+            background-repeat: no-repeat, repeat;
+            border-radius: 54px;
+        }
+
+        &--border {
+            width: 61px; height: 61px;
+
+            &:before {
+                top: 5px; right: 5px; bottom: 5px; left: 5px;
+                background-position: 50% 25px, 50% 0;
+            }
+
+            .discount__number {margin-top: 3px;}
+        }
+
+        .discount__text {
+            position: absolute;
+            color: transparent;
+        }
+        .discount__number {
+            position: relative; z-index: 20;
+            display: block;
+            color: #fff;
+            font-size: 22px;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: -1px;
+
+            &:after {
+                content: "%";
+                display: inline-block;
+                padding-left: 1px;
+                font-size: 13px;
+                vertical-align: middle;
+            }
+        }
+    } // .package__discount
+    .package__price {
+        position: relative;
+        display: inline-block;
+        padding: 10px;
+        text-align: left;
+
+        .origin-price {
+            display: block;
+            color: #979797;
+            font-size: 10px;
+            text-decoration: line-through;
+        }
+        .price {
+            color: #666;
+            font-size: 25px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            line-height: 1em;
+
+            &:before {
+                content: "￦";
+                position: absolute;
+                display: inline-block;
+                margin-top: 2px;
+                margin-left: -17px;
+                font-size: 18px;
+            }
+        }
+        .unit {
+            display: inline-block;
+            margin-bottom: 3px;
+            color: #c2c2c2;
+            font-size: 12px;
+            font-weight: 600;
+            vertical-align: bottom;
+        }
+    }  // .package__price
+    .package__image {
+        padding: 0 15px 15px;
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: 130px;
+            margin: -5px auto 0;
+        }
+    }
+    .package__heading__sub {
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+        text-align: center;
+        line-height: 40px;
+        background-color: #38c4ff;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+    }
+    .package__event {
+        margin-bottom: 12px;
+        padding-bottom: 26px;
+        font-size: 14px;
+        line-height: 1.57em;
+        letter-spacing: -1px;
+
+        @include all_desktop {
+            display: flex;
+            flex: 1 1;
+            margin-bottom: 60px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: 350px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .package__box {
+            padding: 20px;
+
+            @include all_desktop {
+                display: flex;
+                width: 50%; height: 230px;
+                flex-direction: column;
+                justify-content: center;
+
+                &:first-child {margin-right: 8px;}
+                &:last-child {margin-left: 8px;}
+            }
+        }
+    }
+    .package__subtitle {
+        width: 100%;
+        margin-bottom: 15px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #ececec;
+        font-size: 16px;
+        line-height: 26px;
+
+        .point-text {color: #ff1a5a;}
+    }
+}

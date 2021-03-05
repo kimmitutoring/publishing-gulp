@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+@include tablet {
+    .inner_advantage {
+        .inner_heading,
+        .inner_description {
+            width: 300px;
+            margin: 0 auto;
+        }
+    }
+}
+.advantage-title {
+    height: 211px;
+    margin-top: -10px;
+    margin-bottom: 40px;
+    background-image: url($withCake-cdn-url + 'award.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: auto 100%;
+}
+.advantage-list-shape {
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.57em;
+    letter-spacing: -1.1px;
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    
+    li {
+        position: relative;
+        display: table;
+        width: 260px;
+        height: 74px;
+        margin: 13px auto 0;
+        padding: 0 33px;
+        text-align: center;
+        box-sizing: border-box;
+        table-layout: fixed;
+
+        @include tablet {
+            float: left;
+            width: 204px; height: 57px;
+            margin: 0;
+            padding: 0 26px;
+            font-size: 12px;
+            line-height: 1.57em;
+
+            & + li { margin-left: 10px; }
+        }
+
+        &:first-child { margin-top: 0; }
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute; top: 0; left: 0;
+            width: 33px; height: 74px;
+            background-image: url($withCake-cdn-url + 'leaf_left.png');
+            background-size: 100% auto;
+
+            @include tablet {
+                width: 26px; height: 57px;
+            }
+        }
+        &:after {
+            left: auto; right: 0;
+            transform: scaleX(-1);
+        }
+
+        .box {
+            display: table-cell;
+            width: 100%;
+            vertical-align: middle;
+        }
+        .text {
+            font-weight: 300;
+        }
+    }
+}
+
+.advantage-list-icon {
+    margin: 30px -10px 0;
+    font-size: 0;
+    text-align: center;
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    li {
+        display: inline-block;
+        width: 144px; height: 144px;
+        margin: 10px;
+        padding-top: 16px;
+        border-radius: 50%;
+        background-color: #fff;
+        color: #131415;
+        font-size: 14px;
+        line-height: 1.14em;
+        box-sizing: border-box;
+
+        .highlight {
+            display: block;
+            padding-bottom: 3px;
+            color: #ff4452;
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 1.09em;
+            letter-spacing: -0.8px;
+        }
+
+        .icon-image {
+            vertical-align: top;
+        }
+    }
+}

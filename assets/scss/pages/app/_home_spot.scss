@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+.lesson-ticket__home {
+    .spot {
+        max-width: 768px;
+        height: 180px;
+        margin-right: auto;
+        margin-left: auto;
+        background-color: #fff;
+    
+        @include small_mobile {
+            height: 160px;
+        }
+    
+        &__image {
+            display: block;
+            width: 100%; height: 100%;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: auto 100%;
+        }
+    
+        // swiper
+        .swiper-container {
+            height: 100%;
+    
+            .swiper-pagination {
+                bottom: 16px; left: 50%;
+                width: 320px;
+                font-size: 0;
+                text-align: left;
+                transform: translateX(-50%);
+    
+                @include small_mobile {
+                    width: 285px;
+                }
+                
+                &-bullet {width: 6px; height: 6px; background-color: #d8d8d8; opacity: 1;}
+                &-bullet-active {background-color: $main-color;}
+            }
+        }
+    }
+}

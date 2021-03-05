@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+.slide-content { 
+    position: relative;
+    min-width: 300px;
+    max-width: 320px;
+    margin: 0 auto;
+
+    @include tablet {
+        max-width: 628px;
+    }
+
+    img {
+        display: inline-block;
+    }
+
+    .list,
+    .list1,
+    .list2 {
+        overflow: hidden;
+        text-align: center;
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+    .list-item {
+        height: 100%;
+        outline: none;
+    }
+    .description {
+        color: #333;
+        font-size: 14px;
+        line-height: 1.43em;
+
+        .title,
+        .highlight {
+            display: block;
+            padding: 16px 0 4px;
+            font-weight: 600;
+        }
+        .highlight {
+            color: #ff4452;
+            font-size: 16px;
+        }
+    }
+    .slick-arrow {
+        position: absolute; top: 100px; z-index: 20;
+        margin: 0 -5px;
+        padding: 25px 10px;
+        font-size: 0;
+
+        &:before {
+            content: '';
+            overflow: hidden;
+            display: block;
+            width: 17px; height: 41px;
+            background-size: 100% auto;
+            color: transparent;
+
+        }
+
+        &.slick-prev { 
+            left: 0;
+
+            &:before { background-image: url($withCake-cdn-url + 'arrow_left.png'); }
+        }
+        &.slick-next { 
+            right: 0;
+
+            &:before { background-image: url($withCake-cdn-url + 'arrow_right.png'); }
+        }
+    }
+    .slick-dots {
+        padding-top: 27px;
+        font-size: 0;
+        line-height: 0;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            padding: 0 5px;
+            vertical-align: top;
+
+            button {
+                overflow: hidden;
+                display: block;
+                width: 8px; height: 8px;
+                color: rgba(0, 0, 0, 0);
+                border-radius: 50%;
+                background-color: rgba(51, 51, 51, 0.2);
+            }
+
+            &.slick-active button { background-color: rgba(51, 51, 51, 1); }
+        }
+    }
+}
+
+// service slide
+.cake-slide-content {
+    .list, .list1 { height: 360px; }
+    .list-item { position: relative; }
+    .slide-arrow { top: 117px; }
+    .number {
+        display: block;
+        position: relative;
+        width: 45px; height: 45px;
+        margin: 0 auto -7px;
+        padding-top: 7px;
+        border-radius: 50%;
+        background-color: #ff4452;
+        color: #fff;
+        font-size: 17px;
+        font-weight: 400;
+        text-align: center;
+        line-height: 0.8em;
+        box-sizing: border-box;
+
+        &:after {
+            content: 'STEP';
+            display: block;
+            margin-top: 3px;
+            font-size: 10px;
+        }
+    }
+}
+.advantage-slide-content {
+    margin-top: 58px;
+
+    img {
+        height: 286px;
+    }
+    .list,
+    .list2 {
+        height: 401px;
+    }
+}

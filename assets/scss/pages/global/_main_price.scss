@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+// 반값으로 영어공부
+.item_price {
+    padding-bottom: 80px;
+
+    @include big_desktop {
+        padding-bottom: 120px;
+    }
+    .txt_g b {
+        display: block;
+        color: #222;
+    }
+
+    @include all_desktop {
+        .txt_g,
+        .tit_g {
+            margin-top: 25px;
+            font-size: 28px;
+            line-height: 1.64em;
+
+            b {
+                font-weight: 500;
+            }
+        }
+        .txt_b_m {
+            display: block;
+        }
+        .img_g {
+            width: 312px;
+            margin: 0 auto;
+        }
+    }
+    @include big_desktop {
+        .thumb_item {
+            position: absolute; top: 0; left: 50%;
+            width: 467px;
+            margin-left: 80px;
+            text-align: center;
+        }
+        .txt_g {
+            margin-right: 0; margin-left: 0;
+            font-size: 18px;
+        }
+    }
+}
+.list_obtain {
+    @include clear;
+
+    overflow: hidden;
+    width: 236px;
+    margin: 30px auto 0;
+
+    @include all_desktop {
+        width: 396px;
+    }
+    @include big_desktop {
+        width: 100%;
+        padding-top: 150px;
+
+    }
+
+    li {
+        position: relative;
+        width: 176px; height: 56px;
+        margin-top: 21px;
+        padding: 11px 30px 0;
+        color: $point-color;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+
+        @include all_desktop {
+            width: 288px; height: 105px;
+            margin-top: 31px;
+            padding: 24px 54px 0;
+            font-size: 24px;
+            line-height: 40px;
+        }
+        @include big_desktop {
+            float: left;
+            width: 156px; height: 77px;
+            margin-top: 0;
+            margin-left: 34px;
+            padding: 16px 35px 0 ;
+            font-size: 16px;
+            line-height: 27px;
+            text-align: center;
+        }
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute; top: 0; left: 0;
+            width: 30px; height: 67px;
+            background-position: -200px 0;
+
+            @include all_desktop {
+                top: 4px;
+                width: 54px; height: 122px;
+                background-position: 0 0;
+            }
+            @include big_desktop {
+                top: 5px;
+                width: 35px; height: 77px;
+                background-position: -120px 0;
+            }
+        }
+        &:after {
+            left: auto; right: 0;
+            transform: scaleX(-1);
+        }
+
+        &.winner {
+            width: 100%; height: auto;
+            margin: 0 auto;
+            padding: 0;
+            color: #af8039;
+
+            @include big_desktop {
+                width: 180px;
+                margin-top: -39px;
+            }
+
+            &:before {
+                display: block;
+                position: static;
+                width: 184px; height: 133px;
+                margin: 0 auto;
+                background: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/win3.png) no-repeat 50% 0;
+                background-size: 100% auto;
+
+                @include all_desktop {
+                    width: 265px; height: 194px;
+                }
+                @include big_desktop {
+                    width: 100%; height: 131px;
+                }
+            }
+            &:after {
+                display: none;
+            }
+
+            & + li {
+                height: 67px;
+                padding-top: 0;
+
+                @include all_desktop {
+                    height: 129px;
+                }
+            }
+        }
+    }
+
+    .txt_info {
+        display: block;
+        font-size: 13px;
+        font-weight: 300;
+
+        @include all_desktop {
+            font-size: 20px;
+        }
+        @include big_desktop {
+            font-size: 14px;
+        }
+    }
+}

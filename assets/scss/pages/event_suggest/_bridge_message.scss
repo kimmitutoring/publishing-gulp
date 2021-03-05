@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+.bridge__message {
+    position: absolute; top: 18px; left: 50%; z-index: 20;
+    width: 320px;
+    padding: 18px 10px 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+    text-align: center;
+    box-sizing: border-box;
+    transform: translateX(-50%);
+
+    @media (min-width: 1024px) {
+        position: static;
+        margin: 100px auto 60px;
+        transform: translateX(0);
+    }
+
+    &:before {
+        content: "";
+        position: absolute; top: 9px; right: 9px;
+        width: 8px; height: 8px;
+        background-color: #f93e5e;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        font-size: 0; line-height: 0;
+    }
+}
+.message__text {
+    margin: 0 0 13px 0; padding: 0;
+    color: #000;
+    font-size: 14px;
+    line-height: 1.71em;
+    letter-spacing: -0.65px;
+}
+.message__image {
+    vertical-align: top;
+}

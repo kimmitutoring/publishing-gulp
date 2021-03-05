@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+// 관심사별 추천
+.topic__interest {
+    padding-top: 24px;
+    padding-bottom: 26px;
+    background-color: #e5e5e5;
+
+    .group__more {
+        top: 24px;
+    }
+
+    .interest__item {
+        min-height: 190px;
+        margin: 24px 20px 0;
+        padding: 16px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08);
+        box-sizing: border-box;
+
+        &:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    }
+    .interest__more {
+        overflow: hidden;
+        position: absolute; top: 24px; right: 20px;
+        height: 24px;
+        padding-right: 9px;
+        padding-left: 7px;
+        color: #777;
+        font-size: 11px;
+        line-height: 24px;
+        text-align: center;
+        background-color: #fff;
+        border-radius: 6px;
+
+        i {
+            position: relative;
+            display: inline-block;
+            width: 12px; height: 12px;
+            margin: -1px 4px 1px 0;
+            background-color: #ececec;
+            border-radius: 11px;
+            vertical-align: middle;
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute; top: 50%; left: 50%;
+                width: 1px; height: 5px;
+                background-color: #777;
+                transform: translate(-50%, -50%);
+            }
+            &:before {
+                width: 5px; height: 1px;
+            }
+        }
+    }
+    .interest__setting {
+        float: right;
+        display: block;
+        height: 34px;
+        margin-top: -20px;
+        padding-right: 15px;
+        padding-left: 15px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        background-color: #34BCFF;
+        box-sizing: border-box;
+        border-radius: 34px;
+    }
+
+    .topic__scroll {
+        margin-bottom: -26px;
+        padding-bottom: 26px;
+    }
+
+    .topic__list {
+        padding-right: 12px;
+        padding-left: 12px;
+        
+        .list__item {
+            margin-right: 8px;
+            margin-left: 8px;
+        }
+        .interest__item {
+            width: 200px;
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+    .topic__subject {
+        color: #FF4165;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 18px;
+    }
+    .topic__title {
+        overflow: hidden;
+        display: -webkit-box;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        color: #333;
+        font-size: 18px;
+        line-height: 24px;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .topic__desc {
+        overflow: hidden;
+        display: -webkit-box;
+        max-width: 180px;
+        color: #333;
+        font-size: 14px;
+        line-height: 21px;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+}

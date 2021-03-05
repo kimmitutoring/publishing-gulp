@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+// 토픽 전체 컴포넌트에 적용
+.topic {
+    padding-top: 22px;
+    letter-spacing: -0.5px;
+    background-color: #f3f3f3;
+}
+
+.topic__scroll {
+    overflow-x: scroll;
+}
+
+.topic__group {
+    position: relative;
+
+    .group__title {
+        padding-left: 22px;
+        color: #333;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+    .group__more {
+        overflow: hidden;
+        position: absolute; top: 0; right: 12px;
+        padding: 0 10px;
+        color: #8d8d8d;
+        font-size: 12px;
+        line-height: 24px;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 6px; height: 6px;
+            margin: -1px 0 1px 3px;
+            border-top: 1.5px solid #8D8D8D;
+            border-right: 1.5px solid #8D8D8D;
+            box-sizing: border-box;
+            vertical-align: middle;
+            transform: rotate(45deg);
+        }
+
+
+        i {
+            position: absolute; top: -50px;
+            color: rgba(255, 0, 0, 0);
+            font-size: 12px;
+        }
+    }
+}
+
+.topic__list {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+    white-space: nowrap;
+    vertical-align: top;
+
+    .list__item {
+        display: inline-block;
+        white-space: normal;
+        vertical-align: top;
+    }
+}

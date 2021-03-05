@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+.#{$content_prefix}_benefit {
+    position: relative;
+    width: 920px;
+    margin: 0 auto 80px;
+
+    @include tablet {
+        width: auto;
+    }
+
+    @include all_mobile {
+        width: auto;
+        margin-bottom: 0;
+    }
+}
+.#{$content_prefix}_benefit_image {
+    position: absolute; right: -15px; bottom: 0;
+
+    @include tablet {
+        position: static;
+        margin-top: -50px;
+        margin-bottom: 50px;
+    }
+
+    @include all_mobile {
+        position: static;
+        margin-top: -30px;
+        margin-bottom: 60px;
+
+        img {
+            width: 300px; height: auto;
+        }
+    }
+}   
+.#{$content_prefix}_benefit_list {
+    margin: 0 auto;
+    padding-bottom: 20px;
+    text-align: left;
+
+    @include tablet {
+        width: 400px;
+    }
+
+    @include all_mobile {
+        width: 240px;
+    }
+
+    li {
+        position: relative;
+        min-height: 60px;
+        padding-left: 98px;
+        padding-bottom: 42px;
+        color: #666;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.75em;
+
+        @include all_mobile {
+            padding-left: 58px;
+            font-size: 16px;
+            vertical-align: top;
+        }
+
+        a {
+            text-decoration: underline !important;
+            cursor: pointer;
+        }
+    }
+    .number {
+        position: absolute; top: -5px; left: 0;
+        color: #8f8f8f;
+        font-size: 80px;
+        font-family: 'Spoqa Han Sans', 'Sanf-serif';
+        font-weight: 100;
+        line-height: 1em;
+
+        @include all_mobile {
+            top: 5px;
+            font-size: 40px;
+        }
+    }
+    .title {
+        font-weight: 500;
+    }
+}

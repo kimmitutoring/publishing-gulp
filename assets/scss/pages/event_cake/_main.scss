@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+// layout.less overriding
+html, html.device, .device body, .device .wrap {
+    overflow: auto;
+    height: 100%;
+}
+
+#tutoringWrap.cont_sub,
+.withCake-wrapper,
+.withCake-main {
+    height: 100%;
+}
+.withCake-wrapper,
+.withCake-main {
+    background-color: #eb402e;
+    background-image: url($withCake-cdn-url + 'bg_pattern.png');
+    background-position: 0 0;
+    background-size: 176px 176px;
+    background-repeat: repeat;
+}
+.withCake-main {
+    text-align: center;
+
+    .flag {
+        height: 352px;
+        background-image: url($withCake-cdn-url + 'main_title.png');
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: 360px auto;
+        text-align: center;
+    }
+    .description {
+        color: #fff4d0;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.29em;
+
+        p { margin-top: 9px; }
+        b { font-weight: 500; }
+
+        @include tablet {
+            font-size: 16.2px;
+
+            p { margin-top: 16px; }
+        }
+    }
+    .course-nav {
+        padding-top: 41px;
+        padding-bottom: 40px;
+        font-size: 0;
+
+        .link {
+            display: inline-block;
+            width: 154px; height: 128px;
+            margin: 0 6px;
+            border: 2px solid #222;
+            background-color: #333;
+            box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.12);
+            border-radius: 14px;
+
+            @include tablet {
+                width: 184px; height: 154px;
+            }
+        }
+        .title {
+            display: block;
+            height: 52px;
+            margin: 18px auto 11px;
+            background-position: 50% 0;
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+
+            @include tablet {
+                height: 59px;
+                margin-top: 21px;
+                margin-bottom: 13px;
+            }
+        }
+        .link-native .title { background-image: url($withCake-cdn-url + 'txt_native.png'); }
+        .link-utility .title { background-image: url($withCake-cdn-url + 'txt_utility.png'); }
+        .text {
+            display: block;
+            color: #fff4d0;
+            font-size: 14px;
+            font-weight: 300;
+
+            @include tablet {
+                font-size: 17px;
+                letter-spacing: -0.6px;
+            }
+        }
+    }
+}

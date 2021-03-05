@@ -1,0 +1,444 @@
+@charset "utf-8";
+
+.home__custom {
+    padding-top: 80px;
+    text-align: center;
+
+    @media (min-width: 1200px) {
+        padding-top: 100px;
+        padding-bottom: 30px;
+        text-align: left;
+    }
+
+    &__inner {
+        max-width: 960px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .custom__title {
+        margin-bottom: 20px;
+        color: #333;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 1.43em;
+        letter-spacing: -2px;
+        text-align: center;
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+            font-size: 58px;
+        }
+
+        @media (min-width: 1200px) {
+            font-size: 48px;
+            text-align: left;
+        }
+
+        b {
+            display: block;
+            font-size: 0.5em;
+            font-weight: 500;
+            line-height: 1.2em;
+            letter-spacing: -1px;
+
+            @media (min-width: 1200px) {
+                font-size: 0.416em;
+            }
+        }
+    }
+
+    .custom__link {
+        display: inline-block;
+        color: #6759ef;
+        font-size: 16px;
+        line-height: 1.6em;
+        letter-spacing: -1px;
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+            font-size: 28px;
+
+            br {display: none;}
+        }
+
+        @media (min-width: 1200px) {
+            font-size: 18px;
+
+            br {display: none;}
+        }
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 18px; height: 18px;
+            margin: -2px 0 2px 5px;
+            background: url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/ico_home_3_190402.png") no-repeat -220px -110px;
+            background-size: 420px 400px;
+            vertical-align: middle;
+        }
+    }
+
+    .custom__content {
+        display: flex;
+        letter-spacing: -1px;
+        flex-direction: column;
+        background-color: #fff;
+
+        @media (min-width: 1200px) {
+            width: 960px;
+            margin: 0 auto;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }        
+    }
+
+    .custom__sub {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.2em;
+        letter-spacing: -1px;
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+            font-size: 32px;
+        }
+
+        @media (min-width: 1200px) {
+            font-size: 30px;
+            letter-spacing: -2px;
+
+            br {display: none;}
+        }
+    }
+
+    .custom__point {
+        margin-top: 20px;
+        margin-bottom: 25px;
+        color: #6759ef;
+        font-size: 15px;
+        line-height: 1.48em;
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+            font-size: 28px;
+
+            br {display: none;}
+        }
+
+        @media (min-width: 1200px) {
+            font-size: 18px;
+
+            br {display: none;}
+        }
+    }
+    .custom__desc {
+        color: #666;
+        font-size: 15px;
+        line-height: 1.8em;
+
+        @media (max-width: 767px) {
+            br {display: none;}
+        }
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+            font-size: 22px;
+        }
+
+        @media (min-width: 1200px) {
+            font-size: 16px;
+        }
+    }
+    .custom__text {
+        @media (max-width: 767px) {
+            padding-top: 30px;
+            padding-bottom: 50px;
+            order: 2;
+        }
+        @media (min-width: 768px) and (max-width: 1199px) {
+            padding-top: 80px;
+            padding-bottom: 100px;
+            order: 2;
+        }
+       
+        @media (min-width: 1200px) {
+            width: 480px; height: 100%;
+        }
+    }
+    
+    .custom__image {
+        position: relative;
+
+        @media (max-width: 1199px) {
+            margin-right: auto;
+            margin-left: auto;
+            order: 1;
+        }
+
+        &__wrapper {
+            overflow: hidden;
+            height: 100%;
+        }
+
+        &--01 {
+            width: 100%; height: 337px;
+            background:
+                url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/custom_view03.png") no-repeat 50% 0,
+                url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/custom_tutor_m.png") no-repeat 50% 0;
+            background-size: 226px 337px, 418px auto;
+
+            @media (max-width: 767px) {
+                img {
+                    display: block;
+                    width: 204px;
+                    margin: 44px auto 0;
+                }
+            }
+
+            @media (min-width: 768px) {
+                width: 693px; height: 452px;
+                padding-top: 70px;
+                background:
+                    url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/custom_view03.png") no-repeat 199px 15px,
+                    url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/custom_tutor.png") no-repeat 0 0;
+                background-size: 292px 435px, 693px 452px;
+
+                &:before {
+                    content: "";
+                    position: absolute; bottom: -30px; left: 385px;
+                    width: 225px; height: 225px;
+                    background: url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/tudal_custom03.png") no-repeat;
+                    background-size: 100% auto;
+                }
+
+                .custom__image__wrapper {
+                    overflow: hidden;
+                    height: 380px;
+                }
+            }
+            @media (min-width: 1200px) {
+                margin-right: -370px;
+                padding-left: 212px;
+            }
+        }
+        &--02 {
+            text-align: center;
+
+            @media (max-width: 767px) {
+                width: 100%;
+                background: url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/custom_category_m.png") no-repeat 50% 0;
+                background-size: 356px auto;
+
+                img {
+                    display: block;
+                    width: 226px;
+                    margin: 0 auto;
+                }
+            }
+
+            @media (min-width: 768px) {
+                width: 600px; height: 435px;
+                
+                background: url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/custom_category_02.png") no-repeat 0 0;
+                background-size: 484px auto;
+                background-position: 0 62px;
+
+                &:before {
+                    content: "";
+                    position: absolute; bottom: -30px; left: -30px;
+                    width: 201px; height: 261px;
+                    background: url("https://cdn.tutoring.co.kr/uploads/home/img/main/version3/tudal_flame.png") no-repeat;
+                    background-size: 100% auto;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                margin-left: -80px;
+            }
+        }
+        &--03 {
+            @media (max-width: 767px) {
+                width: 100%;
+                background: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/custom_topic_m.png) no-repeat 50% 0;
+                background-size: 388px auto;
+
+                img {
+                    display: block;
+                    width: 226px;
+                    margin: 0 auto;
+                }
+            }
+            
+            @media (min-width: 768px) {
+                width: 550px; height: 435px;
+                background: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/custom_topic_02.png) no-repeat 0 65px;
+                background-size: 235px 275px;
+                
+                &:before {
+                    content: "";
+                    position: absolute; bottom: -53px; left: 405px;
+                    width: 161px; height: 217px;
+                    background: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/tudal_maracas.png) no-repeat;
+                    background-size: 100% auto;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                margin-right: -215px;
+                padding-left: 176px;
+            }
+        }
+        &--04 {
+            @media (max-width: 767px) {
+                img {
+                    display: block;
+                    width: auto; height: 337px;
+                    margin: 0 auto;
+                }
+            }
+            @media (min-width: 768px) {
+                width: 550px; height: 435px;
+            }
+            @media (min-width: 1200px) {
+                margin-left: -30px;
+            }
+        }
+        &--05 {
+            &:after {
+                content: "";
+                position: absolute; top: 147px; left: 32px;
+                width: 328px; height: 287px;
+                background: url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/custom_graph.png") no-repeat 0 0;
+                background-size: 100% auto;
+            }
+
+            @media (max-width: 767px) {
+                &:after {
+                    top: 118px; left: 50%;
+                    width: 263px; height: 230px;
+                    margin-left: -186px;
+                }
+                img {
+                    display: block;
+                    width: 226px;
+                    margin: 0 auto;
+                }
+            }
+
+            @media (min-width: 768px) {
+                width: 550px; height: 435px;
+                text-align: center;
+                
+                &:before {
+                    content: "";
+                    position: absolute; bottom: -35px; right: -55px;
+                    width: 280px; height: 292px;
+                    background: url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/tudal_custom04_pc.png") no-repeat;
+                    background-size: 100% auto;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                margin-right: -36px;
+            }
+        }
+    } // .custom__image
+    .custom__tab {
+        margin: 40px 20px;
+        font-size: 0;
+
+        @media (min-width: 1200px) {
+            width: 960px;
+            margin: 50px auto;
+        }
+
+        .tab__item {
+            display: inline-block;
+            width: 20%; height: 55px;
+            border-bottom: 1px solid #D8D8D8;
+            color: #999999;
+            font-size: 18px;
+            letter-spacing: -1px;
+            text-align: center;
+            box-sizing: border-box;
+
+            @media (max-width: 767px) {
+                height: 40px;
+                font-size: 13px;
+            }
+
+            &--active {
+                border-bottom: 4px solid #6759EF;
+                color: #6759EF;
+                font-weight: 600;
+
+                @media (max-width: 767px) {
+                    border-width: 2px;
+                }
+            }
+        }
+    } // .custom__tab
+    .custom__container {
+        overflow: visible;
+        margin-top: 50px;
+        padding-top: 105px;
+    }
+
+    // swiper
+    .swiper-slide {
+        @media (min-width: 1200px) {
+            height: 555px;
+            background-color: #fff;
+        }
+    }
+    .swiper-pagination {
+        bottom: auto; top: 0; 
+
+        @media (max-width: 1199px) {
+            right: 20px; left: 20px;
+            width: auto;
+        }
+
+        @media (min-width: 1200px) {
+            left: 50%;
+            width: 960px;
+            transform: translateX(-50%);
+        }
+
+        &-bullet {
+            display: inline-block;
+            width: 20%; height: 55px;
+            margin: 0 !important;
+            border-bottom: 1px solid #D8D8D8;
+            background-color: #fff;
+            color: #999999;
+            font-size: 18px;
+            line-height: 50px;
+            letter-spacing: -1px;
+            text-align: center;
+            box-sizing: border-box;
+            border-radius: 0;
+            opacity: 1 !important;
+            outline: none;
+
+            &:nth-child(1):before {content: "24시간 수업";}
+            &:nth-child(2):before {content: "레벨별 학습";}
+            &:nth-child(3):before {content: "맞춤 토픽";}
+            &:nth-child(4):before {content: "전문 튜터";}
+            &:nth-child(5):before {content: "피드백";}
+
+            @media (max-width: 767px) {
+                height: 40px;
+                font-size: 13px;
+                line-height: 38px;
+            }
+
+            &-active {
+                border-bottom: 4px solid #6759EF;
+                color: #6759EF;
+                font-weight: 600;
+
+                @media (max-width: 767px) {
+                    border-width: 2px;
+                }
+            }
+        }
+    }
+}

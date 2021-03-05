@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+.worker-pick {
+	position: relative;
+	width: 320px;
+	margin: 0 auto;
+	padding-top: 34px;
+	border-radius: 30px;
+	background-color: #5904D0;
+	font-size: 0;
+	text-align: center;
+
+	@media (min-width: 1200px) {
+		width: 668px;
+		margin-top: -110px;
+	}
+
+	.pick__tag {
+		overflow: hidden;
+		position: absolute; top: -25px; right: -10px;
+		width: 90px; height: 90px;
+		color: transparent;
+		background: url("//res.tutoring.co.kr/res/images/evt/202011/tech/tech_pick_sticker_img.png") no-repeat 50% 0;
+		background-size: 100% auto;
+
+		@media (min-width: 1200px) {
+			top: -33px; right: -44px;
+			width: 140px; height: 140px;
+		}
+	}
+	.heading {
+		overflow: hidden;
+		width: 109px; height: 56px;
+		margin: 0 auto 16px;
+		color: transparent;
+		background: url("//res.tutoring.co.kr/res/images/evt/202011/tech/tech_picktitle_img.png") no-repeat 50% 0;
+		background-size: 100% auto;
+
+		@media (min-width: 1200px) {
+			width: 164px; height: 80px;
+		}
+	}
+	.keyword {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 20px;
+		margin-right: 3px;
+		margin-left: 3px;
+		padding-right: 10px;
+		padding-left: 10px;
+		border: 1px solid rgba(205, 180, 241, 0.5);
+		border-radius: 20px;
+		box-sizing: border-box;
+		color: #cdb4f1;
+		font-size: 10px;
+		font-weight: 600;
+		letter-spacing: -0.4px;
+		vertical-align: top;
+
+		@media (min-width: 1200px) {
+			height: 28px;
+			font-size: 14px;
+		}
+	}
+
+	.price {
+		margin-top: 50px;
+		padding-top: 36px;
+		padding-bottom: 36px;
+		background-color: #4600A7;
+		color: rgba(255, 255, 255, 0.7);
+		font-size: 14px;
+		line-height: 21px;
+		letter-spacing: -1px;
+		border-radius: 0 0 30px 30px;
+	}
+	.result-price {
+		margin-bottom: 5px;
+		color: #fff;
+		font-size: 55px;
+		font-weight: 600;
+		font-family: $font-roboto;
+		line-height: 1em;
+		letter-spacing: -2px;
+
+		.unit {
+			display: inline-block;
+			padding-right: 3px;
+			font-size: 20px;
+			line-height: 1em;
+		}
+	}
+}

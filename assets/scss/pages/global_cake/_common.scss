@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.global-cake {
+	padding-bottom: 60px;
+
+	img {
+		display: block;
+		width: 100%;
+		max-width: 720px;
+		margin: 0 auto;
+	}
+}
+.global-cake__link {
+	position: fixed; bottom: 0; right: 0; left: 0;
+	background-color: #333;
+}

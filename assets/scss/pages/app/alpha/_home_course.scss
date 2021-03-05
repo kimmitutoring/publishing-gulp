@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+.alpha-home__course {
+    padding-right: $alpha-detail-hspace;
+    padding-left: $alpha-detail-hspace;
+    padding-bottom: $alpha-detail-vspace;
+
+    @include tablet {
+        padding-right: $alpha-detail-tablet-hspace;
+        padding-left: $alpha-detail-tablet-hspace;
+    }
+
+    .course__title {
+        @include alphaDetailHeading('course');
+    }
+    .course__content {
+        position: relative;
+        padding-bottom: 50px;
+
+        .content__more {
+            @include contentMoreItem(-20px);
+        }
+    }
+    .course__list {
+        margin: -8px;
+        padding: 0;
+        list-style: none;
+
+        &:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .list__item {
+            float: left;
+            width: 50%;
+            padding: 8px;
+            box-sizing: border-box;
+
+            @include tablet {
+                width: 25%;
+            }
+            @include desktop {
+                width: 25%;
+            }
+        }
+    }
+    .course__item {
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.05);
+    }
+    .course__thumb {
+        width: 100%;
+        padding-top: 52.63%;
+        background-color: #ebebeb;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 100% auto;
+    }
+    .course__detail {
+        padding: 16px;
+        color: #333;
+        font-size: 13px;
+        line-height: 1.5em;
+        letter-spacing: -0.5px;
+        word-break: break-all;
+        // word-wrap: break-word;
+
+        .detail__description {
+            min-height: 54px;
+            margin: 5px 0 0;
+            padding: 0;
+            font-size: 13px;
+        }
+    }
+    .course__price {
+        display: flex;
+        margin-top: 5px;
+        margin-bottom: -4px;
+        padding-top: 10px;
+        border-top: solid 1px #f0f0f0;
+        justify-content: space-between;
+
+        .price__discount {
+            color: #ff1a5a;
+            font-weight: 600;
+        }
+    }
+    .course__tip {
+        margin-bottom: 16px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border: 2px solid #ff8fa2;
+        color: #f83e5e;
+        background-color: #fff;
+        border-radius: 32px;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: -0.5px;
+        text-align: center;
+        box-shadow: 0 6px 6px 0 rgba(0,0,0,.08);
+        box-sizing: border-box;
+    }
+}

@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+.main-award {
+	padding-top: 70px;
+	padding-bottom: 70px;
+	color: #CF9F50;
+	background-color: #000;
+	text-align: center;
+
+	@media (min-width: 768px) {
+		padding-bottom: 78px;
+	}
+
+	.award__title {
+		font-size: 50px;
+		font-weight: 600;
+		line-height: 1em;
+		letter-spacing: -3px;
+	}
+	.award__desc {
+		display: block;
+		margin-top: 16px;
+		font-size: 16px;
+		line-height: 1em;
+		letter-spacing: -0.5px;
+	}
+	.award__item {
+		position: relative;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 160px; height: 56px;
+		margin: 0 7px;
+		font-size: 11px;
+		line-height: 15px;
+		letter-spacing: -0.5px;
+
+		@media (min-width: 768px) {
+			width: 202px; height: 70px;
+			margin: 0;
+			font-size: 15px;
+			line-height: 20px;
+		}
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute; top: 0; left: 0;
+			width: 24px; height: 56px;
+			background: url("//cdn.tutoring.co.kr/uploads/home/img/main/banner/award_leaf_l.png") no-repeat 50% 0;
+			background-size: 100%;
+
+			@media (min-width: 768px) {
+				width: 30px; height: 70px;
+			}
+		}
+		&:after {
+			left: auto; right: 0;
+			transform: scaleX(-1);
+		}
+
+		b {
+			display: block;
+			font-size: 15px;
+			font-family: $font-roboto;
+
+			@media (min-width: 768px) {
+				font-size: 19px;
+			}
+		}
+
+		&--recent {
+			width: 249px; height: 100px;
+			margin-bottom: 47px;
+
+			@media (min-width: 768px) {
+				margin: 0 30px;
+				font-size: 11px;
+
+				b {
+					font-size: 15px;
+					line-height: 1em;
+				}
+			}
+
+			&:before,
+			&:after {
+				width: 43px; height: 100px;
+			}
+
+			b:before {
+				content: "";
+				display: block;
+				width: 58px; height: 100px;
+				margin: 0 auto 14px;
+				background: url("//res.tutoring.co.kr/res/images/evt/com/award_2021_img.png") no-repeat 50% 0;
+				background-size: 100%;
+			}
+		}
+	}
+	.award__list {
+		width: 360px;
+		margin: 64px auto 0;
+		font-size: 0;
+
+		@media (min-width: 768px) {
+			display: flex;
+			width: auto;
+			margin: 95px 0 0 0;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.list__item {
+			display: inline-block;
+			vertical-align: top;
+
+			@media (min-width: 768px) {
+				&:nth-child(1) {order: 2;}
+				&:nth-child(2) {order: 1;}
+				&:nth-child(3) {order: 3;}
+			}
+		}
+	}
+}

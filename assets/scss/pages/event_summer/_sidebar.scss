@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+.summer-friends .sidebar {
+    position: fixed; bottom: 0; right: 0; left: 0; z-index: 60;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.18);
+
+    .sidebar__content {
+        max-width: 768px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+
+    .sidebar__content:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .sidebar__ico {
+        // @include spriteIcoHome;
+
+        display: inline-block;
+        margin: -1px 4px 1px -5px;
+        width: 16px; height: 16px;
+        background-image: url(//res.tutoring.co.kr/res/images/pay/home3.0/ico_payhome.png);
+        background-repeat: no-repeat;
+        background-size: 156px 76px;
+        background-position: -100px 0;
+        vertical-align: middle;
+    }
+
+    .sidebar__inner {
+        float: right;
+        position: relative;
+        margin-top: -10px;
+        padding: 10px;
+
+        &:before {
+            content: "";
+            position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+            background-color: #f7f7f7;
+            box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.18);
+            border-radius: 40px;
+            // clip: rect(-10px, 170px, 10px, 0);
+            clip-path: inset(-10px 0 50px 0);
+            -webkit-clip-path: inset(-10px 0 50px 0);
+        }
+
+        .sidebar__button {
+            display: block;
+            width: auto; height: 40px;
+            margin: 0;
+            padding-right: 28px;
+            padding-left: 28px;
+            font-size: 18px;
+            box-shadow: 0 10px 14px -6px rgba(52, 188, 255, 0.58);
+
+            &:after {
+                width: 8px; height: 8px;
+                margin: -1px 0 1px 13px;
+                border-width: 3px;
+            }
+        }
+    }
+
+    .sidebar__tooltip {
+        position: absolute; top: -32px; left: 50%;
+        height: 32px;
+        padding: 4px 17px 0 17px;
+        border: 2px solid #ff8fa2;
+        color: #f83e5e;
+        font-size: 14px;
+        line-height: 1.4em;
+        letter-spacing: -1px;
+        background-color: #fff;
+        box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.08);
+        box-sizing: border-box;
+        border-radius: 32px;
+        text-align: center;
+        white-space: nowrap;
+        transform: translateX(-50%);
+
+        &:before {
+            content: "";
+            position: absolute; bottom: -7px; left: 50%; z-index: 10;
+            width: 10px; height: 10px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: transparent #ff8fa2 #ff8fa2 transparent;
+            background-color: #fff;
+            transform: translateX(-50%) rotate(45deg);
+        }
+
+        .tootip__inner {
+            position: relative; z-index: 20;
+        }
+
+        .sidebar__ico {
+            background-position: -120px 0;
+        }
+    }
+
+    .sidebar__button {
+        position: relative;
+        display: inline-block;
+        width: 147px; height: 35px;
+        margin: 13px 2px 8px 1px;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 35px;
+        text-align: center;
+        letter-spacing: -1px;
+        background-color: #6759ef;
+        background-image: linear-gradient(107deg, #6759ef 17%, #4839db 91%);
+        border-radius: 40px;
+
+        @media (min-width: 768px) {
+            width: 168px; height: 40px;
+            margin: 13px 4px;
+            font-size: 18px;
+            line-height: 40px;
+        }
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 7px; height: 7px;
+            margin: -2px 0 2px 8px;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+            vertical-align: middle;
+            transform: rotate(45deg);
+        }
+
+        & ~ .sidebar__tooltip {
+            transform: translateX(-20px);
+
+            @media (min-width: 768px) {
+                transform: translateX(-3px);
+            }
+        }
+    }  
+}

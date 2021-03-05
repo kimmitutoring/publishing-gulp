@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+.worker-package {
+	padding: 70px 20px;
+	text-align: center;
+	background-color: #fff;
+
+	@media (min-width: 768px) {
+		padding-right: 50px;
+		padding-left: 50px;
+	}
+	@media (min-width: 1200px) {
+		padding: 196px 0;
+	}
+
+	img {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	.heading {
+		margin-top: 25px;
+		margin-bottom: 97px;
+
+		@media (min-width: 1200px) {
+			img {width: 380px;}
+		}
+	}
+	.description {
+		color: #5904d0;
+		font-size: 14px;
+		font-weight: 600;
+		letter-spacing: -0.5px;
+
+		@media (min-width: 1200px) {
+			font-size: 24px;
+			line-height: 31px;
+			letter-spacing: -1px;
+		}
+	}
+
+	.group {
+		position: relative;
+		margin: 44px auto 0;// 타이틀 margin-top 값 만큼 여백을 준다
+		padding-bottom: 42px;
+		border: 1px solid #5904D0;
+		border-radius: 30px;
+		background-color: #fff;
+		font-size: 16px;
+		line-height: 25px;
+		text-align: center;
+		box-sizing: border-box;
+
+		& ~ .group {margin-top: 97px;}
+
+		@media (min-width: 1200px) {
+			width: 668px;
+			margin-top: 140px;
+			padding-bottom: 55px;
+			font-size: 20px;
+			line-height: 28px;
+
+			& ~ .group {margin-top: 144px;}
+		}
+	}
+
+	.group__title {
+		display: inline-block;
+		margin-top: -44px;
+		padding: 0 22px;
+		color: #5904D0;
+		font-size: 24px;
+		font-weight: 900;
+		font-family: $font-roboto;
+		letter-spacing: -1px;
+		vertical-align: top;
+		background-color: #fff;
+
+		@media (min-width: 1200px) {
+			margin-top: -63px;
+			padding: 0 30px;
+
+			img {width: 156px;}
+		}
+	}
+
+	.group__description {
+		margin-top: 28px;
+		color: #5904D0;
+		letter-spacing: -1px;
+
+		@media (min-width: 1200px) {
+			margin-top: 33px;
+		}
+	}
+
+	.detail {
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		flex-basis: 72px;
+		margin: 50px auto 46px;
+		box-sizing: border-box;
+
+		@media (min-width: 1200px) {
+			margin-top: 44px;
+			margin-bottom: 44px;
+		}
+
+		&__item {
+			min-width: 72px;
+		}
+
+		&__unit {
+			display: flex;
+			min-width: 26px;
+			height: 70px;
+			align-items: center;
+			justify-content: center;
+			color: #999;
+			font-size: 12px;
+			font-family: $font-roboto;
+			font-weight: 300;
+
+			.plus {font-size: 20px;}
+		}
+		
+		.name {
+			display: flex;
+			height: 28px;
+			align-items: center;
+			justify-content: center;
+			color: #333;
+			font-size: 12px;
+			line-height: 14px;
+			letter-spacing: -0.5px;
+
+			@media (min-width: 1200px) {
+				height: 36px;
+				font-size: 16px;
+				line-height: 18px;
+			}
+		}
+	}
+
+	.square {
+		position: relative;
+		width: 72px; height: 70px;
+		margin: 0 auto 10px;
+		color: transparent;
+
+		&__bg {
+			position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+			z-index: 10;
+		}
+
+		&__image {
+			display: block;
+			position: absolute; top: 50%; left: 50%; z-index: 20;
+			transform: translate(-50%, -50%);
+		}
+
+		&__number {
+			position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+			z-index: 20;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #fff;
+			font-size: 34px;
+			font-family: $font-roboto;
+			letter-spacing: -2px;
+		}
+	}
+
+	.price {
+		.origin-price {
+			margin-top: 4px;
+			color: #B6B6B6;
+			font-size: 14px;
+			line-height: 21px;
+			letter-spacing: -0.7px;
+
+			@media (min-width: 1200px) {
+				margin-top: 0;
+			}
+		}
+		.result-price {
+			color: #5904D0;
+			font-family: $font-roboto;
+			font-size: 36px;
+			font-weight: 600;
+			line-height: 40px;
+			letter-spacing: -1.72px;
+
+			@media (min-width: 1200px) {
+				font-size: 50px;
+				line-height: 60px;
+				letter-spacing: -2px;
+			}
+		}
+		.unit {
+			display: inline-block;
+			margin-top: 15px;
+			font-size: 16px;
+			line-height: 20px;
+			letter-spacing: -0.7px;
+			vertical-align: top;
+
+			@media (min-width: 1200px) {
+				margin-top: 28px;
+				margin-left: -5px;
+			}
+		}
+	}
+}

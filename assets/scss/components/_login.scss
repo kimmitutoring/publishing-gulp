@@ -1,0 +1,202 @@
+@charset "utf-8";
+
+.bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    //z-index: 1;
+    background-color: #FFF;
+    padding: 12px;
+    &__backBtn {
+        display: inline-block;
+        width: 20px;
+        height: 16px;
+        margin-right: 20px;
+        vertical-align: middle;
+        background: url(//res.tutoring.co.kr/res/img/arrow_back_black_20170417.png) no-repeat center;
+        background-size: contain;
+    }
+    &__text {
+        displaY: inline-block;
+        padding-top: 2px;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 17px;
+        font-weight: bold;
+        letter-spacing: 0.3px;
+    }
+}
+
+.login__bridge {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .content {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        height: calc(90% - 80px);
+        &__middle {
+            position: absolute;
+            top: 40%;
+            bottom: 60%;
+            width: 100%;
+            &__sns {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 30px;
+                &__icon {
+                    display: inline-block;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                    width: 52px;
+                    height: 52px;
+                    &-facebook {
+                        background: url(//res.tutoring.co.kr/res/img/facebook_icon_20170726.png) no-repeat center;
+                        background-size: contain;
+                    }
+                    &-google {
+                        background: url(//res.tutoring.co.kr/res/img/google_icon_20170726.png) no-repeat center;
+                        background-size: contain;
+                    }
+                    &-kakao {
+                        background: url(//res.tutoring.co.kr/res/img/kakaotalk_icon_20170726.png) no-repeat center;
+                        background-size: contain;
+                    }
+                    &-naver {
+                        background: url(//res.tutoring.co.kr/res/img/naver_icon_20170726.png) no-repeat center;
+                        background-size: contain;
+                    }
+                }
+            }
+            &__snsNotice {
+                position: relative;
+                display: inline-block;
+                font-size: 12px;
+                line-height: 1.58;
+                color: #797979;
+                margin-bottom: 29px;
+                text-align: center;
+                & > span {
+                    &:before {
+                        position: absolute;
+                        top: 50%;
+                        left: -90px;
+                        width: 75px;
+                        height: 1px;
+                        background: #e2e2e2;
+                        content: '';
+                    }
+                    &:after {
+                        position: absolute;
+                        top: 50%;
+                        right: -90px;
+                        width: 75px;
+                        height: 1px;
+                        background: #e2e2e2;
+                        content: '';
+                    }
+                }
+            }
+            &__email {
+                &__btn {
+                    display: block;
+                    border-radius: 5px;
+                    background-color: #ffffff;
+                    border: solid 1px #cecece;
+                    margin: 0 auto;
+                    padding: 7px 28px;
+                    line-height: 1.5;
+                    font-size: 12px;
+                    &__text {
+                        line-height: 1.5;
+                        font-size: 12px;
+                        color: #cecece;
+                    }
+                }
+            }
+        }
+
+    }
+    .back {
+        background: url(//res.tutoring.co.kr/res/img/login_tudal_bottom_20180214.png) center bottom /contain no-repeat;
+        position: absolute;
+        width: 100px;
+        height: 90px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+
+.login {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    form {
+        height: 100%;
+        width: 100%;
+        .form__box {
+            position: absolute;
+            top: 40%;
+            left: 0;
+            right: 0;
+            width: 80%;
+            border-radius: 5px;
+            background-color: #ffffff;
+            border: solid 1px #d1d1d1;
+            margin: auto;
+            list-style: none outside none;
+            &__item {
+                position: relative;
+                height: 50px;
+                border-radius: 5px;
+                border-bottom: solid 1px #d1d1d1;
+                &:first-child {
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+                &:last-child {
+                    border-bottom: none;
+                }
+                &__input {
+                    position: absolute;
+                    width: 90%;
+                    height: 50px;
+                    color: #007dff;
+                    padding: 0 5%;
+                    letter-spacing: 1.7px;
+                    border: none;
+                    background: rgb(250, 255, 189) none !important;
+                    border-radius: 5px;
+                }
+            }
+        }
+        .form__submit_find {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            &__find {
+                width: 50%;
+                margin: 0 auto 1.9% auto;
+                font-size: 12.5px;
+                text-align: center;
+                color: #818181;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+            &__submit {
+                width: 100%;
+                background-color: #2d80ff;
+                font-size: 15px;
+                font-weight: bold;
+                letter-spacing: 1.5px;
+                color: #fff;
+                padding: 18.5px;
+                text-align: center;
+            }
+        }
+    }
+}

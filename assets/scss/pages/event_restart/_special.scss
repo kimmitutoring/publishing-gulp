@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+.restart-special {
+	position: relative;
+	padding-bottom: 70px;
+	background-color: #F1F1F1;
+
+	@media (min-width: 1200px) {
+		display: flex;
+		justify-content: center;
+		padding-top: 30px;
+		padding-bottom: 100px;
+	}
+
+	.heading {
+		margin-bottom: 30px;
+		color: #333;
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 32px;
+		letter-spacing: -2px;
+		text-align: center;
+
+		br {display: none;}
+		
+		@media (min-width: 1200px) {
+			margin-right: 100px;
+			text-align: left;
+
+			br {display: block;}
+		}
+    }
+
+	.special__list {
+		max-width: 200px;
+    	margin: 0 auto;
+		text-align: left;
+
+		@media (min-width: 1200px) {
+			margin: 0;
+		}
+	
+		.list__item {
+			padding: 4px 0;
+			letter-spacing: -0.67px;
+			white-space: nowrap;
+		}
+	
+		.text {
+			position: relative;
+			color: #000;
+			font-size: 14px;
+			line-height: 19px;
+	
+			&:before {
+				content: "";
+				position: absolute; top: 50%; left: -23px;
+				width: 15px; height: 15px;
+				background-image: url("//res.tutoring.co.kr/res/images/img/plans/img_star_3x.png");
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				background-size: 15px 15px;
+				transform: translateY(-50%);
+			}
+			// &:after {
+			// 	content: "";
+			// 	position: absolute; bottom: 0; left: 0; right: 0;
+			// 	height: 1px;
+			// 	background-color: #7063f9;
+			// }
+		}
+		.tag {
+			display: inline-block;
+			margin-left: 5px;
+			padding: 2px 7px;
+			color: #fff;
+			background-color: #c8c6e1;
+			border-radius: 3px;
+			font-size: 8px;
+			font-weight: 700;
+			line-height: 12px;
+			letter-spacing: -0.4px;
+		}
+	}
+}

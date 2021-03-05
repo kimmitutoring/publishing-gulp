@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+.plan__limit {
+	position: relative;
+	text-align: center;
+	background-image: url("//res.tutoring.co.kr/res/images/evt/202011/allforu/bg_allforu_03.png");
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	background-size: 768px auto;
+
+	@media (min-width: $tablet_minimum_width) {
+		padding-top: 60px;
+		padding-bottom: 104px;
+		background-image: url("//res.tutoring.co.kr/res/images/evt/202011/allforu/bg_allforu_02.png");
+	}
+	@media (min-width: $big_desktop_minimum_width) {
+		background-image: url("https://res.tutoring.co.kr/res/images/evt/202011/allforu/bg_allforu_01.png");
+		background-size: 1600px 450px;
+	}
+
+	.limit__heading {
+		color: #7063F9;
+		font-size: 50px;
+		font-weight: 900;
+		letter-spacing: -2px;
+		text-transform: uppercase;
+
+		@media (min-width: $tablet_minimum_width) {
+			font-size: 60px;
+			line-height: 70px;
+		}
+		@media (min-width: $big_desktop_minimum_width) {
+			font-size: 70px;
+		}
+	}
+	.limit__desc {
+		margin-top: 20px;
+		color: #666;
+		font-size: 20px;
+		line-height: 25px;
+		letter-spacing: -1px;
+
+		@media (min-width: $big_desktop_minimum_width) {
+			font-size: 25px;
+		}
+
+		.period {
+			display: block;
+			margin-top: 8px;
+			color: #000;
+			font-size: 16px;
+			line-height: 1em;
+
+			@media (min-width: $big_desktop_minimum_width) {
+				font-size: 20px;
+			}
+		}
+	}
+	.limit__benefit {
+		width: 320px;
+		margin: 42px auto 0;
+		color: #515151;
+		font-size: 14px;
+		letter-spacing: -1px;
+		text-align: center;
+
+		@media (min-width: $tablet_minimum_width) {
+			width: 420px;
+		}
+
+		@media (min-width: $big_desktop_minimum_width) {
+			width: 620px;
+		}
+	}
+	.limit__link {
+		display: inline-block;
+		width: 100%;
+		margin-top: 14px;
+		margin-bottom: 20px;
+
+		& ~ .limit__link {margin-top: -6px;}
+	}
+	.limit__box {
+		position: relative;
+		display: flex;
+		height: 70px;
+		background-color: #fff;
+		box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+		box-sizing: border-box;
+		align-items: stretch;
+		justify-content: space-between;
+		font-size: 14px;
+		line-height: 23px;
+
+		@media (min-width: $tablet_minimum_width) {
+			height: 80px;
+			font-size: 18px;
+		}
+
+		.point-text {color: #7063f9;}
+	}
+	.limit__tag {
+		display: flex;
+		position: absolute; top: 0; left: 50%;
+		height: 20px;
+		padding: 0 10px;
+		border: 1px solid #7063F9;
+		transform: translate(-50%, -50%);
+		background-color: #fff;
+		color: #7063F9;
+		font-size: 10px;
+		box-sizing: border-box;
+		border-radius: 24px;
+		align-items: center;
+		justify-content: center;
+
+		@media (min-width: $tablet_minimum_width) {
+			height: 24px;
+			font-size: 12px;
+		}
+	}
+	.limit__title {
+		display: flex;
+		width: 70px;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+		font-size: 14px;
+		font-weight: 700;
+		background-color: #4239A6;
+
+		@media (min-width: $tablet_minimum_width) {
+			width: 80px;
+		}
+	}
+	.limit__content {
+		margin: auto;
+		text-align: center;
+		font-weight: 700;
+	}
+	.limit__arrow {
+		position: relative;
+		width: 70px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border-left: 1px solid #ddd;
+		color: transparent;
+		box-sizing: border-box;
+
+		&:before {
+			content: "";
+			position: absolute; top: 50%; left: 50%;
+			width: 36px; height: 36px;
+			background: url("//res.tutoring.co.kr/res/images/evt/202011/allforu/btn_go.png") no-repeat 0 0;
+			background-size: 100% auto;
+			transform: translate(-50%, -50%)
+		}
+	}
+}

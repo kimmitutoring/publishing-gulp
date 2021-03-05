@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.lang-en {
+    .card_plan .desc_plan {padding-right: 104px;}
+    .card_plan .price_deduct {right: 80px;}
+    .card_plan .price_origin {width: 110px;}
+    .card_plan .txt_plan_zh {margin-right: -29px;}
+
+    @include tablet {
+        .card_plan .desc_plan {padding-right: 85px;}
+        .card_plan .tit_period {padding: 20px; padding-left: 35px; font-size: 22px;}
+        .card_plan .tit_period .txt_g {padding-top: 5px; font-size: 12px; line-height: 1.4em;}
+        .card_plan .price_deduct {right: 165px;}
+    }
+
+    @include all_mobile {
+        .card_plan .desc_plan {padding-right: 15px;}
+        .card_plan .price_origin {width: 100%;}
+        .card_plan .txt_plan_zh {margin-right: 0;}
+    }
+}

@@ -1,0 +1,1832 @@
+@charset "utf-8";
+
+$package-inner-box-width: 400px;
+$package-inner-box-height: 306px;
+
+@mixin titlePlanText {
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: -2px;
+
+    b {
+        display: block;
+        font-weight: 600;
+    }
+
+    @include all_mobile {
+        font-size: 24px;
+        letter-spacing: -1px;
+    }
+}
+@mixin emphPlanText {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #6759ef;
+    font-size: 20px;
+    font-weight: 600;
+
+    @include all_mobile {
+        padding-top: 5px;
+        font-size: 16px;
+    }
+}
+
+
+
+.item_plan { 
+    position: relative;
+    width: 920px;
+    margin-top: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 80px;
+    border-top: 1px solid #d8d8d8;
+    letter-spacing: -1px;
+    box-sizing: border-box;
+
+    @include tablet {
+        width: 648px;
+    }
+    @include all_mobile {
+        width: 320px;
+        padding-top: 40px;
+    }
+
+    .tit_item {
+        width: 605px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-bottom: 14px;
+        color: #333;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 34px;
+
+        @at-root .plan_cn & {
+            text-align: center;
+
+            br {
+                display: none;
+            }
+        }
+
+        @include all_mobile {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .bundle_live {
+        position: absolute; top: 82px; right: 159px;
+        width: 156px; height: 28px;
+        border: 2px solid #f2f2f2;
+        color: #919191;
+        font-size: 14px;
+        line-height: 29px;
+        text-align: center;
+        letter-spacing: 0;
+        border-radius: 28px;
+        background-color: #f9f9f9;
+
+        @include tablet {
+            right: 22px;
+        }
+        @include all_mobile {
+            position: static;
+            margin-right: auto;
+            margin-bottom: 10px;
+            margin-left: auto;
+        }
+
+        .img_tutors {
+            display: inline-block;
+            width: 58px;
+        }
+
+        .ico_live {
+            display: inline-block;
+            width: 35px; height: 19px;
+            margin-top: 4px;
+            margin-left: 5px;
+            background-color: #50e3a9;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 600;
+            line-height: 20px;
+            border-radius: 19px;
+            vertical-align: top;
+        }
+    } //.bundle_live
+
+    .list_tab {
+        @include clear;
+
+        width: 620px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 59px;
+
+        @at-root .plan_cn & {
+            width: 310px;
+        }
+
+        @include all_mobile {
+            width: 100%;
+            padding-top: 0;
+        }
+
+        li {
+            position: relative;
+            float: left;
+            width: 294px; height: 123px;
+            margin-right: 8px;
+            margin-left: 8px;
+            padding-top: 23px;
+            border: 2px solid #f2f2f2;
+            border-radius: 8px;
+            color: #777;
+            font-size: 14px;
+            line-height: 1.4em;
+            text-align: center;
+            box-sizing: border-box;
+
+            @include all_mobile {
+                width: 100%;
+                height: 96px;
+                margin-top: 12px;
+                margin-left: 0;
+                padding-top: 18px;
+                padding-left: 55px;
+                text-align: left;
+            }
+        }
+
+        b {
+            display: block;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .ico_employee {
+            display: block;
+            width: 22px; height: 22px;
+            margin: 0 auto;
+            background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/basicPlan/ico_employee.png');
+
+            @include all_mobile {
+                position: absolute; top: 50%; left: 20px;
+                transform: translateY(-50%);
+            }
+        }
+        .ico_global {background-position: 0 0;}
+        .ico_native {background-position: -26px 0;}
+        .ico_chinese {
+            background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/basicChinesePlan/ico_chiness.png');
+            background-position: 0 0;
+            background-size: 22px 22px;
+        }
+
+        .img_tutors {
+            display: none;
+            position: absolute; top: -102px; left: 0;
+            height: 22px;
+        }
+        .box_detail {
+            position: absolute; top: -59px; right: -2px; left: -2px;
+            height: 50px;
+            padding-left: 20px;
+            border-radius: 8px;
+            color: #777;
+            line-height: 50px;
+            text-align: left;
+            background-color: #f9f9f9;
+
+            @include all_mobile {
+                top: 50%; right: 0; left: auto;
+                width: auto; height: auto;
+                padding: 0;
+                border: none;
+                background-color: #fff;
+                transform: translateY(-50%);
+
+                .txt_g {
+                    display: none;
+                }
+            }
+
+            a {
+                float: right;
+                display: inline-block;
+                width: 49px; height: 23px;
+                margin-top: 12px;
+                margin-right: 15px;
+                background-color: #fff;
+                color: #333;
+                font-size: 12px;
+                line-height: 23px;
+                text-align: center;
+                border-radius: 23px;
+                cursor: pointer;
+
+                @include all_mobile {
+                    margin-top: 0;
+                    background-color: #f9f9f9;
+                }
+            }
+        }
+        .tab_g1 .img_tutors {left: 447px;}
+        .tab_g2 .img_tutors {left: 135px;}
+
+        @include all_mobile {
+            .tab_g1 .img_tutors {top: -51px; left: 81px;}
+            .tab_g2 .img_tutors {top: -159px; left: 81px;}
+        }
+
+        .on {
+            border-color: #6759ef;
+            color: #6759ef;
+
+            .img_tutors {display: block;}
+        }
+    } //.list_tab
+
+    .box_balloon {
+        position: relative; z-index: 30;
+        margin-top: 12px;
+        padding: 24px;
+        border: 2px solid #ebebeb;
+        color: #333;
+        font-size: 16px;
+        line-height: 1.75em;
+        background-color: #f9f9f9;
+        box-sizing: border-box;
+
+        @include all_mobile {
+            margin-top: 15px;
+            padding: 13px;
+            text-align: center;
+        }
+
+        &:before {
+            content: "";
+            position: absolute; top: -21px; left: 92px;
+            width: 48px; height: 21px;
+            background-image: url(//cdn.tutoring.co.kr/uploads/home/img/plans/basicPlan/tail_plan.png);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: 48px 21px;
+
+            @include all_mobile {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        p {
+            padding-left: 328px;
+
+            @include tablet {
+                padding-left: 230px;
+            }
+            @include all_mobile {
+                padding-left: 0;
+                font-size: 14px;
+            }
+        }
+
+        .emph_g {
+            position: absolute; top: 24px; left: 28px;
+            color: #6759f2;
+            font-size: 16px;
+            font-weight: 600;
+
+            @include all_mobile {
+                position: static;
+            }
+        }
+    }
+
+    .tab_content {
+        display: none;
+
+        @at-root .plan_cn & { display: block;}
+
+        &.on {
+            display: block;
+        }
+    }
+
+    .tit_g {
+        display: block;
+        height: 29px;
+        margin-top: 69px;
+        color: #6759ef;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 29px;
+
+        @include all_mobile {
+            margin-top: 40px;
+        }
+
+        .txt_g {
+            padding-left: 10px;
+            color: #333;
+            font-size: 14px;
+            font-weight: 400;
+            vertical-align: top;
+        }
+    } //.tit_g
+
+    .txt_warn {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #777;
+        font-size: 14px;
+        line-height: 1.4em;
+        letter-spacing: -0.7px;
+        text-align: center;
+
+        @include all_mobile {
+            margin-right: -10px;
+            margin-left: -10px;
+            font-size: 12px;
+        }
+    }
+    .ico_warn {
+        margin-top: 1px;
+        margin-right: 6px;
+        vertical-align: top;
+    }
+
+} //.item_plan
+
+.item_example {
+    width: 616px;
+    margin: 80px auto;
+
+    @include all_mobile {
+        width: 100%;
+        margin: 40px 0;
+    }
+
+    .tit_example {
+        padding-bottom: 20px;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.5em;
+        letter-spacing: -1px;
+        text-align: center;
+
+        @include all_mobile {
+            padding-bottom: 0;
+            font-size: 16px;
+        }
+
+        p {
+            display: inline;
+            font-weight: 400;
+        }
+    }
+    .bundle_g {
+        @include clear;
+
+        width: 604px;
+        margin-bottom: 20px;
+        padding: 37px 12px 26px;
+        border-radius: 8px;
+        background-color: rgba(239, 239, 239, 0.4);
+        box-shadow: inset 0 0 8px rgba(0,0,0,.1);
+        box-sizing: border-box;
+
+        @include all_mobile {
+            width: inherit;
+            margin-bottom: 0;
+            padding: 0 0 0 20px;
+            background-color: #fff;
+            box-shadow: none;
+        }
+    }
+    
+} //.item_example
+
+.card_example {
+    float: left;
+    position: relative;
+    width: 258px;
+    margin-right: 16px;
+    margin-left: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 34px;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.8em;
+    letter-spacing: -1px;
+    background-color: #fff;
+    border-radius: 3px;
+    text-align: left;
+    box-sizing: border-box;
+
+    @include all_mobile {
+        float: none;
+        width: 273px;
+        margin-top: 40px;
+        margin-right: auto;
+        margin-left: auto;
+        border: 2px solid #ebebeb;
+        background-color: #f9f9f9;
+    }
+
+    b {
+        font-weight: 600;
+    }
+
+    .user_profile {
+        position: absolute; top: -25px; left: -42px;
+        width: 84px; height: 84px;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    .user_name {
+        position: absolute; top: -22px; left: 46px;
+        color: #acacac;
+        font-size: 13px;
+        line-height: 1.38em;
+    }
+    .user_period {
+        display: block;
+        padding-bottom: 7px;
+        padding-left: 17px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.2em;
+
+    }
+} //.card_example
+
+.list_plan {
+    padding-top: 6px;
+
+    li {
+        padding-top: 12px;
+    }
+}
+
+.card_plan {
+    position: relative;
+    height: 110px;
+    padding-left: 324px;
+    border: 2px solid #ebebeb;
+    box-sizing: border-box;
+
+    @include tablet {
+        padding-left: 203px;
+        border: 0;
+        box-shadow: 0 5px 20px rgba(11, 0, 120, 0.2);
+    }
+    @include all_mobile {
+        height: auto;
+        padding-left: 0;
+        border-width: 1px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px -5px rgba(11, 0, 120, 0.2);
+    }
+
+    .tit_period {
+        position: absolute; top: 0; bottom: 0; left: 0; z-index: 10;
+        width: 284px;
+        padding-top: 20px;
+        padding-left: 35px;
+        color: #6759ef;
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 1.3em;
+        text-align: left;
+        background-color: #f4f3fe;
+        box-sizing: border-box;
+
+        @include tablet {
+            width: 183px;
+        }
+        @include all_mobile {
+            position: static;
+            display: block;
+            width: auto;
+            padding: 8px 15px 5px;
+            font-size: 18px;
+        }
+
+        .txt_g {
+            display: block;
+            font-size: 18px;
+            font-weight: 500;
+
+            @include all_mobile {
+                font-size: 12px;
+            }
+        }
+    }
+    .desc_plan {
+        position: relative;
+        height: 100%;
+        padding-right: 180px;
+        text-align: right;
+
+        @include tablet {
+            padding-right: 50px;
+        }
+        @include all_mobile {
+            position: static;
+            height: auto;
+            padding: 0 15px;
+            text-align: center;
+        }
+    }
+    .price_origin {
+        position: absolute; top: 50%; left: 0;
+        width: 100px;
+        transform: translateY(-50%);
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 28px;
+        box-sizing: border-box;
+
+        @include all_mobile {
+            top: auto; bottom: 10px;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            text-align: right;
+            line-height: 21px;
+            transform: translateY(0);
+
+            .val_price,
+            .val_origin {
+                display: inline-block;
+                font-size: 13px;
+                vertical-align: top;
+            }
+        }
+
+        .val_origin {
+            color: #888;
+            font-weight: 400;
+            text-decoration: line-through;
+
+            @include all_mobile {
+                position: relative;
+                margin-right: 2px;
+                padding-right: 20px;
+                text-decoration: none;
+
+                &:after {
+                    content: "";
+                    position: absolute; top: 8px; left: 0;
+                    width: 100%; height: 7px;
+                    background-image: url(//cdn.tutoring.co.kr/uploads/home/img/plans/career/line_through.png);
+                    background-repeat: no-repeat;
+                    background-position: 100% 0;
+                    background-size: 140px 70px;
+                }
+            }
+        }
+        .txt_won,
+        .txt_won_pre {
+            position: absolute; left: 0;
+
+            @include all_mobile {
+                position: static;
+            }
+        }
+    }
+    .price_sale {
+        padding-top: 22px;
+        color: #6759ef;
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 1.4em; 
+
+        @include all_mobile {
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+
+        .txt_month {
+            position: absolute;
+            margin-top: -2px;
+            margin-left: 5px;
+            color: #888;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0;
+
+            @include all_mobile {
+                position: static;
+                margin-left: 3px;
+            }
+        }
+    }
+    .price_deduct {
+        position: absolute; top: 50%; right: 180px; left: 0;
+        color: #ff3434;
+        font-size: 18px;
+        text-align: center;
+        transform: translateY(-50%);
+
+        @include tablet {
+            right: 160px; left: 110px;
+        }
+        @include all_mobile {
+            position: static;
+            margin-top: -10px;
+            padding-bottom: 10px;
+            font-size: 13px;
+            text-align: left;
+            transform: translateY(0);
+        }
+
+        .num_percent {
+            display: block;
+            width: 56px; height: 22px;
+            margin: 0 auto 5px;
+            border: 1px solid #ff3434;
+            font-size: 16px;
+            line-height: 22px;
+            border-radius: 22px;
+
+            @include all_mobile {
+                display: inline-block;
+                width: auto; height: 16px;
+                margin-bottom: 0;
+                margin-right: 5px;
+                padding: 0 8px;
+                font-size: 12px;
+                line-height: 16px;
+                border-radius: 16px;
+            }
+        }
+    }
+    .txt_plan,
+    .txt_plan_zh {
+        color: #888;
+        font-size: 16px;
+
+        @include all_mobile {
+            position: absolute; top: 8px; right: 12px;
+            font-size: 12px;
+            letter-spacing: -0.6px;
+        }
+    }
+    .label_plan {
+        position: absolute; top: -15px; left: -35px; z-index: 20;
+        width: 60px; height: 60px;
+        padding-top: 3px;
+        border: 4px solid #fff;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 22px;
+        text-align: center;
+        background-color: #f93e5d;
+        box-shadow: 0 10px 10px -7px rgba(255,0,0,.3);
+        border-radius: 56px;
+        box-sizing: border-box;
+
+        &.best {
+            padding-top: 0;
+            font-size: 20px;
+            line-height: 52px;
+        }
+
+        @include all_mobile {
+            top: -15px;
+
+            & ~ .tit_period {
+                padding-left: 40px;
+            }
+        }
+    }
+    .btn_plan {
+        position: absolute; top: 50%; right: 28px;
+        width: 88px; height: 36px;
+        border: 2px solid #6758ef;
+        border-radius: 36px;
+        color: #6758ef;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 36px;
+        text-align: center;
+        transform: translateY(-50%);
+
+        @include tablet {
+            top: 0; right: 0; left: -203px;
+            width: auto; height: 100%;
+            border: none;
+            color: transparent;
+            border-radius: 0;
+            transform: translateY(0);
+        }
+        @include all_mobile {
+            display: none;
+        }
+    }
+} //.card_plan
+
+.card_plan06 {
+    @include all_mobile {
+        .txt_plan,
+        .txt_plan_zh {
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+    .tit_period {
+        margin: -2px;
+        color: #fff;
+        background: linear-gradient(to right, #8c82ff 0%, #499bff 100%);
+
+        @include all_mobile {
+            margin: -1px;
+            border-radius: 8px 8px 0 0;
+        }
+    }
+}
+.card_plan12 {
+    @include all_mobile {
+        .txt_plan,
+        .txt_plan_zh {
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+    .tit_period {
+        margin: -2px;
+        color: #fff;
+        background-color: #6759ef;
+
+        @include all_mobile {
+            margin: -1px;
+            border-radius: 8px 8px 0 0;
+        }
+    }
+}
+@include all_mobile {
+    .card_nosale .price_origin {display:none;}
+}
+
+.item_package {
+    @include all_mobile {
+        padding-right: 30px;
+        padding-bottom: 100px;
+        padding-left: 30px;
+    }
+
+    .inner_box {
+        overflow: hidden;
+        position: relative;
+        width: 920px; height: 636px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 110px;
+        padding-left: 450px;
+        background-color: #ffa5a5;
+        border-radius: 8px;
+        color: #fff;
+        text-align: left;
+        box-sizing: border-box;
+
+        @include tablet {
+            width: 100%;
+            padding-top: 40px;
+            padding-left: 300px;
+            border-radius: 0;
+        }
+        @include all_mobile {
+            overflow: visible;
+            width: 320px; height: auto;
+            padding: 0;
+            color: #333;
+            background-color: #fff;
+        }
+
+        &:before {
+            content: "";
+            position: absolute; top: 204px; left: 438px;
+            width: $package-inner-box-width; height: $package-inner-box-height;
+            padding: 12px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 22px;
+
+            @include tablet {
+                top: 209px; left: 288px;
+            }
+            @include all_mobile {
+                display: none;
+            }
+        }
+    }
+    .tit_package {
+        position: absolute; top: 39px; left: 46px;
+        font-size: 20px;
+        line-height: 1.7em;
+        font-weight: 600;
+
+        @include tablet {
+            position: static;
+            padding-bottom: 15px;
+        }
+        @include all_mobile {
+            position: static;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            letter-spacing: -1px;
+        }
+
+        .txt_tit {
+            display: block;
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 1.3em;
+            letter-spacing: -2px;
+
+            i {font-style: normal;}
+
+            @include tablet {
+                font-size: 20px;
+                letter-spacing: -1px;
+
+                .txt_b_p {
+                    display: inline;
+                    letter-spacing: -1px;
+                }
+            }
+            @include all_mobile {
+                font-size: 20px;
+                letter-spacing: -1px;
+            }
+        }
+    }
+    .txt_offer {
+        position: relative; z-index: 20;
+        display: block;
+        width: 400px; height: 62px;
+        border: 2px solid #fff;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 62px;
+        letter-spacing: 2px;
+        text-align: center;
+
+        @include all_mobile {
+            display: none;
+        }
+
+        &:after {
+            content: "";
+            position: absolute; bottom: -11px; left: -2px;
+            width: 11px; height: 11px;
+            background-color: #ffa5a5;
+            background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/basicPlan/tail_package.png');
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+    .img_offer {
+        position: absolute; bottom: 0; left: 0; z-index: 10;
+        width: 796px; height: 624px;
+        background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/basicPlan/thumb_han.png');
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+
+        @include tablet {
+            left: -155px;
+        }
+        @include all_mobile {
+            display: none;
+        }
+    }
+
+} //.item_package
+
+// TODO: 직딩의품격 페이지와 클래스명이 부딪히는 문제로 분기한다
+.item_package {
+    .box_package {
+        position: relative; z-index: 20;
+        width: $package-inner-box-width; height: $package-inner-box-height;
+        margin-top: 40px;
+        border: 2px solid #ebebeb;
+        color: #333;
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 16px;
+        box-sizing: border-box;
+
+        @include all_mobile {
+            width: inherit;
+            height: auto;
+        }
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+
+            @include all_mobile {
+                display: none;
+            }
+        }
+        &:before {
+            top: 209px; left: -2px;
+            width: 32px; height: 28px;
+            background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/basicPlan/bg_hand_r.png');
+
+            @include tablet {
+                top: 200px;
+            }
+        }
+        &:after {
+            bottom: -2px; left: 167px;
+            width: 90px; height: 40px;
+            background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/basicPlan/bg_hand_l.png');
+
+            @include tablet {
+                left: 162px;
+            }
+        }
+
+        .tit {
+            display: block;
+            margin: -2px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: #fff;
+            font-size: 26px;
+            font-weight: 600;
+            line-height: 1.4em;
+            letter-spacing: -2px;
+            text-align: center;
+            background-color: #6758ef;
+            border-radius: 12px 12px 0 0;
+
+            @include all_mobile {
+                padding-top: 13px;
+                padding-bottom: 13px;
+                font-size: 20px;
+            }
+        }
+
+        .list_package {
+            overflow: hidden;
+            width: 330px; height: 104px;
+            margin: 25px auto;
+            background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/career/pack_1_img_m.png');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: 100% auto;
+
+            @include all_mobile {
+                width: 280px; height: 102px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+        }
+        .btn_package {
+            position: absolute; bottom: 23px; right: 25px; z-index: 20;
+            width: 128px; height: 40px;
+            border: 2px solid #6759ef;
+            color: #6759ef;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 34px;
+            text-align: center;
+            letter-spacing: -1px;
+            box-sizing: border-box;
+            border-radius: 40px;
+
+            @include all_mobile {
+                bottom: -60px;
+                right: 50%;
+                transform: translateX(50%);
+            }
+        }
+        .cell_price {
+            position: relative; z-index: 20;
+            padding-right: 35px;
+            padding-left: 35px;
+            letter-spacing: -1px;
+
+            @include all_mobile {
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+
+            .num_price {
+                display: inline-block;
+                width: 140px;
+                margin-left: 2px;
+                color: #979797;
+                font-size: 16px;
+                line-height: 30px;
+
+                @include all_mobile {
+                    position: absolute; bottom: 10px; left: 15px;
+                    font-size: 12px;
+                }
+
+                &:before {
+                    content: "";
+                    display: block;
+                    height: 18px;
+                    margin-bottom: -33px;
+                    background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/career/line_through.png');
+                    background-repeat: no-repeat;
+                    background-position: 100% -26px;
+
+                    @include all_mobile {
+                        height: 7px;
+                        margin-bottom: -19px;
+                        background-position: 100% 0;
+                    }
+                }
+            }
+            .num_sale {
+                display: block;
+                color: #6759ef;
+                font-size: 32px;
+                font-weight: 600;
+                line-height: 1.2em;
+
+                @include all_mobile {
+                    padding-bottom: 10px;
+                    text-align: right;
+                    font-size: 25px;
+                }
+
+                .txt_g {
+                    display: inline-block;
+                    padding-left: 1px;
+                    padding-top: 3px;
+                    color: #888;
+                    font-size: 20px;
+                    font-weight: 500;
+                    vertical-align: top;
+
+                    @include all_mobile {
+                        display: inline-block !important;
+                        padding: 0;
+                        color: inherit;
+                        font-size: 17px;
+                    }
+                }
+                .txt_g:first-child {display: none;}
+            }
+        }
+
+        .badge_fcf {
+            position: absolute; top: -21px; right: -22px;
+            width: 92px; height: 92px;
+            padding-top: 13px;
+            color: #fff;
+            font-size: 12px;
+            line-height: 1.5em;
+            text-align: center;
+            letter-spacing: -1px;
+            background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/career/badge_single.png');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: 100% auto;
+            box-sizing: border-box;
+
+            .num_g {
+                display: block;
+                font-size: 27px;
+                font-weight: 600;
+                line-height: 1.1em;
+                letter-spacing: -1px;
+
+                .txt {
+                    display: inline-block;
+                    font-size: 17px;
+                    font-weight: 500;
+                    vertical-align: top;
+                }
+            }
+        }
+    } //.box_package
+}
+
+.item_operation {
+    margin-top: 80px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    line-height: 1.4em;
+    text-align: center;
+    background-color: #f9f9f9;
+
+    @include tablet {
+        margin-top: 0;
+    }
+    @include all_mobile {
+        margin-top: 0;
+        padding-top: 40px;
+        padding-bottom: 0;
+    }
+
+    .tit_plan {
+        @include titlePlanText;
+
+        @include all_mobile {
+            font-size: 20px;
+            line-height: 1.5em;
+        }
+    }
+    .emph_plan {
+        @include emphPlanText;
+    }
+} //.item_operation
+.list_operation {
+    @include clear;
+
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include all_mobile {
+        width: 324px;
+    }
+
+    li {
+        float: left;
+        width: 33.33%;
+        color: #c2c2c2;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.6em;
+        text-align: center;
+        letter-spacing: -1px;
+
+        @include all_mobile {
+            font-size: 12px;
+        }
+    }
+
+    .img_operation {
+        display: block;
+        width: 122px;
+        margin: 0 auto 8px;
+
+        @include all_mobile {
+            width: 92px;
+            margin-bottom: 4px;
+        }
+    }
+} //.list_operation
+
+.txt_operation {
+    position: relative;
+    display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-right: 80px;
+    padding-left: 80px;
+    font-size: 20px;
+    line-height: 1.7em;
+    letter-spacing: -1px;
+
+    @include all_mobile {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+    }
+
+    b {
+        font-weight: 600;
+    }
+
+    .ico_quotes {
+        position: absolute; top: 50%;
+        display: inline-block;
+        width: 25px; height: 19px;
+        margin-top: -10px;
+        background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/basicPlan/ico_quotes.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 52px 19px;
+
+        @include all_mobile {
+            display: none;
+        }
+
+        &.ico_left {
+            left: 0;
+            background-position: 0 0;
+        }
+        &.ico_right {
+            right: 0;
+            background-position: -27px 0;
+        }
+    }
+} //.txt_operation
+
+.box_operation {
+    position: relative;
+    width: 918px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 58px;
+    padding-bottom: 50px;
+    background-color: #fff;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+
+    @include tablet {
+        width: 648px;
+    }
+    @include all_mobile {
+        width: 100%;
+        margin-top: 40px;
+        padding-top: 40px;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    &:before {
+        content: "";
+        position: absolute; top: 0; left: 50%;
+        width: 30px; height: 22px;
+        margin-left: -15px;
+        background-image: url(//cdn.tutoring.co.kr/uploads/home/img/plans/basicPlan/tail_operation.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        @include all_mobile {
+            right: 30px; left: 30px;
+            width: auto;
+            height: 1px;
+            margin: 0;
+            background-image: none;
+            background-color: rgba(0,0,0,0.1);
+        }
+    }
+    .tit_plan {
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .list_operation li {
+        color: #6759ef;
+    }
+    .txt_operation {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+} //.box_operation
+
+.item_quality {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    letter-spacing: -1px;
+
+    @include all_mobile {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .tit_plan {
+        @include titlePlanText;
+    }
+    .emph_plan {
+        @include emphPlanText;
+    }
+
+    .img_quality {
+        width: 598px;
+        margin: 40px auto 0;
+        padding: 25px 100px;
+        border: 2px solid #ebebeb;
+        background-color: #f9f9f9;
+        border-radius: 3px;
+        box-sizing: border-box;
+
+        @include all_mobile {
+            width: 100%;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            padding: 0 30px;
+            border: none;
+            background-color: transparent;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+    .txt_operation .txt_b_t {
+        display: block;
+    }
+    .img_tutors {
+        overflow: hidden;
+        display: block;
+        width: 603px; height: 472px;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        
+        @include tablet {
+            width: 320px;
+        }
+        @include all_mobile {
+            display: none;
+        }
+    }
+    .card_tutors {
+        position: absolute; top: 212px; left: 603px;
+        width: 341px;
+        padding-top: 66px;
+        background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/basicPlan/phone_frame.png');
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: 257px 261px;
+
+        @include tablet {
+            left: 320px;
+        }
+        @include all_mobile {
+            position: static;
+            width: 100%;
+        }
+
+        .img_g {
+            display: block;
+            width: 100%;
+
+            @include all_mobile {
+                width: 341px;
+            }
+        }
+    }
+    .desc_txt {
+        position: absolute; top: 0; left: 635px;
+        width: 310px;
+
+        @include tablet {
+            left: 362px;
+        }
+        @include all_mobile {
+            position: static;
+            width: 100%;
+            text-align: center;
+        }
+
+        p {
+            margin-top: 7px;
+            font-size: 16px;
+            line-height: 1.75em;
+        }
+        
+        .tit_g {
+            display: block;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.5em;
+
+            @include all_mobile {
+                font-size: 20px;
+            }
+
+            em {
+                display: block;
+                color: #6759f2;
+            }
+        }
+
+    }
+
+    // swiper
+    .ico_swiper {
+        width: 12px; height: 21px;
+        margin-left: -6px;
+        background-image: url('//cdn.tutoring.co.kr/uploads/home/img/common/ico_swiper.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 28px 45px;
+
+        @include all_mobile {
+            margin-top: 150px;
+        }
+    }
+    .btn_swiper {
+        top: 0; right: auto;z-index: 20;
+        display: flex;
+        width: 54px; height: 472px;
+        margin-top: 0;
+        color: transparent;
+        background: none;
+        align-items: center;
+        justify-content: center;
+
+        @include all_mobile {
+            width: 28px;
+        }
+    }
+    .swiper-button-prev {
+        left: 0;
+
+        .ico_swiper {
+            background-position: 0 -24px;
+
+            @include all_mobile {
+                background-position: 0 0;
+            }
+        }
+    }
+    .swiper-button-next {
+        left: 550px;
+
+        @include tablet {
+            left: 266px;
+        }
+        @include all_mobile {
+            left: auto; right: 0;
+        }
+
+        .ico_swiper {
+            background-position: -16px -24px;
+
+            @include all_mobile {
+                background-position: -16px 0;
+            }
+        }
+    }
+
+    .swiper-container {
+        width: 944px;
+        margin: 0 auto;
+        text-align: left;
+
+        @include tablet {
+            width: 668px;
+        }
+        @include all_mobile {
+            width: 341px;
+            margin-top: 60px;
+            margin-bottom: -40px;
+        }
+    }
+    .swiper-page {
+        .swiper-slide {
+            height: 520px;
+            background-color: #fff;
+
+            @include all_mobile {
+                height: 500px;
+            }
+        }
+    }
+    .swiper-slide1 .img_tutors {background-image:url('//cdn.tutoring.co.kr/uploads/home/img/plans/basicPlan/tutors_01.png')}
+    .swiper-slide2 .img_tutors {background-image:url('//cdn.tutoring.co.kr/uploads/home/img/plans/basicPlan/tutors_02.png')}
+    .swiper-slide3 .img_tutors {background-image:url('//cdn.tutoring.co.kr/uploads/home/img/plans/basicPlan/tutors_03.png')}
+    .swiper-slide4 .img_tutors {background-image:url('//cdn.tutoring.co.kr/uploads/home/img/plans/basicPlan/tutors_04.png')}
+
+    @include tablet {
+        .swiper-slide1 .img_tutors{background-image:url('//cdn.tutoring.co.kr/uploads/home/img/plans/basicPlan/tutors_01_t.png')}
+        .swiper-slide2 .img_tutors{background-image:url('//cdn.tutoring.co.kr/uploads/home/img/plans/basicPlan/tutors_02_t.png')}
+        .swiper-slide3 .img_tutors{background-image:url('//cdn.tutoring.co.kr/uploads/home/img/plans/basicPlan/tutors_03_t.png')}
+        .swiper-slide4 .img_tutors{background-image:url('//cdn.tutoring.co.kr/uploads/home/img/plans/basicPlan/tutors_04_t.png')}
+    }
+} //.item_quality
+
+.txt_quality {
+    position: relative;
+    display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-right: 80px;
+    padding-left: 80px;
+    font-size: 20px;
+    line-height: 1.7em;
+    letter-spacing: -1px;
+
+    @include tablet {
+        margin: 0;
+    }
+    @include all_mobile {
+        display: none;
+    }
+
+    b {
+        display: block;
+        font-weight: 600;
+    }
+} //.txt_quality
+
+
+.item_g.item_match {
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    line-height: 1.4em;
+    text-align: center;
+    letter-spacing: -1px;
+    background-color: #f9f9f9;
+
+    @include all_mobile {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    & > p {
+        margin-top: 32px;
+        margin-bottom: 32px;
+        font-size: 20px;
+        line-height: 1.7em;
+
+        @include all_mobile {
+            font-size: 16px;
+        }
+    }
+
+    b {
+        font-weight: 600;
+    }
+
+    .tit_plan {
+        @include titlePlanText;
+    }
+    .emph_plan {
+        @include emphPlanText;
+    }
+
+    .inner_item {
+        position: relative;
+        width: 284px;
+        margin-top: 80px;
+        margin-left: 50%;
+        padding-left: 17px;
+
+        @include all_mobile {
+            margin: 40px auto 0;
+            padding-left: 0;
+        }
+    }
+    .balloon_tag {
+        display: block;
+        height: 86px;
+        padding-top: 10px;
+        border: 2px solid #6759ef;
+        color: #6758ef;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.6em;
+        border-radius: 8px;
+        box-sizing: border-box;
+        text-align: center;
+
+        b {
+            display: block;
+            font-weight: 600;
+        }
+    }
+    .phone_match {
+        position: absolute; top: -50px; left: -361px;
+        width: 404px; height: 695px;
+        background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/basicPlan/phone_match.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 100% auto;
+
+        @include all_mobile {
+            display: none;
+        }
+    }
+    // tutoringgo
+    .phone_match_en,
+    .phone_match_zh {
+        display: block;
+        position: absolute; top: -50px;left: -361px;
+        width: 404px; height: 695px;
+        background: url('//cdn.tutoring.co.kr/uploads/home/img/tutoringgo/enHome/phone_match-en.png') 0 0 no-repeat;
+        background-size: 100% auto;
+
+        @include all_mobile {
+            display: none;
+        }
+    }
+    .phone_match_zh {
+        background-image: url('//cdn.tutoring.co.kr/uploads/home/img/tutoringgo/zhHome/phone_match-zh.png');
+    }
+    .link_direct {
+        display: block;
+        width: 280px; height: 80px;
+        margin: 0 auto;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 80px;
+        background-color: #6759ef;
+        border-radius: 80px;
+        box-shadow: 0 30px 30px -10px rgba(103, 89, 239, 0.4);
+
+        @include all_mobile {
+            width: 240px; height: 60px;
+            font-size: 20px;
+            line-height: 60px;
+        }
+    }
+} //.item_match
+
+.list_topic {
+    overflow: hidden;
+    position: relative;
+    width: 286px; height: 500px;
+    padding-top: 7px;
+    text-align: left;
+
+    &:after {
+        content: "";
+        position: absolute; bottom: 0; left: 0;
+        width: 100%; height: 100px;
+        background: linear-gradient(to bottom, rgba(249,249,249,0) 0%, rgba(249,249,249,1) 100%);
+    }
+
+    li {
+        height: 181px;
+        margin-top: 6px;
+        padding-top: 18px;
+        padding-left: 118px;
+        border: 2px solid #ebebeb;
+        color: #999;
+        font-size: 16px;
+        line-height: 1.7em;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+    strong {
+        display: block;
+        padding-bottom: 4px;
+        color: #333;
+        font-size: 20px;
+        font-weight: 500;
+
+        b {
+            font-weight: 600;
+        }
+    }
+
+    .img_topic {
+        position: absolute;
+        width: 87px;
+        margin-top: 2px;
+        margin-left: -102px;
+    }
+
+} //.list_topic
+.item_match ~ .item_notice {
+    padding: 8px 60px 50px;
+    border-top: 1px solid #d8d8d8;
+
+    @include all_mobile {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .fst {
+        margin-top: -15px;
+        margin-bottom: 20px;
+
+        li {
+            margin-top: 25px;
+        }
+    }
+}
+
+// tutor 
+.tutor-info {
+    position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+    z-index: 100;
+
+    .dimmer {
+        overflow: auto;
+        width: 100%; height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        -webkit-overflow-scrolling: touch;
+
+        .btn-close {
+            display: block;
+            width: 40px; height: 40px;
+            margin: 16px auto;
+            border: none;
+            outline: none;
+
+            img {
+                width: 100%;
+                vertical-align: top;
+            }
+        } //.btn-close
+        .info_modal {
+            width: 85%;
+            max-width: 33rem;
+            margin: 30px auto 0;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.31);
+
+            .title {
+                padding: 15px 18px;
+                border-bottom: 1px solid #f2f2f2;
+            }
+            .info_tit {
+                display: inline-block;
+                height: 18px;
+                padding-left: 3px !important;
+                color: #426aea;
+                vertical-align: top;
+            }
+            .line {
+                content: "";
+                display: inline-block;
+                width: 3px; height: 18px;
+                margin-right: 6px;
+                background-color: #426aea;
+                vertical-align: top;
+            }
+            .question {
+                padding: 0 20px 20px;
+            }
+            .q_block {
+                position: relative;
+                margin-top: 15px;
+                padding-left: 20px;
+                color: #727272;
+                font-size: 13px;
+                line-height: 1.6em;
+
+                &:before {
+                    content: "Q";
+                    position: absolute; top: 3px; left: 0;
+                    width: 16px; height: 16px;
+                    margin-right: 3px;
+                    color: #fff;
+                    background-color: #00c7ee;
+                    font-size: 12px;
+                    font-weight: 600;
+                    line-height: 14px;
+                    text-align: center;
+                    border-radius: 20px;
+                }
+
+                .q_tit {
+                    color: #303030;
+                }
+            }
+            .tutor {
+                padding: 2px 20px 33px;
+                border-top: 1px solid #ededed !important;
+            }
+            .t_block {
+                position: relative;
+                margin-top: 15px;
+                padding-left: 45px;
+                color: #727272;
+                font-size: 13px;
+                line-height: 1.6em;
+                text-align: left;
+
+                &:before {
+                    content: "";
+                    position: absolute; top: 0; left: 0;
+                    width: 38px; height: 38px;
+                    border-radius: 40px;
+                    background-image: url('//res.tutoring.co.kr/res/images/team/img/tutor/img_tutor_Jeferyl.png?v=1');
+                    background-repeat: no-repeat;
+                    background-position: 50% 50%;
+                    background-size: contain;
+                    box-shadow: 0 1px 3px 0 rgba(157, 157, 157, 0.5);
+                }
+
+                &:nth-child(2):before {background-image: url('//res.tutoring.co.kr/res/img/global_tutor_img_2_20170801.png?v=1');}
+                &:nth-child(3):before {background-image: url('//res.tutoring.co.kr/res/img/global_tutor_img_3_20170801.png?v=1');}
+
+                &.native:nth-child(1):before {background-image: url('//res.tutoring.co.kr/res/img/native_tutor_img_1_20170801.png');}
+                &.native:nth-child(2):before {background-image: url('//res.tutoring.co.kr/res/img/native_tutor_img_2_20180125.png');}
+                &.native:nth-child(3):before {background-image: url('//res.tutoring.co.kr/res/img/native_tutor_img_3_20170801.png');}
+            }
+            .t_name {
+                color: #303030;
+                font-size: 14px;
+            }
+        }
+    }
+}

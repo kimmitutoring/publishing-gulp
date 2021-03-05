@@ -1,0 +1,39 @@
+{
+  "name": "tutoring",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp",
+    "minify": "gulp minify"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "dependencies": {
+    "bower": "^1.8.8",
+    "global": "^4.3.2",
+    "gulp-cli": "^2.3.0",
+    "sass": "^0.5.0"
+  },
+  "description": "npm install gulp@3.9.1 -g",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devtutoring/app-publishing.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devtutoring/app-publishing/issues"
+  },
+  "homepage": "https://github.com/devtutoring/app-publishing#readme",
+  "keywords": []
+}

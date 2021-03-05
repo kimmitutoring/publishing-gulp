@@ -1,0 +1,203 @@
+@charset "UTF-8";
+
+.ontact-junior {
+	padding-right: 20px;
+	padding-left: 20px;
+
+	.heading {
+		margin-top: 70px;
+		margin-bottom: 40px;
+		color: #333;
+		font-size: 25px;
+		font-weight: 600;
+		line-height: 32px;
+		letter-spacing: -2px;
+	}
+	.box {
+		overflow: hidden;
+		position: relative;
+		width: 320px;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 25px 27px;
+		background: #fff;
+		border-radius: 15px;
+		color: #333;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: -1px;
+		text-align: left;
+		box-sizing: border-box;
+	}
+	.box--flip {
+		height: 261px;
+		background: #F8D44E url("//res.tutoring.co.kr/res/images/evt/202012/pesta/pesta_jr01_img.png") no-repeat 50% 100%;
+		background-size: 267px 120px;
+
+		@media (min-width: 1200px) {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			width: 990px; height: 300px;
+			padding: 20px 108px;
+			background-position: 440px 50%;
+			background-size: 442px;
+			font-size: 18px;
+			line-height: 30px;
+
+			.title {
+				margin-bottom: 20px;
+				font-size: 25px;
+				line-height: 32px;
+			}
+		}
+	}
+	.box--real {
+		height: 265px;
+		margin-top: 20px;
+		background: #fff url("//res.tutoring.co.kr/res/images/evt/202012/pesta/pesta_jr02_img.png") no-repeat 92% 50%;
+		background-size: 154px;
+
+		@media (min-width: 1200px) {
+			width: 990px; height: auto;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			width: 990px; height: 300px;
+			margin-top: 0;
+			padding: 20px 108px;
+			background: #fff url("//res.tutoring.co.kr/res/images/evt/202012/pesta/pesta_jr02_pc_img.png") no-repeat 434px 50%;
+			background-size: 434px;
+			font-size: 18px;
+			line-height: 30px;
+
+			.title {
+				margin-bottom: 20px;
+				font-size: 25px;
+				line-height: 32px;
+			}
+		}
+	}
+	.title {
+		margin-bottom: 13px;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 20px;
+	}
+	.hide {
+		position: absolute;
+		color: transparent;
+	}
+
+	.care-tutor {
+		position: relative;
+		height: 396px;
+		margin-top: 70px;
+		padding-top: 0;
+		padding-bottom: 0;
+		text-align: left;
+		background: transparent url("//res.tutoring.co.kr/res/images/evt/202012/pesta/pesta_jr04-1_img.gif") no-repeat 50% 100%;
+		background-size: 330px auto;
+
+		@media (min-width: 1200px) {
+			width: 875px;
+			font-size: 18px;
+			line-height: 30px;
+			background-size: 512px;
+			background-position: 100% 100%;
+
+			&:after {
+				content: "";
+				position: absolute; bottom: 0; right: 0; left: 0;
+				height: 67px;
+				background: linear-gradient(0deg,#f1f1f1 17.16%, transparent 100%);
+			}
+
+			br {display: none;}
+		}
+
+		.heading {
+			margin: 0;
+			margin-bottom: 20px;
+		}
+	}
+
+	.curriculum-list {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		.list__item ~ .list__item {
+			margin-top: 20px;
+		}
+
+		@media (min-width: 1200px) {
+			flex-direction: row;
+			justify-content: center;
+
+			.list__item {margin: 0 8px 0 7px !important;}
+		}
+
+		.box {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			padding: 0;
+			padding-top: 30px;
+			text-align: center;
+			border-radius: 15px;
+			box-sizing: border-box;
+
+			b {margin-bottom: 5px;}
+			b br {display: none;}
+
+			@media (min-width: 1200px) {
+				padding: 40px;
+				justify-content: flex-start;
+				border-radius: 0 0 15px 15px;
+
+				b {
+					margin-bottom: 20px;
+					font-size: 20px;
+					line-height: 28px;
+
+					br {display: block;}
+				}
+			}
+
+			.small-text {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-top: 27px;
+				width: 100%; height: 57px;
+				border-top: 1px solid #ddd;
+				color: #555;
+				font-size: 12px;
+				line-height: 14px;
+				letter-spacing: -1.5px;
+
+				@media (min-width: 1200px) {
+					height: auto;
+					margin-top: 30px;
+					padding-top: 30px;
+					color: #333;
+					font-size: 16px;
+					font-weight: 600;
+					line-height: 1em;
+				}
+			}
+		}
+
+		.image {
+			display: none;
+			margin: 0 auto;
+			border-radius: 15px 15px 0 0;
+
+			@media (min-width: 1200px) {
+				display: block;
+			}
+		}
+	}
+}

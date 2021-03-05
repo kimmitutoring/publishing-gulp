@@ -1,0 +1,378 @@
+@charset "utf-8";
+
+$font-HGGGothicssi: 'HGGGothicssi', -apple-system, BlinkMacSystemFont, helvetica, "Apple SD Gothic Neo", sans-serif;
+
+.event-ai {
+	background-color: #fff;
+    background-image: url("//cdn.tutoring.co.kr/uploads/home/img/leveltest/bg_gradient_main_m.png");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: 100% auto;
+
+    @media (min-width: 768px) {
+        background-image: url("//cdn.tutoring.co.kr/uploads/home/img/leveltest/bg_gradient_main_t.png");  
+    }
+    @media (min-width: 1600px) {
+        background-image: url("//cdn.tutoring.co.kr/uploads/home/img/leveltest/bg_gradient_main_PC.png"); 
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__title {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        color: #333;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1.35em;
+        letter-spacing: -0.5px;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            font-size: 40px;
+            line-height: 1.4em;
+
+            br {display: none;}
+        }
+    }
+    &__sub-title {
+        margin-top: 40px;
+        margin-bottom: 16px;
+        color: #333;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.3em;
+        letter-spacing: -0.5px;
+        text-align: center;
+
+        b {
+            display: block;
+            padding-bottom: 8px;
+            color: #A49BFF;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.7em;
+        }
+    }
+    &__desc {
+        width: 280px;
+        margin: 20px auto;
+        color: rgba(51, 51, 51, 0.6);
+        font-size: 16px;
+        line-height: 1.5em;
+        letter-spacing: -0.5px;
+
+        @media (min-width: 768px) {
+            width: auto;
+            text-align: center;
+        }
+    }
+    &__button {
+        display: flex;
+        width: 280px; height: 64px;
+        margin: 8px auto;
+        border: 1px solid #D4D4D4;
+        background-color: #fff;
+        color: #333;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        border-radius: 5px;
+
+        @media (min-width: 768px) {
+            width: 314px;
+        }
+
+        &--primary {
+            border-color: #6759EF;
+            background-color: #6759EF;
+            color: #fff;
+        }
+    }
+}
+
+.event-ai__spot {
+    padding-top: 90px;
+    padding-bottom: 55px;
+    text-align: center;
+    background: url("//cdn.tutoring.co.kr/uploads/home/img/leveltest/bg_aileveltest_mo.png") no-repeat 50% 10px;
+    background-size: 650px 580px;
+
+    @media (min-width: 768px) {
+        margin-bottom: -100px;
+        padding-top: 167px;
+        background-position: 50% 33px;
+        background-size: 740px 680px;
+    }
+
+    .spot__title  {
+        display: inline-block;
+        width: 280px;
+        vertical-align: top;
+        margin-bottom: 45px;
+
+        @media (min-width: 768px) {
+            width: 535px;
+            margin-bottom: 22px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .spot__desc {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        color: #333;
+        font-size: 16px;
+        line-height: 1.5em;
+        font-family: $font-HGGGothicssi;
+
+        &:last-of-type {
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+
+        b {display: block;}
+
+        @media (min-width: 768px) {
+            margin-top: 24px;
+            margin-bottom: 24px;
+            font-size: 20px;
+            line-height: 1em;
+
+            &:last-of-type {
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+
+            b {display: inline;}
+        }
+    }
+}
+
+.event-ai__content .content__inner {margin-top: 80px;}
+
+@media (min-width: 768px) {
+    .event-ai__content .content__inner {margin-top: 160px;}
+}
+
+.event-ai__summary {
+    margin: 40px auto 0;
+    text-align: center;
+    
+    .list__item {
+        width: 320px;
+        margin: 16px auto;
+        padding: 40px 24px;
+        color: rgba(51, 51, 51, 0.6);
+        font-size: 14px;
+        line-height: 1.7em;
+        background-color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.07);
+        box-sizing: border-box;
+
+        @media (min-width: 768px) {
+            width: 364px;
+        }
+
+        @media (min-width: 1600px) {
+            display: inline-block;
+            width: 280px;
+            margin-right: 10px;
+            margin-left: 10px; 
+            vertical-align: top;
+        }
+    }
+    .list__icon {
+        display: flex;
+        width: 64px; height: 64px;
+        margin: 0 auto;
+        border-radius: 64px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+        &--1 {background-color: #FFF3E7;}
+        &--2 {background-color: #F0F0FF;}
+        &--3 {background-color: #F0FFF0;}
+    }
+    .list__title {
+        display: block;
+        margin-top: 24px;
+        margin-bottom: 8px;
+        color: #333;
+        font-size: 20px;
+        line-height: 1.6em;
+    }
+}
+
+.event-ai__step {
+    position: relative;
+    display: flex;
+    width: 320px;
+    margin: 24px auto;
+    align-items: center;
+    justify-content: space-between;
+
+    &:before {
+        content: "";
+        position: absolute; top: 10px; right: 0; left: 0;
+        border-top: 2px dotted #D4D4D4
+    }
+
+    @media (min-width: 768px) {
+        width: 480px;
+
+        &:before {top: 20px;}
+    }
+
+    .list__item {
+        position: relative;
+        color: rgba(51, 51, 51, 0.3);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.7em;
+
+        @media (min-width: 768px) {
+            font-size: 20px;
+        }
+
+        &:first-child::before {
+            content: "";
+            position: absolute; top: 0; left: 0;
+            width: 50%; height: 24px;
+            background-color: #fff;
+        }
+        &:last-child::before {
+            content: "";
+            position: absolute; top: 0; right: 0;
+            width: 50%; height: 24px;
+            background-color: #fff;
+        }
+
+        &--active {color: #333;}
+        &--active .step__number {background-color: #333;}
+    }
+
+    .step__number {
+        position: relative; z-index: 10;
+        overflow: hidden;
+        display: block;
+        width: 24px; height: 24px;
+        margin: 0 auto 8px;
+        border-radius: 24px;
+        background-color: #D5D5D5;
+        color: #fff;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            width: 40px; height: 40px;
+            font-size: 18px;
+            line-height: 40px;
+        }
+    }
+
+    &__image {
+        width: 320px;
+        margin: 0 auto;
+
+        @media (min-width: 768px) {
+            width: 480px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .event-ai__feature {
+        width: 720px;
+        margin: 0 auto;
+    
+        .list__item {
+            display: flex;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            justify-content: space-between;
+            align-items: center;
+
+            &:nth-child(even) {
+                .feature__inner {order: 2; padding-left: 40px;}
+                .feature__image {order: 1;}
+            }
+        }
+
+        .event-ai__sub-title,
+        .event-ai__desc {
+            text-align: left;
+        }
+        .feature__image {width: 50%; padding-top: 20px;}
+        .feature__image img {display: block; width: 100%;}
+        .feature__inner {
+            width: 50%;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+.event-ai__guide {
+    padding-top: 120px;
+    padding-bottom: 165px;
+    background-image: url("//cdn.tutoring.co.kr/uploads/home/img/leveltest/bg_gradient_PC.png");
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: 1440px auto;
+
+    .event-ai__desc {
+        width: auto;
+        text-align: center;
+    }
+}
+
+.event-ai__notice {
+    padding: 24px 20px;
+    background-color: #F9FAFE;
+
+    @media (min-width: 768px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    .notice__title,
+    .notice__list {
+        color: rgba(51, 51, 51, 0.6);
+        font-size: 12px;
+        line-height: 1.5em;
+
+        @media (min-width: 768px) {
+            font-size: 16px;
+        }
+    }
+    .notice__title {font-weight: 600;}
+    .notice__list .list__item {margin-top: 10px;}
+    .notice__list ~ .notice__title {margin-top: 30px;}
+    .notice__wrapper {
+        max-width: 768px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+}

@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+.#{$content_prefix}_reviewer {
+    padding-bottom: 80px;
+
+    @include all_mobile {
+        padding-bottom: 0;
+    }
+}
+.#{$content_prefix}_reviewer_list {
+    width: 944px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    @include tablet {
+        width: 100%;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    @include all_mobile {
+        display: none;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    li {
+        float: left;
+        position: relative;
+        width: 448px; height: 264px;
+        margin: 12px;
+        padding: 26px 32px 0;
+        box-sizing: border-box;
+        text-align: left;
+        background-color: #f6f6f8;
+
+        @include tablet {
+            float: none;
+            width: auto; height: 228px;
+            margin: 24px 0;
+        }
+    }
+    .inner {
+        position: static;
+        margin: 0;
+        padding: 0;
+    }
+    .image {
+        position: absolute; top: 25px; right: 32px;
+        width: 120px; height: 54px;
+        background-color: rgba(255, 0, 0, 0.5);
+    }
+    .title {
+        display: block;
+        margin-bottom: 14px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.78em;
+    }
+    .highlight {
+        color: $color-purple;
+    }
+    .review_text {
+        color: #666;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.85em;
+        text-align: justify;
+        word-break: normal;
+    }
+}
+.#{$content_prefix}_reviewer_area {
+    position: relative;
+    margin: 0 auto;
+    padding: 46px 12px;
+    box-sizing: border-box;
+
+    @include big_desktop {
+        width: 944px;
+    }
+
+    @include desktop {
+        width: 944px;
+    }
+
+    @include tablet {
+        width: auto;
+    }
+
+    @include all_mobile {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .figure_box {
+        float: left;
+        width: 380px;
+        padding-top: 28px;
+        color: #666;
+        font-size: 22px;
+        text-align: center;
+
+        @include tablet {
+            float: none;
+            width: auto;
+            padding-bottom: 50px;
+        }
+
+        @include all_mobile {
+            width: 100%;
+            padding-top: 0;
+            padding-bottom: 46px;
+        }
+        
+        .highlight {
+            display: block;
+            margin-top: -20px;
+            color: #333;
+            font-family: 'Spoqa Han Sans', 'Sanf-serif';
+            font-size: 80px;
+            font-weight: 100;
+            line-height: 1.2em;
+        }
+    }
+
+    .talk_box {
+        @include b2bTalkBox(480, 164, -30);
+
+        float: right;
+
+        @include tablet {
+            float: none;
+            width: 470px;
+            margin: 0 auto;
+        }
+
+        @include all_mobile {
+            float: none;
+            width: 320px; height: auto;
+            margin: 0 auto;
+            font-size: 16px;
+
+            &:before {
+                left: 0;
+                margin-top: -22px;
+            }
+            &:after {
+                left: auto; right: 0;
+                margin-top: -22px;
+            }
+        }
+    }
+}

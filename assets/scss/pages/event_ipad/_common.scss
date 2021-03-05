@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+$main-color: #3fbcff;
+$break-point-mobile: 360px;
+$break-point-tablet: 768px;
+$alpha-detail-hspace: 20px;
+$alpha-detail-vspace: 100px;
+$alpha-detail-tablet-hspace: 55px;
+
+@mixin mobile {
+	@media (max-width: $break-point-mobile) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: #{$break-point-mobile + 1px}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$break-point-tablet + 1px}) {
+		@content;
+	}
+}

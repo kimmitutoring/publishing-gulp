@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+.ipad-wrap {
+	.product {
+		padding: 42px 0 60px;
+		background-color: #fff;
+
+		&__subtitle {
+			line-height: 28px;
+			color: #9a9a9a;
+			text-align: center;
+
+			@include desktop {
+				font-size: 20px;
+			}
+		}
+
+		&__title {
+			font-size: 24px;
+			line-height: 1.2em;
+			color: #555;
+			letter-spacing: -1px;
+			text-align: center;
+
+			@include desktop {
+				font-size: 30px;
+			}
+
+			& + .product__title {
+				font-weight: 700;
+				color: $main-color;
+
+				@include desktop {
+					font-size: 40px;
+				}
+			}
+		}
+
+		.product-spec-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-top: 50px;
+
+			@include desktop {
+				flex-wrap: nowrap;
+				max-width: 900px;
+				margin: 70px auto 0;
+			}
+
+			.product-spec {
+				flex: 1 1 100%;
+
+				& + .product-spec {
+					margin-top: 72px;
+
+					@include desktop {
+						margin-top: 0;
+					}
+				}
+
+				&:nth-child(2) {
+					.product-spec__description-list {
+						margin-top: 200px;
+
+						&::before {
+							width: 225px;
+							height: 149px;
+							background-image: url(//res.tutoring.co.kr/res/images/evt/202008/shooting/shooting_ipad_7_big.png);
+							top: -175px;
+							left: 50%;
+
+							@include desktop {
+								top: -195px;
+							}
+							
+						}
+					}
+					.spec-link {
+						@include desktop {
+							margin-top: 45px;
+						}
+					}
+				}
+
+				&:nth-child(3) {
+					.product-spec__description-list {
+						margin-top: 236px;
+
+						&::before {
+							width: 141px;
+							height: 211px;
+							background-image: url(//res.tutoring.co.kr/res/images/evt/202008/shooting/shooting_ipad_air3_big.png);
+							top: -205px;
+							left: 50%;
+
+							@include desktop {
+								top: -235px;
+							}
+						}
+					}
+					.spec-link {
+						@include desktop {
+							margin-top: 27px;
+						}
+					}
+				}
+
+				&__subtitle {
+					text-align: center;
+					line-height: 14px;
+					letter-spacing: -0.5px;
+					color: #636363;
+
+					b {
+						position: relative;
+						display: inline-block;
+						span {
+							position: relative;
+							z-index: 1;
+						}
+
+						&::after {
+							position: absolute;
+							content: "";
+							left: 0;
+							bottom: -4px;
+							width: 100%;
+							height: 8px;
+							background-color: #a7e5ff;
+							z-index: 0;
+						}
+					}
+				}
+
+				&__title {
+					margin-top: 10px;
+					font-size: 20px;
+					text-align: center;
+					font-weight: 700;
+					letter-spacing: -0.5px;
+					color: #333;
+				}
+
+				&__description-list {
+					position: relative;
+					margin-top: 235px;
+
+					@include desktop {
+						margin-top: 287px !important;
+					}
+
+					&::before {
+						content: "";
+						position: absolute;
+						top: -215px;
+						left: calc(50% + 30px);
+						display: block;
+						width: 227px;
+						height: 260px;
+						background-image: url(//res.tutoring.co.kr/res/images/evt/202008/shooting/shooting_ipad_mini5_big.png);
+						background-size: cover;
+						z-index: 1;
+						transform: translateX(-50%);
+
+						@include desktop {
+							top: -235px;
+						}
+					}
+
+					.product-spec__description {
+						position: relative;
+						text-align: center;
+						font-weight: 300;
+						font-size: 14px;
+						letter-spacing: -0.5px;
+						z-index: 2;
+
+						b {
+							font-weight: 500;
+						}
+
+						& + .product-spec__description {
+							margin-top: 4px;
+						}
+					}
+				}
+
+				.spec-link {
+					display: flex;
+					justify-content: center;
+					width: 126px;
+					margin: 15px auto 0;
+					padding: 6.4px 0;
+					line-height: 15.4px;
+					background-color: #505050;
+					text-align: center;
+					border-radius: 14px;
+					font-size: 10px;
+					color: #fff;
+					font-weight: 700;
+
+					@include desktop {
+						margin-top: 49px;
+					}
+
+					&::after {
+						content: "";
+						position: relative;
+						top: 7px;
+						display: inline-block;
+						width: 8px;
+						height: 8px;
+						margin: -3px 0 3px 8px;
+						border-bottom: 2px solid #fff;
+						border-left: 2px solid #fff;
+						transform: rotate(-135deg);
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+	}
+}

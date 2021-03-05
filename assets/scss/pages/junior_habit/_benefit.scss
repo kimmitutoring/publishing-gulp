@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+.habit-benefit {
+	text-align: center;
+
+	.inner {
+		padding-top: 70px;
+		padding-bottom: 70px;
+
+		@media (min-width: 1200px) {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+	}
+
+	.heading {
+		@include text-xlarge;
+
+		margin-bottom: 50px;
+	}
+	.heading-unit {
+		display: block;
+		width: 100px; height: 33px;
+		margin: 0 auto 30px;
+		color: transparent;
+		font-size: 10px;
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		background-size: 100% auto;
+
+		@media (min-width: 1200px) {
+			width: 170px; height: 55px;
+			margin-bottom: 50px;
+		}
+
+		&--event1 {background-image: url("//s3.ap-northeast-2.amazonaws.com/junior.tutoring.co.kr/uploads/images/browse/habit/event1_ico_img.png");}
+		&--event2 {background-image: url("//s3.ap-northeast-2.amazonaws.com/junior.tutoring.co.kr/uploads/images/browse/habit/event2_ico_img.png");}
+		&--event3 {background-image: url("//s3.ap-northeast-2.amazonaws.com/junior.tutoring.co.kr/uploads/images/browse/habit/event3_ico_img.png");}
+	}
+
+	.more {
+		display: inline-block;
+		margin-top: 20px;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 1em;
+		letter-spacing: -0.5px;
+		vertical-align: top;
+
+		@media (min-width: 1200px) {
+			margin-top: 25px;
+			font-size: 20px;
+			line-height: 23px;
+		}
+
+		.icon {
+			content: "";
+			display: block;
+			width: 50px; height: 50px;
+			margin: 20px auto 0;
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+
+			@media (min-width: 1200px) {
+				width: 64px; height: 64px;
+			}
+		}
+
+		&--light {
+			color: #fff;
+
+			.icon {background-image: url("//s3.ap-northeast-2.amazonaws.com/junior.tutoring.co.kr/uploads/images/browse/habit/btn_white_ico.png")}
+		}
+		&--dark {
+			color: #000;
+
+			.icon {background-image: url("//s3.ap-northeast-2.amazonaws.com/junior.tutoring.co.kr/uploads/images/browse/habit/btn_yellow_ico.png")}
+		}
+	}
+
+	.list {
+		margin: 70px 0 68px;
+		padding: 0;
+		list-style: none;
+
+		.list-item ~ .list-item {margin-top: 80px;}
+
+		@media (min-width: 1200px) {
+			display: flex;
+			justify-content: center;
+			margin-top: 76px;
+			margin-bottom: 30px;
+
+			.list-item,
+			.list-item ~ .list-item {
+				margin: 0 50px;
+			}
+		}
+	}
+
+	.item {
+		@include text-medium;
+
+		position: relative;
+
+		img {margin-bottom: 20px;}
+
+		@media (min-width: 1200px) {
+			img {
+				width: 360px;
+				margin-bottom: 25px;
+			}
+
+			&--event3 {
+				text-align: left;
+				padding-top: 104px;
+				padding-left: calc(50% + 70px);
+
+				img {
+					position: absolute; top: 0; right: 50%;
+					width: 402px;
+					transform: translateX(-30px);
+				}
+			}
+		}
+	}
+
+	.badge {
+		position: absolute; top: -20px; left: 50%;
+		width: 90px; height: 90px;
+		margin: 0;
+		padding: 21px 0 0 0;
+		color: #fff;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 23px;
+		letter-spacing: -1px;
+		background-color: #000;
+		box-sizing: border-box;
+		border-radius: 50%;
+		text-align: center;
+		transform: translateX(50px);
+
+		@media (min-width: 1200px) {
+			width: 120px; height: 120px;
+			padding-top: 28px;
+			font-size: 26px;
+			line-height: 30px;
+			transform: translateX(60px);
+		}
+
+		.point {color: #FFD400;}
+	}
+
+	.guide {
+		display: inline-block;
+		margin-top: 44px;
+		color: #999;
+		font-size: 14px;
+		line-height: 22px;
+		text-align: left;
+		letter-spacing: -1px;
+		vertical-align: top;
+
+		@media (min-width: 1200px) {
+			display: block;
+			margin-top: 30px;
+			margin-bottom: 90px;
+			padding-left: calc(50% + 70px);
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+
+	.image-30discount {
+		margin-top: -25px;
+		margin-bottom: -20px;
+
+		@media (min-width: 1200px) {
+			width: 676px;
+		}
+	}
+}

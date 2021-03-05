@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+.worker-guide {
+	width: 280px;
+	margin: 0 auto;
+	padding-bottom: 70px;
+	color: #666;
+	font-size: 12px;
+	line-height: 22px;
+	letter-spacing: -0.5px;
+	white-space: nowrap;
+
+	@media (min-width: 1200px) {
+		display: none;
+	}
+
+	.heading {
+		margin-bottom: 8px;
+		color: #f15d5d;
+		font-size: 14px;
+		line-height: 14px;
+		font-weight: 600;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 16px; height: 16px;
+			margin: -1px 4px 1px 0;
+			background-image: url("//res.tutoring.co.kr/res/images/common/ico_comm.png");
+			background-repeat: no-repeat;
+			background-position: -140px -104px;
+			background-size: 220px 188px;
+			vertical-align: middle;
+		}
+	}
+}

@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+.landing__rules {
+    padding-top: 164px;
+    padding-bottom: 38px;
+    background-color: #ffe811;
+    text-align: center;
+}
+.rules__heading {
+    @include headingBox(#ffe811);
+
+    @at-root :lang(en) & {
+        width: 140px;
+        letter-spacing: -1px;
+    }
+}
+.rules__text {
+    @include defaultText;
+
+    line-height: 1.4em;
+
+    b {
+        font-weight: 700;
+    }
+
+    &--medium {
+        font-size: 20px;
+    }
+    &--small {
+        display: inline-block;
+        padding-top: 4px;
+        font-size: 14px;
+    }
+}
+.rules__content {
+    max-width: 320px;
+    margin: 0 auto;
+    padding-top: 8px;
+    padding-bottom: 22px;
+    text-align: left;
+
+    img {
+        display: block;
+    }
+}
+.rules__tip {
+    @include bubbleBox;
+
+    position: relative;
+    width: 223px;
+    margin: -16px auto 0;
+
+    &:before {
+        bottom: auto; top: -6px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+    }
+}
+.rules__sns {
+    position: relative;
+
+    .sns__button {
+        position: absolute; top: 59px;
+        width: 60px; height: 60px;
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        color: transparent;
+        background-color: rgba(255, 255, 255, 0);
+
+        &--kakao {left: 30px;}
+        &--naver {left: 96px;}
+        &--facebook {left: 163px;}
+        &--etc {left: 230px;}
+    }
+    .landing__button {
+        position: absolute; bottom: 18px;left: 12px;
+        width: 296px; height: 50px;
+        color: transparent;
+        background-color: rgba(255, 255, 255, 0);
+    }
+}

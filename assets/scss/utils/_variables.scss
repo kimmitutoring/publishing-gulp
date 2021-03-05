@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+// common
+$tutoring_color: #4baeff;
+$console_main_color: #093f9c;
+$console_sub_dark_color: #082f74;
+$console_sub_light_color: #1959c7;
+
+//z-index 정리
+$z-tab: 1;
+$z-tooltip: 2;
+$z-sidebar: 2;
+$z-loader: 9; // modal 보다 아래 Tmodal 100;
+$z-dimmer: 10;
+$z-modal: 10;
+$z-fixed: 10;
+
+// url
+$base-url: "//res.tutoring.co.kr/res/img";
+$new-base-url: "//res.tutoring.co.kr/res/images";
+$icon-star : "//res.tutoring.co.kr/res/img/star_icon_20170302.png";
+$icon-review : "//res.tutoring.co.kr/res/img/review_icon_20170302.png";
+
+// 기본 칼라
+$defaultColor: #333;
+$txtDefaultColor: #555;
+$txtPrimaryColor: #919191;
+$activeNoneColor: #c3c3c3;
+$inactiveColor: #d8d8d8;
+$bgColor: #f3f3f3;
+$bgInfoColor: #ececec;
+$mainBlueColor: #34bcff;
+$pointWarningColor: #f93e5e;
+$mainYellowColor: #ffe812;
+$onAirColor: #50e3c2;
+$lineColor: #efefef;
+
+// color 기존
+$sky: $mainBlueColor;
+$global: #0047af;
+$native: #f56b52;
+$chinese: #f44660;
+
+//status 상태
+$offline: #e1e1e1;
+$online: #50e3c2;
+$waiting: #fdbf01;
+$ing: #FF5959;
+
+// color 신규
+$sky-blue: #00ABFF;
+$dark-black: #232323;
+$light-black: #333333;
+$dark-gray: #777777;
+$light-gray: #999999;
+$red: #FF5959;
+$white: #FFFFFF;
+$yellow: #FFED00;
+$very-light-gray : #E8E8E8;
+
+$primary: $mainBlueColor;
+$waring: #FF4165;
+$disable: #F5F5F5;
+
+//brand color
+$main: #6759EF;
+$sub: #FFE812;
+
+//text color
+$basic: #333333;
+$sub-text: #999999;
+$warning-text: #FF4165;
+$app-bg-color: #F3F3F3;
+
+// layout
+$header-height: 51px;
+$footer-height: 3.38rem;
+$header-height-fixed: 137px; 
+
+// modal width
+$xsm-modal-width : 280px;
+$sm-modal-width: 330px;
+$md-modal-width: 360px;
+
+// modal height
+$sm-min-height: 11rem;
+$sm-max-height: 30rem;
+$md-min-height: 11rem;
+$md-max-height: 35rem;
+
+//font-size
+$font-xxLarge: 34px;
+$font-xLarge: 20px;
+$font-large: 18px;
+$font-medium: 16px;
+$font-small: 14px;
+$font-xSmall: 12px;
+
+// webfont
+$font-HGGGothicssi: 'HGGGothicssi','Apple SD Gothic Neo', sans-serif;
+$font-default: "NotoSansCJK", NotoSansCJK, “Helvetica Neue”, Helvetica, “Segoe UI”, Arial, freesans, sans-serif;
+$font-roboto: 'Roboto', "NotoSansCJK", "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+
+// B2BProgram variables
+$color-purple: #6759ef;
+$width-advantage-content: 920px;
+$form-input-transition-delay: 0.2s;
+$b2b-cdn-url: "//cdn.tutoring.co.kr/uploads/home/img/B2B/";
+$planSectionVerticalSpace: 80px;

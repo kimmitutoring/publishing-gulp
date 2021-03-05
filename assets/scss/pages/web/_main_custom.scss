@@ -1,0 +1,344 @@
+@charset "utf-8";
+
+// 편식하는 영어공부
+.item_custom {
+    .tit_sub {
+        color: #333;
+    }
+    .link_go {
+        display: inline-block;
+        color: $point-color;
+        line-height: 1.48em;
+
+        @include all_desktop {
+            font-size: 28px;
+        }
+        @include big_desktop {
+            font-size: 18px;
+        }
+
+        .ico_g_main {
+            width: 18px; height: 18px;
+            margin: -2px 0 2px 4px;
+            background-position: -220px -110px;
+            vertical-align: middle;
+        }
+    }
+} // .item_custom
+.list_custom {
+    @include big_desktop {
+        width: 1100px;
+        margin: 0 auto;
+    }
+
+    li {
+        padding-top: 50px;
+        padding-bottom: 20px;
+
+        @include big_desktop {
+            @include clear; 
+
+            position: relative;
+            height: 435px;
+            padding-top: 54px;
+            padding-bottom: 45px;
+            text-align: left;
+        }
+    }
+    
+    .desc_custom {
+        overflow: hidden;
+        padding: 0 30px;
+
+        @include all_desktop {
+            padding-top: 77px;
+        }
+        @include big_desktop {
+            width: 482px;
+            padding: 0 0 0 68px;
+        }
+
+        p b {
+            font-weight: 500;
+
+            @include big_desktop {
+                font-weight: 600;
+            }
+        }
+    }
+    .tit_custom {
+        display: block;
+        padding-top: 30px;
+        color: #333;
+        font-size: 18px;
+        font-weight: 600;
+
+        @include all_desktop {
+            padding-top: 60px;
+            font-size: 32px;
+        }
+        @include big_desktop {
+            font-size: 30px;
+        }
+    }
+    .emph_custom {
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        color: $point-color;
+
+        @include all_desktop {
+            padding: 30px 0 40px;
+            font-size: 28px;
+        }
+        @include big_desktop {
+            padding: 27px 0 25px;
+            font-size: 18px;
+        }
+    }
+    .thumb_custom {
+        position: relative;
+
+        @include big_desktop {
+            display: block;
+        }
+
+        .img_tutor {
+            display: none;
+            position: absolute; top: -19px; left: -45px;
+
+            @include big_desktop {
+                display: block;
+                width: auto;
+            }
+        }
+    }
+    .custom_cover {
+        overflow: hidden;
+        position: relative;
+        height: 337px;
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+
+        @include all_desktop {
+            height: 606px;
+        }
+        @include big_desktop {
+            width: 550px; height: 435px;
+            background-repeat: no-repeat;
+        }
+
+        &.custom_tutor {
+            background-image: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/custom_tutor_m.png);
+            background-size: 418px auto;
+
+            @include all_desktop {
+                background-size: 764px auto;
+                background-position: 10px 0;
+            }
+            @include big_desktop {
+                background: none;
+            }
+        }
+        &.custom_category {
+            background-image: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/custom_category_m.png);
+            background-size: 356px auto;
+
+            @include all_desktop {
+                background-image: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/custom_category_02.png);
+                background-position: 20px 0;
+                background-size: 680px auto;
+            }
+            @include big_desktop {
+                width: 520px;
+                margin-right: 4px;
+                background-size: 484px 336px;
+                background-position: 0 62px;
+            }
+        }
+        &.custom_topic {
+            background-image: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/custom_topic_m.png);
+            background-size: 388px auto;
+
+            @include all_desktop {
+                background-image: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/custom_topic_02.png);
+                background-position: 0 65px;
+                background-size: 235px 275px;
+            }
+            @include big_desktop {
+                .img_phone {
+                    margin-left: 176px;
+                }
+            }
+        }
+        &.custom_selection {
+            height: auto;
+            padding: 0 30px;
+
+            @include all_desktop {
+                padding: 0 84px;
+            }
+            @include big_desktop {
+                height: 435px;
+                padding: 0 0 0 43px;
+                box-sizing: border-box;
+
+                .img_selection {
+                    width: 447px; height: 453px;
+                }
+            }
+        }
+        &.custom_graph {
+            .img_graph {
+                position: absolute; top: 118px; left: 50%;
+                width: 263px;
+                margin-left: -186px;
+
+                @include all_desktop {
+                    top: 212px;
+                    width: 472px;
+                    margin-left: -334px;
+                }
+                @include big_desktop {
+                    top: 147px;
+                    width: 328px;
+                    margin-left: -244px;
+                }
+            }
+        }
+    } // custom_cover
+    @include big_desktop {
+        .custom_02 {
+            .desc_custom {
+                width: 402px;
+                padding-top: 60px;
+                padding-right: 60px;
+                padding-left: 82px;
+            }
+        }
+        .custom_03 {
+            .desc_custom {
+                width: 430px;
+                padding-top: 60px;
+            }
+            .thumb_custom {
+                padding-right: 50px;
+            }
+        }
+        .custom_04 {
+            .desc_custom {
+                padding-top: 80px;
+                padding-right: 30px;
+                padding-left: 37px;
+            }
+        }
+        .custom_05 {
+            height: 490px;
+
+            .thumb_custom {
+                margin-left: -39px;
+            }
+            .desc_custom {
+                width: 430px;
+                padding-top: 60px;
+                padding-left: 82px;
+            }
+        }
+    }
+    .img_phone {
+        width: 226px; height: 337px;
+        margin: 0 auto;
+
+        @include all_desktop {
+            width: 407px; height: 606px;
+        }
+        @include big_desktop {
+            width: 292px; height: 435px;
+        }
+    }
+    .img_mov {
+        position: absolute; top: 44px; left: 50%;
+        width: 204px;
+        transform: translateX(-50%);
+
+        @include all_desktop {
+            top: 78px;
+            width: 366px;
+        }
+        @include big_desktop {
+            top: 56px;
+            width: 264px;
+        }
+
+    }
+    .img_tudal {
+        display: none;
+        position: absolute; bottom: 0; left: 50%;
+        width: 270px; height: 270px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 100% auto;
+
+        @include all_desktop {
+            display: block;
+        }
+
+        &.img_tudal03 {
+            bottom: -22px;
+            margin-left: 104px;
+            background-image:url('//cdn.tutoring.co.kr/uploads/home/img/main/version3/tudal_custom03.png');
+
+            @include big_desktop {
+                bottom: -28px;
+                width: 225px; height: 225px;
+                margin-left: 70px;
+            }
+        }
+        &.img_tudal04 {
+            bottom: -101px;
+            width: 280px; height: 331px;
+            margin-left: 62px;
+            background-image:url('//cdn.tutoring.co.kr/uploads/home/img/main/version3/tudal_custom04.png');
+
+            @include big_desktop {
+                bottom: -30px;
+                width: 280px; height: 292px;
+                margin-left: 56px;
+                background-image: url('//cdn.tutoring.co.kr/uploads/home/img/main/version3/tudal_custom04_pc.png');
+            }
+        }
+        &.tudal_flame {
+            bottom: -22px;
+            width: 240px; height: 312px;
+            margin-left: -370px;
+            background-image: url('//cdn.tutoring.co.kr/uploads/home/img/main/version3/tudal_flame.png');
+            background-size: 100% auto;
+
+            @include big_desktop {
+                width: 201px; height: 261px;
+                margin-left: -290px;
+            }
+        }
+        &.tudal_maracas {
+            bottom: -54px;
+            width: 200px;
+            height: 270px;
+            margin-left: 124px;
+            background-image: url('//cdn.tutoring.co.kr/uploads/home/img/main/version3/tudal_maracas.png');
+            background-size: 100% auto;
+
+            @include big_desktop {
+                width: 161px; height: 217px;
+                margin-left: 105px;
+            }
+        }
+    } // img_tudal
+    @include big_desktop {
+        .bg_particle {
+            position: absolute; top: 198px; left: 50%;
+            width: 39px; height: 45px;
+            margin-left: 140px;
+            background: url('//cdn.tutoring.co.kr/uploads/home/img/main/version3/bg_particle.png') 0 0 no-repeat;
+        }
+    }
+} // .list_custom

@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+.promotion {
+    @include defaultText;
+
+    position: relative;
+    min-height: 362px;
+    color: #3c3937;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.83em;
+    background-color: #ffde00;
+    box-sizing: border-box;
+
+    &:before {
+        content: '';
+        position: absolute; top: 45px; left: 50%; z-index: 10;
+        width: 272px; height: 272px;
+        background-color: #3c3937;
+        border-radius: 272px;
+        transform: translateX(-50%);
+        box-shadow: 0 8px 24px 0 rgba(255, 81, 0, 0.6);
+    }
+}
+
+.promotion__inner {
+    position: relative; z-index: 20;
+    max-width: 360px;
+    margin: 0 auto;
+    padding-top: 76px;
+    color: #fff;
+}
+
+.promotion__heading {
+    margin: 0 0 5px 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 500;
+
+    .heading__bold {
+        font-weight: 700;
+    }
+}
+
+.promotion__price {
+    display: -webkit-flex;
+    display: flex;
+    width: 320px; height: 76px;
+    margin: 12px auto 3px;
+    color: #3c3937;
+    background-color: #fff;
+
+    border-radius: 76px;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: flex-end;
+    align-content: flex-end;
+
+    .price-origin {
+        display: block;
+        width: 100%;
+        font-size: 12px;
+        font-weight: 600;
+        text-decoration: line-through;
+    }
+    .price-sales {
+        display: block;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 12px;
+        color: #ff1414;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 1em;
+
+        .highlight {
+            font-size: 40px;
+            letter-spacing: -1.25px;;
+        }
+    }
+}
+
+.promotion__link {
+    display: block;
+    width: 136px; height: 44px;
+    margin: 3px auto 0;
+    padding: 0;
+    border: none;
+    color: #3c3937;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: -0.36px;
+    background-color: #fff721;
+    outline: none;
+
+    .ico {
+        overflow: hidden;
+        display: inline-block;
+        position: relative;
+        width: 7px; height: 7px;
+        margin-top: 6px;
+        margin-left: 6px;
+        border-top: 3px solid #3c3937;
+        border-right: 3px solid #3c3937;
+        border-radius: 2px;
+        transform: translate(-50%,-50%) rotate(45deg);
+        vertical-align: middle;
+    }
+}
+
+.promotion__tip {
+    margin: 0;
+    padding: 60px 0 26px 0;
+    color: rgba(60, 57, 55, 0.5);
+    font-weight: 600;
+    letter-spacing: -0.75px;
+}

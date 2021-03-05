@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+.event-intro {
+	padding-top: 70px;
+	padding-bottom: 70px;
+	text-align: center;
+	background-color: #568257;
+
+	.intro__title {
+		margin-bottom: 80px;
+		color: #fff;
+		font-size: 28px;
+		font-weight: 700;
+		line-height: 34px;
+		letter-spacing: -1px;
+
+		@media (min-width: 1200px) {
+			margin-top: 36px;
+			margin-bottom: 40px;
+			font-size: 36px;
+			line-height: 44px;
+		}
+	}
+
+	.intro__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 200px; height: 60px;
+		margin: 0 auto;
+		color: #568257;
+		font-size: 16px;
+		font-weight: 700;
+		letter-spacing: -1px;
+		background-color: #fff;
+		border-radius: 60px;
+
+		@media (min-width: 1200px) {
+			width: 220px;
+			font-size: 18px;
+		}
+	}
+
+	.intro__inner {
+		overflow: hidden;
+		position: relative;
+		margin: 0 auto;
+		color: transparent;
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		background-size: 100%;
+	}
+	.intro__first {
+		width: 320px; height: 587px;
+		background: url("//res.tutoring.co.kr/res/images/evt/202102/tac/tac_event01_mo_img.png") no-repeat 50% 0;
+		background-size: 100%;
+
+		.intro__button {
+			position: absolute; top: 455px; left: 50%;
+			transform: translateX(-50%);
+		}
+
+		@media (min-width: 1200px) {
+			width: 999px; height: 835px;
+			background-image: url("//res.tutoring.co.kr/res/images/evt/202102/tac/tac_event01_pc_img.png");
+
+			.intro__button {
+				top: 675px;
+			}
+		}
+	}
+	.intro__second {
+		width: 320px;
+		margin-top: 30px;
+		padding-top: 612px;
+		background: url("//res.tutoring.co.kr/res/images/evt/202102/tac/tac_event02_mo_img.png") no-repeat 50% 0;
+		background-size: 100%;
+
+		@media (min-width: 1200px) {
+			width: 1101px; height: 1301px;
+			margin-top: 47px;
+			padding-top: 1069px;
+			background-image: url("//res.tutoring.co.kr/res/images/evt/202102/tac/2nd/tac_event02_pc_img.png");
+			box-sizing: border-box;
+		}
+	}
+
+	.intro__summary {
+		padding-top: 24px;
+		padding-bottom: 44px;
+		color: #fff;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 20px;
+		letter-spacing: -0.5px;
+
+		@media (min-width: 1200px) {
+			display: none;
+		}
+
+		.period {
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 1em;
+			letter-spacing: -1px;
+		}
+
+		.heading {
+			margin-top: 30px;
+			margin-bottom: 8px;
+			border-top: 1px solid rgba(255, 255, 255, 0.1);
+			padding-top: 30px;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 1em;
+			letter-spacing: -1px;
+		}
+		.description--small {
+			margin-top: 10px;
+			font-size: 12px;
+			line-height: 16px;
+
+			b {color: #FFE57B;}
+			& + p {margin-top: 20px;}
+		}
+	}
+	.summary__list {padding-top: 12px;}
+	.summary__list .list__item {padding-bottom: 28px;}
+	.summary__tag {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 72px; height: 30px;
+		margin: 0 auto 8px;
+		font-size: 12px;
+		font-weight: 700;
+		background-color: #79A87A;
+		border-radius: 30px;
+	}
+	.summary__guide {
+		display: inline-block;
+		margin-bottom: 15px;
+		border-bottom: 0.5px solid #fff;
+		font-size: 16px;
+		font-weight: 700;
+		letter-spacing: -0.5px;
+		;
+	}
+}

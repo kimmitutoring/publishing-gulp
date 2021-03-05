@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+.bridge__visual {
+    @include defaultText;
+
+    position: relative; z-index: 10;
+    height: 635px;
+    padding-top: 180px;
+    background-color: #de657a;
+    background-image: url('//res.tutoring.co.kr/res/images/evt/com/invite/brdg_startnow.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 162px;
+    background-size: auto 480px;
+
+    @media (min-width: 1024px) {
+        position: absolute; top: 324px; left: 50%;
+        width: 320px; height: 480px;
+        padding-top: 0;
+        background-position: 50% 0;
+        border-radius: 10px;
+        transform: translateX(-332px);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+    }
+}
+.visual__heading,
+.visual__description {
+    margin: 0; padding: 0;
+    color: rgba(0,0,0,0);
+}
+.visual__vod {
+    position: absolute; bottom: 0; left: 50%;
+    width: 100%;
+    padding-top: 56.38%;
+    background-color: #000;
+    transform: translateX(-50%);
+
+    @media (min-width: 361px) {
+        bottom: 20px;
+        width: 320px; height: 180px;
+        padding-top: 0;
+        border-radius: 10px;
+    }
+    @media (min-width: 1024px) {
+        display: none;
+    }
+
+    & > div {
+        position: absolute; top: 0; left: 0;
+        width: 100%;
+        min-width: 320px;
+        height: 100%;
+    }
+
+    iframe {
+        display: block;
+        width: 100%; height: 100%;
+
+        @media (min-width: 361px) {
+            border-radius: 10px;
+        }
+    }
+}

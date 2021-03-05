@@ -1,0 +1,250 @@
+@charset "utf-8";
+
+.plan__review {
+	padding-top: 0;
+	background-color: #fff;
+
+	&:before {
+		content: "";
+		display: block;
+		width: 320px; height: 1px;
+		margin: 0 auto 80px;
+		background-color: #ededed;
+	}
+
+	@media (min-width: $big_desktop_minimum_width) {
+		margin-top: -80px;
+		padding-top: 120px;
+		padding-bottom: 120px;
+
+		&:before {display: none;}
+	}
+
+	.section__heading {
+		letter-spacing: 0;
+	}
+
+	.review__count {
+		margin: 20px auto 0;
+
+		@media (min-width: $big_desktop_minimum_width) {
+			margin-top: 40px;
+		}
+
+		.count__box {
+			display: flex;
+			width: 181px; height: 28px;
+			margin: 0 auto 8px;
+			padding: 0 14px;
+			border: 1px solid #f15d5d;
+			font-size: 12px;
+			font-weight: 600;
+			align-items: center;
+			justify-content: space-between;
+			border-radius: 50px;
+			box-sizing: border-box;
+
+			@media (min-width: $big_desktop_minimum_width) {
+				width: 310px; height: 48px;
+				padding: 0 25px;
+				border-width: 2px;
+				font-size: 18px;
+			}
+		}
+		.count__title {
+			color: #f15d5d;
+			font-size: 10px;
+			font-weight: 500;
+			letter-spacing: -1px;
+
+			@media (min-width: $big_desktop_minimum_width) {
+				font-size: 18px;
+			}
+		}
+		.review__score {
+			height: 10px;
+			font-size: 12px;
+
+			.score__bar {width: 50px;}
+		}
+	}
+
+	.review__content {
+		overflow: hidden;
+		overflow-x: auto;
+		margin-top: 30px;
+		padding-bottom: 30px;
+
+		@media (min-width: $big_desktop_minimum_width) {
+			margin-top: 40px;
+		}
+
+		&::-webkit-scrollbar {display: none;}
+	}
+	.review__list {
+		display: inline-block;
+		vertical-align: top;
+		white-space: nowrap;
+		font-size: 0;
+
+		.list__item {
+			display: inline-block;
+			width: 264px;
+			margin-left: 16px;
+			vertical-align: top;
+			text-align: left;
+			white-space: normal;
+
+			@media (min-width: $big_desktop_minimum_width) {
+				width: 352px;
+				margin: 0 12px;
+			}
+		}
+	}
+
+	.review__item {
+		display: block;
+		padding: 20px;
+		box-shadow: 12px 12px 30px rgba(0,0,0,.05);
+		background-color: #fff;
+		border-radius: 9px;
+		box-sizing: border-box;
+
+		@media (min-width: $big_desktop_minimum_width) {
+			padding: 27px;
+		}
+	}
+	.review__head {
+		margin-bottom: 18px;
+		line-height: 1em;
+
+		@media (min-width: $big_desktop_minimum_width) {
+			margin-bottom: 25px;
+		}
+	}
+
+	.review__thumb {
+		float: left;
+		margin-right: 10px;
+		border-radius: 50%;
+
+		@media (min-width: $big_desktop_minimum_width) {
+			width: 48px; height: 48px;
+			margin-left: 13px;
+		}
+	}
+	.review__tag {
+		display: inline-block;
+		margin-bottom: 2px;
+		padding: 2px 3px;
+		background: #f15d5d;
+		border-radius: 3px;
+		color: #fff;
+		font-size: 10px;
+		font-weight: 600;
+		line-height: 12px;
+		letter-spacing: -0.4px;
+		vertical-align: top;
+
+		@media (min-width: $big_desktop_minimum_width) {
+			padding: 2px 8px;
+			font-size: 12px;
+			line-height: 17px;
+			border-radius: 5px;
+		}
+
+		&--global {background-color: #41CCD4;}
+	}
+	.review__tutor {
+		overflow: hidden;
+		color: #333;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 18px;
+		letter-spacing: -0.5px;
+
+		@media (min-width: $big_desktop_minimum_width) {
+			font-size: 18px;
+			line-height: 24px;
+		}
+	}
+	.review__desc {
+		overflow: hidden;
+		display: -webkit-box;
+		height: 54px;
+		color: #555;
+		font-size: 12px;
+		line-height: 18px;
+		letter-spacing: -0.5px;
+		word-break: break-all;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+
+		@media (min-width: $big_desktop_minimum_width) {
+			height: 72px;
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 24px;
+		}
+	}
+	.review__detail {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 15px;
+
+		@media (min-width: $big_desktop_minimum_width) {
+			margin-top: 20px;
+		}
+	}
+
+	.review__name {
+		color: #333;
+		font-size: 12px;
+    	line-height: 12px;
+		letter-spacing: -.6px;
+		
+		@media (min-width: $big_desktop_minimum_width) {
+			font-size: 16px;
+		}
+	}
+
+	.review__score {
+		display: flex;
+		height: 13px;
+		justify-content: center;
+		align-items: center;
+		color: #333;
+		font-family: $font-roboto;
+		font-size: 14px;
+		font-weight: 600;
+		letter-spacing: -0.5px;
+
+		@media (min-width: $big_desktop_minimum_width) {
+			height: 18px;
+			font-size: 18px;
+		}
+
+		.score__bar,
+		.score__bar .status {
+			background: url("//res.tutoring.co.kr/res/images/img/plans/img_greystar_2x.png") no-repeat 0 0;
+			background-size: auto 100%;
+		}
+
+		.score__bar {
+			display: inline-flex;
+			width: 64px; height: 100%;
+			margin-right: 5px;
+
+			@media (min-width: $big_desktop_minimum_width) {
+				width: 90px;
+			}
+
+			.status {
+				display: block;
+				height: 100%;
+				background-image: url("//res.tutoring.co.kr/res/images/img/plans/img_yellowstar_2x.png");
+			}
+		}
+	}
+}

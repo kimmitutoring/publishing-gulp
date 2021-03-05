@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+.withCake-spot {
+    position: relative; z-index: 10;
+    border-bottom: 75px solid #f8f8fa;
+    background-color: #ff6600;
+    background-image: url($withCake-cdn-url + 'bg_pattern.png');
+    background-position: 0 0;
+    background-size: 176px 176px;
+    background-repeat: repeat;
+
+    .spot-content {
+        padding-bottom: 145px;
+
+        @include tablet {
+            padding-bottom: 160px;
+        }
+    }
+
+    .spot-han {
+        position: absolute; bottom: 0; right: 0;
+        width: 50%; height: 330px;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: 15px 0;
+
+        @include tablet {
+            bottom: -175px;
+            height: 509px;
+            background-position: 100px 0;
+        }
+    }
+
+    .flag {
+        height: 316px;
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: 360px 316px;
+        text-align: center;
+    }
+
+    .text {
+        position: relative; z-index: 10;
+        max-width: 308px;
+        margin: 0 auto;
+        padding: 0 10px;
+        color: #333;
+        font-size: 14px;
+        line-height: 1.43em;
+        box-sizing: border-box;
+
+        @include tablet {
+            max-width: 636px;
+            padding-top: 20px;
+            font-size: 18px;
+            line-height: 1.48em;
+        }
+
+        p {
+            margin-top: 23px;
+        }
+    }
+    .marks {
+        display: inline-block;
+        width: 20px; height: 18px;
+        margin-right: 5px;
+        margin-bottom: 4px;
+        background-image: url($withCake-cdn-url + 'ico_bb.png');
+        background-size: 100% auto;
+        vertical-align: bottom;
+
+        @include tablet {
+            width: 27px; height: 25px;
+        }
+    }
+    .highlight {
+        overflow: hidden;
+        display: inline-block;
+        width: 154px; height: 22px;
+        background-image: url($withCake-cdn-url + 'txt_say_native.png');
+        background-size: 100% auto;
+        color: rgba(0, 0, 0, 0);
+
+        @include tablet {
+            width: 203px; height: 29px;
+        }
+    } 
+    .video-area {
+        position: absolute; bottom: -87px; left: 50%;
+        transform: translateX(-50%);
+
+        @include tablet {
+            transform: translateX(-310px); 
+        }
+    }
+}

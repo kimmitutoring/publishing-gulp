@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+.summer-friends .item_review {
+    padding-top: 50px;
+    background-color: #f5f5fa;
+    word-break: keep-all;
+
+    .desc_story {
+        padding-right: 30px;
+        padding-left: 30px;
+        letter-spacing: -1px;
+    }
+    .tit_sub {
+        display: block;
+        margin: 0 30px 16px;
+        color: #6759ef;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -1px;
+    }
+    .tit_item {
+        display: block;
+        margin-bottom: 40px;
+        color: #333;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 41px;
+        letter-spacing: -2px;
+    }
+    .txt_writer {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #333;
+        font-size: 16px;
+    }
+    .txt_review {
+        color: #666;
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+    // swiper
+    .swiper-container {
+        overflow: hidden;
+        position: relative;
+        width: 100%; height: 750px;
+    }
+    .swiper-slide {
+        height: 860px;
+        background-color: #f5f5fa;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: 0 100%;
+        opacity: 0;
+    }
+    .slide_01 {background-image: url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/story_01_m.png");}
+    .slide_02 {background-image: url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/story_02_m.png");}
+    .slide_03 {background-image: url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/story_03_m.png");}
+    .slide_04 {background-image: url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/story_04_m.png");}
+
+    @media (min-width: 768px) {
+        .inner_item {
+            width: 360px;
+            margin: 0 auto;
+        }
+        .swiper-container {
+            height: 800px;
+        }
+    }
+
+    .btn_swiper {
+        display: flex;
+        position: absolute; top: 467px;
+        width: 50px; height: 50px;
+        background: #6759ef;
+        outline: none;
+        align-content: center;
+        justify-items: center;
+
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 22px;
+            margin: auto;
+            background-image: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/ico_home_190402.png);
+            background-repeat: no-repeat;
+            background-size: 420px 400px;
+            vertical-align: top;
+        }
+
+        &.swiper-button-prev {left: 30px;}
+        &.swiper-button-prev:before {background-position: -350px -70px;}
+        &.swiper-button-next {left: 80px;}
+        &.swiper-button-next:before {background-position: -366px -70px;}
+    }
+    
+    
+}

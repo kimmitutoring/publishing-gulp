@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.event_march {
+	min-width: 360px;
+	padding-bottom: 78px;
+	background-color: #eee;
+
+	@media (min-width: 1200px) {
+		padding-top: 137px;
+		padding-bottom: 120px;
+	}
+}

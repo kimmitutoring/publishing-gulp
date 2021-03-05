@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+.summer-friends {
+    .item_vod .tit_item {font-weight: 600;}
+    .item_review {padding-bottom: 0;}
+    .item_review .bundle_review {display: none;}
+    .item_review .bg_slice {display: none;}
+    .item_review .inner_item {overflow: hidden;}
+
+    @media (max-width: 767px) {
+        .item_review .inner_item {height: 815px;}
+    }
+    @media (min-width: 768px) and (max-width: 1199px) {
+        .item_review .inner_item {height: 1230px;}
+        .item_vod {padding-bottom: 120px; background-size: 100% auto;}
+    }
+
+    @media (min-width: 1200px) {
+        .item_review {z-index: 21; margin-top: -105px; padding-top: 80px;}
+        .item_review .bundle_review {display: block; padding-bottom: 65px;}
+    }
+}

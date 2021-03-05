@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+.moving_master .content03 {
+    padding-top: 30px;
+    background-color: $gray-03;
+    text-align: center;
+
+    .content__heading {
+        width: 300px;
+        margin: 0 auto;
+        padding-top: 26px;
+        padding-bottom: 26px;
+        background-color: #fff;
+
+        @media (min-width: 768px) {
+            width: 322px;
+        }
+    }
+
+    .content__text ~ .content__image {
+        width: 100%;
+        max-width: 360px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    &__head {
+        width: 300px;
+        margin: 0 auto;
+        padding-top: 32px;
+        text-align: left;
+
+        @media (min-width: 768px) {
+            width: 700px;
+            text-align: center;
+
+            br {display: none;}
+        }
+
+        .head__bubble {
+            position: relative;
+            display: inline-block;
+            height: 30px;
+            margin-bottom: 10px;
+            padding-right: 20px;
+            padding-left: 20px;
+            color: $purple-01;
+            border: 2px solid $purple-01;
+            font-size: 11px;
+            font-weight: 600;
+            line-height: 26px;
+            box-sizing: border-box;
+            border-radius: 30px;
+
+            &:before {
+                content: "";
+                position: absolute; bottom: -5px; left: 50%;
+                width: 6px; height: 6px;
+                background-color: $gray-03;
+                border-width: 2px;
+                border-color: transparent $purple-01 $purple-01 transparent;
+                border-style: solid;
+                transform: translateX(-50%) rotate(45deg);
+            }
+        }
+        .head__title {
+            display: block;
+            font-size: 20px;
+            line-height: 1.8em;
+            letter-spacing: -1px;
+
+            b {color: $purple-01;}
+        }
+    }
+
+    &__inner {
+        padding-bottom: 30px;
+
+        &:nth-child(odd),
+        &:nth-child(odd) ~ .content03__inner .head__bubble:before {background-color: #fff;}
+
+        img[width='460'],
+        img[width='646'] {display: none;}
+
+        @media (min-width: 768px) {
+            img[width='300'],
+            img[width='320'] {display: none;}
+            img[width='460'],
+            img[width='646'] {display: block;}
+        }
+    }
+
+    .inner__desc {
+        width: 300px;
+        margin: 14px auto;
+        color: #666;
+        font-size: 16px;
+        line-height: 1.9em;
+        text-align: left;
+
+        &--small {
+            color: #333;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+
+    &__image {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        background-image: url('//res.tutoring.co.kr/res/images/pay/movie/app/real_blur.png');
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: 440px auto;
+
+        @media (min-width: 768px) {
+            background-image: url('//res.tutoring.co.kr/res/images/pay/movie/web/poster.png');
+            background-size: 768px auto;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: 250px;
+            margin: 0 auto;
+            
+            @media (min-width: 768px) {
+                height: 400px;
+                margin-bottom: -50px;
+                opacity: 0;
+            }
+        }
+
+        .content__text {
+            color: $gray-01;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: (14 * 1.8) + px;
+            text-align: center;
+        }
+
+        .image__desc {
+            display: block;
+            width: 320px;
+            margin: -10px auto 20px;
+            color: #838383;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: right;
+
+            @media (min-width: 768px) {
+                width: 700px;
+                margin-right: auto;
+                margin-left: auto;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}

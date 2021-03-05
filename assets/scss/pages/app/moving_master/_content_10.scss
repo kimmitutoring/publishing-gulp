@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+.moving_master .content10 {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    background-color: #494949;
+    letter-spacing: -0.5px;
+
+    .content__heading {
+        padding-bottom: 16px;
+        color: #fff;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            padding-top: 10px;
+            padding-bottom: 33px;
+            font-size: 24px;
+        }
+    }  
+
+    &__list {
+        display: inline-block;
+        padding-right: 22px;
+        padding-left: 22px;
+        font-size: 0;
+        vertical-align: top;
+        white-space: nowrap;
+
+        @media (min-width: 768px) {
+            display: block;
+            margin-bottom: -30px;
+            padding: 0;
+            white-space: normal;
+        }
+
+        .list__item {
+            display: inline-block;
+            width: 200px;
+            margin: 0 8px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400;
+            vertical-align: top;
+            white-space: normal;
+
+            @media (min-width: 768px) {
+                width: 315px;
+                height: 273px;
+            }
+        }
+        .list__image {
+            position: relative;
+            overflow: hidden;
+            width: 200px; height: 151px;
+
+            @media (min-width: 768px) {
+                width: 100%;
+                margin-bottom: 8px;
+            }
+
+            img {
+                display: block;
+            }
+        }
+        .list__title {
+            display: block;
+            margin-bottom: 3px;
+            padding-top: 8px;
+            padding-bottom: 10px;
+            font-weight: 400;
+            border-bottom: 1px solid $gray-02;
+
+            @media (min-width: 768px) {
+                font-size: 16px;
+            }
+        }
+        .list__count {
+            display: inline-block;
+            width: 30px;
+            font-weight: 600;
+        }
+        .list__desc {
+            line-height: 1.88em;
+
+            br {display: none;}
+
+            @media (min-width: 768px) {
+                font-size: 12px;
+
+                br {display: block;}
+            }
+        }
+    }
+
+    &__list__wrapper {
+        overflow: hidden;
+        overflow-x: auto;
+        height: 280px;
+
+        @media (min-width: 768px) {
+            overflow: hidden;
+            width: 662px; height: auto;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+}

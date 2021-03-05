@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+.habit-spot {
+	@include text-large;
+
+	overflow: hidden;
+	position: relative;
+	padding-top: 60px;
+	background-color: #FFD400;
+
+	@media (min-width: 1200px) {
+		padding-top: 216px;
+
+		br {display: none;}
+	}
+
+	&:before {
+		content: "";
+		position: absolute; top: 470px; left: 50%; z-index: 10;
+		width: 253px; height: 337px;
+		background: url("//s3.ap-northeast-2.amazonaws.com/junior.tutoring.co.kr/uploads/images/browse/habit/title_tudal_small.png") no-repeat 50% 0;
+		background-size: 100%;
+		transform: translateX(27px);
+
+		@media (min-width: 1200px) {
+			top: 553px;
+			width: 394px; height: 530px;
+			transform: translateX(226px);
+		}
+	}
+
+	.heading {
+		width: 222px; height: 468px;
+		margin: 18px auto 16px;
+		color: transparent;
+		font-size: 10px;
+		background: url("https://s3.ap-northeast-2.amazonaws.com/junior.tutoring.co.kr/uploads/images/browse/habit/title_mo_img.png") no-repeat 50% 0;
+		background-size: 100% auto;
+
+		@media (min-width: 1200px) {
+			width: 805px; height: 434px;
+			margin-top: 36px;
+			margin-bottom: 52px;
+			background-image: url("//s3.ap-northeast-2.amazonaws.com/junior.tutoring.co.kr/uploads/images/browse/habit/title_pc_img.png");
+		}
+	}
+
+	.period {
+		display: inline-block;
+		width: 222px;
+		margin: 0 auto 66px;
+		line-height: 27px;
+		letter-spacing: -1.5px;
+		text-align: left;
+
+		@media (min-width: 1200px) {
+			width: 805px;
+			margin-bottom: 100px;
+			font-size: 56px;
+			line-height: 63px;
+			letter-spacing: -2.3px;
+		}
+	}
+
+	.banner {
+		position: relative; z-index: 20;
+		display: flex;
+		height: 280px;
+		color: rgba(255, 255, 255, 0.5);
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 28px;
+		letter-spacing: -1px;
+		text-align: center;
+		background-color: #000;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		br {display: block;}
+
+		@media (min-width: 1200px) {
+			height: 529px;
+			font-size: 40px;
+			line-height: 50px;
+		}
+
+		&:after {
+			content: "";
+			width: 92px; height: 94px;
+			margin-top: 30px;
+			background: url("//s3.ap-northeast-2.amazonaws.com/junior.tutoring.co.kr/uploads/images/logo/tutoring/logo_w_2_ko%402x.png") no-repeat 50% 0;
+			background-size: 100%;
+
+			@media (min-width: 1200px) {
+				width: 130px; height: 132px;
+				margin-top: 50px;
+			}
+		}
+	}
+}

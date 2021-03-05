@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+// base
+@import 'utils/variables';
+@import 'utils/mixin';
+
+// webfont
+@import 'fonts/NotoSans';
+@import 'fonts/HGGGothicssi';
+@import 'fonts/SpoqaHanSans';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+// common
+@import 'base/reset';
+@import 'pages/app/common';
+
+// layout
+@import 'layout/common';
+@import 'layout/header';
+@import 'layout/footer';
+
+// vendors
+@import 'vendors/swiper';
+
+// component
+@import 'components/app_landing';
+@import 'components/modal';
+@import 'components/special_coupon';
+
+// pages
+@import 'pages/web/common';
+@import 'pages/web/main_common';
+@import 'pages/web/main_spot';
+@import 'pages/web/main_about';
+@import 'pages/web/home_custom';
+@import 'pages/web/main_price';
+@import 'pages/web/main_vod';
+@import 'pages/web/main_review';
+@import 'pages/web/main_lab';
+@import 'pages/web/main_animation';
+@import 'pages/web/main_alpha';
+@import 'pages/web/main_fixed';
+@import 'pages/web/main_award';
+
+// sub pages
+@import 'pages/web/login';
+@import 'pages/web/plan';
+// @import 'pages/web/career';
+@import 'pages/web/packages';
+@import 'pages/web/tutor';
+@import 'pages/web/tutor_list';
+@import 'pages/web/tutor_detail';
+@import 'pages/web/topic';
+@import 'pages/web/topic_list';
+@import 'pages/web/topic_detail';
+@import 'pages/web/editors_pick';
+@import 'pages/web/magazine_detail';
+@import 'pages/web/review';
+@import 'pages/web/help';
+@import 'pages/web/company';
+@import 'pages/web/crew';
+@import 'pages/web/coupon';
+
+// 튜터링 알파 홈
+@import 'pages/app/alpha/home_spot';
+@import 'pages/app/alpha/home_intro';
+@import 'pages/app/alpha/home_course';
+@import 'pages/app/alpha/home_sidebar';
+@import 'pages/app/alpha/home_bottom';
+
+// 튜터링 알파 상세
+@import 'pages/app/alpha/detail_spot';
+@import 'pages/app/alpha/detail_summary';
+@import 'pages/app/alpha/detail_tab';
+@import 'pages/app/alpha/detail_review';
+@import 'pages/app/alpha/detail_intro';
+@import 'pages/app/alpha/detail_topic';
+@import 'pages/app/alpha/detail_order';
+@import 'pages/app/alpha/detail_sidebar';
+@import 'pages/app/alpha/detail_price';
+@import 'pages/app/alpha/detail_package';
+@import 'pages/app/alpha/detail_basic';
+@import 'pages/app/alpha/detail_notice';
+@import 'pages/app/alpha/detail_guide';
+@import 'pages/app/alpha/detail_sales';
+
+// 리뷰 홈
+@import 'pages/app/review/home_spot';
+@import 'pages/app/review/home_recommend';
+@import 'pages/app/review/home_store';
+@import 'pages/app/review/home_banner';
+
+// 무빙마스터
+// @import 'pages/app/moving_master/common';
+// @import 'pages/app/moving_master/spot';
+// @import 'pages/app/moving_master/content_01';
+// @import 'pages/app/moving_master/content_02';
+// @import 'pages/app/moving_master/content_03';
+// @import 'pages/app/moving_master/content_04';
+// @import 'pages/app/moving_master/content_05';
+// @import 'pages/app/moving_master/content_06';
+// @import 'pages/app/moving_master/content_07';
+// @import 'pages/app/moving_master/content_08';
+// @import 'pages/app/moving_master/content_09';
+// @import 'pages/app/moving_master/content_10';
+// @import 'pages/app/moving_master/content_11';
+// @import 'pages/app/moving_master/content_12';
+// @import 'pages/app/moving_master/content_13';
+// @import 'pages/app/moving_master/content_14';
+// @import 'pages/app/moving_master/package';
+// @import 'pages/app/moving_master/series';
+// @import 'pages/app/moving_master/notice';
+// @import 'pages/app/moving_master/fixed_bar';
+// @import 'pages/app/moving_master/sidebar';
+
+// 짜요 수강권 홈
+@import 'pages/app/jiayou/home';
+@import 'pages/app/jiayou/detail';
+
+// b2b 프로그램
+@import 'pages/web/b2bProgram/common';
+@import 'pages/web/b2bProgram/template';
+@import 'pages/web/b2bProgram/visual';
+@import 'pages/web/b2bProgram/shape_list';
+@import 'pages/web/b2bProgram/advantage';
+@import 'pages/web/b2bProgram/step_list';
+@import 'pages/web/b2bProgram/partner';
+@import 'pages/web/b2bProgram/reviewer';
+@import 'pages/web/b2bProgram/benefit';
+@import 'pages/web/b2bProgram/members';
+@import 'pages/web/b2bProgram/complete';
+@import 'pages/web/b2bProgram/etc';
+
+// 회원가입
+@import 'pages/web/signup/common';
+@import 'pages/web/signup/component';
+@import 'pages/web/signup/template';
+@import 'pages/web/signup/variation';
+
+// 2020 renewal
+@import 'pages/web/2020/all';
+@import 'pages/web/2020/plan_event';
+@import 'pages/web/2020/plan_section';
+@import 'pages/web/2020/plan_section2';
+@import 'pages/web/2020/plan_summary';
+@import 'pages/web/2020/plan_review';
+@import 'pages/web/2020/plan_partner';
+@import 'pages/web/2020/plan_tutor';
+@import 'pages/web/2020/plan_limit';
+@import 'pages/web/2020/plan_point';
+@import 'pages/web/2020/plan_benefit';
+@import 'pages/web/2020/pass';
+@import 'pages/web/2020/review';
+@import 'pages/web/2020/pass_tab';
+@import 'pages/web/2020/pass_spot';
+@import 'pages/web/2020/pass_summary';
+@import 'pages/web/2020/pass_option';
+@import 'pages/web/2020/pass_detail';
+@import 'pages/web/2020/circle_effect';
+@import 'pages/web/2020/modal_certificate';
+
+// desktop 버전 분기
+@import 'pages/app/desktop';

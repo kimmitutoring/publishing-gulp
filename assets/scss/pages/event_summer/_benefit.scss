@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+.summer-friends .benefit {
+    padding: 32px 30px 25px 0;
+    background-color: #fff6df;
+    text-align: center;
+
+    @media (min-width: 1200px) {
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+
+    &__title {
+        position: absolute;
+        color: transparent;
+        font-size: 10px;
+    }
+
+    &__wrapper {
+        position: relative;
+        width: 327px; height: 284px;
+        margin: 0 auto;
+        padding: 87px 32px 0 60px;
+        background: url("//cdn.tutoring.co.kr/uploads/page/summersummer/receipt_img2_360w.png") no-repeat 50% 0;
+        background-size: 100% auto;
+        box-sizing: border-box;
+
+        @media (min-width: 1200px) {
+            width: 589px; height: 502px;
+            padding: 157px 72px 0 120px;
+            background-image: url("//cdn.tutoring.co.kr/uploads/page/summersummer/receipt_img_1600w.png");
+        }
+    }
+
+    &__list .list__item {
+        display: flex;
+        margin-bottom: 5px;
+        padding-right: 20px;
+        padding-left: 20px;
+        color: #585858;
+        font-size: 12px;
+        letter-spacing: -0.5px;
+        line-height: 1.4em;
+        justify-content: space-between;
+
+        @media (min-width: 1200px) {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        &--package {
+            margin-top: 8px;
+            color: #1e1e1e;
+            font-size: 16px;
+            font-weight: 600;
+
+            @media (min-width: 1200px) {
+                margin-top: 15px;
+                font-size: 24px;
+            }
+        }
+    }
+
+    &__price {
+        margin-top: 40px;
+        color: #4a4a4a;
+        font-size: 10px;
+        line-height: 1.7em;
+        letter-spacing: -0.5px;
+
+        @media (min-width: 1200px) {
+            margin-top: 60px;
+            font-size: 16px;
+        }
+        
+        .discount {
+            position: absolute; top: 160px; left: 9px;
+            width: 67px;
+            color: #fff;
+            font-size: 28px;
+            font-family: $font-HGGGothicssi;
+            font-weight: 600;
+            line-height: 31px;
+            letter-spacing: -1px;
+            text-align: center;
+
+            @media (min-width: 1200px) {
+                top: 307px;
+                width: 135px;
+                font-size: 59px;
+                font-weight: 800;
+            }
+        }
+        .sales-price {
+            display: block;
+            margin-bottom: 5px;
+            color: #ff2f2f;
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 1em;
+            letter-spacing: -1px;
+            background: linear-gradient(#ff6363,#ff2f2f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            @media (min-width: 1200px) {
+                margin-bottom: 10px;
+                font-size: 65px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+.promotion-special {
+	position: relative;
+	padding-top: 55px;
+	padding-bottom: 55px;
+	background-color: #F1F1F1;
+	text-align: center;
+
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.heading {
+		margin-bottom: 30px;
+		color: #333;
+		font-size: 25px;
+		font-weight: 900;
+		line-height: 32px;
+		letter-spacing: -1px;
+
+		@media (min-width: 1200px) {
+			margin-bottom: 60px;
+			font-size: 36px;
+			line-height: 44px;
+
+			&:before {
+				content: "";
+				display: block;
+				width: 100px; height: 96px;
+				margin: 0 auto 20px;
+				background: url("//res.tutoring.co.kr/res/images/evt/202101/restart/restart_tudalup_img.png") no-repeat 50% 0;
+				background-size: 100%;
+			}
+		}
+	}
+	.heading-medium {
+		margin-bottom: 30px;
+		color: #333;
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 32px;
+		letter-spacing: -2px;
+		text-align: center;
+
+		br {display: none;}
+		
+		@media (min-width: 1200px) {
+			margin-right: 191px;
+			font-size: 36px;
+			line-height: 50px;
+			text-align: left;
+
+			br {display: block;}
+		}
+	}
+	
+	.description {
+		margin-top: 36px;
+		margin-bottom: 72px;
+		color: #333;
+		font-size: 18px;
+		line-height: 30px;
+		letter-spacing: -1px;
+
+		@media (min-width: 1200px) {
+			margin-top: 50px;
+			margin-bottom: 88px;
+			font-size: 25px;
+			line-height: 32px;
+		}
+	}
+
+	.special__list {
+		max-width: 200px;
+    	margin: 0 auto;
+		text-align: left;
+
+		@media (min-width: 1200px) {
+			max-width: 100%;
+			margin: 0;
+		}
+	
+		.list__item {
+			padding: 4px 0;
+			letter-spacing: -0.67px;
+			white-space: nowrap;
+		}
+	
+		.text {
+			position: relative;
+			color: #000;
+			font-size: 14px;
+			line-height: 19px;
+
+			@media (min-width: 1200px) {
+				font-size: 25px;
+				font-weight: 300;
+				line-height: 42px;
+			}
+	
+			&:before {
+				content: "";
+				position: absolute; top: 50%; left: -23px;
+				width: 15px; height: 15px;
+				background-image: url("//res.tutoring.co.kr/res/images/img/plans/img_star_3x.png");
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				background-size: 100%;
+				transform: translateY(-50%);
+
+				@media (min-width: 1200px) {
+					left: -40px;
+					width: 24px; height: 24px;
+				}
+			}
+		}
+		.tag {
+			display: inline-block;
+			margin-left: 5px;
+			padding: 2px 7px;
+			color: #fff;
+			background-color: #5D04D9;
+			border-radius: 3px;
+			font-size: 8px;
+			font-weight: 700;
+			line-height: 12px;
+			letter-spacing: -0.4px;
+
+			@media (min-width: 1200px) {
+				margin: -5px 0 5px 12px;
+				padding-right: 12px;
+				padding-left: 12px;
+				font-size: 14px;
+				line-height: 24px;
+				border-radius: 5px;
+				vertical-align: middle;
+			}
+		}
+	}
+	.special__image {
+		width: 300px; height: 278px;
+		margin: 0 auto;
+		color: transparent;
+		background: url("//res.tutoring.co.kr/res/images/img/plans/img_section3_text_circle.png") no-repeat 50% 0;
+		background-size: 100%;
+
+		@media (min-width: 1200px) {
+			width: 855px; height: 310px;
+			background-image: url("//res.tutoring.co.kr/res/images/img/plans/img_section3_text_circle_pc.png");
+		}
+	}
+
+	@media (min-width: 1200px) {
+		.special__benefit {
+			display: flex;
+			justify-content: center;
+			padding-bottom: 30px;
+
+			.heading {
+				margin-right: 100px;
+    			text-align: left;
+			}
+			.special__list {margin: 0;}
+		}
+	}
+}

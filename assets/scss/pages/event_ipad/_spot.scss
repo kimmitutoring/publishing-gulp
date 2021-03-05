@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.ipad-wrap {
+	.spot {
+		position: relative;
+		height: 662px;
+		background-image: url(//res.tutoring.co.kr/res/images/evt/202008/shooting/shooting_main_bg.jpg);
+		background-size: cover;
+		background-position: center;
+
+		@include tablet {
+			background-image: url(//res.tutoring.co.kr/res/images/evt/202008/shooting/shooting_main_bg_768w.jpg);
+		}
+
+		@include desktop {
+			height: 900px;
+			background-image: url(//res.tutoring.co.kr/res/images/evt/202008/shooting/shooting_main_bg_1600w.jpg);
+			background-position: 50% 0;
+			background-size: 1600px 900px;
+			background-color: #000;
+		}
+
+		.sticker {
+			position: absolute;
+			left: calc(50% + 30px);
+			top: 55%;
+			width: 131px;
+			height: 130px;
+			background-image: url(//res.tutoring.co.kr/res/images/evt/202008/shooting/shooting_main_sticker.png);
+			background-size: cover;
+
+			@include desktop {
+				left: calc(50% + 200px);
+				top: 68%;
+			}
+		}
+	}
+}

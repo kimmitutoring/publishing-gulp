@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+.plan__section2 {
+	padding-top: 62px;
+	color: #fff;
+	background-color: #7F64FA;
+
+	@media (min-width: 768px) and (max-width: 1100px) {
+		padding-top: 45px;
+		padding-bottom: 111px;
+	}
+	@media (min-width: 1200px) {
+		padding-top: 120px;
+		padding-bottom: 200px;
+	}
+
+	.section2__container {
+		padding: 68px 0;
+
+		@media (min-width: 768px) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 35px 0;
+		}
+		@media (min-width: 1200px) {
+			padding: 68px 0;
+		}
+
+		@media (min-width: 768px) and (max-width: 1199px) {
+			&--1st {align-items: flex-start;}
+			&--3rd {align-items: flex-end;}
+		}
+	}
+	.section2__content {
+		position: relative;
+		width: 200px;
+		margin: 0 auto;
+
+		@media (min-width: 768px) and (max-width: 1199px) {
+			margin: 0 22px;
+		}
+		@media (min-width: 1200px) {
+			width: 384px;
+			margin: 0 50px;
+		}
+	}
+	.section2__image {
+		width: 196px; height: 377px;
+		margin: 20px auto 0;
+		background-color: #fff;
+		box-shadow: 60px 60px 150px rgba(0, 0, 0, 0.15);
+
+		img {
+			display: block;
+			width: 100%;
+			vertical-align: top;
+		}
+
+		@media (min-width: 768px) and (max-width: 1199px) {
+			margin: 0 22px;
+		}
+		@media (min-width: 1200px) {
+			width: 406px; height: 784px;
+			margin: 0 50px;
+		}
+	}
+	
+	.section2__text {
+		display: block;
+		margin-bottom: 10px;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 24px;
+
+		@media (min-width: 1200px) {
+			margin-bottom: 20px;
+			font-size: 25px;
+			line-height: 29px;
+		}
+	}
+	.section2__title {
+		position: relative;
+		font-size: 24px;
+		font-weight: 600;
+		font-family: $font-roboto;
+		line-height: 29px;
+		letter-spacing: -1px;
+
+		@media (min-width: 1200px) {
+			font-size: 50px;
+			line-height: 60px;
+			letter-spacing: -1px;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			background-size: 100% auto;
+		}
+	}
+	.section2__desc {
+		margin-top: 14px;
+		color: #BFB2FD;
+		font-size: 14px;
+		line-height: 21px;
+		letter-spacing: -0.5px;
+		word-break: break-all;
+
+		@media (min-width: 1200px) {
+			margin-top: 30px;
+			font-size: 25px;
+			line-height: 45px;
+			letter-spacing: -1px;
+		}
+	}
+
+	// 컨테이너 방향
+	.section2__container--even {
+		.section2__content {order: 2;}
+		.section2__image {order: 1;}
+	}
+
+	// 타이틀 화살표
+	.section2__container--1st .section2__title:before {
+		top: -81px; left: -11px;
+		width: 220px; height: 171px;
+		background-image: url("//res.tutoring.co.kr/res/images/img/plans/img_bubble1_3x.png");
+
+		@media (min-width: 768px) {
+			top: -75px; left: -80px;
+			height: 165px;
+			background-image: url("//res.tutoring.co.kr/res/images/img/plans/img_bubble1_2x.png");
+		}
+		@media (min-width: 1200px) {
+			top: -155px; left: -160px;
+			width: 468px; height: 349px;
+		}
+	}
+	.section2__container--2nd .section2__title:before {
+		top: -65px; left: -20px;
+		width: 269px; height: 131px;
+		background-image: url("//res.tutoring.co.kr/res/images/img/plans/img_bubble2_3x.png");
+
+		@media (min-width: 1200px) {
+			top: -136px; left: -30px;
+			width: 562px; height: 267px;
+		}
+	}
+	.section2__container--3rd .section2__title:before {
+		top: -66px; left: -32px;
+		width: 235px; height: 160px;
+		background-image: url("//res.tutoring.co.kr/res/images/img/plans/img_bubble3_3x.png");
+
+		@media (min-width: 1200px) {
+			top: -140px; left: -65px;
+			width: 493px; height: 340px;
+		}
+	}
+}

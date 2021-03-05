@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+.landing__visual {
+    @include defaultText;
+
+    position: relative;
+    height: 608px;
+    background-color: #000f3d;
+    background-image: url('//res.tutoring.co.kr/res/images/evt/com/invite/invite_title--ipad.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: auto 610px;
+
+    @at-root :lang(en) & {
+        background-image: url('//res.tutoring.co.kr/res/images/evt/com/invite/inviteEN_title--ipad.jpg');
+    }
+
+    @at-root :lang(zh) & {
+        background-image: url('//res.tutoring.co.kr/res/images/evt/com/invite/inviteZH_title--ipad.jpg');
+    }
+
+    .visual__heading {
+        margin: 0; padding: 0;
+        color: rgba(0, 0, 0, 0);
+    }
+}
+
+.landing__spot {
+    @include defaultText;
+    @include roundBox(#fff);
+
+    position: absolute; top: 100%; right: 0; left: 0;
+    max-width: 300px; height: 167px;
+    margin-top: -50px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 13px;
+    text-align: center;
+
+    @at-root :lang(en) & {
+        padding: 13px 0;
+        letter-spacing: -1px;
+    }
+
+    b {
+        font-weight: 700;
+    }
+
+    .spot__image {
+        display: block;
+        margin: -30px auto 10px;
+    }
+    .spot__text {
+        &--medium {
+            display: block;
+            font-size: 20px;
+            font-weight: 400;
+        }
+        &--small {
+            font-size: 14px;
+        }
+    }
+}

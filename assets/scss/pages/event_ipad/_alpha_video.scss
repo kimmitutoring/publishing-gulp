@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+.ipad-wrap {
+	.alpha-video {
+		padding: 58px 0 35px;
+		background-color: #0B1F3C;
+
+		@include desktop {
+			padding: 120px 0 120px;
+		}
+
+		&__subtitle {
+			font-weight: 500;
+			letter-spacing: -1px;
+			color: $main-color;
+			text-align: center;
+			line-height: 1;
+
+			@include desktop {
+				font-size: 20px;
+			}
+		}
+
+		&__title {
+			font-weight: 700;
+			text-align: center;
+			letter-spacing: -2px;
+			line-height: 1.4em;
+			font-size: 32px;
+			color: #fff;
+
+			@include desktop {
+				font-size: 40px;
+			}
+		}
+
+		&__list {
+			display: flex;
+			flex-wrap: wrap;
+			max-width: 297px;
+			margin: 0 auto;
+			margin-top: 29px;
+
+			@include desktop {
+				max-width: 614px;
+			}
+
+			.alpha-video-frame {
+				flex-basis: 297px;
+				& + .alpha-video-frame {
+					margin-top: 34px;
+
+					@include desktop {
+						margin-top: 0;
+						margin-left: 20px;
+					}
+				}
+				.video-title {
+					text-align: center;
+					font-size: 14px;
+					letter-spacing: -0.5px;
+					line-height: 14px;
+					padding: 9px 0 10px;
+					background-color: #fff;
+				}
+			}
+		}		
+	}
+}

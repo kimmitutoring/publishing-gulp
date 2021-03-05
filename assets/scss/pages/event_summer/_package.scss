@@ -1,0 +1,567 @@
+@charset "utf-8";
+
+.summer-friends .package {
+    padding-top: 44px;
+    padding-bottom: 44px;
+    text-align: center;
+
+    @media (min-width: 1200px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    &__title {
+        width: 300px;
+        margin: 0 auto 24px;
+        padding-top: 26px;
+        padding-bottom: 26px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: -.7px;
+        text-align: center;
+        background-color: #f6f6f8;
+
+        @media (min-width: 1200px) {
+            margin-bottom: 80px;
+        }
+    }
+
+    &__tab {
+        overflow: hidden;
+        display: inline-block;
+        width: 146px; height: 50px;
+        border: solid 1px #e6e6e6;
+        color: #cacaca;
+        font-size: 20px;
+        border-radius: 5px;
+        box-sizing: border-box;
+
+        @media (min-width: 1200px) {
+            width: 314px; height: 50px;
+            margin-bottom: 37px;
+            border-color: #f7f7f7;
+            background-color: #f7f7f7;
+        }
+
+        &--active {
+            border-width: 2px;
+            border-color: #6759ef;
+            color: #6759ef;
+
+            @media (min-width: 1200px) {
+                border-color: #ffd57c;
+                background-color: #fff;
+                color: #474747;
+            }
+        }
+    }
+
+    &__wrapper {
+        display: none;
+        width: 300px;
+        margin: 0 auto;
+
+        @media (min-width: 1200px) {
+            width: 645px;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        &--active {
+            display: block;
+        }
+    }
+
+    .package__inner {
+        position: relative; z-index: 2;
+        float: left;
+        width: 50%;
+        padding-right: 4px;
+        text-align: center;
+        letter-spacing: -0.5px;
+        box-sizing: border-box;
+
+        @media (min-width: 1200px) {
+            padding-right: 8px;
+        }
+
+        & + .package__inner {
+            float: right;
+            padding-right: 0;
+            padding-left: 4px;
+
+            @media (min-width: 1200px) {
+                padding-left: 8px;
+            }
+        }
+        &--native {
+            z-index: 1;
+
+            .package__tutor .tutor__title:before {background-position: -73px 0;}
+
+            @media (min-width: 1200px) {
+                .package__tutor .tutor__title:before {
+                    background-image: url("//cdn.tutoring.co.kr/uploads/page/summersummer/ico_native_1600w.png");
+                    background-position: 0 0;
+                }
+            }
+        }
+    }
+    .package__tutor {
+        padding: 14px 0 10px;
+        color: #666;
+        font-size: 12px;
+        line-height: 1.5em;
+        background-color: #fff;
+
+        @media (min-width: 1200px) {
+            padding-top: 22px;
+            padding-bottom: 25px;
+            font-size: 24px;
+            letter-spacing: -1.5px;
+        }
+
+        .tutor__title {
+            display: block;
+            margin: 0 10px 6px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #dddbdb;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.6em;
+
+            @media (min-width: 1200px) {
+                margin-bottom: 17px;
+                display: inline-block;
+                padding: 0 10px 15px;
+                font-size: 32px;
+                vertical-align: top;
+            }
+
+            &:before {
+                content: "";
+                display: inline-block;
+                width: 17px; height: 17px;
+                margin: -1px 5px 1px 0;
+                background: url(//cdn.tutoring.co.kr/uploads/home/img/plans/career/ico_employee.png) -52px 0 no-repeat;
+                background-size: 180px 90px;
+                vertical-align: middle;
+
+                @media (min-width: 1200px) {
+                    width: 32px; height: 32px;
+                    margin: -2px 10px 2px 0;
+                    background: url("//cdn.tutoring.co.kr/uploads/page/summersummer/ico_global_1600w.png") no-repeat 0 0;
+                    background-size: 100% auto;
+                }
+            }
+        }
+        .tutor__live {
+            display: flex;
+            color: #919191;
+            justify-content: center;
+            align-items: center;
+            white-space: nowrap;
+
+            @media (min-width: 1200px) {
+                font-size: 22px;
+            }
+
+            .photo {
+                height: 20px;
+                margin-right: 5px;
+                vertical-align: middle;
+
+                @media (min-width: 1200px) {
+                    height: 37px;
+                    margin-right: 8px;
+                }
+            }
+            .icon {
+                height: 16px;
+                margin-left: 5px;
+                padding-right: 5px;
+                padding-left: 5px;
+                color: #fff;
+                font-size: 9px;
+                font-weight: 600;
+                letter-spacing: 0;
+                line-height: 15px;
+                background-color: #50e3a9;
+                border-radius: 16px;
+
+                @media (min-width: 1200px) {
+                    width: 56px; height: 31px;
+                    margin-left: 8px;
+                    font-size: 16px;
+                    line-height: 31px;
+                    text-align: center;
+                    box-sizing: border-box;
+                    border-radius: 31px;
+                }
+            }
+        }
+    } // .package__tutor
+    .package__ticket {
+        width: 133px; height: 65px;
+        margin: 10px auto 0;
+        padding: 20px 48px 0 20px;
+        text-align: center;
+        background: #f6f6f8 url(//cdn.tutoring.co.kr/uploads/home/img/plans/career/img_ticket_2.png) 0 0 no-repeat;
+        background-size: 117px 70px;
+        box-sizing: border-box;
+
+        @media (min-width: 1200px) {
+            width: 180px; height: 101px;
+            margin: 26px auto 16px;
+            padding-top: 6px;
+            background-image: url("//cdn.tutoring.co.kr/uploads/page/summersummer/tutoring_coupon_1600w.png");
+            background-size: 100% auto;
+            transform: translateX(-10px);
+        }
+
+        .ticket__title {
+            position: absolute;
+            color: transparent;
+            letter-spacing: -1px;
+
+            @media (min-width: 1200px) {
+                position: relative;
+                display: block;
+                margin-bottom: -3px;
+                color: #5828df;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+        .ticket__count {
+            color: #5828df;
+            font-size: 25px;
+            font-family: Spoqa Han Sans,-apple-system,BlinkMacSystemFont,helvetica,Apple SD Gothic Neo,sans-serif;
+            font-weight: 600;
+            line-height: 1em;
+            letter-spacing: -1px;
+
+            &:after {
+                content: "회";
+                display: inline-block;
+                margin-bottom: -2px;
+                padding-left: 1px;
+                font-size: 9px;
+                vertical-align: bottom;
+            }
+
+            @media (min-width: 1200px) {
+                margin-bottom: -10px;
+                font-size: 50px;
+                letter-spacing: -3px;
+
+                &:after {
+                    margin-bottom: -10px;
+                    padding-left: 3px;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+        }
+    } // .package__ticket
+
+    .package__notice {
+        position: relative; z-index: 3;
+        display: flex;
+        height: 40px;
+        margin-bottom: -6px;
+        color: #4a322e;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+        text-align: center;
+        background-color: #fcbd62;
+        background-image: linear-gradient(100deg,#ffd78b 18%,#fcbd62 91%);
+        border-radius: 10px 10px 0 0;
+        align-items: center;
+        justify-content: center;
+
+        @media (min-width: 1200px) {
+            height: 80px;
+            margin-top: 15px;
+            font-size: 29px;
+        }
+    } // .package__notice
+
+    .package__box {
+        position: relative;
+        border: 1px solid #e3e3e3;
+        box-sizing: border-box;
+        background-color: #f6f6f8;
+        border-radius: 5px;
+    }
+
+    .package__image {
+        margin-top: 19px;
+        padding: 24px 0;
+        color: #666;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 1200px) {
+            font-size: 16px;
+
+            img {
+                width: 95px;
+            }
+        }
+
+        & ~ div {
+            margin-top: -1px;
+            border-top: 1px dashed #e3e3e3;
+            background-color: #fff;
+        }
+    }
+
+    .package__price {
+        position: relative;
+        display: inline-block;
+        padding: 10px;
+        text-align: left;
+
+        @media (min-width: 1200px) {
+            padding: 24px 0 24px 30px;
+        }
+
+        .origin-price {
+            display: block;
+            color: #979797;
+            font-size: 10px;
+            text-decoration: line-through;
+
+            @media (min-width: 1200px) {
+                color: #979797;
+                font-size: 20px;
+                font-weight: 300;
+                line-height: 29px;
+                letter-spacing: -1px;
+            }
+        }
+        .price {
+            color: #666;
+            font-size: 25px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            line-height: 1em;
+
+            @media (min-width: 1200px) {
+                font-size: 50px;
+                letter-spacing: -1.5px;
+            }
+
+            &:before {
+                content: "￦";
+                position: absolute;
+                display: inline-block;
+                margin-top: 2px;
+                margin-left: -17px;
+                font-size: 18px;
+
+                @media (min-width: 1200px) {
+                    margin-top: 8px;
+                    margin-left: -30px;
+                    font-size: 32px;
+                }
+            }
+        }
+        .unit {
+            display: inline-block;
+            margin-left: 2px;
+            margin-bottom: 3px;
+            color: #c2c2c2;
+            font-size: 10px;
+            font-weight: 600;
+            vertical-align: bottom;
+
+            @media (min-width: 1200px) {
+                margin-bottom: 8px;
+                margin-left: 4px;
+                font-size: 20px;
+            }
+        }
+    }  // .package__price
+    .package__discount {
+        position: absolute; top: -15px; right: -23px; z-index: 2;
+        width: 64px; height: 70px;
+        padding-top: 5px;
+        background: url("//cdn.tutoring.co.kr/uploads/page/summersummer/sale_badge_img_360w.png") no-repeat 50% 0;
+        background-size: 100% auto;
+        box-sizing: border-box;
+
+        @media (min-width: 1200px) {
+            top: -37px; right: -43px;
+            width: 135px; height: 155px;
+            padding-top: 30px;
+        }
+
+        .discount__text {
+            position: absolute;
+            color: transparent;
+        }
+        .discount__number {
+            position: relative; z-index: 20;
+            display: block;
+            color: #fff;
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 32px;
+            text-align: center;
+            letter-spacing: -1px;
+
+            @media (min-width: 1200px) {
+                font-size: 49px;
+            }
+
+            &:after {
+                content: "%";
+                display: inline-block;
+                padding-left: 1px;
+                font-size: 13px;
+                vertical-align: middle;
+
+                @media (min-width: 1200px) {
+                    font-size: 30px;
+                }
+            }
+        }
+    } // .package__discount
+
+    .package__item {
+        padding-top: 26px;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 46px; height: 52px;
+            background: url("//cdn.tutoring.co.kr/uploads/page/summersummer/plus_round_img_360w.png") no-repeat 50% 0;
+            background-size: 100% auto;
+            vertical-align: top;
+        }
+
+        img {
+            display: block;
+            margin: 5px auto 0;
+
+            &[width="660"] {display: none;}
+
+            @media (min-width: 1200px) {
+                &[width="300"] {display: none;}
+                &[width="660"] {display: block;}
+            }
+        }
+        .item__title {
+            color: #444;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+
+            b {
+                display: block;
+                padding-bottom: 5px;
+                color: #6759ef;
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            @media (min-width: 1200px) {
+                font-size: 24px;
+                line-height: 36px;
+
+                b {
+                    font-size: 28px;
+                    line-height: 39px;
+                }
+            }
+        }
+    }
+
+    .package__desc {
+        margin-top: 20px;
+        color: #5e5653;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: -0.5px;
+
+        @media (min-width: 1200px) {
+            margin-top: 60px;
+            font-size: 24px;
+            line-height: 1em;
+        }
+    }
+
+    .package__link {
+        position: relative;
+        display: inline-block;
+        height: 24px;
+        margin: 5px 10px;
+        padding: 0 5px;
+        color: #5e5653;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: -0.5px;
+        vertical-align: top;
+
+        @media (min-width: 1200px) {
+            margin: 12px 40px;
+            height: 36px;
+            font-size: 24px;
+            line-height: 36px;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 9px;
+            right: 7px;
+            z-index: 20;
+            width: 4px; height: 4px;
+            margin-right: 2px;
+            border-color: #5e5653;
+            border-style: solid;
+            border-width: 1.5px 1.5px 0 0;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+
+            @media (min-width: 1200px) {
+                top: 13px; right: 12px;
+                width: 9px; height: 9px;
+                border-width: 3px 3px 0 0;
+            }
+        }
+        
+        &:after {
+            content: "";
+            position: relative;
+            z-index: 10;
+            display: inline-block;
+            width: 13px; height: 13px;
+            margin: -1px 0 1px 3px;
+            background-color: #dededb;
+            border-radius: 13px;
+            vertical-align: middle;
+
+            @media (min-width: 1200px) {
+                width: 26px; height: 26px;
+                margin-left: 8px;
+                border-radius: 26px;
+            }
+        }
+    }
+    
+}

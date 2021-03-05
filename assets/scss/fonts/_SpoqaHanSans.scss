@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@font-face {
+    font-weight: 100;
+    font-family: 'Spoqa Han Sans';
+    src: local('SpoqaHanSansThin'),
+        url('//res.tutoring.co.kr/res/raw/fonts/spoqa/SpoqaHanSansThin.woff') format('woff');
+}
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    src: local('SpoqaHanSansRegular'),
+        url('//res.tutoring.co.kr/res/raw/fonts/spoqa/SpoqaHanSansRegular.woff') format('woff');
+}
+@font-face {
+    font-weight: 600;
+    font-family: 'Spoqa Han Sans';
+    src: local('SpoqaHanSansBold'),
+        url('//res.tutoring.co.kr/res/raw/fonts/spoqa/SpoqaHanSansBold.woff') format('woff');
+}

@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+// 반값으로 영어공부
+.item_price {
+    padding-bottom: 80px;
+
+    @include big_desktop {
+        padding-bottom: 120px;
+    }
+
+    .thumb_item .img_g {
+        margin-left: 40px;
+
+        @include all_desktop {
+            margin-left: 70px;
+        }
+    }
+    .txt_g b {
+        display: block;
+        color: #222;
+    }
+
+    @include all_desktop {
+        .txt_g,
+        .tit_g {
+            margin-top: 25px;
+            font-size: 28px;
+            line-height: 1.64em;
+
+            b {
+                font-weight: 500;
+            }
+        }
+        .txt_b_m {
+            display: block;
+        }
+    }
+    @include big_desktop {
+        .thumb_item {
+            position: absolute; top: 0; left: 50%;
+            width: 467px;
+            margin-left: 80px;
+            text-align: center;
+        }
+        .txt_g {
+            font-size: 18px;
+        }
+    }
+}
+.list_obtain {
+	width: 345px;
+	margin: 55px auto 25px;
+	font-size: 0;
+	text-align: center;
+
+	@media (min-width: 1200px) {
+		display: flex;
+		width: auto;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.obtain_award {
+		display: inline-block;
+		margin: 15px;
+		vertical-align: top;
+
+		@media (min-width: 1200px) {
+			margin: 15px 0;
+		}
+	}
+
+	.award__item {
+		position: relative;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 142px; height: 46px;
+		color: #CF9F50;
+		font-size: 11px;
+		line-height: 14px;
+		letter-spacing: -0.5px;
+
+		@media (min-width: 1200px) {
+			width: 196px; height: 68px;
+			font-size: 15px;
+			line-height: 20px;
+		}
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute; top: 0; left: 0;
+			width: 20px; height: 46px;
+			background: url("//cdn.tutoring.co.kr/uploads/home/img/main/banner/award_leaf_l.png") no-repeat 50% 0;
+			background-size: 100%;
+
+			@media (min-width: 1200px) {
+				width: 30px; height: 68px;
+			}
+		}
+		&:after {
+			left: auto; right: 0;
+			transform: scaleX(-1);
+		}
+
+		b {
+			display: block;
+			font-size: 14px;
+			font-family: $font-roboto;
+
+			@media (min-width: 1200px) {
+				font-size: 19px;
+			}
+		}
+	}
+}
+
+.obtain_point {
+	margin-top: 70px;
+
+	.point__item {
+		display: block;
+		width: 270px;
+		margin: 0 auto;
+		text-align: left;
+		color: #6759EF;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: -0.5px;
+		white-space: nowrap;
+
+		@media (min-width: 1200px) {
+			width: auto;
+		}
+
+		&:before {
+			content: "";
+			display: block;
+			float: left;
+			width: 40px; height: 40px;
+			margin-right: 10px;
+			background: url("//cdn.tutoring.co.kr/uploads/home/img/main/banner/patent.png");
+			background-size: 100%;
+		}
+
+		b {
+			display: block;
+			font-size: 16px;
+		}
+	}
+}

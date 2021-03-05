@@ -1,0 +1,351 @@
+@charset "utf-8";
+
+*, html, body {
+    font: inherit;
+    font-family: 'Noto Sans kr', sans-serif;
+    word-break: keep-all;
+}
+
+p{margin-block-start:0;margin-block-end:0;margin-inline-en:0; margin-inline-end: 0;}
+/*all bridge*/
+#tutoringWrap{
+    height: 100vh;
+}
+
+/*body*/
+body{
+    margin: 0 !important;
+}
+
+
+
+
+.article-wrap .news-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+img {
+    max-width: 100%;
+}
+.article-content > h1 {
+    margin: 50px 0 30px 0;
+    font-size: 4em;
+    line-height: 35px;
+}
+.article-content > h2 {
+    margin: 50px 0 30px 0;
+    font-size: 24px;
+    line-height: 33px;
+}
+.article-content > h3 {
+    margin: 50px 0 30px 0;
+    font-size: 2em;
+    line-height: 27px;
+}
+.article-content > h4 {
+    line-height: 25px;
+}
+.article-content > h5 {
+    line-height: 20px;
+}
+.article-content > h6 {
+    line-height: 18px;
+}
+
+
+.article-content > p > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.article-content > p > a > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.article-content > p {
+    font-size: 11pt;
+    line-height: 22pt;
+    letter-spacing: .8px;
+}
+
+.article-content > ol, ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.article-content > ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.article-content > ul > li {
+    font-family: 'Apple SD Gothic Neo', 'NanumSquare', 'Noto Sans KR', sans-serif !important;;
+    font-size: 1.2em;
+    line-height: 1.5em !important;;
+    letter-spacing: .8px;
+    color: #333;
+}
+
+.article-content > blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 17.5px;
+    border-left: 5px solid #eee;
+}
+.article-content > blockquote p {
+    xfont-size: 1.3em;
+    xfont-weight: 400;
+}
+
+.article-content > iframe {
+    width: 100%;
+    min-height: 350px;
+    border: none;
+}
+
+.article-content > pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+/*CTA css*/
+.bnr_count{position:fixed;left:0;bottom:0;width:100%;margin-left:0;text-align:center;letter-spacing:-1px;z-index:3;}
+.bnr_count .txt_banner{position:relative;height:58px;padding-top:0;border-top-left-radius:27px;border-top-right-radius:27px;font-weight:bold;font-size:11px;line-height:15px;background-color:rgba(51, 51, 51, .9);color:#fff}
+.bnr_count .txt_banner .txt1{
+    width: fit-content;
+    padding: 9px 0 0 24px;
+    opacity: 0.6;
+    letter-spacing: -0.34px;
+    color: #ffffff;
+}
+.bnr_count .txt_banner .txt2{
+    width: fit-content;
+    padding: 3px 0 0 24px;
+    font-size: 14px;
+    letter-spacing: -0.44px;
+    color: #ffffff;
+}
+
+
+
+.bnr_count .label_bnr, .bnr_count .txt_info{display:inline-block}
+.bnr_count .ico_time {display: block;margin-top: 7.5px;margin-left: 12px;width:13px;height:13px;background-position: -60px -20px;background-size:100px 60px;}
+.bnr_count .link_direct{position:absolute;right: 7px;top: 10px; width: 200px;height: 40px;border-radius: 20px;box-shadow: 0 15px 16px -12px rgba(251, 56, 93, 0.7);background-color: #ff4165;}
+
+/*.bnr_count .link_direct{position:absolute;top:-14px;right:41px;font-weight:bold;font-size:14px;line-height:28px;color:#fff;}*/
+.bnr_count .link_direct:before{display: none;}
+.bnr_count .link_direct .txt_g{display:inline-block;margin-top: 11px;margin-right:15px;
+    color: #ffffff;
+    font-weight: bold;}
+.bnr_count .link_direct .ico_arr{
+    position: absolute;
+    top: 5px;
+    background-image: url("//cdn.tutoring.co.kr/uploads/home/bridge/cta2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 23px;
+    box-shadow: 0 10px 10px -2px rgba(110, 0, 21, 0.4);
+    width: 30px;
+    height: 30px;
+}
+
+
+/* layer_m */
+.layer_modal_m{display:none;position:fixed;top:0;left:0;z-index:100;width:100%;height:100%}
+.layer_modal_m.open{display:block}
+.layer_modal_m .dark_background{width:100%;height:100%;background-color:#000}
+.layer_modal_m .inner_layer{position:fixed;top:10%;left:0;background-color:#fff;border-radius: 11px;padding-top: 65px;text-align: center;}
+.layer_modal_m .inner_layer .tit_txt{position:relative;font-size: 18px;font-weight:bold;margin:20px 30px;line-height: 1.5;letter-spacing: -0.5px;}
+.layer_modal_m .inner_layer .tit_txt:after{position: absolute;top: 50px;left: 0;content: '';width: 100%;height: 1px;background-color: #efefef;}
+
+
+
+.layer_modal_m .view_iframe{display:block}
+.layer_modal_m .btn_close{position:fixed;top:0;right:0;width:16px;height:16px;padding:17px}
+/*.layer_modal_m .btn_close .ico_close{width:16px;height:16px;background-position:-280px -134px}*/
+.layer_modal_m.show{display: block;}
+.layer_modal_m .dark_background{opacity:.5;filter:alpha(opacity=50)}
+.layer_modal_m .btn_close{position:absolute;right:0;width:30px;width:20px;height:20px;padding:16px}
+.layer_modal_m .btn_close .ico_close{display: inherit;text-indent: -9999px;width:20px;height:20px;background-position:-177px -73px;background-size: 375px 357px;background-image: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/ico_home_3_190402.png);opacity: 0.2;}
+
+.layer_modal_m .inner_layer{top:50%;margin-top: -200px;}
+.layer_modal_m .inner_layer .btn_box{position: relative;padding: 15px 0 15px 75px;margin: 61px auto 0; background-color: #34bcff}
+.layer_modal_m .inner_layer .btn_box .tudal-img{position: absolute;top:-55px;left:-18px;width: 120px;height: auto;}
+.layer_modal_m .inner_layer .btn_box .downLoadBtn{font-size: 16px;font-weight: bold; letter-spacing: -1px;text-align: center;background: #34bcff;padding: 10px 25px;border-radius: 53.6px;color: #fff;}
+.layer_modal_m .inner_layer .btn_box .downLoadBtn .arrow_icon{
+    width:9px;
+    height:15px;
+    background-position:-74px 0;
+    margin: 1px 0 0 15px;
+    background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/career/ico_banner_2.png');
+    background-size: 100px 60px;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 1px;
+    line-height: 1px;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    vertical-align: top;
+    color: transparent;
+}
+
+.layer_modal_m .inner_layer .benefit-txt-box{text-align: left;padding:14px 40px 0;}
+.layer_modal_m .inner_layer .benefit-txt-box li{padding-top: 8px;list-style: none}
+.layer_modal_m .inner_layer .benefit-txt-box li .benefit-txt{font-size: 16px;font-weight: bold;line-height: 1.56;letter-spacing: -1px;color: #777777;vertical-align: top}
+.layer_modal_m .inner_layer .benefit-txt-box li .benefit-cont{display:inline-block;margin-left:8px;font-size: 16px;line-height: 1.56;letter-spacing: -1px;color: #777777;}
+.layer_modal_m .inner_layer .benefit-txt-box li .benefit-cont i{font-weight: bold;color: #34bcff;}
+
+.layer_modal_m .inner_layer{margin-left: 50%;left: -160px;width:324px;overflow: hidden;}
+
+.layer_modal_m .inner_layer .count_g{position:relative;width:204px;height:70.5px;margin:0 auto;border-radius:40px;color:#fff;-webkit-box-shadow:0 0 6px rgba(255,0,0,.6);box-shadow: 0 15px 16px -12px rgba(251, 56, 93, 0.7);background-color: #ff4165;background:-moz-linear-gradient(-45deg, #ff0a3b 0%, #ff0a3b 24%, #ff4065 55%);background:-webkit-linear-gradient(-45deg, #ff0a3b 0%, #ff0a3b 24%, #ff4065 55%, #ff4065 100%);background:-o-linear-gradient(-45deg, #ff0a3b 0%, #ff0a3b 24%, #ff4065 55%);background:-ms-linear-gradient(-45deg, #ff0a3b 0%, #ff0a3b 24%, #ff4065 55%);background:linear-gradient(135deg, #ff0a3b 0%, #ff0a3b 24%, #ff4065 55%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0a3b', endColorstr='#ff4065', GradientType=1 )}
+.layer_modal_m .inner_layer .count_g .count_time{position:absolute;right: 30px;top:13px;font-weight:bold;font-size:25.2px;letter-spacing: -1.26px;line-height:28px;}
+.layer_modal_m .inner_layer .ico_time{position:absolute;width:26px;height:26px;top:22px;margin-left:-82px;background-position: -120px -40px;background-size:200px 120px;background-image: url(//cdn.tutoring.co.kr/uploads/home/img/plans/career/ico_banner_2.png);}
+.layer_modal_m .inner_layer .ico_tail{
+    position:absolute;
+    bottom:-16px;
+    left:92px;
+    width:22px;
+    height:18px;
+    background-position:-172px 0;
+    background-size:200px 120px;
+    background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/career/ico_banner_2.png');
+}
+.layer_modal_m .inner_layer .count_g .time-txt-box{position: relative;width: fit-content;top: 40px;left: 60px;}
+.layer_modal_m .inner_layer .count_g .time-txt-box .time-txt{margin:0 10px;font-size: 12px;font-weight: bold;opacity: 0.5;color: #ffffff;}
+
+
+@media all and (max-width: 767px) {
+    .article-content > p {
+        font-size: 1.3em;
+    }
+
+}
+
+@media all and (max-width: 990px) {
+    .article-content > p {
+        font-size: 13px;
+    }
+}
+
+.article-content img:first-child {
+    margin-bottom:0px;
+}
+
+
+/*CTA css*/
+.plink{
+    width: 100%;
+    height: 54px;
+    position: fixed;
+    bottom: 0;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+}
+
+.plink .btn-box{
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    left: 50%;
+    margin-left: -34px;
+    width: 177px;
+    height: 32px;
+    border-radius: 27.1px;
+    background: linear-gradient(0.25turn, #8276ff, #34bcff);
+}
+
+.plink .btn-box .btn-txt{
+    font-size: 14.4px;
+    line-height: 2.1;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.plink .btn-box .btn-txt:after{
+    content: '';
+    background: url(https://cdn.tutoring.co.kr/uploads/home/img/main/version3/ico_home_3_190402.png) no-repeat;
+    display: inline-block;
+    background-size: 315px 271px;
+    background-position: -275px -47px;
+    width: 10px;
+    height: 16px;
+    margin-left: 5px;
+    position: absolute;
+    top: 8px;
+}
+
+.plink img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -136px;
+    width: 92px;
+}
+
+
+
+
+
+
+@media all and (min-width: 767px) {
+    .article-content > p {
+        font-size: 1.3em;
+    }
+
+    .plink{
+        height: 82px;
+    }
+
+    .plink .btn-box{
+        width: 410px;
+        height: 54px;
+        margin-top: -27px;
+        margin-left: -133px;
+    }
+
+    .plink .btn-box .btn-txt{
+        line-height: 2.8;
+        font-size: 19px;
+    }
+
+    .plink .btn-box .btn-txt:after{
+        margin-left: 18px;
+        top: 14px;
+        background-size: 544px 407px;
+        background-position: -472px -70px;
+        width: 20px;
+        height: 23px;
+    }
+
+    .plink img {
+        margin-left: -264px;
+        width: 122px;
+    }
+
+}
+
+
+.article-content img:first-child {
+    margin-bottom:54px;
+}

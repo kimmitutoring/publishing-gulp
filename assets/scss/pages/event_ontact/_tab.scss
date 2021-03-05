@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+.ontact-tab {
+    padding-top: 60px;
+	text-align: center;
+	background-color: $dark-blue;
+	
+	.point {color: $dark-yellow;}
+
+	& > .heading {
+        margin-bottom: 40px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+		letter-spacing: -1px;
+		
+		@media (min-width: 1200px) {
+			font-size: 22px;
+			line-height: 28px;
+		}
+
+        &:before {
+            content: "";
+            display: block;
+            width: 66px; height: 12px;
+            margin: 0 auto 40px;
+			background: url("//res.tutoring.co.kr/res/images/evt/202012/pesta/pesta_vine_img.png") no-repeat 50% 0;
+			background-size: 100% auto;
+        }
+	}
+	
+	.tab {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.tab__item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 106px; height: 40px;
+			margin-left: 1px;
+			color: rgba(255, 255, 255, 0.5);
+			font-size: 16px;
+			font-weight: 600;
+			letter-spacing: -1px;
+			text-align: center;
+			background-color: rgba(241, 241, 241 ,0.1);
+			border-radius: 10px 10px 0 0;
+
+			&--active {
+				color: #333;
+				background-color: #f1f1f1;
+			}
+		}
+	}
+    
+    .tab__content {
+		display: none;
+		background: #F1F1F1;
+		
+		&--active {display: block;}
+    }
+}

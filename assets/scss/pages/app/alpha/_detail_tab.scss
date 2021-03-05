@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+.alpha-detail__tab {
+    position: -webkit-sticky;
+    position: sticky; top: 0; z-index: 30;
+    border-bottom: 1px solid #ececec;
+    background-color: #f5f5f5;
+
+    .tab__inner {
+        display: flex;
+        padding-right: ($alpha-detail-hspace + 10);
+        padding-left: ($alpha-detail-hspace + 10);
+        align-items: center;
+        justify-content: space-between;
+
+        @include tablet {
+            padding-right: $alpha-detail-tablet-hspace;
+            padding-left: $alpha-detail-tablet-hspace;
+        }
+    }
+
+    .tab__item {
+        display: inline-block;
+        height: 45px;
+        margin-bottom: -1px;
+        padding-top: 15px;
+        border-bottom: 2px solid transparent;
+        color: #c5c5c5;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: -1px;
+		box-sizing: border-box;
+		cursor: pointer;
+
+        @include tablet {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+
+        &--active {
+            border-color: #00abff;
+            color: #00abff;
+        }
+    }
+}

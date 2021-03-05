@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+.tutor_lst_area {
+    margin: 20px 0 100px;
+
+    @include all_mobile {
+        padding: 0 10px;
+    }
+
+    .tutor_lst {
+        @include clear;
+
+        .item {
+            float: left;
+            width: 100%;
+            margin: 0; // layout.less
+            padding: 0 10px 25px;
+            box-sizing: border-box;
+            
+            @include small_mobile {
+                width: 100%;
+            }
+            @include mobile {
+                width: 50%;
+            }
+            @include all_desktop {
+                width: 33.3%;
+            }
+            @include big_desktop {
+                width: 25%;
+            }
+
+            a {
+                @include tutorCard;
+                
+                display: block;
+                border: 1px solid rgba(200, 200, 200, 0.7);
+                text-align: center;
+                background: #fff;
+                border-radius: 11px;
+                box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.18);
+                transition: all 0.2s;
+            }
+        }
+    }
+}

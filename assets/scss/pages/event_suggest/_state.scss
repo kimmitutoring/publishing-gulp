@@ -1,0 +1,228 @@
+@charset "utf-8";
+
+.landing__state {
+    @include defaultText;
+
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background-color: #ffe811;
+}
+.state__heading,
+.state__subheading {
+    margin: 0; padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.47px;
+}
+.state__heading {
+    padding-bottom: 5px;
+    line-height: 1.3em;
+
+    b {
+        word-break:break-all;
+    }
+
+    i {
+        display: inline-block;
+        font-style: normal;
+    }
+}
+.state__subheading {
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.state__summary {
+    position: relative;
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 20px;
+
+    .summary__tip {
+        @include bubbleBox;
+        top: 0; right: 0;
+        width: 128px;
+    
+        &:before {
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+        }
+
+        & ~ .summary__text .state__heading {
+            width: 160px;
+        }
+    }
+} //.state__summary
+
+.state__score {
+    display: block;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: -1.32px;
+
+    &:before {
+        content: "+";
+        display: inline-block;
+    }
+    &:after {
+        content: "P";
+        display: inline-block;
+        font-size: 25px;
+    }
+} //.state__score
+
+.landing__dashboard {
+    position: relative;
+}
+.landing__stamp {
+    overflow: hidden;
+    width: 264px; height: 65px;
+    font-size: 0;
+
+    .stamp__icon {
+        display: inline-block;
+        width: 29px; height: 29px;
+        margin-right: 4px;
+        margin-bottom: 6px;
+        vertical-align: top;
+        background-image: url('//res.tutoring.co.kr/res/images/evt/com/invite/invite_pointSprite.png');
+        background-repeat: no-repeat;
+        background-size: 260px auto;
+        background-position: 0 -207px;
+
+        &:nth-child(16) {background-position: -231px -242px}
+    }
+
+    &--bronze {
+        .stamp__icon--active {background-position: 0 0;}
+        .stamp__icon--active.stamp__icon:nth-child(16) {background-position: -231px -35px;}
+    }
+    &--silver {
+        .stamp__icon--active {background-position: 0 -104px;}
+        .stamp__icon--active.stamp__icon:nth-child(16) {background-position: -231px -104px;}
+    }
+    &--gold {
+        .stamp__icon--active {background-position: 0 -173px;}
+        .stamp__icon--active.stamp__icon:nth-child(16) {background-position: -231px -173px;}
+    }
+}
+
+.state__list {
+    width: 300px;
+    margin: 4px auto 25px;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+} //.state__list
+
+.state__list--type1 {
+    text-align: center;
+
+    .list__item {
+        @include roundBox(#fff);
+
+        float: left;
+        position: relative;
+        width: 142px; height: 146px;
+        padding: 15px;
+        color: rgba(0,0,0,0.3);
+        font-size: 13px;
+        font-family: "Helvetica Neue", "Noto Sans", "Apple SD Gothic Neo",  sans-serif;
+
+        @at-root :lang(en) & {
+            padding: 15px 0;
+        }
+
+        & + .list__item {margin-left: 15px;}
+    }
+    .list__item--active {
+        color: #fff;
+        background-image: linear-gradient(316deg, #499bff, #7c6fff 51%, #8d82ff);
+
+        .head {color: #fff;background-color: rgba(67, 48, 200, 0.4);}
+        .pay-count {display: none;}
+        .signup:before,
+        .pay:before {background-image: url('//res.tutoring.co.kr/res/images/evt/com/invite/invite_ico--missionCheck.png')}
+    }
+    .pay-count {
+        position: absolute; top: 67px; right: 15px; left: 27px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: -2px;
+    }
+    .head {
+        overflow: hidden;
+        display: block;
+        height: 30px;
+        margin-bottom: 4px;
+        background-color: rgba(230, 230, 230, 0.4);
+        border-radius: 15px;
+        color: rgba(51, 51, 51, 0.2);
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 30px;
+        text-align: center;
+
+        @at-root :lang(en) & {
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+    }
+    .icon {
+        &:before {
+            content: "";
+            display: block;
+            height: 60px;
+            background-repeat: no-repeat;
+            background-size: 87px auto;
+            background-position: 50% 50%;
+        }
+    }
+    .signup:before {background-image: url('//res.tutoring.co.kr/res/images/evt/com/invite/invite_ico--mission1.png')}
+    .pay:before {background-image: url('//res.tutoring.co.kr/res/images/evt/com/invite/invite_ico--mission2.png')}
+} //.state__list--type1
+
+.state__list--type2 {
+    @include roundBox(#fff);
+    
+    width: 300px;
+    padding: 16px 20px 10px;
+
+    .list__item {
+        padding-bottom: 16px;    
+    }
+
+    .title-mission {
+        display: block;
+        padding-bottom: 3px;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: -0.47px;
+    }
+} //.state__list--type2
+
+.state__dimmed {
+    @include defaultText;
+
+    display: flex;
+    position: absolute; top: 0; bottom: 0; left: 50%;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 17px;
+    font-size: 14px;
+    text-align: center;
+    align-items: center;
+    transform: translateX(-50%);
+
+    .dimmed__wrap {
+        width: 100%;
+    }
+}

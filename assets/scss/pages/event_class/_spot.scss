@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+.spot {
+    @include defaultText;
+
+    position: absolute; right: 0; bottom: 0; left: 0; z-index: 20;
+    height: 168px;
+    padding-top: 32px;
+    background-color: rgba(37, 17, 13, 0.8);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.spot__highlight {
+    display: inline-block;
+    padding: 0 15px;
+    border-bottom: 1px solid $point-color;
+    color: $point-color;
+    font-size: 17px;
+}
+
+.spot__text {
+    display: block;
+    color: #fff;
+    font-size: 14px;
+}
+
+.spot__image {
+    overflow: hidden;
+    width: 310px; height: 32px;
+    margin: 12px auto 0;
+    background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/career/txt_award_7.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    color: transparent;
+}
+
+
+.event-badge {
+    position: absolute; top: -140px; left: 50%;
+    -webkit-animation: shake 1.5s infinite;
+    -moz-animation: shake 1.5s infinite;
+    -o-animation: shake 1.5s infinite;
+    animation: shake 1.5s infinite;
+}
+
+@keyframes shake {
+    0%,100% {-webkit-transform:rotate(0);transform:rotate(0)}
+    15% {-webkit-transform:rotate(-6deg);transform:rotate(-6deg)}
+    30% {-webkit-transform:rotate(6deg);transform:rotate(6deg)}
+    45% {-webkit-transform:rotate(-3.6deg);transform:rotate(-3.6deg)}
+    60% {-webkit-transform:rotate(2.4deg);transform:rotate(2.4deg)}
+    75% {-webkit-transform:rotate(-1.2deg);transform:rotate(-1.2deg)}
+}
+@-webkit-keyframes shake {
+    0%,100% {-webkit-transform:rotate(0);transform:rotate(0)}
+    15% {-webkit-transform:rotate(-6deg);transform:rotate(-6deg)}
+    30% {-webkit-transform:rotate(6deg);transform:rotate(6deg)}
+    45% {-webkit-transform:rotate(-3.6deg);transform:rotate(-3.6deg)}
+    60% {-webkit-transform:rotate(2.4deg);transform:rotate(2.4deg)}
+    75% {-webkit-transform:rotate(-1.2deg);transform:rotate(-1.2deg)}
+}

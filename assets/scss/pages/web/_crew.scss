@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+.team_con {
+    padding-bottom: 80px;
+
+    @include all_mobile {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    h2 {
+        @include subPageTopTitle;
+
+        & + .sub_top_tit {
+            padding-top: 60px;
+
+            @include all_mobile {
+                padding-top: 10px;
+            }
+        }
+    }
+    .sub_top_tit {
+        padding-top: 80px;
+        text-align: center;
+
+        @include all_mobile {
+            padding-top: 30px;
+        }
+
+        b,
+        i {
+            display: block;
+            color: rgba(51, 51, 51, 0.95);
+            font-size: 55px;
+            font-family: $font-HGGGothicssi;
+            font-style: normal;
+            line-height: 1.4em;
+
+            @include all_mobile {
+                font-size: 22px;
+            }
+        }
+        p {
+            display: inline-block;
+            margin-top: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #29a2e8;
+            color: rgba(102, 102, 102, 0.9);
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 25px;
+            letter-spacing: -1px;
+
+            @include all_mobile {
+                margin-top: 10px;
+                padding-bottom: 10px;
+                font-size: 13px;
+            } 
+        }
+    } // .sub_top_tit
+    .recruit_link {
+        display: block;
+        max-width: 330px; height: 56px;
+        margin: 60px auto 0;
+        border: 2px solid #333;
+        color: #333;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 54px;
+        text-align: center;
+        box-sizing: border-box;
+        border-radius: 10px;
+        letter-spacing: -0.5px;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s;
+
+        @include all_mobile {
+            margin-top: 40px;
+        }
+
+        &:hover {
+            color: #fff;
+            background-color: #333;
+        }
+
+        i {font-style: normal;}
+    } // .recruit_link
+    .team_lst {
+        max-width: 1201px;
+        margin: 120px auto 0;
+
+        @include all_mobile {
+            margin-top: 0;
+        }
+
+        .tit {
+            padding-left: 50px;
+            color: rgba(51, 51, 51, 0.95);
+            font-family: $font-HGGGothicssi;
+            font-size: 45px;
+            font-weight: 700;
+            line-height: 50px;
+
+            @include all_mobile {
+                font-size: 24px;
+                line-height: 28px;
+                margin-top: 80px; padding-left: 0;
+                text-align: center;
+            }
+        }
+
+        .lst {
+            @include clear;
+
+            li {
+                float: left;
+                width: 33.33%;
+                margin-top: 60px;
+                text-align: center;
+
+                @include big_desktop {
+                    width: 25%;
+                }
+                @include all_mobile {
+                    width: 50%;
+                    margin-top: 40px;
+                    &:only-child {width: 100%;}
+                }
+            }
+        }
+        .img {
+            position: relative;
+            overflow: hidden;
+            width: 96px; height: 96px;
+            margin: 0 auto;
+            border-radius: 100%;
+
+            img {
+                position: absolute; top: 50%; left: 50%;
+                width: 100%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .name {
+            margin: 10px 0 5px;
+            color: rgba(51, 51, 51, 0.9);
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 20px;
+        }
+        .position {
+            color: rgba(102, 102, 102, 0.7);
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 18px;
+        }
+    }
+}

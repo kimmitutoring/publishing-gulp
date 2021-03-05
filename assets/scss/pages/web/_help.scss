@@ -1,0 +1,253 @@
+@charset "utf-8";
+
+.help_area {
+    padding-bottom: 100px;
+    background-color: #fff;
+
+    @include all_mobile {
+        padding-bottom: 50px;
+    }
+
+    .blue_form {
+        padding: 50px;
+        text-align: center;
+        background: #3fcdfd;
+        background: linear-gradient(to right, #3fcdfd 0%, #23aafc 100%);
+
+        @include all_mobile {
+            padding: 40px 20px;
+        }
+
+        h3 {
+            color: #fff;
+            font-family: $font-HGGGothicssi;
+            font-size: 45px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+
+            @include all_mobile {
+                font-size: 30px;
+            }
+        }
+        input[type="text"] {
+            width: 100%; height: 70px;
+            line-height: 70px;
+            padding: 0 20px 0 62px;
+            border: 0;
+            font-size: 18px;
+            color: #333;
+            border-radius: 5px;
+            box-sizing: border-box;
+
+            @include all_mobile {
+                height: 50px;
+                padding-left: 40px;
+                font-size: 15px;
+                line-height: 50px;
+            }
+
+            &::placeholder {color: rgba(0,0,0,0.3)}
+        }
+
+        .inp {
+            position: relative; z-index: 10;
+            width: 100%;
+            max-width: 700px;
+            margin: 38px auto 0;
+            background-color: #fff;
+
+            @include all_mobile {
+                margin-top: 15px;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 20px;
+                top: 50%;
+                transform: translate(0, -50%);
+                width: 25px;
+                height: 25px;
+                background: url(//cdn.tutoring.co.kr/uploads/home/img/icon_zoom2.jpg) no-repeat;
+                background-size: 100%;
+
+                @include all_mobile {
+                    left: 16px;
+                    width: 14px; height: 14px;
+                }
+
+            }
+        }
+    }
+} // .help_area
+
+.help_lst_area {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 50px;
+    letter-spacing: -0.5px;
+    box-sizing: border-box;
+
+    @include all_mobile {
+        padding: 30px 20px;
+    }
+
+    .category {
+        @include clear;
+
+        li {
+            float: left;
+        }
+
+        a {
+            display: block;
+            height: 40px;
+            margin: 5px 5px 0 0;
+            color: #333;
+            padding: 0 20px;
+            font-size: 15px;
+            font-weight: 600;
+            background-color: #f6f6f6;
+            line-height: 38px;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+
+            @include all_mobile {
+                height: 30px;
+                font-size: 12px;
+                line-height: 28px;
+                border-radius: 3px;
+            }
+
+            &.selected {
+                color: #fff;
+                background-color: #00aaff;
+            }
+        }
+    }
+}
+.help_lst {
+    padding-top: 75px;
+
+    @include all_mobile {
+        padding-top: 25px;
+    }
+
+    .key_tit {
+        padding: 25px 0;
+        color: rgba(51, 51, 51, 0.95);
+        font-family: $font-HGGGothicssi;
+        font-size: 45px;
+        font-weight: 800;
+        line-height: 50px;
+        letter-spacing: -0.5px;
+
+        @include all_mobile {
+            padding-bottom: 10px;
+            font-size: 25px;
+            line-height: 28px;
+        }
+
+        .current {
+            font-style: normal;
+
+            &:before {
+                content: ">";
+                margin-right: 10px;
+            }
+        }
+    } // .key_tit
+    .lst_wrap {
+        li {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .que {
+            position: relative;
+            display: block;
+            padding: 30px 60px 30px 140px;
+
+            @include all_mobile {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-left: 0;
+            }
+
+            &:before {
+                content: "";
+                position: absolute; right: 20px; top: 50%;
+                width: 18px; height: 10px;
+                background: url(//cdn.tutoring.co.kr/uploads/home/img/arr_down.png) no-repeat;
+                background-size: 100%;
+                opacity: 0.35;
+                transition: opacity 0.5s;
+
+                @include all_mobile {
+                    right: 0;
+                    width: 15px; height: 9px;
+                }
+            }
+            &:after {display: none;}
+            
+            i {
+                display: inline-block;
+                color: rgba(102, 102, 102, 0.9);
+                font-size: 22px;
+                font-style: normal;
+                line-height: 1.65em;
+                word-break: break-all;
+                vertical-align: top;
+
+                @include all_mobile {
+                    display: block;
+                    font-size: 16px;
+                }
+            }
+
+            &.on {
+                &:before {transform: rotate(180deg);opacity: 1;}
+                i {color: #333;}
+            }
+        }
+        .ctry {
+            position: absolute; top: 50%; left: 0;
+            display: inline-block;
+            width: 124px; height: 38px;
+            padding: 0 10px;
+            border: 1px solid rgba(102, 102, 102, 0.5);
+            border-radius: 100px;
+            color: rgba(102, 102, 102, 0.7);
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 35px;
+            text-align: center;
+            vertical-align: top;
+            box-sizing: border-box;
+            transform: translateY(-50%);
+
+            @include all_mobile {
+                position: static;
+                width:100px; height: 28px;
+                margin-bottom: 8px;
+                font-size: 13px;
+                line-height: 25px;
+                transform: translateY(0);
+            }
+        }
+        .fre {
+            display: none;
+            padding: 25px 35px;
+            color: rgba(102, 102, 102, 0.9);
+            font-size: 20px;
+            line-height: 1.8em;
+            background-color: rgba(229, 229, 229, 0.45);
+
+            .txt {background-color: transparent;}
+
+            @include all_mobile {
+                padding: 15px 20px;
+                font-size: 16px;
+            }
+        }
+    }
+}

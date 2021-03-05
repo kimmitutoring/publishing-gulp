@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+.summer-friends .review {
+    padding-top: 34px;
+    padding-bottom: 34px;
+    background-color: #fff6df;
+
+    @media (min-width: 1200px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    &__title {
+        @include noteBGTitle-white;
+
+        margin-bottom: 30px;
+    }
+    &__wrapper {
+        overflow: hidden;
+        overflow-x: auto;
+        margin-top: 34px;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        
+        &::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera*/
+        }
+
+        @media (min-width: 580px) {
+            overflow: visible;
+            display: block;
+            width: 578px;
+            margin: 34px auto 0;
+            vertical-align: top;
+        }
+        @media (min-width: 1200px) {
+            width: auto;
+            text-align: center;
+        }
+    }
+    &__list {
+        display: inline-block;
+        padding-right: 22px;
+        padding-left: 22px;
+        // padding: 34px 22px;
+        font-size: 0;
+        vertical-align: top;
+        white-space: nowrap;
+
+        .list__item {
+            display: inline-block;
+            width: 251px; height: 210px;
+            margin: 0 8px;
+            padding: 39px 32px;
+            border-radius: 4px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 2px 4px 0 rgba(250, 184, 88, 0.65);
+            vertical-align: top;
+            white-space: normal;
+            box-sizing: border-box;
+
+            @media (min-width: 1200px) {
+                width: 314px; height: auto;
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+        }
+        .list__inner {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .list__desc {
+            color: #818181;
+            font-size: 16px;
+            line-height: 30px;
+
+            b {color: #7961f7;}
+        }
+        .list__summary {
+            display: block;
+            padding-top: 15px;
+            color: #333;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+        }
+    }
+    &__video {
+        position: relative;
+        padding-top: 56.25%;
+        background-color: #000;
+
+        @media (min-width: 768px) {
+            width: 364px; height: 203px;
+            margin: 0 auto;
+            padding-top: 0;
+        }
+
+        @media (min-width: 1200px) {
+            width: 647px; height: 361px;
+        }
+
+        iframe {
+            position: absolute; top: 0; left: 0;
+            display: block;
+            width: 100%; height: 100%;
+            border: 0;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+// base
+@import 'utils/variables';
+@import 'utils/mixin';
+
+// webfont
+@import 'fonts/NotoSans';
+@import 'fonts/HGGGothicssi';
+
+// common
+@import 'base/reset';
+
+// layout
+@import 'layout/common';
+@import 'layout/global/header';
+@import 'layout/global/footer';
+
+// vendors
+@import 'vendors/swiper';
+
+// component
+@import 'components/app_landing';
+
+// pages
+@import 'pages/global/common';
+@import 'pages/web/main_fixed';
+@import 'pages/global/main_common';
+@import 'pages/global/main_visual';
+@import 'pages/global/main_about';
+@import 'pages/global/main_custom';
+@import 'pages/global/main_price';
+@import 'pages/global/main_vod';
+@import 'pages/global/main_review';
+@import 'pages/global/main_lab';
+@import 'pages/global/main_animation';
+
+@import 'pages/web/plan';
+@import 'pages/web/tutor';
+@import 'pages/web/tutor_list';
+@import 'pages/web/tutor_detail';
+@import 'pages/web/topic';
+@import 'pages/web/topic_list';
+@import 'pages/web/topic_detail';
+@import 'pages/web/company';
+@import 'pages/web/help';
+
+// etc
+@import 'pages/global/native_ad';
+
+// 국문 사이트에서 가져온 소스를 다국어 분기한다
+@import 'pages/global/etc';

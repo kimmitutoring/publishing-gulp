@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+.tutoring-interview {
+    text-align: center;
+
+    .interview-add {
+        color: #ff4452;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: -1px;
+    }
+    .interview-title {
+        padding: 9px 0 20px;
+        font-size: 26px;
+        font-weight: 300;
+        letter-spacing: -1px;
+        line-height: 1.31em;
+    }
+    .interview-list {
+        width: 308px;
+        margin: 0 auto;
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        @include tablet {
+            width: 644px;
+        }
+
+        li {
+            margin-top: 20px;
+
+            @include tablet {
+                float: left;
+                width: 308px;
+                margin-top: 8px;
+
+                &.big { margin-right: 20px; }
+            }
+        }
+        .link {
+            display: flex;
+        }
+        .video-thumb {
+            flex: none;
+            width: 120px; height: 67px;
+            margin-right: 14px;
+            background-color: #000;
+
+            @include tablet {
+                width: 93px; height: 52px;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+        .video-title {
+            margin: auto 0;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.79em;
+            text-align: left;
+
+            @include tablet {
+                line-height: 1.64em;
+            }
+        }
+        .big .video-thumb {
+            width: 308px; height: 172px;
+        }
+    }
+}

@@ -1,0 +1,591 @@
+@charset "utf-8";
+
+@mixin spotLarge {
+    @media (min-width: 1025px) {
+        @content;
+    }
+}
+@mixin spotMedium {
+    @media (min-width: 768px) and (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin spotSmall {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin spriteMainSpot {
+    // background-color: rgba(255, 0, 0, 0.2);
+    background-image: url('//cdn.tutoring.co.kr/uploads/home/img/main/banner/sprite_webbanner.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 160px auto;
+}
+
+.main-spot {
+	@include big_desktop {
+		margin-top: $header-height-fixed;
+	}
+
+    .slide__inner, 
+    .slide__container {position: relative;}
+    .slide__inner:before {
+        content: "";
+        position: absolute; top: 0; right: 0; left: 0;
+        height: 90px;
+        background-image: linear-gradient(to bottom, rgba(82, 61, 42, 0.3), rgba(0, 0, 0, 0));
+        opacity: 0.6;
+
+        @include spotLarge {height: 145px;}
+    }
+
+    &__slide {
+        overflow: hidden;
+
+        @include spotLarge {
+            height: 850px;
+        }
+    }
+
+    &__image {
+        .image__area {
+            background-repeat: no-repeat;
+            background-position: 50% 0;
+            background-size: auto 100%;
+
+            &--big {display: none; height: 850px;}
+            &--small {padding-top: 177.77%; background-size: cover;}
+
+            @include spotLarge {
+                &--big {display: block;}
+                &--small {display: none;}
+            }
+
+            @include spotMedium {
+                &--small {padding-top: 128.12%;}
+            }
+        }
+    }
+    &__detail {
+        position: absolute; top: 250px; left: 0;
+        
+        @include spotLarge {
+            left: 50%;
+            width: 1056px;
+            transform: translateX(-50%);
+        }
+
+        @include spotMedium {
+            top: 430px; left: 0;
+        }
+
+        @include spotSmall {
+            top: auto; bottom: 85px; left: 0;
+        }
+
+        .detail__inner {
+            width: 400px; height: 400px;
+            padding: 56px 0 40px 48px;
+            color: #fff;
+            box-sizing: border-box;
+
+            @include spotSmall {
+                width: 268px; height: 268px;
+                padding: 38px 0 38px 30px;
+            }
+        }
+        .detail__title {
+            display: block;
+            padding-bottom: 8px;
+            font-size: 46px;
+            font-weight: 100;
+            line-height: 64px;
+            letter-spacing: -2.5px;
+
+            @include spotSmall {
+                font-size: 28px;
+                line-height: 42px;
+                letter-spacing: -2px;
+            }
+
+            .highlight {
+                display: block;
+                font-weight: 500;
+            }
+        }
+        .detail__desc {
+            display: inline-block;
+            border-bottom: 1px solid #fff;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 37px;
+            letter-spacing: -1.5px;
+            vertical-align: top;
+
+            @include spotSmall {
+                font-size: 16px;
+            }
+        }
+        .detail__link {
+            position: absolute; bottom: 40px; left: 40px;
+            overflow: hidden;
+            display: block;
+            width: 202px; height: 60px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 62px;
+            letter-spacing: -1px;
+            background-color: #6759d0;
+            border-radius: 30px;
+            box-sizing: border-box;
+
+            @include spotSmall {
+                bottom: 26px; left: 22px;
+                width: 156px; height: 48px;
+                font-size: 16px;
+                line-height: 48px;
+            }
+        }
+        .detail__flag {
+            @include spriteMainSpot;
+
+            position: absolute; top: -35px; left: 40px;
+            width: 90px; height: 85px;
+            padding-top: 15px;
+            color: #fff;
+            text-align: center;
+            letter-spacing: -0.5px;
+            box-sizing: border-box;
+
+            @include spotSmall {
+                left: 26px;
+                width: 68px; height: 64px;
+                padding-top: 12px;
+                background-size: 120px auto;
+            }
+
+            &__title {
+                display: block;
+                margin-bottom: -4px;
+                font-size: 14px;
+                line-height: 20px;
+
+                @include spotSmall {
+                    font-size: 10px;
+                    font-weight: 500;
+                    line-height: 15px;
+                }
+            }
+            &__desc {
+                display: block;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 36px;
+
+                @include spotSmall {
+                    font-size: 18px;
+                    line-height: 27px;
+                }
+            }
+            &__text {
+                display: block;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 24px;
+
+                @include spotSmall {
+                    margin-top: -4px;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+    &__button--prev,
+    &__button--next {
+        display: none !important;
+        position: absolute !important;
+        top: 375px !important; left: 50% !important;
+        width: 57px !important; height: 150px !important;
+        margin: 0 !important;
+        background-image: none !important;
+
+        @include spotLarge {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &:after {
+            @include spriteMainSpot;
+            
+            content: "";
+            overflow: hidden;
+            width: 9px; height: 19px;
+            background-position: 0 -596px;
+            font-size: 0;
+            color: transparent;
+        }
+    }
+    &__button--prev {transform: translateX(-585px);}
+    &__button--next {transform: translateX(-128px);}
+    &__button--next:after {transform: scaleX(-1)}
+
+    &__pagination {
+        position: absolute; right: 0; left:0; bottom: 30px !important; z-index: 1;
+        height: 21px;
+        padding: 6px 0;
+        font-size: 0;
+        text-align: center;
+        box-sizing: border-box;
+
+        .swiper-pagination-bullet {
+            display: inline-block;
+            width: 8px; height: 8px;
+            border-radius: 100%;
+            margin: 0 4px !important; background-color: #d8d8d8;
+            vertical-align: top;
+            opacity: 1;
+
+            &-active {background-color: #8d82ff;}
+        }
+    }
+
+    &__banner {
+        position: relative; z-index: 1;
+        margin: 0 auto;
+
+        @include spotLarge {
+            width: 1200px;
+        }
+
+        .banner__wrap {
+            position: absolute; bottom: 0; right: 0;
+            animation: shake 1.5s infinite;
+
+            .banner__link {
+                display: block;
+            }
+
+            @include spotLarge {
+                bottom: 25px;
+            }
+        }
+        .banner__image {
+            &--big {display: none;}
+            &--small {display: block;}
+
+            @include spotSmall {
+                &--small {width: 196px;}
+            }
+
+            @include spotLarge {
+                &--big {display: block;}
+                &--small {display: none;}
+            }
+        }
+    }
+}
+
+.main-banner {
+    padding-top: 46px;
+    padding-bottom: 46px;
+    background-color: #1e1e1e;
+    color: #e9c77a;
+
+    @include spotSmall {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    @include spotMedium {
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+
+    &__wrap {
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 0;
+        text-align: center;
+
+        @include spotLarge {
+            width: 1000px;
+        }
+    }
+    &__image {
+        @include spriteMainSpot;
+
+        display: none;
+        width: 145px; height: 102px;
+        margin-top: -8px;
+        background-position: 0 -408px;
+        vertical-align: top;
+
+        @include spotLarge {
+            display: inline-block;
+        }
+    }
+    &__title {
+        display: inline-block;
+        padding: 7px 40px 6px;
+        font-size: 16px;
+        line-height: (16 * 1.6) + px;
+        vertical-align: top;
+
+        @include spotSmall {
+            padding: 0;
+            padding-bottom: 8px;
+        }
+
+        .highlight {
+            display: block;
+            font-size: 30px;
+            font-weight: 500;
+            line-height: (30 * 1.6) + px;
+        }
+
+        @include spotSmall {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+
+            .highlight {
+                font-size: 15px;
+                line-height: 23px;
+                -webkit-box-ordinal-group: 2;
+            }
+            .description {
+                display: block;
+                font-size: 13px;
+                line-height: 23px;
+                -webkit-box-ordinal-group: 1;
+            }
+        }
+
+        @include spotMedium {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+
+            .highlight {
+                font-size: 30px;
+                line-height: 46px;
+                -webkit-box-ordinal-group: 2;
+            }
+            .description {
+                display: block;
+                font-size: 26px;
+                line-height: 46px;
+                -webkit-box-ordinal-group: 1;
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: inline-block;
+        margin-right: 15px;
+        margin-left: 15px;
+        padding: 14px 43px 15px;
+        font-size: 15px;
+        letter-spacing: -0.5px;
+        line-height: (15 * 1.33) + px;
+        vertical-align: top;
+
+        @include spotSmall {
+            margin-right: 6px;
+            margin-left: 6px;
+            padding: 0 19px;
+            font-size: 10px;
+            line-height: 14px;
+
+            .highlight br {display: none;}
+        }
+        @include spotMedium {
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 28px;
+
+            .highlight br {display: none;}
+        }
+
+        &:before,
+        &:after {
+            @include spriteMainSpot;
+
+            content: "";
+            position: absolute; top: 50%;
+            width: 23px; height: 52px;
+            background-position: 0 -526px;
+            transform: translateY(-50%);
+
+            @include spotSmall {
+                width: 13px; height: 29px;
+                background-size: 90px auto;
+                background-position: 0 -297px;
+            }
+        }
+        &:before {left: 0;}
+        &:after {right: 0; transform: translateY(-50%) scaleX(-1)}
+    }
+}
+
+.main-advantage {
+    position: relative;
+    background-color: #e8e8ef;
+    color: #333;
+
+    .advantage__list {
+        overflow: hidden;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        text-align: center;
+
+        @include spotLarge {
+            padding-top: 59px;
+            padding-bottom: 59px;
+        }
+        @include spotSmall {
+            width: 320px;
+        }
+
+        .list__item {
+            position: relative;
+            display: inline-block;
+            color: #333;
+            font-size: 18px;
+            text-align: left;
+            letter-spacing: -1px;
+            vertical-align: top;
+
+            @include spotLarge {
+                min-height: 64px;
+                padding-right: 30px;
+                padding-left: 109px;
+
+                & + li:before {
+                    content: "";
+                    display: block;
+                    position: absolute; top: 50%; right: 100%;
+                    width: 2px; height: 50px;
+                    background-color: rgba(51, 51, 51, 0.3);
+                    transform: translateY(-50%);
+                }
+            }
+
+            @include spotMedium {
+                width: 189px;
+                text-align: center;
+
+                & + li:before {
+                    content: "";
+                    display: block;
+                    position: absolute; top: 50%; right: 100%;
+                    width: 2px; height: 60px;
+                    background-color: rgba(51, 51, 51, 0.2);
+                    transform: translateY(-50%);
+                }
+            }
+
+            @include spotSmall {
+                &:nth-child(even):before {
+                    content: "";
+                    display: inline-block;
+                    width: 1px; height: 12px;
+                    margin-right: 4px;
+                    margin-left: 7px;
+                    background-color: rgba(51, 51, 51, 0.3);
+                }
+            }
+
+            .highlight {
+                display: block;
+                font-size: 30px;
+                line-height: 37px;
+
+                @include spotLarge {
+                    position: absolute; top: 0; left: 107px;
+                }
+                @include spotMedium {
+                    padding-bottom: 30px;
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    font-weight: 600;
+                }
+                @include spotSmall {
+                    display: inline-block;
+                    font-size: 15px;
+                    font-weight: 700;
+                    line-height: 30px;
+                }
+            }
+            .description {
+                @include spotLarge {
+                    display: block;
+                    padding-top: 37px;
+                }
+                @include spotMedium {
+                    position: absolute; bottom: 0; right: 0; left: 0;
+                }
+                @include spotSmall {
+                    padding-right: 3px;
+                    font-size: 15px;
+                    line-height: 30px;
+                }
+            }
+        }
+        .list__icon {
+            @include spriteMainSpot;
+
+            width: 60px; height: 60px;
+
+            &--download {background-position: 0 -104px;}
+            &--star {background-position: 0 -180px;}
+            &--graph {background-position: 0 -256px;}
+            &--flag {background-position: 0 -332px;}
+
+            @include spotLarge {
+                position: absolute; top: 2px; left: 32px;
+            }
+            @include spotMedium {
+                margin: 0 auto 12px;
+            }
+
+            @include spotSmall {
+                display: none;
+            }
+        }
+    }
+    .advantage__desc {
+        display: none;
+        position: absolute; top: 50%; left: 50%;
+        width: 600px;
+        color: #333;
+        font-size: 15px;
+        letter-spacing: -1px;
+        text-align: right;
+        transform: translateY(-50%);
+
+        @media (min-width: 1200px) {display: block;} 
+    }
+}
+
+@keyframes shake {
+    0%,100% {-webkit-transform:rotate(0);transform:rotate(0)}
+    15% {-webkit-transform:rotate(-6deg);transform:rotate(-6deg)}
+    30% {-webkit-transform:rotate(6deg);transform:rotate(6deg)}
+    45% {-webkit-transform:rotate(-3.6deg);transform:rotate(-3.6deg)}
+    60% {-webkit-transform:rotate(2.4deg);transform:rotate(2.4deg)}
+    75% {-webkit-transform:rotate(-1.2deg);transform:rotate(-1.2deg)}
+}
+@-webkit-keyframes shake {
+    0%,100% {-webkit-transform:rotate(0);transform:rotate(0)}
+    15% {-webkit-transform:rotate(-6deg);transform:rotate(-6deg)}
+    30% {-webkit-transform:rotate(6deg);transform:rotate(6deg)}
+    45% {-webkit-transform:rotate(-3.6deg);transform:rotate(-3.6deg)}
+    60% {-webkit-transform:rotate(2.4deg);transform:rotate(2.4deg)}
+    75% {-webkit-transform:rotate(-1.2deg);transform:rotate(-1.2deg)}
+}

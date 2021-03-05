@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+.#{$service-assess-page-prefix}-score--item {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    max-width: 400px;
+    margin: 30px auto 0;
+    text-align: center;
+    justify-content: space-between;
+
+    .radio_input {
+        position: absolute; top: 0; left: 0;
+        margin-left: -50px;
+
+        &:checked + .radio_label .text {
+            color: #000;
+            font-weight: 500;
+        }
+    }
+    .radio_label {
+        display: block;
+        color: #919191;
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: -0.5px;
+        
+        &:before {
+            content: '';
+            display: block;
+            width: 60px; height: 60px;
+            margin: 0 auto 7px;
+            background-size: 100% auto;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+        }
+    }
+
+    @each $assess-score in $service-assess-score {
+        .radio_label_#{$assess-score}:before {
+            background-image: url($service-assess-cdn-url + 'tudal_' + $assess-score + '.png');
+        }
+        .radio_input:checked + .radio_label_#{$assess-score}:before {
+            background-image: url($service-assess-cdn-url + 'tudal_' + $assess-score + '_p.png'); 
+        }
+        
+    }
+}

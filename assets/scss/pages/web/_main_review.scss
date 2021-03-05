@@ -1,0 +1,322 @@
+@charset "utf-8";
+
+// 영어인생을 바꾼 사람들
+.item_review {
+    background-color: #f5f5fa;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8em;
+    text-align: left;
+    letter-spacing: -1px;
+
+    @include all_desktop {
+        margin-top: 0;
+        padding-top: 120px;
+    }
+    @include big_desktop {
+        margin-top: 0;
+        padding: 120px 0 178px;
+    }
+
+    .link_more {
+        display: inline-block;
+        padding: 10px 20px;
+    }
+
+    .inner_item {
+        position: relative;
+        // width: 960px;
+        margin: 0 auto;
+    }
+
+    .tit_item {
+        display: block;
+        font-size: 32px;
+        font-weight: 600;
+
+        @include all_desktop {
+            font-size: 48px;
+            padding-bottom: 62px;
+        }
+        @include big_desktop {
+            width: 600px;
+            line-height: 64px;
+        }
+    }
+
+    .desc_story {
+        padding: 0 30px;
+
+        @include all_desktop {
+            padding: 0 60px;
+            font-size: 24px;
+            line-height: 40px;
+        }
+        @include big_desktop {
+            position: relative; z-index: 2;
+            padding: 0;
+            font-size: 16px;
+            line-height: 28px;
+
+            .txt_review {
+                width: 500px;
+            }
+        }
+    }
+    .tit_sub {
+        padding: 0 30px;
+        color: $point-color;
+        font-size: 20px;
+        font-weight: 500;
+
+        @include all_desktop {
+            padding: 0 60px 20px;
+        }
+        @include big_desktop {
+            padding-right: 0;
+            padding-bottom: 12px;
+            padding-left: 0;
+        }
+    }
+    .txt_writer {
+        margin-bottom: 20px;
+        color: #333;
+        font-size: 16px;
+        line-height: 1.4em;
+
+        @include all_desktop {
+            font-size: 28px;
+        }
+        @include big_desktop {
+            font-size: 16px;
+        }
+    }
+    .link_more {
+        margin-top: 30px;
+    }
+    .img_writer {
+        display: none;
+        position: absolute; top: 12px; left: 385px; z-index: 1;
+        width: 794px; height: 835px;
+        background-repeat: no-repeat;
+        background-color: #f6f6fb;
+
+        &.img_writer01{background-image:url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/story_01_pc.png)}
+        &.img_writer02{background-image:url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/story_02_pc.png)}
+        &.img_writer03{background-image:url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/story_03_pc.png)}
+        &.img_writer04{background-image:url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/story_04_pc.png)}
+
+        @include big_desktop {
+            display: block;
+        }
+    }
+
+    .slide_01{background-image:url('//cdn.tutoring.co.kr/uploads/home/img/main/version3/story_01_m.png');}
+    .slide_02{background-image:url('//cdn.tutoring.co.kr/uploads/home/img/main/version3/story_02_m.png')}
+    .slide_03{background-image:url('//cdn.tutoring.co.kr/uploads/home/img/main/version3/story_03_m.png')}
+    .slide_04{background-image:url('//cdn.tutoring.co.kr/uploads/home/img/main/version3/story_04_m.png')}
+
+    @include all_desktop {
+        .txt_b_p {display:inline;}
+        .slide_01{background-image:url('//cdn.tutoring.co.kr/uploads/home/img/main/version3/story_01_t.png')}
+        .slide_01 .tit_item{width:84%}
+        .slide_02{background-image:url('//cdn.tutoring.co.kr/uploads/home/img/main/version3/story_02_t.png')}
+        .slide_03{background-image:url('//cdn.tutoring.co.kr/uploads/home/img/main/version3/story_03_t.png')}
+        .slide_04{background-image:url('//cdn.tutoring.co.kr/uploads/home/img/main/version3/story_04_t.png')}
+    }
+    @include big_desktop {
+        .txt_b_p {display:block;}
+        .slide_01 .tit_item {width: 100%; padding-bottom: 35px;}
+    }
+
+    // swiper
+    .btn_swiper {
+        position: absolute; top: 467px;
+        display: flex;
+        width: 50px; height: 50px;
+        text-align: center;
+        background-color: $point-color;
+        background-image: none;
+        outline: none;
+
+        @include all_desktop {
+            top: 697px;
+            width: 90px; height: 90px;
+        }
+        @include big_desktop {
+            top: 465px;
+            width: 50px; height: 50px;
+        }
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 12px; height: 22px;
+            margin: auto;
+            vertical-align: top;
+
+            @include all_desktop {
+                width: 22px; height: 40px;
+            }
+            @include big_desktop {
+                width: 12px; height: 22px;
+            }
+        }
+    }
+    .swiper {
+        &-container {
+            overflow: visible;
+            width: 100%; height: 860px;
+
+            @include all_desktop {
+                height: 1230px;
+            }
+            @include big_desktop {
+                height: 860px;
+            }
+        }
+        &-slide {
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: 0 100%;
+            background-color: #f5f5fa;
+            opacity: 0;
+
+            @include big_desktop {
+                background-image: none;
+                background-color: #f6f6fb;
+            }
+        }
+        &-pagenation {
+            display: none;
+        }
+        &-button-prev {left: 30px;}
+        &-button-next {left: 80px;}
+        &-button-prev:after {background-position: -350px -70px;}
+        &-button-next:after {background-position: -366px -70px;}
+        &-button-disabled:after {opacity: 0.5;}
+
+        @include all_desktop {
+            &-button-prev {left: 60px;}
+            &-button-next {left: 150px;}
+            &-button-prev:after {background-position: -296px -50px;}
+            &-button-next:after {background-position: -326px -50px;}
+        }
+        @include big_desktop {
+            &-button-prev {left: 0;}
+            &-button-next {left: 50px;}
+            &-button-prev:after {background-position: -350px -70px;}
+            &-button-next:after {background-position: -366px -70px;}
+        }
+    }
+}
+.bundle_review {
+    padding: 37px 30px 0;
+    text-align: center;
+
+    @include all_desktop {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+    @include big_desktop {
+        position: relative; z-index: 20;
+        padding: 0;
+    }
+
+    .emph_g {
+        display: block;
+        color: $point-color;
+        font-weight: 500;
+        font-size: 16px;
+        text-align: left;
+
+        @include all_desktop {
+            font-size: 28px;
+        }
+        @include big_desktop {
+            font-size: 20px;
+            line-height: 29px;
+        }
+    }
+}
+.list_review {
+    @include clear;
+
+    text-align: left;
+
+    li {
+        margin-top: 20px;
+        padding: 30px 20px;
+        background-color: #fbfbff;
+        border-radius: 5px;
+        word-break: break-all;
+
+        @include all_desktop {
+            margin-top: 30px;
+            padding: 35px 40px;
+        }
+        @include big_desktop {
+            float: left;
+            position: relative;
+            width: 247px; height: 472px;
+            padding: 30px 24px;
+            margin-left: 19px;
+
+            &:first-child {margin-left: 0;}
+        }
+    }
+
+    .tit_review {
+        display: block;
+        margin-bottom: 20px;
+        color: #333;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+        word-break: keep-all;
+
+        @include all_desktop {
+            font-size: 28px;
+            line-height: 46px;
+        }
+        @include big_desktop {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    .txt_info {
+        margin-top: 20px;
+        line-height: 22px;
+
+        @include all_desktop {
+            margin-top: 50px;
+        }
+        @include big_desktop {
+            position: absolute; bottom: 30px; left: 24px;
+            margin-top: 0;
+        }
+
+        span + span:before {
+            content: "";
+            display: inline-block;
+            width: 1px; height: 11px;
+            margin: 6px 4px 0 5px;
+            background-color: #dee1eb;
+            vertical-align: top;
+
+            @include all_desktop {
+                width: 2px; height: 20px;
+                margin: 2px 10px;
+            }
+
+            @include big_desktop {
+                width: 1px; height: 11px;
+                margin: 6px 5px 0 6px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .cont_home .bundle_review {margin-top: -310px;}
+}

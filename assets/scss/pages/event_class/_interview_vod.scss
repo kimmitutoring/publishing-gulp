@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+.interview-vod {
+    @include defaultText;
+
+    padding-top: 80px;
+    padding-bottom: 68px;
+    color: #fff;
+    text-align: center;
+    background-color: $main-color;
+}
+
+.interview-vod__title {
+    color: #ffe812;
+    font-size: 16px;
+    letter-spacing: -1px;
+}
+
+.interview-vod__heading {
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.44em;
+    letter-spacing: -2px;
+}
+
+.interview-vod__list {
+    width: 300px;
+    margin: 26px auto 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+
+    .list__item {
+        margin-top: 20px;
+
+        &:nth-child(2) .list__title {
+            color: #ffe812;
+        }
+
+        &--big {
+            .list__link {
+                display: block;
+            }
+            .list__thumb {
+                width: 300px; height: 168px;
+                margin-right: 0;
+            }
+            .list__title {
+                overflow: hidden;
+                position: absolute;
+                clip: rect(0 0 0 0);
+                width: 1px;height: 1px;
+                margin: -1px;
+            }
+        }
+    }
+    .list__link {
+        display: flex;
+    }
+    .list__thumb {
+        flex: none;
+        width: 120px; height: 67px;
+        margin-right: 14px;
+        background-color: #000;
+    }
+    .list__title {
+        margin: auto 0;
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.79em;
+    }
+}

@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+.cakeApp-topic {
+    .topic-main-image {
+        display: block;
+        margin-top: 25px;
+        margin-right: auto;
+        margin-bottom: 12px;
+        margin-left: auto;
+    }
+
+    @include tablet {
+        .topic-main-text {
+            float: left;
+            width: 308px;
+            box-sizing: border-box;
+
+            .inner_tip {
+                margin: 0;
+                box-sizing: border-box;
+            }
+        }
+        .topic-main-image {
+            margin-left: 0;
+        }
+    }
+}
+
+.cakeApp-service {
+    position: relative;
+
+    &.inner {
+        margin-top: 40px;
+        padding: 0;
+        text-align: center;
+
+        @include tablet {
+            margin-top: -40px;
+            padding-top: 72px;
+        }
+    }
+    .service-main-image {
+        margin-top: -100px;
+
+        @include tablet {
+            position: absolute; top: -135px; left: 50%;
+            margin: 0 0 0 35px;
+        }
+    }
+}
+.cakeApp-service-tip {
+    margin-top: 35px;
+    padding: 11px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.67em;
+    background-color: #ebebf0;
+
+    strong {
+        font-weight: 500;
+    }
+}

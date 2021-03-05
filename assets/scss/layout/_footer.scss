@@ -1,0 +1,230 @@
+@charset "UTF-8";
+
+@mixin divideListItem {
+	li {
+		display: inline-block;
+		padding: 3px 4px;
+		vertical-align: top;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 1px; height: 12px;
+			margin: -1px 6px 0 -3px;
+			background-color: #d8d8d8;
+			vertical-align: middle;
+
+			@media (min-width: $tablet_minimum_width) and (max-width: $desktop_maximum_width) {
+				height: 16px;
+				margin: -2px 10px 0 0;
+			}
+		}
+	}
+}
+
+.footerArea {
+	position: relative;
+	padding-bottom: 100px;
+	color: #666;
+	font-size: 14px;
+	line-height: 1.4em;
+	letter-spacing: -0.5px;
+	text-align: center;
+	background-color: #fff;
+
+	.txt_copyright {font-size: inherit;}
+
+	@media (min-width: $tablet_minimum_width) and (max-width: $desktop_maximum_width) {
+		font-size: 20px;
+		line-height: 1.6em;
+	}
+
+	@media (min-width: $big_desktop_minimum_width) {
+		text-align: left;
+
+		.link_mail {
+			padding: 3px 4px;
+
+			&:before {
+				content: "";
+				display: inline-block;
+				width: 1px; height: 12px;
+				margin: -1px 6px 0 -3px;
+				background-color: #d8d8d8;
+				vertical-align: middle;
+			}
+		}
+
+		.txt_copyright {
+			display: block;
+			padding: 10px 4px;
+		}
+	}
+
+	address {
+		display: none;
+		padding: 15px 20px 5px;
+		line-height: 1.5em;
+
+		span {display: block;}
+		&.active {display: block;}
+
+		@media (min-width: $big_desktop_minimum_width) {
+			display: block;
+			padding: 3px 4px;
+
+			span {
+				display: inline;
+
+				&:before {
+					content: "";
+					display: inline-block;
+					width: 1px; height: 12px;
+					margin: -1px 6px 0 6px;
+					background-color: #d8d8d8;
+					vertical-align: middle;
+				}
+
+				&:first-child:before {display: none;}
+			}
+		}
+	}
+
+	.foot_nav {
+		border-top: 1px solid #dee1eb;
+		border-bottom: 1px solid #f3f2f9;
+
+		b {
+			color: #333;
+			font-weight: 600;
+		}
+	}
+
+	.inner_foot,
+	.foot_info {
+		position: relative; z-index: 1;
+		max-width: 1150px;
+		margin: 0 auto;
+		padding: 24px 0;
+		box-sizing: border-box;
+	}
+
+	.inner_foot {
+		& > span {
+			display: block;
+			margin: 0 auto 10px;
+
+			@media (min-width: $tablet_minimum_width) and (max-width: $desktop_maximum_width) {
+				display: inline;
+				padding-right: 10px;
+			}
+			@media (min-width: $big_desktop_minimum_width) {
+				display: inline-block;
+				margin: 0;
+				padding: 3px 4px;
+			}
+		}
+	}
+
+	.info_policy {
+		@include divideListItem;
+
+		width: 250px;
+		margin: 0 auto;
+
+		@media (min-width: $tablet_minimum_width) and (max-width: $desktop_maximum_width) {
+			width: 600px;
+		}
+		@media (min-width: $big_desktop_minimum_width) {
+			width: auto;
+		}
+
+		li {
+			&:first-child:before,
+			&:nth-child(4):before {display: none;}
+		}
+		
+	}
+
+	.info_company {
+		@include divideListItem;
+
+		li {
+			i {font-style: normal;}
+
+			&:first-child:before,
+			&.cell_offer:before {display: none;}
+
+			&.cell_offer {
+				display: block;
+
+				@media (min-width: $big_desktop_minimum_width) {
+					display: inline-block;
+
+					&:before {
+						content: "";
+						display: inline-block;
+						width: 1px; height: 12px;
+						margin: -1px 6px 0 -3px;
+						background-color: #d8d8d8;
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+	}
+	.link_offer {
+		margin-left: 4px;
+		color: #333;
+		font-weight: 600;
+		text-decoration: underline;
+	}
+	button,
+	.button {
+		display: inline-block;
+		margin: -1px 0 1px;
+		padding-right: 5px;
+		padding-left: 7px;
+		vertical-align: middle;
+
+		@media (min-width: $big_desktop_minimum_width) {
+			display: none;
+		}
+
+		.ico_arr {
+			display: block;
+			widtH: 14px; height: 9px;
+			margin-top: 2px;
+			background: url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/ico_home_3_190402.png") no-repeat -242px -110px;
+			background-size: 420px 400px;
+		}
+
+		&--active .ico_arr {transform: rotate(180deg);}
+	}
+	.foot_sns {
+		padding-top: 15px;
+		padding-bottom: 10px;
+		font-size: 0;
+
+		@media (min-width: $big_desktop_minimum_width) {
+			position: absolute; top: -87px; right: 0;
+		}
+		
+		li {
+			display: inline-block;
+			padding: 0 3px;
+			vertical-align: top;
+		}
+		.ico_g_main {
+			display: block;
+			width: 42px; height: 42px;
+			background: url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/ico_home_3_190402.png") no-repeat -242px -110px;
+			background-size: 420px 400px;
+			background-position: -42px -400px;
+
+			&.ico_facebook {background-position: -270px 0;}
+			&.ico_naver {background-position: -316px 0;}
+			&.ico_brunch {background-position: -362px 0;}
+		}
+	}
+}

@@ -1,0 +1,321 @@
+@charset "utf-8";
+
+.alpha-home__intro {
+    padding-right: $alpha-detail-hspace;
+    padding-left: $alpha-detail-hspace;
+    padding-bottom: $alpha-detail-vspace;
+
+    @include tablet {
+        padding-right: $alpha-detail-tablet-hspace;
+        padding-left: $alpha-detail-tablet-hspace;
+    }
+
+    .content__box {
+        padding: 20px;
+        color: #4c4c4c;
+        font-size: 14px;
+        line-height: 1.6em;
+        letter-spacing: -1px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+
+        &--center {text-align: center;}
+        & + .content__box {margin-top: 16px;}
+    }
+
+    .intro__title {
+        @include alphaDetailHeading('intro');
+    }
+    .intro__sub-title {
+        margin: 0;
+        padding: 0 0 16px 0;
+        font-size: 16px;
+        line-height: 1.63em;
+        text-align: center;
+    }
+
+    .intro__content--first {
+        position: relative;
+        margin-top: 320px;
+
+        @include tablet {
+            margin-top: 480px;
+        }
+    }
+    .intro__content--second {
+        position: relative;
+
+        .content__image__inner {
+            margin-left: -35px;
+            margin-right: -65px;
+        }
+        .content__image {
+            overflow: hidden;
+            position: relative;
+            margin-right: -20px;
+            margin-left: -20px;
+            margin-bottom: -35px;
+
+            img {
+                display: block;
+                width: 100%;
+                max-width: 656px;
+                margin: 0 auto;
+            }
+        }
+    }
+    .intro__content--third {
+        .content__image {
+            display: block;
+            width: 230px;
+            margin: 22px auto;
+
+            @include tablet {
+                width: 450px;
+            }
+        }
+    }
+    .intro__text {
+        margin: 0;
+        padding: 0;
+        word-break: keep-all;
+        word-wrap: break-word;
+    }
+    .intro__step {
+        margin: 0 -18px;
+        padding: 0;
+        list-style: none;
+        font-size: 0;
+        text-align: center;
+
+        .step__item {
+            position: relative;
+            display: inline-block;
+            width: 66px; height: 66px;
+            margin-right: 18px;
+            margin-left: 18px;
+            border: 1px solid #efefef;
+            color: #333;
+            font-size: 12px;
+            line-height: 2em;
+            letter-spacing: -0.5px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 66px;
+            box-shadow: 0 8px 15px -4px rgba(0, 0, 0, 0.06);
+            vertical-align: top;
+
+            @include tablet {
+                width: 99px; height: 99px;
+                font-size: 18px;
+            }
+
+            &:before {
+                @include alphaContentIcon;
+
+                content: "";
+                display: block;
+                width: 40px; height: 40px;
+                margin: 3px auto -10px;
+
+                @include tablet {
+                    width: 60px; height: 60px;
+                    margin-top: 4px;
+                    margin-bottom: -15px;
+                    background-size: auto 60px;
+                }
+            }
+            &:after {
+                content: "";
+                position: absolute; top: 50%; left: -32px;
+                display: block;
+                width: 14px; height: 14px;
+                border-style: solid;
+                border-width: 0 2px 2px 0;
+                border-color: #e1e1e1;
+                transform: translateY(-50%) rotate(-54deg) skew(-20deg);
+
+                @include tablet {
+                    left: -38px;
+                    width: 22px; height: 22px;
+                }
+            }
+            &:first-child:after {display: none;}
+            &:nth-child(2):before {background-position: -48px 0;}
+
+            @include tablet {
+                &:nth-child(2):before {background-position: -72px 0;}
+            }
+        } // .step__item
+    } // .intro__step
+    .intro__description {
+        margin: 0;
+        padding: 0;
+    }
+    .intro__list {
+        margin: 0;
+        padding: 40px 0 0 0;
+        list-style: none;
+        counter-reset: step-list-counter;
+
+        .intro__sub-title {
+            display: block;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #ececec;
+            text-align: left;
+        }
+    
+        .list__item {
+            position: relative;
+            padding-left: 30px;
+    
+            &:before {
+                content: counter(step-list-counter);
+                position: absolute; top: 7px; left: 0;
+                width: 19px; height: 19px;
+                color: #fff;
+                font-size: 12px;
+                text-align: center;
+                line-height: 19px;
+                background-color: #333;
+                border-radius: 20px;
+                counter-increment: step-list-counter;
+            }
+            &:after {
+                content: "";
+                position: absolute; top: 33px; bottom: -30px; left: 9px;
+                width: 1px; 
+                background-color: rgba(51, 51, 51, 0.1);
+            }
+    
+            & + .list__item {margin-top: 30px;}
+            &:last-child:after {display: none;}
+        }
+    }
+
+    // text animation
+    .text-animation {
+        width: 163px; height: 283px;
+        font-size: 16px;
+
+        @include tablet {
+            width: 244px; height: 425px;
+            font-size: 26px;
+            background-position: 50% 360px;
+        }
+    }
+}
+
+// tab content
+.alpha-content__tab {
+    padding-top: 25px;
+    padding-bottom: 10px;
+    text-align: center;
+
+    @include tablet {
+        padding-top: 45px;
+    }
+
+    .tab__keyword {
+        display: inline-block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-right: 1px;
+        padding-left: 1px;
+        border-bottom: 2px solid transparent;
+        color: #c5c5c5;
+        font-size: 14px;
+        font-weight: 600;
+        vertical-align: middle;
+        cursor: pointer;
+
+        &--active {
+            color: $main-color;
+            border-color: $main-color;
+        }
+    }
+    .tab__bar {
+        display: inline-block;
+        width: 1px; height: 16px;
+        margin-right: 16px;
+        margin-left: 16px;
+        background-color: #ececec;
+        vertical-align: middle;
+
+        @include small_mobile {
+            margin-right: 6px;
+            margin-left: 6px;
+        }
+    }
+} //.alpha-content__tab
+
+.alpha-content__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #4c4c4c;
+    font-size: 14px;
+    line-height: 1.6em;
+    text-align: center;
+    letter-spacing: -1px;
+
+    .list__item {
+        display: none;
+
+        &--active {display: block;}
+    }
+    .list__keyword {
+        position: absolute;
+        color: transparent;
+    }
+
+    .list__image {
+        position: absolute; top: -320px; left: 50%;
+        width: 171px; height: 358px;
+        padding: 40px 4px 0;
+        background-color: #f6f6f6;
+        border-radius: 22px;
+        box-sizing: border-box;
+        box-shadow: 18px 12px 18px 0 rgba(0, 0, 0, 0.08), -18px -12px 18px 0 rgba(255, 255, 255, 0.9);
+        transform: translateX(-50%);
+
+        @include tablet {
+            top: -480px;
+            width: 256px; height: 538px;
+            padding: 58px 6px 0;
+            border-radius: 33px;
+        }
+
+        &:before {
+            content: "";
+            position: absolute; top: 18px; left: 50%;
+            width: 33px; height: 5px;
+            background-color: #eaeaea;
+            border-radius: 5px;
+            box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+            opacity: 0.5;
+            transform: translateX(-50%);
+
+            @include tablet {
+                top: 27px;
+                width: 50px; height: 7px;
+            }
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            border-radius: 10px;
+
+            @include tablet {
+                border-radius: 15px;
+            }
+        }
+    }
+    .list__description {
+        margin: 0;
+        padding: 20px 0 0 0;
+        border-top: 1px solid #ececec;
+    }
+}

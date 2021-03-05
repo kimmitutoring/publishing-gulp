@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+.alpha-detail__sales {
+	padding-bottom: 100px;
+
+    .sales__wrapper {
+		overflow: hidden;
+		display: flex;
+		width: 290px; height: 290px;
+		margin: 0 auto;
+		padding-top: 35px;
+		padding-bottom: 35px;
+		background-color: #fff;
+		border-radius: 50%;
+		text-align: center;
+		box-sizing: border-box;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		// flex-direction: column;
+
+		@media (min-width: 768px) {
+			width: 580px; height: 580px;
+		}
+	}
+	.sales__bubble {
+		position: relative;
+		display: inline-flex;
+		height: 33px;
+		padding: 0 15px;
+		border: 2px solid #ff8fa2;
+		border-radius: 66px;
+		background-color: #fff;
+		box-shadow: 0 6px 6px 0 rgba(0,0,0,.08);
+		color: #f83e5e;
+		box-sizing: border-box;
+		letter-spacing: -0.5px;
+		align-items: center;
+
+		@media (min-width: 768px) {
+			height: 60px;
+			padding: 0 30px;
+			border-width: 3px;
+			font-size: 28px;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: -7px;
+			left: 50%;
+			z-index: 10;
+			width: 10px;
+			height: 10px;
+			border-color: transparent #ff8fa2 #ff8fa2 transparent;
+			border-style: solid;
+			border-width: 2px;
+			background-color: #fff;
+			transform: translateX(-50%) rotate(45deg);
+
+			@media (min-width: 768px) {
+				bottom: -12px;
+				width: 18px; height: 18px;
+				border-width: 3px;
+			}
+		}
+
+		.wrapper {
+			position: relative;
+			z-index: 20;
+		}
+
+		.number {
+			font-family: 'Spoqa Han Sans', Arial, sans-serif;
+			font-weight: 600;
+		}
+	}
+	.sales__number {
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 110px;
+		margin-top: 15px;
+		margin-bottom: 10px;
+
+		@media (min-width: 768px) {
+			height: 270px;
+			margin-top: -80px;
+			margin-bottom: -100px;
+		}
+
+		.number {
+			display: block;
+			margin-top: -10px;
+			font-family: 'Spoqa Han Sans', Arial, sans-serif;
+			font-size: 130px;
+			font-weight: 600;
+			line-height: 192px;
+
+			@media (min-width: 768px) {
+				font-size: 260px;
+			}
+
+			&:after {
+				content: "%";
+				display: inline-block;
+				margin-top: 20px;
+				font-size: 0.46em;
+				font-weight: 300;
+				line-height: 97px;
+				vertical-align: top;
+			}
+		}
+	}
+	.sales__desc {
+		width: 230px;
+		margin: 0 auto;
+		padding-top: 6px;
+		border-top: 1px solid #ECECEC;
+		color: #999;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 1.6em;
+		letter-spacing: -0.5px;
+
+		@media (min-width: 768px) {
+			width: 460px;
+			padding-top: 12px;
+			font-size: 16px;
+
+			br {display: none;}
+		}
+
+		b {color: #F93E5E;}
+	}
+	
+}

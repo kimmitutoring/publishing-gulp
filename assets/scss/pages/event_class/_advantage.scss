@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+.advantage {
+    @include defaultText;
+
+    padding-top: 32px;
+    background-color: #eaeae6;
+    text-align: center;
+}
+
+.advantage__heading {
+    @include bubbleBoxBorder;
+
+    margin-bottom: -15px;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.54em;
+    letter-spacing: -2px;
+}
+
+.advantage__item {
+    padding-top: 52px;
+    padding-bottom: 52px;
+    
+    .bold {
+        font-weight: 600;
+    }
+
+    .item__number {
+        display: inline-block;
+        width: 53px; height: 43px;
+        margin-bottom: 15px;
+        background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/career/num_img.png');
+        background-repeat: no-repeat;
+        background-position: -330px -210px;
+        background-size: 330px 210px;
+        color: transparent;
+
+        &--01 {background-position: 0 0;}
+        &--02 {background-position: -58px 0;}
+        &--03 {
+            background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/career/num_03.png');
+            background-position: 0 0;
+            background-size: contain;
+        }
+    }
+    .item__heading,
+    .item__description {
+        margin: 0;
+        padding: 0;
+        color: $point-color-dark;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.71em;
+    }
+    .item__description--small {
+        opacity: 0.5;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .item__heading .bold {
+        display: block;
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .item__image {
+        margin: 20px 0;
+    }
+} //.advantage__item
+
+.advantage__video {
+    padding: 30px 0;
+    background-color: #f7f7f7;
+
+    .video__heading {
+        width: 300px;
+        margin: 0 auto;
+        padding: 0;
+        color: #393939;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 2.5em;
+        letter-spacing: -0.88px;
+        background-color: #fff;
+
+        .bold {
+            font-weight: 600;
+        }
+    }
+    .video__area {
+        width: 300px;
+        margin: 0 auto;
+        background-color: #000;
+
+        .frame {
+            vertical-align: top;
+        }
+    }
+}

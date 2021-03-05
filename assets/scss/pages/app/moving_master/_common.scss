@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+$purple-01: #6759ef;
+$purple-02: #4839db;
+$yellow-01: #f0d664;
+$yellow-02: #ffe812;
+$green-01: #85d6c1;
+$green-02: #17edb5;
+$red-01: #f3153b;
+$gray-01: #333;
+$gray-02: #666;
+$gray-03: #f6f6f8;
+$gray-04: #555;
+$gray-05: #cdcdcd;
+$gray-06: #b6b6b6;
+$gray-07: #858585;
+$gray-08: #ededef;
+
+$font-spoqa: 'Spoqa Han Sans', Arial, sans-serif;
+
+@mixin listSlide {
+    position: relative;
+
+    .list__arrow {
+        overflow: hidden;
+        position: absolute; top: 50%; left: 50%;
+        width: 50px; height: 100px;
+        background-image: none;
+        color: transparent;
+        transform: translateY(-50%);
+
+        &:before {
+            content: "";
+            display: block;
+            width: 10px; height: 10px;
+            margin: 45px auto 0;
+            border-width: 0 2px 2px 0;
+            border-style: solid;
+            border-color: #555;
+            transform: rotate(-54deg) skew(-20deg);
+        }
+
+        &--prev {margin-left: -165px;}
+        &--prev:before {transform: rotate(-234deg) skew(-20deg);}
+        &--next {margin-left: 115px}
+    }
+}
+
+.moving_master {
+    b,
+    em,
+    span {
+        display: inline;
+    }
+    
+    .content__heading {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: (20 * 1.8) + px;
+        letter-spacing: -0.7px;
+    }
+
+    .content__text {
+        width: 300px;
+        margin-right: auto;
+        margin-left: auto;
+        color: $gray-02;
+        font-size: 16px;
+        line-height: (16 * 1.8) + px;
+        letter-spacing: -0.7px;
+        text-align: left;
+
+        br {display: none;}
+
+        @media (min-width: 768px) {
+            width: auto;
+            text-align: center;
+
+            br {display: block;}
+        }
+
+        &--small {
+            margin-top: 8px;
+            color: #cacaca;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: (12 * 1.6) + px;
+
+            @media (min-width: 768px) {
+                font-size: 16px;
+                line-height: (16 * 1.8) + px;
+            }
+        }
+    }
+
+    .content__image {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

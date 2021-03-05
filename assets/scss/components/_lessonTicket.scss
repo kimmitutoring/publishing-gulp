@@ -1,0 +1,1082 @@
+@charset "utf-8";
+
+.lessonTicket {
+    .lessonTicketComponent {
+        width: 100%;
+        min-height: 100%;
+        background-color: rgb(241, 241, 241);
+    }
+
+    // it is just for test
+    .back {
+        display: flex;
+        height: 50px;
+        width: 95%;
+        align-items: center;
+        &__arrow {
+            display: flex;
+            flex-grow: 0;
+            width: 2rem;
+            height: 3rem;
+            align-items: center;
+            justify-content: center;
+        }
+        .arrow_content {
+            width: 0;
+            height: 0;
+            border-left: 8px solid #303030;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            transform: rotate(180deg);
+        }
+        .arrow_content:before {
+            content: "";
+            position: absolute;
+            top: -6px;
+            right: 5px;
+            width: 0;
+            height: 0;
+            border: 6px solid #fafafa;
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+        }
+        &__title {
+            flex-grow: 1;
+        }
+        &__purches {
+            flex-grow: 0;
+        }
+    }
+    .progress {
+        position: relative;
+        width: 100%;
+        margin-bottom: 18px;
+        &__content {
+            position: relative;
+            width: 100%;
+            height: 6px;
+            margin-top: 5.6px;
+            margin-bottom: 8px;
+            background-color: #d8d8d8;
+            border-radius: 3.5px;
+        }
+        &__header{
+            position: relative;
+            height: 25px;
+            width: 100%;
+            &--dimmed,
+            &--none{display: none;}
+        }
+        &__signWrap {
+            display: inline-block;
+            position: absolute;
+            &--center {
+                margin-left: - 17.4px;
+            }
+            &--left {
+                margin-left: - 42.750px;
+                right: 0;
+            }
+        }
+        &__desc {
+            font-size: 12px;
+            font-weight: bold;
+            color: #c3c3c3;
+        }
+        &__bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            border-radius: 3.5px;
+            background-color: $sky;
+            &--dimmed {background-color: #ababab;}
+        }
+        &__sign {
+            position: relative;
+            display: inline-block;
+            min-width: 25px;
+            padding: 0 5px;
+            margin-bottom: 2px;
+            background: $sky;
+            text-align: center;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            border-radius: 15px;
+            font-size: 12px;
+            color: #ffffff;
+            font-weight: bold;
+            &--right {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    border-style: solid;
+                    border-width: 4px 4px 0;
+                    border-color: $sky transparent;
+                    display: block;
+                    width: 0;
+                    bottom: -2px;
+                    left: 3.6px;
+                }
+            }
+            &--center {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    border-style: solid;
+                    border-width: 4px 4px 0;
+                    border-color: $sky transparent;
+                    display: block;
+                    width: 0;
+                    bottom: -2px;
+                    left: 13px;
+                }
+            }
+            &--left {
+                right: 0;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    bottom: -2px;
+                    right: 3.2px;
+                    width: 0;
+                    border-style: solid;
+                    border-width: 4px 4px 0;
+                    border-color: $sky transparent;
+                }
+            }
+        }
+        &__icon {
+            &--fire {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                background: url("//res.tutoring.co.kr/res/images/common/ico_comm.png") no-repeat;
+                background-position-x: -140px;
+                background-position-y: -56px;
+                background-size: 220px 188px;
+            }
+        }
+        &__signText {
+            &--fire {padding-left: 16px;}
+        }
+        &__text {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            font-weight: bold;
+            color: #919191;
+            &--dimmed {color: #d8d8d8;}
+        }
+    }
+    .progressBillKey {
+        position: relative;
+        width: 100%;
+        margin-bottom: 18px;
+        &__list {
+            display: flex;
+            * > {
+                flex: 1;
+            }
+        }
+        &__item {
+            position: relative;
+            width: 100%;
+            height: 6px;
+            margin-top: 5.6px;
+            margin-bottom: 8px;
+            margin-right: 2px;
+            background-color: #d8d8d8;
+            border-radius: 3.5px;
+            &:last-of-type{
+                margin-right: 0;
+            }
+            &--notPay {
+                display: inline-flex;
+                box-sizing: border-box;
+                background-color: #fff;
+                border: solid 1.5px #d8d8d8;
+            }
+            &--use {
+                background: #d8d8d8;
+            }
+            &--used {
+                background: $sky;
+            }
+        }
+        &__bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            border-radius: 3.5px;
+            background-color: $sky;
+            &--dimmed {
+                background-color: #c3c3c3;
+            }
+        }
+        &__text {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            font-weight: bold;
+            color: #919191;
+            &--dimmed {color: #d8d8d8;}
+        }
+    }
+
+    .textBar {
+        display: flex;
+        margin: 0 5% 16px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        border-radius: 25px;
+        background-color: #ffffff;
+        &__icon {
+            width: 16px;
+            height: 16px;
+            background: url("//res.tutoring.co.kr/res/images/common/ico_comm.png") no-repeat;
+            background-size: 220px 188px;
+            &--warring {
+                background-position-x: -140px;
+                background-position-y: -104px;
+            }
+            &--info {
+                background-position-x: -160px;
+                background-position-y: -104px;
+            }
+            &--none {
+                display: none;
+            }
+            &--gift {
+                background-position-x: -160px;
+                background-position-y: -124px;
+            }
+            &--coupon {
+                background-position-x: -180px;
+                background-position-y: -124px;
+            }
+        }
+        // icon component
+        &__text {
+            flex: 1;
+            margin-left: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333333;
+        }
+        &__link {
+            width: 16px;
+            height: 16px;
+            background: url("//res.tutoring.co.kr/res/images/common/ico_arrow.png") no-repeat;
+            background-position-x: 0;
+            background-position-y: 0;
+            background-size: 24px 188px;
+        }
+    }
+    .btnBox1 {
+        display: flex;
+        margin: 0 5% 16px;
+        padding: 20px 0;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+
+        &__item {
+            position: relative;
+            flex: 1;
+            padding: 1px 0;
+            text-align: center;
+        }
+        &__countIcon {
+            position: absolute;
+            left: calc(50% + 4px);
+            top: -2px;
+            width: 16px;
+            height: 16px;
+            background-color: #f93e5e;
+            border-radius: 8px;
+            font-size: 11px;
+            line-height: 11px;
+            text-align: center;
+            vertical-align: middle;
+            color: #fff;
+            &--middle {
+                vertical-align: middle;
+            }
+            &--none {
+                display: none;
+            }
+        }
+        &__icon {
+            display: inline-block;
+            margin-bottom: 8px;
+            width: 24px;
+            height: 24px;
+            background-color: red;
+            &--point {
+                width: 24px;
+                height: 24px;
+                background: url("//res.tutoring.co.kr/res/images/common/ico_comm.png") no-repeat;
+                background-position-x: -84px;
+                background-position-y: -56px;
+                background-size: 220px 188px;
+            }
+            &--coupon {
+                width: 24px;
+                height: 24px;
+                background: url("//res.tutoring.co.kr/res/images/common/ico_comm.png") no-repeat;
+                background-position-x: -28px;
+                background-position-y: -56px;
+                background-size: 220px 188px;
+            }
+            &--addCode {
+                width: 24px;
+                height: 24px;
+                background: url("//res.tutoring.co.kr/res/images/common/ico_comm.png") no-repeat;
+                background-position-x: -56px;
+                background-position-y: -56px;
+                background-size: 220px 188px;
+            }
+        }
+        &__text {
+            font-size: 16px;
+            text-align: center;
+            color: #333333;
+        }
+        &__coupon {
+            border-left: solid 1px #f0f0f0;
+            border-right: solid 1px #f0f0f0;
+        }
+    }
+    .infoBox {
+        display: flex;
+        margin: 0 5% 16px;
+        padding: 20px 0;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+        &__item {
+            position: relative;
+            flex: 1;
+            padding: 1px 0;
+            text-align: center;
+            &--done {
+                border-left: solid 1px #f0f0f0;
+                border-right: solid 1px #f0f0f0;
+            }
+        }
+        &__count {
+            display: inline-block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            color: #333333;
+        }
+        &__desc {
+            text-align: center;
+            font-size: 16px;
+            color: #333333;
+        }
+
+    }
+    .cardEvent {
+        margin: 0 5% 10px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0,0.05);
+        &__main {
+            position: relative;
+            height: 180px;
+            background-color: #f5f5f5;
+        }
+        &__eventImgCover {
+            height: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        &__eventImg {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        &__guide {
+            display: flex;
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            .guide__item {
+                margin-right: 8px;
+                width: 6px;
+                height: 6px;
+                border-radius: 3px;
+                background-color: #d8d8d8;
+                &--active {
+                    background-color: $sky;
+                }
+            }
+        }
+        &__more {
+            width: 100%;
+            border-top: 1px solid #f0f0f0;
+            .more {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 17px 20px;
+                &__text {
+                    font-size: 14px;
+                    color: #333333;
+                }
+                &__icon {
+                    width: 10px;
+                    height: 10px;
+                    background-color: #777777;
+                }
+            }
+        }
+    }
+    .ticketState {
+        display: inline-block;
+        padding: 2px 4.5px 0;
+        box-sizing: border-box;
+        font-size: 12px;
+        line-height: 15px;
+        height: 21px;
+        text-align: center;
+        border-radius: 4px;
+        &--ing,
+        &--hold,
+        &--wait,
+        &--revival {
+            color: $sky;
+            border: solid 1.5px $sky;
+        }
+        &--requestWait {
+            color: $sky;
+            border: solid 1.5px $sky;
+            opacity: 0.4;
+        }
+        &--payDone,
+        &--payReserve,
+        &--done,
+        &--expire {
+            color: #919191;
+            background-color: #f4f4f4;
+        }
+        &--refund,
+        &--cancel {
+            color: #f93e5e;
+            border: solid 1.5px #f93e5e;
+        }
+    }
+    .tutorLangCounts {
+        display: inline-flex;
+        align-items: center;
+        font-size: 12px;
+        &__item {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 8px;
+        }
+        &__count {
+            margin-left: 3px;
+            color: #777777;
+            &--dimmed {
+                color: #d8d8d8;
+            }
+        }
+    }
+    .tutorLang {
+        display: inline-flex;
+        align-items: center;
+        font-size: 12px;
+        color: #777777;
+        &__icon {
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            margin-right: 5px;
+            border-radius: 2.5px;
+        }
+        &__text {
+        }
+        &--global {
+            color: $global;
+            .tutorLang__icon {
+                background-color: $global;
+            }
+        }
+        &--native {
+            color: $native;
+            .tutorLang__icon {
+                background-color: $native;
+            }
+        }
+        &--chinese {
+            color: #ce2e2e;
+            .tutorLang__icon {
+                background-color: #ce2e2e;
+            }
+        }
+        &--dimmed {
+            color: #d8d8d8;
+            .tutorLang__icon {
+                background-color: #d8d8d8;
+            }
+        }
+    }
+    .card {
+        margin: 0 5% 16px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+        .cardHeader {
+            padding: 20px 20px 0;
+            margin: 0 0 16px;
+            &__header {
+                position: relative;
+            }
+            &__title {
+                display: block;
+                margin-bottom: 5px;
+                font-size: 34px;
+                font-weight: 100;
+                line-height: 34px;
+                &--dimmed {
+                    color: #c3c3c3;
+                }
+
+            }
+            &__state {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+        &Body{
+            padding: 0 20px 16px 20px;
+            &__desc{
+                line-height: normal;
+                color:#919191;
+                font-size: 14px;
+                &--title{
+                    color: #333333;
+                }
+                &--dimmed{
+                    color:#919191;
+                }
+            }
+        }
+        &Footer {
+            display: flex;
+            width: 100%;
+            background-color: #ffffff;
+            border-top: 1px solid #f0f0f0;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            .cardFooter__content:nth-child(2) {
+                border-left: 1px solid #efefef;
+            }
+            &__content {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                padding: 17px 20px;
+                &--noneInfo {
+                    flex-direction: row-reverse;
+                }
+                &--button,
+                &--button2 {
+                    text-align: center;
+                }
+            }
+            &__text {
+                flex: 1;
+                font-size: 14px;
+                color: #333333;
+            }
+            &__icon {
+                width: 16px;
+                height: 16px;
+                &--next {
+                    width: 16px;
+                    height: 16px;
+                    background: url("//res.tutoring.co.kr/res/images/common/ico_arrow.png") no-repeat;
+                    background-position-x: 0;
+                    background-position-y: 0;
+                    background-size: 24px 188px;
+                }
+                &--more {
+
+                }
+                &--closed {
+                    width: 16px * 3/3;
+                    height: 16px * 3/3;
+                    background: url("//res.tutoring.co.kr/res/images/common/ico_arrow.png") no-repeat;
+                    background-position-x: 0px * 3/3;
+                    background-position-y: -40px * 3/3;
+                    background-size: 24px * 3/3 188px * 3/3;
+                }
+                &--opened {
+                    width: 16px;
+                    height: 16px;
+                    background: url("//res.tutoring.co.kr/res/images/common/ico_arrow.png") no-repeat;
+                    background-position-x: 0;
+                    background-position-y: -20px;
+                    background-size: 24px 188px;
+                }
+                &--noneInfo {
+                    width: 16px;
+                    height: 16px;
+                    background: url("//res.tutoring.co.kr/res/images/common/ico_comm.png") no-repeat;
+                    background-position-x: -160px;
+                    background-position-y: -104px;
+                    background-size: 220px 188px;
+                    margin-right: 4px;
+                }
+                &--down {
+                    width: 16px;
+                    height: 16px;
+                    background: url("//res.tutoring.co.kr/res/images/common/ico_comm.png") no-repeat;
+                    background-position-x: -140px;
+                    background-position-y: -124px;
+                    background-size: 220px 188px;
+                    margin-right: 4px;
+                }
+                &--none,
+                &--button,
+                &--button2 {
+                    display: none;
+                }
+            }
+
+        }
+    }
+    .ticketBoard {
+        &__noTicketImg {
+            display: block;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 8px;
+            object-fit: contain;
+            background: url("//res.tutoring.co.kr/res/images/img/tudal/tudal_empty.png");
+            background-size: 110px 110px;
+        }
+        &__noTicketDesc {
+            font-size: 16px;
+            font-weight: bold;
+            color: #d8d8d8;
+            text-align: center;
+
+        }
+        &__text {
+            &--sky {
+                color: $sky;
+            }
+            &--red {
+                color: #f93e5e;
+            }
+        }
+    }
+    .ticketDetail {
+        &__text {
+            &--color {
+                color: $sky;
+            }
+            &--wait{
+                color: #777777;
+            }
+            &--dimmed{
+                color: #c3c3c3;
+            }
+        }
+    }
+    .ticketMonth {
+        &__duration {
+            margin-top: 5px;
+            color: #919191;
+            font-size: 14px;
+            font-weight: normal;
+        }
+    }
+    .ticketList {
+        border-top: 1px solid #f0f0f0;
+        &__title {
+            padding: 16px 18px 2px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333333;
+        }
+        .ticket--noneFirst{
+            margin: 0 20px 0 20px;
+            border-top: solid 1px #e7e7e7;
+        }
+        &__ticket {
+            .ticket {
+                display: flex;
+                padding: 18px 20px;
+                align-items: center;
+                &__img {
+                    width: 48px;
+                    height: 48px;
+                    object-fit: cover;
+                    border-radius: 24px;
+                    border: solid 1px #e7e7e7;
+                    background-color: #e7e7e7;
+                }
+                &__desc {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 5px;
+                    justify-content: space-between;
+                    word-break: break-word;
+                }
+                &__subDesc {
+                    text-align: right;
+                    justify-self: right;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+                &__date {
+                    width: 100%;
+                    font-size: 14px;
+                    text-align: right;
+                    color: #919191;
+                }
+                &__name {
+                    margin-bottom: 4px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #333333;
+                }
+                &__time {
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: #333333;
+                }
+
+                &__type {
+                    margin-top: 8px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: #c3c3c3;
+                    max-width:calc(100% - 35px);
+                }
+                &__count {
+                    margin-top: 8px;
+                    padding-left:5px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: #c3c3c3;
+                }
+            }
+        }
+
+    }
+    .ticketStamp {
+        padding: 15px 0 8px 0;
+        margin-top: 40px;
+        width: 100%;
+        justify-content: space-between;
+        &__stamp {
+            display: flex;
+            &--noneFirst {
+                margin-top: 32px;
+            }
+            &--line {
+                display: flex;
+                flex: 1;
+                .line {
+                    display: flex;
+                    float: right;
+                    width: 100%;
+                    margin-top: -18px;
+                    border-top: solid 3px #d8d8d8;
+                    justify-content: space-between;
+                    &--used {
+                        border-top: solid 3px #34bcff;
+                    }
+                    &--done {
+                        border-top: solid 3px #c3c3c3;
+                    }
+                }
+            }
+            &--circle {
+                width: 24px;
+                height: 24px;
+                margin-top: -28px;
+                border-radius: 50%;
+                background-color: #d8d8d8;
+                color: #ffffff;
+                font-size: 10px;
+                font-weight: bold;
+                line-height: 24px;
+                text-align: center;
+                &--used {
+                    background-color: #34bcff;
+                }
+                &--done {
+                    background-color: #ABABAB;
+                }
+            }
+        }
+        &__desc {
+            display: flex;
+            width: 100%;
+            color: #919191;
+            font-size: 14px;
+            font-weight: bold;
+            &--done {
+                color: #c3c3c3;
+            }
+        }
+        &__usedCount {
+            width: 30%;
+        }
+        &__totalCount {
+            margin-right: 2.5px;
+            text-align: right;
+        }
+        &__icon--question {
+            margin-top: 2px;
+            width: 16px;
+            height: 16px;
+            background: url("//res.tutoring.co.kr/res/images/common/ico_comm.png") no-repeat;
+            background-position-x: -120px;
+            background-position-y: -125px;
+            background-size: 220px 188px;
+            margin-right: 4px;
+        }
+    }
+
+    .ticketRevival {
+        &__duration {
+            color: #919191;
+            font-size: 14px;
+            font-weight: normal;
+        }
+        &__coupon {
+            position: relative;
+            padding: 24px;
+            text-align: center;
+            .coupon {
+                &__img {
+                    vertical-align: middle;
+                    width: 122.3px;
+                    height: 56px;
+                }
+                &__title {
+                    position: absolute;
+                    padding-left: 20px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    line-height: 1;
+                    color: #555555;
+                    &--dim {
+                        color: #c3c3c3;
+                    }
+                    text-align: center;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            &--none {
+                display: none;
+            }
+        }
+        &__title {
+            padding-bottom: 32px;
+            width: 100%;
+            font-size: 16px;
+            color: #333333;
+            text-align: center;
+            white-space: pre-line;
+            line-height: initial;
+            &--none,
+            &--dimmed {
+                display: none;
+            }
+        }
+        &__desc {
+            padding: 14px 0 16px 0;
+            width: 100%;
+            font-size: 14px;
+            color: #919191;
+            .desc {
+                &__title {
+                    color: #333333;
+                }
+                &__item {
+                    display: flex;
+                }
+                &__itemTitle {
+                    flex: 2.4;
+                    height: 20px;
+                }
+                &__itemDesc {
+                    flex: 7.6;
+                    height: 20px;
+                }
+            }
+        }
+    }
+    .ticketPay {
+        &__title {
+            margin-bottom: 8px;
+            color: #333333;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        &__duration {
+            color: #919191;
+            font-size: 14px;
+        }
+        &__article{
+            &:nth-child(2n){
+                margin-top: 24px;
+            }
+        }
+        &__category {
+            display: flex;
+            padding-bottom: 3px;
+            padding-top: 2px;
+            color: #333333;
+            font-size: 14px;
+            &Name {
+                flex: 2.5;
+                &--small{
+                    margin-right: -8px;
+                }
+            }
+            &Content {
+                position: relative;
+                flex: 7.5;
+                &--refund{
+                    text-decoration: line-through;
+                    text-decoration-color: #f93e5e;
+                }
+            }
+            &State{
+                position: absolute;
+                top: -2px;
+                display: inline-block;
+                margin-left: 4px;
+                font-weight: normal;
+            }
+            &--small {
+                padding-left: 8px;
+                box-sizing: border-box;
+                border-left: 1px solid #efefef;
+                color: #919191;
+                font-size: 12px;
+            }
+            &--bold {
+                font-weight: bold;
+            }
+            &--refund {
+                color: #f93e5e;
+                font-weight: bold;
+            }
+        }
+        &__subCategory{
+            //margin: 7px 0;
+        }
+        &__detail{
+            border-top: 1px solid #efefef;
+            padding: 16px 20px;
+            &Title{
+                margin-bottom: 18px;
+                font-size: 16px;
+                font-weight: bold;
+                color: #333333;
+            }
+            &Item{
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #efefef;
+                &:last-child{
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    border-bottom: none;
+                }
+                .detailItem{
+                    &__header{
+                        position: relative;
+                        margin-bottom: 8px;
+                    }
+                    &__title{
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: #333333;
+                        &--dimmed{
+                            color: #c3c3c3;
+                        }
+                    }
+                    &__category {
+                        position: relative;
+                        display: flex;
+                        padding-bottom: 4px;
+                        padding-top: 3px;
+                        color: #333333;
+                        font-size: 14px;
+                        line-height: 1;
+                        &Name {
+                            flex: 2;
+                            &--bold {
+                                font-weight: bold;
+                            }
+                        }
+                        &Content {
+                            position: relative;
+                            flex: 8;
+                            &--red{
+                                text-decoration: line-through;
+                                text-decoration-color: #f93e5e;
+                            }
+                            &> * {
+                                margin-left: 4px;
+                            }
+                        }
+                        &State{
+                            display: inline-block;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            font-weight: normal;
+                        }
+                        &--small {
+                            padding-left: 8px;
+                            box-sizing: border-box;
+                            border-left: 1px solid #efefef;
+                            color: #919191;
+                            font-size: 12px;
+                        }
+                        &--bold {
+                            font-weight: bold;
+                        }
+                        &--red {
+                            position: relative;
+                            color: #f93e5e;
+                            padding-bottom: 0;
+                            padding-top: 0;
+                        }
+                        &--dimmed{
+                            color: #c3c3c3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

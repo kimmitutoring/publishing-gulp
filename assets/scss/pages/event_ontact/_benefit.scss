@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+.ontact-benefit {
+	position: relative;
+    background-color: $dark-blue;
+
+    .list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .list__item {
+        width: 130px;
+        margin: -54px 4px 0;
+        color: rgb(255, 165, 176);
+        font-size: 16px;
+        font-weight: 600;
+        font-family: $font-roboto;
+        line-height: 22px;
+		background-color: $dark-yellow;
+		
+		@media (min-width: 1200px) {
+			width: 170px;
+		}
+    }
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+		height: 53px;
+		margin-right: 15px;
+		margin-left: 15px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		color: #fff;
+        font-weight: 600;
+    }
+    .inner {
+		position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 96px;
+		text-align: center;
+		letter-spacing: -1px;
+
+        .point {color: #fff;}
+	}
+	.badge {
+		position: absolute; top: -33px; right: -26px;
+		width: 66px; height: 66px;
+		color: transparent;
+		font-size: 10px;
+		background: url("//res.tutoring.co.kr/res/images/evt/202012/pesta/3rd/pesta_main_badge.png") no-repeat 50% 0;
+		background-size: 100%;
+	}
+}

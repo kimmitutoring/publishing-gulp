@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+.item__alpha {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #0F0F28;
+    background-image: url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/bg_alpha_pc.png");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: 600px auto;
+    text-align: center;
+
+    .dimmed-text {color: rgba(255, 255, 255, 0.7)}
+    .point-text {color: #4BD7FF;}
+
+    .alpha__title {
+        color: #fff;
+        font-size: 32px;
+        line-height: 32px;
+        font-weight: 600;
+
+        @media (min-width: 1200px) {
+            font-size: 48px;
+            line-height: 48px;
+            letter-spacing: -2px;
+        }
+
+        .point-text {
+            display: block;
+            padding-bottom: 20px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 16px;
+            letter-spacing: -1px;
+
+            @media (min-width: 1200px) {
+                font-size: 20px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .alpha__desc {
+        color: #fff;
+        font-size: 18px;
+        letter-spacing: -1px;
+
+        @media (min-width: 1200px) {
+            font-size: 24px
+        }
+
+        &--small {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+
+    .alpha__image {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+
+        &--01 {
+            margin-top: 64px;
+            margin-bottom: 48px;
+        }
+        &--02 {
+            margin-top: 43px;
+            margin-bottom: 48px;
+        }
+
+        @media (min-width: 1200px) {
+            &--01 {
+                width: 620px;
+                margin-top: 80px;
+                margin-bottom: 80px;
+            }
+            &--02 {
+                width: 740px;
+                margin-top: 48px;
+                margin-bottom: 80px;
+            }
+        }
+    }
+
+    .alpha__step {
+        width: 312px;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 0;
+
+        @media (min-width: 1200px) {
+            width: 100%;
+        }
+
+        .list__item {
+            position: relative;
+            display: inline-block;
+            width: 100%; height: 204px;
+            margin: 12px 0;
+            padding: 64px 32px 0;
+            letter-spacing: -1px;
+            text-align: left;
+            vertical-align: top;
+            background-color: rgba(239, 239, 255, 0.1);
+            box-sizing: border-box;
+
+            @media (min-width: 1200px) {
+                width: 268px; height: 204px;
+                margin: 0 8px;
+            }
+
+            &:before {
+                content: "";
+                position: absolute; top: 0; left: 0;
+                width: 64px; height: 64px;
+                background-image: url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/alpha_step1.png");
+                background-repeat: no-repeat;
+                background-size: 100% auto;
+            }
+
+            &:nth-child(2):before {background-image: url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/alpha_step2.png");}
+            &:nth-child(3):before {background-image: url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/alpha_step3.png");}
+        }
+        .list__title {
+            color: #fff;
+            font-size: 20px;
+        }
+        .list__desc {
+            margin-top: 16px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+
+}

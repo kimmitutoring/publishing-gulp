@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+// base
+@import 'utils/variables';
+@import 'utils/mixin';
+
+// webfont
+@import 'fonts/NotoSans';
+@import 'fonts/SpoqaHanSans';
+
+// common
+@import 'pages/app/normalize';
+@import 'pages/app/common';
+
+// 온보딩
+@import 'pages/app/onboad/component';
+@import 'pages/app/onboad/onboard';
+
+// 수강권 홈
+@import 'pages/app/home_nav';
+@import 'pages/app/home_spot';
+@import 'pages/app/home_coupon';
+@import 'pages/app/home_basic';
+@import 'pages/app/home_alpha';
+@import 'pages/app/home_plan';
+@import 'pages/app/home_kids';
+@import 'pages/app/home_package';
+@import 'pages/app/home_review';
+@import 'pages/app/home_banner';
+
+// 튜터링 알파 홈
+@import 'pages/app/alpha/home_spot';
+@import 'pages/app/alpha/home_intro';
+@import 'pages/app/alpha/home_course';
+
+// 튜터링 알파 상세
+@import 'pages/app/alpha/detail_spot';
+@import 'pages/app/alpha/detail_summary';
+@import 'pages/app/alpha/detail_tab';
+@import 'pages/app/alpha/detail_review';
+@import 'pages/app/alpha/detail_intro';
+@import 'pages/app/alpha/detail_topic';
+@import 'pages/app/alpha/detail_order';
+@import 'pages/app/alpha/detail_sidebar';
+@import 'pages/app/alpha/detail_price';
+@import 'pages/app/alpha/detail_package';
+@import 'pages/app/alpha/detail_basic';
+@import 'pages/app/alpha/detail_notice';
+@import 'pages/app/alpha/detail_guide';
+
+// 리뷰 홈
+@import 'pages/app/review/home_spot';
+@import 'pages/app/review/home_recommend';
+@import 'pages/app/review/home_store';
+@import 'pages/app/review/home_banner';
+
+// 토픽
+@import 'pages/app/topic/topic_common';
+@import 'pages/app/topic/topic_card';
+@import 'pages/app/topic/topic_search';
+@import 'pages/app/topic/topic_popular';
+@import 'pages/app/topic/topic_normal';
+@import 'pages/app/topic/topic_review';
+@import 'pages/app/topic/topic_interest';
+@import 'pages/app/topic/topic_banner';
+
+// 무빙마스터
+@import 'pages/app/moving_master/common';
+@import 'pages/app/moving_master/spot';
+// @import 'pages/app/moving_master/content_01';
+@import 'pages/app/moving_master/content_02';
+@import 'pages/app/moving_master/content_03';
+@import 'pages/app/moving_master/content_04';
+@import 'pages/app/moving_master/content_05';
+// @import 'pages/app/moving_master/content_06';
+@import 'pages/app/moving_master/content_07';
+@import 'pages/app/moving_master/content_08';
+@import 'pages/app/moving_master/content_09';
+@import 'pages/app/moving_master/content_10';
+@import 'pages/app/moving_master/content_11';
+// @import 'pages/app/moving_master/content_12';
+@import 'pages/app/moving_master/content_13';
+@import 'pages/app/moving_master/content_14';
+@import 'pages/app/moving_master/package';
+@import 'pages/app/moving_master/series';
+@import 'pages/app/moving_master/notice';
+@import 'pages/app/moving_master/fixed_bar';
+@import 'pages/app/moving_master/sidebar';

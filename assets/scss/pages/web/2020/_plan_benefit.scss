@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+.plan__benefit {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-color: #F0F0F0;
+	text-align: left;
+
+	@media (min-width: $big_desktop_minimum_width) {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+
+	.section__heading {
+		margin-bottom: -12px;
+
+		@media (min-width: $big_desktop_minimum_width) {
+			margin-bottom: 30px;
+			padding-right: 108px;
+			white-space: nowrap;
+		}
+	}
+
+	.section__desc {
+		margin-top: 25px;
+		font-size: 14px;
+		line-height: 21px;
+
+		@media (min-width: $big_desktop_minimum_width) {
+			margin-top: 0;
+			font-size: 20px;
+			line-height: 32px;
+
+			& + .section__desc {margin-top: 20px;}
+		}
+
+		.point-text {color: #7063f9;}
+	}
+
+	.benefit__wrapper {
+		max-width: 270px;
+		margin: 0 auto;
+
+		@media (min-width: $big_desktop_minimum_width) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	.benefit__list {
+		margin-bottom: 17px;
+
+		@media (min-width: $big_desktop_minimum_width) {
+			margin-bottom: 30px;
+		}
+
+		.list__item {
+			padding: 5px 0;
+			letter-spacing: -1px;
+			white-space: nowrap;
+
+			@media (min-width: $big_desktop_minimum_width) {
+				padding: 2px 0;
+			}
+		}
+
+		.text {
+			position: relative;
+			color: #000;
+			font-size: 13px;
+			line-height: 21px;
+
+			@media (min-width: $big_desktop_minimum_width) {
+				font-size: 20px;
+				line-height: 32px;
+			}
+
+			&:before {
+				content: "";
+				position: absolute; top: 50%; left: -23px;
+				width: 15px; height: 15px;
+				background-image: url("//res.tutoring.co.kr/res/images/img/plans/img_star_3x.png");
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				background-size: 15px 15px;
+				transform: translateY(-50%);
+			}
+			&:after {
+				content: "";
+				position: absolute; bottom: 0; left: 0; right: 0;
+				height: 1px;
+				background-color: #7063f9;
+			}
+		}
+		.tag {
+			display: inline-block;
+			margin-left: 5px;
+			padding: 2px 7px;
+			color: #fff;
+			background-color: #c8c6e1;
+			border-radius: 3px;
+			font-size: 8px;
+			font-weight: 700;
+			line-height: 12px;
+			letter-spacing: -0.4px;
+
+			@media (min-width: $big_desktop_minimum_width) {
+				margin-left: 10px;
+				font-size: 14px;
+				line-height: 21px;
+			}
+		}
+	}
+}

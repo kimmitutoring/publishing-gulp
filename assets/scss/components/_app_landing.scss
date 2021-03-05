@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+$link-image-url: "//cdn.tutoring.co.kr/uploads/home/img/tutoringgo/enHome/";
+
+.tutoringgo_app_landing {
+    background-color: #f9f9f9;
+
+    .app_landing_inner {
+        position: relative;
+        width: 1200px; height: 850px;
+        margin: 0 auto;
+        padding-top: 221px;
+        box-sizing: border-box;
+    }
+    .app_landing_title {
+        color: #333;
+        font-size: 54px;
+        font-weight: 300;
+        line-height: 1.41em;
+        letter-spacing: -2px;
+    }
+    .app_landing_link {
+        position: absolute; bottom: 156px; left: 0;
+
+        .link {
+            display: inline-block;
+            width: 163px; height: 60px;
+            margin-right: 20px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: 'Noto Sans', 'Apple SD Gothic Neo', arial, sans-serif;
+            line-height: 58px;
+            letter-spacing: -1px;
+            vertical-align: top;
+            background-color: #7646ff;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 15px 20px -6px rgba(109, 81, 248, 0.5), 0 2px 6px 0 rgba(118, 70, 255, 0.5);
+
+            &:before {
+                content: "";
+                display: inline-block;
+                width: 20px; height: 22px;
+                margin-right: 5px;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: 100% auto;
+                vertical-align: middle;
+            }
+
+            &_gglplay:before {background-image:url($link-image-url + 'appstore_gglplay.png');}
+            &_apple:before {background-image:url($link-image-url + 'appstore_apple.png');}
+        }
+    }
+    .app_landing_image {
+        position: absolute; bottom: 0; right: 0;
+        width: 557px; height: 735px;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+
+        @at-root :lang(en) & {background-image: url(//cdn.tutoring.co.kr/uploads/home/img/tutoringgo/enHome/appstore_landing-en.png);}
+        @at-root :lang(zh) & {background-image: url(//cdn.tutoring.co.kr/uploads/home/img/tutoringgo/zhHome/appstore_landing-zh.png);}
+    }
+}

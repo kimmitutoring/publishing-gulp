@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+.tac-spot {
+	position: relative;
+	padding-top: 39px;
+	padding-bottom: 29px;
+	background: url("//res.tutoring.co.kr/res/images/evt/202102/tac/tac_bg_img.jpg") repeat-x 50% 0;
+	background-size: auto 100%;
+	text-align: center;
+	box-sizing: border-box;
+
+	@media (min-width: 1200px) {
+		height: 1058px;
+		padding-top: 137px;
+	}
+
+	.spot__title {
+		overflow: hidden;
+		width: 300px; height: 336px;
+		margin: 0 auto;
+		color: transparent;
+		background: url("//res.tutoring.co.kr/res/images/evt/202102/tac/tac_title_img.png") no-repeat 50% 0;
+		background-size: 100%;
+
+		@media (min-width: 1200px) {
+			width: 476px; height: 534px;
+		}
+	}
+	.spot__period {
+		display: block;
+		padding-top: 47px;
+		padding-bottom: 15px;
+		color: #333;
+		font-size: 22px;
+		font-family: "Roboto", Helvetica, sans-serif;
+		font-weight: 700;
+		line-height: 1em;
+
+		@media (min-width: 1200px) {
+			padding-top: 57px;
+			padding-bottom: 40px;
+			font-size: 36px;
+		}
+	}
+
+	.spot__desc {
+		width: 330px; height: 126px;
+		margin: 0 auto;
+		color: transparent;
+		background: url("//res.tutoring.co.kr/res/images/evt/202102/tac/tac_title_sticker.png") no-repeat 50% 0;
+		background-size: 100%;
+
+		@media (min-width: 1200px) {
+			width: 490px; height: 187px;
+		}
+	}
+
+}

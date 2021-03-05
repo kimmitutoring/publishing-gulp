@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+.event-worker {
+	background-color: #F5F5F5;
+
+	@media (min-width: 1200px) {
+		padding-top: 137px;
+	}
+}
+
+.worker-spot {
+	position: relative;
+	height: 1203px;
+	background: url("//res.tutoring.co.kr/res/images/evt/202011/tech/tech_main_01_img.png") no-repeat 50% 0;
+	background-size: auto 100%;
+
+	// breakpoint 기준은 이미지원본/3
+	@media (min-width: 768px) and (max-width: 1199px) {
+		height: auto;
+		padding-top: 156.64%;
+		background-size: auto 100%;
+	}
+	@media (min-width: 1200px) {
+		height: 1132px;
+		background: none;
+
+		&:after {
+			content: "";
+			position: absolute; top: 0; bottom: 0; left: 50%; right: 0; z-index: 10;
+			background-color: #049A7F;
+		}
+	}
+	
+	.wrapper {
+		position: absolute; top: 0; right: 0; left: 0; z-index: 20;
+		color: transparent;
+
+		@media (min-width: 1200px) {
+			height: 1132px;
+			background: url("//res.tutoring.co.kr/res/images/evt/202011/tech/tech_webmain_img.jpg") no-repeat 50% 0;
+			background-size: auto 100%;
+		}
+	}
+}

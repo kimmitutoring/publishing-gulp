@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+// common
+@import 'utils/variables';
+@import 'utils/mixin';
+
+// font
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+// pages
+@import 'pages/event_tac/all';
+@import 'pages/event_tac/spot';
+@import 'pages/event_tac/summary';
+@import 'pages/event_tac/join';
+@import 'pages/event_tac/video';
+@import 'pages/event_tac/intro';
+@import 'pages/event_tac/benefit';
+
+@import 'pages/promotion/plan';
+@import 'pages/promotion/plan_section';
+@import 'pages/promotion/option';
+@import 'pages/promotion/special';
+@import 'pages/promotion/award';
+@import 'pages/promotion/allpass';
+@import 'pages/promotion/review';
+@import 'pages/promotion/notice';
+@import 'pages/promotion/certificate';
+@import 'pages/promotion/guide';
+@import 'pages/promotion/cta';
+@import 'pages/promotion/close';

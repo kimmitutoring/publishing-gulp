@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+.summer-friends .launching {
+    padding-top: 44px;
+    padding-bottom: 50px;
+    background-color: #f7f7f7;
+
+    @media (min-width: 1200px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .launching__title {
+        @include noteBGTitle-white;
+    }
+    .launching__image {
+        display: block;
+        margin: 32px auto 10px;
+        text-align: center;
+
+        img {    
+            display: inline-block;
+            vertical-align: top;
+
+            &[width="644"] {display: none;}
+        }
+
+        @media (min-width: 1200px) {
+            position: relative;
+            width: 644px;
+            margin-top: 80px;
+
+            &:before {
+                content: "";
+                position: absolute; bottom: -52px; right: -132px;
+                width: 172px; height: 221px;
+                background: url("//cdn.tutoring.co.kr/uploads/page/summersummer/tudal_love.png") no-repeat 0 0;
+                background-size: 100% auto;
+            }
+
+            img[width="304"] {display: none;}
+            img[width="644"] {display: block;}
+        }
+    }
+    .launching__price {
+        width: 300px;
+        margin-right: auto;
+        margin-left: auto;
+        color: #5234e5;
+        font-family: 'Spoqa Han Sans', -apple-system, BlinkMacSystemFont, helvetica, "Apple SD Gothic Neo", sans-serif;
+        font-weight: 600;
+        text-align: center;
+        background-color: #6759ef;
+        background-image: linear-gradient(100deg,#ffd78b 18%,#f9a63e 91%);
+        box-shadow: 0 12px 10px -4px rgba(203, 34, 0, 0.3);
+
+        @media (min-width: 1200px) {
+            width: 644px;
+        }
+
+        .sales_price {
+            display: inline-block;
+            font-size: 30px;
+            line-height: 42px;
+            letter-spacing: -0.5px;
+            vertical-align: bottom;
+        }
+        .sales_period {
+            display: inline-block;
+            padding-left: 3px;
+            color: #5234e5;
+            font-size: 14px;
+            line-height: 30px;
+            vertical-align: bottom;
+            opacity: 0.6;
+        }
+    }
+
+    &__button {
+        overflow: hidden;
+        display: block;
+        width: 300px; height: 42px;
+        margin: 27px auto 0;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+        line-height: 42px;
+        text-align: center;
+        background-color: #6759ef;
+        background-image: linear-gradient(107deg,#6759ef 17%,#4839db 91%);
+        border-radius: 42px;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 10px; height: 10px;
+            margin: -2px 0 2px 13px;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+            vertical-align: middle;
+            transform: rotate(45deg);
+        }
+
+        @media (min-width: 1200px) {
+            width: 385px; height: 69px;
+            margin-top: 52px;
+            font-size: 30px;
+            line-height: 69px;
+            border-radius: 69px;
+
+            &:after {
+                width: 18px; height: 18px;
+                margin-top: -3px;
+                margin-bottom: 3px;
+                border-width: 3px;
+            }
+        }
+    }
+}

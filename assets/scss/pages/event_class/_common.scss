@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+$main-color: #6759ef;
+$point-color: #ffde00;
+$point-color-dark: #4a322e;
+$font-default: "Noto Sans", "Apple SD Gothic Neo", "Helvetica Neue", sans-serif;
+
+@mixin defaultText {
+    font-family: $font-default;
+    font-weight: 500;
+    line-height: 1.71em;
+    letter-spacing: -0.67px;
+}
+
+@mixin tablet($minimum_width: 768px) {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin bubbleBox {
+    position: relative;
+    display: inline-block;
+    min-width: 223px;
+    padding: 3px;
+    background-color: $point-color-dark;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.88em;
+    letter-spacing: 3.2px;
+
+    &:before {
+        content: "";
+        position: absolute; bottom: 0; left: 50%;
+        width: 0; height: 0;
+        border: 6px solid transparent;
+        border-top-color: $point-color-dark;
+        border-bottom: 0;
+        border-left: 0;
+        margin-left: -3px;
+        margin-bottom: -6px;
+        transform: translateX(-50%);
+    }
+}
+
+@mixin bubbleBoxBorder {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    padding: 10px 0;
+    padding: 10px 0;
+    border: 1px solid #333;
+    color: $point-color-dark;
+    box-sizing: border-box;
+
+    &:before {
+        content: "\00a0";
+        display: block;
+        height: 10px;
+        position: absolute;
+        bottom: -7px;
+        left: 50%;
+        width: 12px;
+        margin-left: -6px;
+        background-color: #eaeae6;
+        border-left: 1px solid #333;
+        border-bottom: 1px solid #333;
+        transform: rotate(-60deg) skew(-35deg);
+    }
+
+    .bold {
+        font-weight: 600;
+    }
+}

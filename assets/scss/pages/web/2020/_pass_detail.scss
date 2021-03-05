@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+.single-pass__ticket {
+	display: flex;
+	width: 276px; height: 120px;
+	background: url("//res.tutoring.co.kr/res/images/img/plans/alpha_ticket.png") no-repeat 50% 0;
+	background-size: 100% auto;
+	margin: 10px auto 0;
+	padding: 0 40px;
+	color: #fff;
+	font-size: 16px;
+	line-height: 28px;
+	justify-content: center;
+	flex-direction: column;
+	box-sizing: border-box;
+
+	.ticket__subtitle {
+		font-weight: 600;
+		letter-spacing: -0.8px;
+		opacity: 0.8;
+	}
+
+	.ticket__price {
+		font-size: 40px;
+		font-weight: 600;
+		line-height: 40px;
+		text-shadow: 0 4px 4px rgba(80, 80, 80, 0.25);
+
+		.unit {
+			display: inline-block;
+			margin-top: 3px;
+			margin-left: 2px;
+			vertical-align: top;
+			font-size: 0.6em;
+			font-weight: 500;
+		}
+	}
+}
+
+.single-pass__benefit {
+	width: 284px;
+	margin: 0 auto;
+
+	.benefit__image {
+		width: 345px; height: 108px;
+		margin: 0 -32px;
+		background: url("//res.tutoring.co.kr/res/images/pay/home3.0/alpha/al_event.png") no-repeat 50% 0;
+		background-size: 100% auto;
+	}
+	.benefit__desc {
+		display: flex;
+		margin: 7px 5px 24px;
+		font-size: 14px;
+		line-height: 28px;
+		justify-content: space-between;
+	}
+}

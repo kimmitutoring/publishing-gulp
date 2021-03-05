@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+.summer-friends .spot {
+    position: relative; z-index: 10;
+    height: 504px;
+    background-color: #000;
+    background-image: url("//cdn.tutoring.co.kr/uploads/page/summersummer/top_visual_img_768w.png");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: auto 100%;
+
+    @media (min-width: 1200px) {
+        height: 920px;
+        background-image: url("//cdn.tutoring.co.kr/uploads/page/summersummer/top_visual_img_160w.png");
+        background-size: auto 100%;
+    }
+
+    &__title,
+    &__desc {
+        color: transparent;
+        font-size: 10px;
+    }
+    &__image {
+        display: block;
+        position: absolute; bottom: -66px; left: 50%;
+        transform: translateX(-50%);
+
+        @media (min-width: 1200px) {
+            bottom: -90px;
+            width: 706px;
+        }
+    }
+}

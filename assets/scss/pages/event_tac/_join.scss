@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.event-join {
+	padding-top: 60px;
+	padding-bottom: 57px;
+	background-color: #fff;
+
+	@media (min-width: 1200px) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+
+	.join__inner {
+		overflow: hidden;
+		width: 307px; height: 295px;
+		margin: 0 auto;
+		color: transparent;
+		background: url("//res.tutoring.co.kr/res/images/evt/202102/tac/tac_step_mo_img.png") no-repeat 50% 0;
+		background-size: 100%;
+
+		@media (min-width: 1200px) {
+			width: 1002px; height: 331px;
+			background-image: url("//res.tutoring.co.kr/res/images/evt/202102/tac/tac_step_pc_img.png");
+		}
+	}
+}

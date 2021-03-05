@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+.alpha-detail__spot {
+    margin-bottom: 16px;
+
+    .spot__image {
+        position: relative; z-index: 10;
+        overflow: hidden;
+        padding: $alpha-detail-hspace;
+        padding-bottom: 0;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: 50% 0;
+
+        @include tablet {
+            padding: $alpha-detail-tablet-hspace;
+            padding-bottom: 0;
+        }
+    }
+    .spot__bg {
+        position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+        margin: -35px; //이미지 blur 만큼 마이너스 시켜준다
+        background-color: rgba(255, 255, 255, 0.5);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        opacity: 0.4;
+        filter: blur(5px);
+    }
+    .spot__thumb {
+        overflow: hidden;
+        position: relative; z-index: 20;
+        border-radius: 10px 10px 0 0;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    .spot__badge {
+        position: absolute; top: 36px; right: 36px; z-index: 50;
+        display: flex;
+
+        @include tablet {
+            top: ($alpha-detail-tablet-hspace + 20); right: ($alpha-detail-tablet-hspace + 20);
+        }
+
+        .badge__item {
+            display: flex;
+            width: 36px; height: 36px;
+            margin-left: 8px;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 600;
+            line-height: 1.2em;
+            letter-spacing: -1px;
+            background-color: #333;
+            border-radius: 36px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            word-break: keep-all;
+            word-wrap: break-word;
+        }
+
+    }
+    .spot__info {
+        margin: 0 $alpha-detail-hspace;
+        padding: 15px 20px;
+        color: #333;
+        letter-spacing: -1px;
+        background-color: #fff;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+
+        @include tablet {
+            margin-right: $alpha-detail-tablet-hspace;
+            margin-left: $alpha-detail-tablet-hspace;
+        }
+
+        .info__text {
+            display: block;
+            margin-bottom: 2px;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.6em;
+        }
+        .info__title {
+            display: block;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 1.6em;
+        }
+    }
+}

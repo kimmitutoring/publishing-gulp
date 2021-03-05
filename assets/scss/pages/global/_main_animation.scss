@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+@include big_desktop {
+    // YES NO 컨텐츠
+    .box_g {
+        .emph_sub,
+        .tit_sub,
+        .list_about {opacity: 0; transition: all 1s;}
+        .emph_sub,
+        .tit_about,
+        .list_about {opacity: 0; transform: translateY(70px); transition: all 1s;}
+        .bg_txt {transform: translateY(-200px); transition: all 1s;}
+    }
+    .ani_on {
+        .box_g {
+            .emph_sub,
+            .tit_sub,
+            .list_about {opacity: 1;}
+            .emph_sub,
+            .tit_about,
+            .list_about {opacity: 1; transform: translateY(0)}
+            .bg_txt {transform: translateY(0);}
+        }
+    }
+
+    // 하단 컨텐츠들
+    .list_custom {
+        .thumb_custom {opacity: 0; transform: translateY(70px); transition: all 1s;}
+        .desc_custom {opacity: 0; transform: translateY(-70px); transition: all 1s;}
+    }
+    .list_custom .on {
+        .thumb_custom,
+        .desc_custom {opacity: 1; transform: translateY(0);}
+    }
+}

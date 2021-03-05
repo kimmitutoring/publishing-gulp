@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+.interview-text {
+    @include defaultText;
+
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-top: 60px;
+    background-color: #f5f5fa;
+
+    &:after {
+        content: "";
+        display: block;
+        width: 100%; height: 405px;
+        margin: 20px auto 0;
+        text-align: right;
+        background-image: url('//cdn.tutoring.co.kr/uploads/home/img/main/version3/story_01_pc.png');
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: 450px auto;
+        transform: translateX(20px);
+
+    }
+}
+
+.interview-text__item {
+    width: 300px;
+    margin: 0 auto;
+
+    .item__title {
+        display: block;
+        color: #333;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 1.44em;
+        letter-spacing: -2px;
+        word-break: keep-all;
+    }
+    .item__description {
+        display: block;
+        padding-top: 25px;
+        padding-bottom: 15px;
+    }
+    .item__text {
+        margin: 0;
+        padding: 0;
+        color: #666;
+        font-size: 15px;
+        line-height: 1.73em;
+        letter-spacing: -1px;
+    }
+}
+
+.interview-text__heading {
+    margin: 0;
+    padding: 0;
+    color: $main-color;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -1px;
+}

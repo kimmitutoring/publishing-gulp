@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.event-summary {
+	position: relative;
+	height: 1493px; // TODO
+	background: #1E6AFF url('//res.tutoring.co.kr/res/images/evt/202103/oneone/oneone_sum_mo.png') no-repeat 50% 70px;
+	background-size: auto 1423px;
+	color: transparent;
+
+	@media (min-width: 1200px) {
+		height: 2098px;
+		background-image: url('//res.tutoring.co.kr/res/images/evt/202103/oneone/oneone_sum_pc.png');
+		background-position: 50% 0;
+		background-size: auto 2098px;
+	}
+
+	.summary__button {
+		position: absolute; bottom: 250px; left: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 200px; height: 60px;
+		background-color: #fff;
+		box-shadow: 0 10px 15px #265bc5;
+		border-radius: 60px;
+		color: #1E6AFF;
+		font-size: 16px;
+		font-weight: 600;
+		letter-spacing: -1px;
+		transform: translateX(-50%);
+
+		@media (min-width: 1200px) {
+			bottom: 477px;
+			width: 340px; height: 90px;
+			font-size: 30px;
+		}
+	}
+}

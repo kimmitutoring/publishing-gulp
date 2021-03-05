@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+.timer__fixed {
+    position: fixed; bottom: 0; right: 0; left: 0;
+    z-index: 100;
+    background-color: rgba(51, 51, 51, 0.9);
+    color: #fff;
+}
+
+.timer {
+    @include defaultText; 
+
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.timer__heading {
+    position: absolute; top: 0; left: 0;
+    margin: 0;
+    padding: 0;
+    color: transparent;
+    font-size: 14px;
+}
+
+.timer__inner {
+    display: inline-block;
+    padding: 4px 0;
+    vertical-align: top;
+
+    .number {
+        position: relative;
+        display: inline-block;
+        width: 24px; height: 29px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        background-color: rgba(95, 95, 95, 0.5);
+        text-align: center;
+        vertical-align: top;
+        box-sizing: border-box;
+
+        &:before {
+            content: "";
+            position: absolute; top: 50%; right: 0; left: 0;
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+            transform: translateY(-50%);
+        }
+    }
+    .text {
+        display: inline-block;
+        height: 29px;
+        padding-right: 2px;
+        padding-left: 2px;
+        font-size: 16px;
+        font-weight: 700;
+        vertical-align: top;
+    }
+
+    .colon {
+        animation: blink 1s step-start 0s infinite;
+    }
+}
+
+@keyframes blink {
+    50% {opacity: 0;}
+}
+
+.timer__tip {
+    position: absolute; top: -10px; right: -5px;
+    width: 40px; height: 40px;
+    padding-top: 5px;
+    background-color: #ff4165;
+    border-radius: 40px;
+    box-sizing: border-box;
+    transform: rotate(20deg);
+
+    &:before {
+        content: "";
+        position: absolute; bottom: -3px; left: 50%; z-index: 10;
+        width: 12px;
+        height: 10px;
+        margin-left: -6px;
+        background-color: #ff4165;
+        transform: rotate(-55deg) skew(-25deg);
+    }
+
+    .tip__text {
+        position: relative; z-index: 20;
+        display: block;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1.15em;
+        transform: rotate(-20deg);
+    }
+}
+
+.timer__link {
+    display: inline-block;
+    width: 126px; height: 38px;
+    margin-left: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+    background-color: #33bcff;
+    border: none;
+    border-radius: 38px;
+    outline: none;
+    vertical-align: top;
+}

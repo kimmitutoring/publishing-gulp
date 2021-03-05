@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+// webfont
+@import 'fonts/NotoSans';
+@import 'fonts/HGGGothicssi';
+// @import 'fonts/SpoqaHanSans';
+
+// common
+@import 'base/reset';
+
+// landing pages
+@import 'pages/event_ipad/common';
+@import 'pages/event_ipad/spot';
+@import 'pages/event_ipad/package';
+@import 'pages/event_ipad/certificate_first';
+@import 'pages/event_ipad/alpha';
+@import 'pages/event_ipad/alpha_video';
+@import 'pages/event_ipad/product';
+@import 'pages/event_ipad/review';
+@import 'pages/event_ipad/package_detail';
+@import 'pages/event_ipad/choice';
+@import 'pages/event_ipad/exp_video';
+@import 'pages/event_ipad/certificate_second';
+@import 'pages/event_ipad/information';
+@import 'pages/event_ipad/cta';

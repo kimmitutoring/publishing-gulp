@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+.landing__fixed {
+    position: fixed; bottom: 0; right: 0; left: 0;
+    z-index: 100;
+}
+.landing__button {
+    @include defaultText;
+
+    display: block;
+    width: 100%; height: 58px;
+    padding-top: 3px;
+    border: 0;
+    outline: none;
+    color: #919191;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.7px;
+    background-color: #d8d8d8;
+    text-align: center;
+    box-sizing: border-box;
+
+    &--blue {
+        color: #fff;
+        background-color: #34bcff;
+    }
+} //.landing__button
+
+@media (max-width: 320px) {
+    body > div {overflow: hidden;width: 320px;}
+}

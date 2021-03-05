@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+// webfont
+@import 'fonts/NotoSans';
+@import 'fonts/HGGGothicssi';
+@import 'fonts/SpoqaHanSans';
+
+// common
+@import 'base/reset';
+
+// landing pages
+@import 'pages/event_summer/common';
+@import 'pages/event_summer/spot';
+@import 'pages/event_summer/profile';
+@import 'pages/event_summer/benefit';
+@import 'pages/event_summer/video_type2';
+@import 'pages/event_summer/ticket';
+@import 'pages/event_summer/manual';
+@import 'pages/event_summer/effect';
+@import 'pages/event_summer/review_type2';
+@import 'pages/event_summer/launching';
+@import 'pages/event_summer/package';
+@import 'pages/event_summer/award';
+// @import 'pages/event_summer/video_type1';
+// @import 'pages/event_summer/review_type1';
+@import 'pages/event_summer/content_14';
+@import 'pages/event_summer/popular';
+@import 'pages/event_summer/notice';
+@import 'pages/event_summer/sidebar';
+@import 'pages/event_summer/etc';

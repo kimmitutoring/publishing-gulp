@@ -1,0 +1,217 @@
+@charset "utf-8";
+
+// 언어 학습연구소
+.item_lab {
+    padding-bottom: 40px;
+
+    .tit_sub {color: $point-color;}
+
+    @include all_desktop {
+        .txt_b_m {display: block;}
+    }
+    @include big_desktop {
+        .txt_b_m {display: inline;}
+        .inner_item {text-align: center;}
+    }    
+}
+.list_lab {
+    padding: 0 20px;
+
+    @include big_desktop {
+        padding: 0;
+    }
+
+    & > li {
+        padding: 40px 0;
+        border-top: 1px solid #dee1eb;
+
+        &:first-child { border-top: 0; }
+
+        @include all_desktop {
+            padding: 50px 0;
+            border-top: 0;
+        }
+    }
+
+    .tit_lab {
+        display: block;
+        margin-bottom: 10px;
+        color: #333;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1.5em;
+
+        @include all_desktop {
+            font-size: 36px;
+        }
+        @include big_desktop {
+            margin: 15px 0 20px;
+            font-size: 24px;
+        }
+
+        b { font-weight: 600;}
+    }
+}
+.list_oval {
+    @include clear;
+
+    @include all_desktop {
+        width: 700px;
+        margin: 0 auto;
+    }
+    @include big_desktop {
+        width: 850px;
+    }
+
+    li {
+       position: relative;
+       padding-top: 30px;
+       box-sizing: border-box;
+
+       @include all_desktop {
+           float: left;
+           width: 230px;
+           padding-right: 10px;
+           padding-left: 10px;
+       }
+       @include big_desktop {
+           width: 280px;
+       }
+    }
+
+   .oval_g {
+       display: block;
+       width: 120px; height: 120px;
+       margin: 0 auto;
+       padding-top: 47px;
+       background-color: $point-color;
+       border-radius: 50%;
+       box-sizing: border-box;
+       color: #ffe812;
+
+       @include all_desktop {
+           padding-top: 42px;
+           font-size: 18px;
+       }
+
+       .ico_g_main {
+            width: 60px; height: 60px;
+            margin-top: -18px;
+    
+            &.ico_topic {background-position: -240px -270px;}
+            &.ico_brain{background-position:-300px -270px}
+            &.ico_chat{background-position:-360px -270px}
+        }
+   }
+   .txt_lab {
+       display: block;
+       padding: 20px 0 10px;
+       color: #333;
+       font-size: 20px;
+       font-weight: 600;
+
+       @include all_desktop {
+           line-height: 1.4em;
+       }
+
+       @include big_desktop {
+           padding: 25px 0 15px;
+           font-size: 18px;
+       }
+   }
+   .desc_txt {
+       margin: 0 auto;
+
+       @include all_desktop {
+           font-size: 20px;
+           line-height: 1.6em;
+       }
+       @include big_desktop {
+           width: 188px;
+           font-size: 16px;
+       }
+   }
+   .ico_arr {
+       width: 40px; height: 22px;
+       margin-top: 30px;
+       background-position: -350px -46px;
+
+       @include all_desktop {
+           position: absolute; top: 48px; right: -17px;
+           transform: rotate(-90deg);
+       }
+   }
+}
+.list_card {
+    @include clear;
+
+    padding-top: 30px;
+
+    @include big_desktop {
+        padding-bottom: 30px;
+    }
+
+    li {
+        margin-top: 20px;
+
+        @include all_desktop {
+            float: left;
+            width: 50%;
+            margin: 0;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        @include big_desktop {
+            width: auto;
+            padding: 0 0 0 20px;
+            box-sizing: border-box;
+
+            &:first-child {padding-left: 0;}
+        }
+    }
+    .card_g {
+        position: relative;
+        height: 246px;
+        padding: 30px 20px;
+        background-color: #f5f5fa;
+        border-radius: 5px;
+        text-align: left;
+        box-sizing: border-box;
+
+        .txt_card_pc {display: none;}
+
+        @include all_desktop {
+            height: 300px;
+            font-size: 20px;
+
+            .txt_card_m {display: none;}
+            .txt_card_pc {display: block;}
+        }
+        @include big_desktop {
+            width: 225px; height: 245px;
+            font-size: 16px;
+            line-height: 1.55em;
+        }
+    }
+    .txt_lab {
+        display: block;
+        color: #333;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1em;
+        margin-bottom: 18px;
+
+        @include all_desktop {
+            font-size: 28px;
+        }
+        @include big_desktop {
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+    .txt_tag {
+        position: absolute; bottom: 30px; left: 20px;
+        color: $point-color;
+        line-height: 16px;
+    }
+}

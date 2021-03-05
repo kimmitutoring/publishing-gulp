@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.march-spot {
+	min-width: 360px;
+	height: 764px;
+	background: #AEE042 url('//res.tutoring.co.kr/res/images/evt/202103/oneone/oneone_title_mo.png') no-repeat 50% 55px;
+	background-size: auto 646px;
+	color: transparent;
+
+	@media (min-width: 1200px) {
+		height: 854px;
+		background-image: url('//res.tutoring.co.kr/res/images/evt/202103/oneone/oneone_title_pc.png');
+		background-position: 50% 120px;
+		background-size: auto 614px;
+	}
+}

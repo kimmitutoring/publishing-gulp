@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+.habit-package {
+	position: relative;
+	padding-top: 70px;
+	text-align: center;
+	letter-spacing: -1px;
+	background-color: #FFD400;
+
+	@media (min-width: 1200px) {
+		padding-top: 107px;
+	}
+
+	.heading {
+		overflow: hidden;
+		width: 258px; height: 100px;
+		margin: 0 auto;
+		padding: 0;
+		color: transparent;
+		background: url("//s3.ap-northeast-2.amazonaws.com/junior.tutoring.co.kr/uploads/images/browse/habit/goods_title_img.png") no-repeat 50% 0;
+		background-size: 100%;
+
+		@media (min-width: 1200px) {
+			position: absolute; top: 135px; right: 50%;
+			width: 472px; height: 174px;
+		}
+	}
+
+	.heading ~ .description {
+		@include text-medium;
+
+		margin-top: 40px;
+		margin-bottom: 32px;
+
+		@media (min-width: 1200px) {
+			position: absolute; top: 335px; right: 50%;
+			width: 472px;
+			margin: 0;
+			text-align: left;
+		}
+	}
+
+	.item {
+		overflow: hidden;
+		position: relative;
+		padding-top: 14px;
+		padding-bottom: 70px;
+
+		@media (min-width: 1200px) {
+			overflow: visible;
+			padding-top: 0;
+			padding-bottom: 81px;
+			padding-left: calc(50% + 65px);
+
+			img {
+				width: 360px; height: 360px;
+				margin-left: 0;
+			}
+		}
+
+		&:before {
+			content: "";
+			position: absolute; top: 164px; left: 50%; z-index: 10;
+			width: 253px; height: 337px;
+			background: url("//s3.ap-northeast-2.amazonaws.com/junior.tutoring.co.kr/uploads/images/browse/habit/title_tudal_small.png") no-repeat 50% 0;
+			background-size: 100%;
+			transform: translateX(27px);
+
+			@media (min-width: 1200px) {
+				top: 125px;
+				width: 333px; height: 316px;
+				transform: translateX(278px);
+			}
+		}
+	}
+
+	.badge {
+		position: absolute; top: 0; left: 50%;
+		width: 106px; height: 106px;
+		margin: 0;
+		padding: 26px 0 0 0;
+		color: #FFD400;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 27px;
+		letter-spacing: -1px;
+		background-color: #000;
+		border-radius: 50%;
+		text-align: center;
+		transform: translateX(54px);
+
+		@media (min-width: 1200px) {
+			top: -26px;
+			width: 120px; height: 120px;
+			padding-top: 32px;
+			font-size: 26px;
+			line-height: 30px;
+			transform: translateX(305px);
+		}
+	}
+
+	.heading-goods {
+		margin-top: -16px;
+		margin-bottom: 16px;
+		color: #000;
+		font-size: 32px;
+		font-weight: 900;
+		line-height: 1em;
+	}
+
+	.summary {
+		margin: 0;
+		padding: 20px 0 65px;
+		list-style: none;
+		background-color: #fff;
+
+		.list-item {
+			padding-top: 50px;
+		}
+
+		.description {
+			margin: 0;
+			padding: 0;
+			color: #666;
+			font-size: 16px;
+			line-height: 23px;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		.summary {
+			width: 1120px;
+			margin: 0 auto;
+			padding-top: 140px;
+			padding-bottom: 142px;
+			background-color: transparent;
+
+			.list-item {
+				display: inline-block;
+				padding: 0 25px;
+				vertical-align: top;
+			}
+		}
+		.summary-wrap {
+			background-color: #fff;
+		}
+	}
+}

@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+.certificate {
+    @include defaultText;
+
+    padding-top: 32px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.certificate__heading {
+    @include bubbleBoxBorder;
+
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.54em;
+    letter-spacing: -2px;
+
+    &:before {
+        background-color: #fff;
+    }
+}
+
+.certificate__tip {
+    margin: 0;
+    padding: 30px 0 10px;
+    color: rgba(0,0,0,0.5);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: -.75px;
+}
+
+.certificate__image {
+    vertical-align: top;
+}

@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+.alpha-detail__intro {
+    padding-top: $alpha-detail-vspace;
+    padding-right: $alpha-detail-hspace;
+    padding-left: $alpha-detail-hspace;
+
+    @include tablet {
+        padding-right: $alpha-detail-tablet-hspace;
+        padding-left: $alpha-detail-tablet-hspace;
+    }
+
+    .intro__title {
+        @include alphaDetailHeading('intro');
+    }
+
+    .intro__content {
+        color: #333;
+        font-size: 14px;
+        line-height: 1.4em;
+        letter-spacing: -1px;
+        word-break: keep-all;
+        word-wrap: break-word;
+        text-size-adjust: none;
+        -webkit-text-size-adjust: none;
+
+        p {
+            margin: 0;
+            padding: 0;
+            line-height: 1.6em;
+        }
+        b {
+            display: block;
+            color: $main-color;
+            line-height: 1.7em;
+            font-weight: 600;
+        }
+        hr {
+            height: 1px;
+            margin: 16px 0;
+            padding: 0;
+            border: 0;
+            background-color: #ececec;
+        }
+
+        .content__box {
+            padding: 16px 20px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+        .intro__image {
+            display: block;
+            width: 100%;
+            margin-bottom: 16px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
+        }
+    } //.intro__content
+
+    .intro__content--second {
+        position: relative;
+
+        .content__image__inner {
+            margin-left: -35px;
+            margin-right: -65px;
+        }
+        .content__image {
+            overflow: hidden;
+            position: relative;
+            margin-right: -20px;
+            margin-left: -20px;
+            margin-bottom: -35px;
+
+            img {
+                display: block;
+                width: 100%;
+                max-width: 656px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    // TODO: 삭제확인
+    .description {
+        &__list {
+            margin: 0;
+            padding: 4px 0;
+            list-style: none;
+    
+            .list__item {
+                padding-top: 16px;
+                padding-bottom: 16px;
+                color: #333;
+                font-size: 14px;
+                line-height: 1.3em;
+                letter-spacing: -1px;
+    
+                & + .list__item {
+                    border-top: 1px solid #ececec;
+                }
+            }
+        }
+        &__point {
+            display: block;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            color: $main-color;
+            font-weight: 600;
+        }
+        &__text {
+            margin: 0;
+            padding: 0;
+            line-height: 1.6em;
+            word-break: keep-all;
+            word-wrap: break-word;
+        }
+    }
+}

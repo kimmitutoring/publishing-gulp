@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+$visual_prefix: 'b2bProgram_visual';
+
+.#{$visual_prefix} {
+    position: relative;
+    padding-top: 237px;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+    background-color: #6759ef;
+    color: #fff;
+    text-align: center;
+    letter-spacing: -1px;
+    background-position: 50% -150px;
+    background-repeat: no-repeat;
+
+    @include tablet {
+		padding-top: 100px;
+        background-position: 60% -110px;
+    }
+
+    @include all_mobile {
+        background-size: auto 100%;
+        background-position: 68% 0;
+    }
+
+    &:before {
+        content: '';
+        position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+        background: linear-gradient(rgba(255, 255, 255, 0), $color-purple);
+
+        @include tablet {
+            background: linear-gradient(rgba(255, 255, 255, 0), $color-purple 85%);
+        }
+        @include all_mobile {
+            top: 120px;
+            background: linear-gradient(rgba(255, 255, 255, 0), $color-purple 75%);
+        }
+    }
+
+    .inner {
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+
+    @include all_mobile {
+		position: relative;
+		height: 313px;
+
+        .inner {
+            position: absolute; right: 0; bottom: 50px; left: 0;
+        }
+    }
+}
+.#{$visual_prefix}_description {
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1.6em;
+
+    @include all_mobile {
+        font-size: 30px;
+    }
+}
+
+.#{$visual_prefix}_title {
+    display: block;
+    margin: -4px 0 60px;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 2.86em;
+    letter-spacing: -0.6px;
+
+    @include all_mobile {
+        margin: 0;
+        font-size: 20px;
+    }
+}
+
+.#{$visual_prefix}_box {
+    display: inline-block;
+    width: 454px; height: 265px;
+    box-sizing: border-box;
+    margin: 0 2px;
+    padding: 28px 53px 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    vertical-align: top;
+
+    @include tablet {
+        display: block;
+        margin: 20px auto 0;
+        padding-top: 41px;
+    }
+
+    @include all_mobile {
+        display: none;
+    }
+
+    .description {
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 1.73em;
+
+        @include tablet {
+            font-size: 18px;
+        }
+    }
+    .link {
+        @include b2bButton($color-purple, #fff);
+        margin-top: 17px;
+
+        &:after {
+            background-image: url($b2b-cdn-url + 'ico_arrow.png');
+        }
+
+        @include tablet {
+            margin-top: 21px;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+.bridge__detail {
+    width: 320px;
+    margin: 20px auto;
+    padding: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    text-align: center;
+
+    @media (min-width: 1024px) {
+        height: 480px;
+        margin: 0 auto 40px;
+        transform: translateX(172px);
+        box-sizing: border-box;
+    }
+}
+.detail__heading {
+    margin: 0; padding: 0;
+    color: #4c4c4c;
+    font-size: 20px;
+    line-height: 1.2em;
+    letter-spacing: -1.25px;
+}
+.detail__image {
+    display: block;
+    margin: 17px auto 21px;
+}
+.detail__text {
+    margin: 0; padding: 0;
+    color: #606060;
+    font-size: 14px;
+    line-height: 1.71em;
+    letter-spacing: -0.88px;
+}

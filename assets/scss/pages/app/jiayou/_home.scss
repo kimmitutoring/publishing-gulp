@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+.jiayou-home__spot {
+    position: relative;
+    padding: 30px 20px 100px;
+
+    @include tablet {
+        padding-right: 55px;
+        padding-left: 55px;
+    }
+
+    &:before {
+        content: "";
+        position: absolute; top: 0; right: 0; left: 0;
+        height: 520px;
+        background-image: linear-gradient(164deg, rgba(255, 54, 114, 1) 27%, rgba(255,172,90,0.87) 50%, rgba(255, 172, 90, 0) 73%);
+    }
+    
+    .spot__heading {
+        position: relative; z-index: 2;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1.5em;
+        letter-spacing: -1px;
+    }
+    .content__image {
+        overflow: hidden;
+        position: relative; z-index: 2;
+        margin-right: -20px;
+        margin-left: -20px;
+        margin-bottom: -35px;
+
+        @include tablet {
+            margin-right: 0;
+            margin-left: 0;
+            margin-bottom: -45px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: 600px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        &__inner {
+            margin-right: -60px;
+            margin-left: -30px;
+
+            @include tablet {
+                margin: 0;
+            }
+        }
+    }
+    .content__box {
+        padding: 20px;
+        color: #4c4c4c;
+        font-size: 14px;
+        line-height: 1.6em;
+        letter-spacing: -1px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
+    }
+}
+
+.jiayou-home__banner {
+    color: #fff;
+    background-color: rgb(54, 54, 54);
+
+    .banner__content {
+        position: relative;
+        max-width: 320px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 19px;
+        padding-bottom: 19px;
+    }
+    .banner__text {
+        font-size: 13px;
+        font-weight: 300;
+        line-height: (14 * 1.6) + px;
+        letter-spacing: -0.5px;
+
+        &--large {
+            font-weight: 300;
+            font-size: 28px;
+            line-height: (28 * 1.36) + px;
+            letter-spacing: -1px;
+        }
+    }
+    .banner__badge {
+        position: absolute; top: 16px; right: 18px;
+
+        .badge__item {
+            display: flex;
+            width: 42px; height: 42px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 13px;
+            letter-spacing: -0.5px;
+            background-color: $zzayo-main-color;
+            border-radius: 42px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

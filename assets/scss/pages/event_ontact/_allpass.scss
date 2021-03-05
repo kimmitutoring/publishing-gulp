@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+.ontact-allpass {
+    padding-top: 70px;
+    padding-bottom: 70px;
+	color: #fff;
+	background-color: #6B68F0;
+	font-family: $font-roboto;
+	text-align: center;
+
+	@media (min-width: 1200px) {
+		padding-top: 100px;
+		padding-bottom: 117px;
+
+		.view__item {
+			display: inline-block;
+			width: 350px;
+			padding-top: 50px;
+			vertical-align: top;
+
+			.description {width: 280px; font-size: 16px; line-height: 24px; word-break: normal;}
+			.description br {display: none;}
+		}
+	}
+
+	.description {
+		width: 300px;
+		margin: 0 auto;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: -0.7px;
+		word-break: keep-all;
+        word-wrap: break-word;
+        opacity: 0.7;
+	}
+
+	.allpass__title {
+		margin-bottom: 22px;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 30px;
+		letter-spacing: -1px;
+    }
+
+    .tech-image {
+        display: block;
+        margin: 70px auto 20px;
+		box-shadow: 60px 60px 150px rgba(0,0,0,.15);
+		
+		@media (min-width: 1200px) {
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
+    }
+}

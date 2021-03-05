@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+.moving_master .content12 {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    letter-spacing: -0.5px;
+    background-color: #fff;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        padding-bottom: 50px;
+    }
+
+    .content__heading {
+        padding-bottom: 8px;
+
+        @media (min-width: 768px) {
+            font-size: 24px;
+            line-height: (24 * 1.5) + px;
+        }
+    }
+    .content__text {
+        width: auto;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            color: $gray-02;
+            font-weight: 500;
+        }
+    }
+    .content__image {
+        width: 144px; height: 144px;
+        margin: 20px auto 0;
+        background-image: url("//res.tutoring.co.kr/res/images/pay/movie/same/tudal_counseling.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: 100% auto;
+    }
+}

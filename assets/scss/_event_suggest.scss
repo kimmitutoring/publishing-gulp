@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+// fonts
+@import 'fonts/NotoSans';
+
+// common modal
+@import 'components/modal';
+
+// landing pages
+@import 'pages/event_suggest/common';
+@import 'pages/event_suggest/visual';
+@import 'pages/event_suggest/rules';
+@import 'pages/event_suggest/benefit';
+@import 'pages/event_suggest/state';
+@import 'pages/event_suggest/buying';
+@import 'pages/event_suggest/banner';
+@import 'pages/event_suggest/guide';
+@import 'pages/event_suggest/notice';
+@import 'pages/event_suggest/etc';
+
+// bridge pages
+@import 'pages/event_suggest/bridge_message';
+@import 'pages/event_suggest/bridge_visual';
+@import 'pages/event_suggest/bridge_detail';
+@import 'pages/event_suggest/bridge_notice';
+@import 'pages/event_suggest/bridge_button';
+@import 'pages/event_suggest/bridge_modal';
+
+// bridge pages web version
+@import 'pages/event_suggest/bridge_web';

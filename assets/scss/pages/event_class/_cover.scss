@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+.cover {
+    overflow: hidden;
+    position: relative;
+    height: 666px;
+    background-color: #f7f8f6;
+
+    &:before {
+        content: "";
+        position: absolute; top: 0; bottom: 0; right: -60px; left: 0;
+        z-index: 20;
+        background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/career/10job_title_han.png');
+        background-repeat: no-repeat;
+        background-position: 50% 44px;
+        background-size: 379px auto;
+    }
+    &:after {
+        content: "";
+        position: absolute; top: 186px; bottom: 0; left: 50%;
+        z-index: 10;
+        width: 100%;
+        background-color: #e6e8e5;
+        transform: translateX(-50px);
+    }
+}
+.cover__text,
+.cover__heading {
+    color: transparent;
+    font-size: 10px;
+}

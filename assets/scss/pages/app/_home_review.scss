@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+.lesson-ticket__home {
+    .review {
+        @include mainDivisonInfo;
+    
+        &__title {
+            @include templateHeadingBox;
+    
+            position: relative;
+            padding-bottom: 24px;
+        }  
+    }
+    .review__content {
+        position: relative;
+        padding-bottom: 50px;
+    
+        .content__more {
+            @include contentMoreItem(-20px);
+        }
+    }
+    
+    .review__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    
+        @include tablet {
+            margin-right: -8px;
+            margin-left: -8px;
+        }
+    
+        &:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    
+        .list__item {
+            float: left;
+            width: 100%;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+            box-sizing: border-box;
+    
+            @include tablet {
+                width: 50%;
+                padding-right: 8px;
+                padding-left: 8px;
+            }
+        }
+    
+        .item__box {
+            overflow: hidden;
+            padding: 14px 20px 18px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
+        }
+    
+        .item__image {
+            padding-top: 33.12%;
+            background-color: #d8d8d8;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+        .item__thumb {
+            float: left;
+            width: 46px; height: 46px;
+            margin-right: 8px;
+            border-radius: 46px;
+            background-color: #d8d8d8;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: 100% auto;
+            box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+        }
+        .item__summary {
+            float: none;
+            overflow: hidden;
+            font-size: 14px;
+            line-height: 1.5em;
+        
+            .summary__user {
+                display: block;
+                color: #919191;
+                
+            }
+            .summary__hash {
+                @include multi_ellipsis(1);
+    
+                margin-top: 4px;
+                color: #c3c3c3;
+            }
+            .hash__item + .hash__item {padding-left: 4px;}
+        }
+        .item__detail {
+            padding-top: 12px;
+        }
+    }
+    
+    .detail__title {
+        @include multi_ellipsis(1);
+    
+        color: #333;
+        font-size: 16px;
+        line-height: 1.4em;
+    }
+    .detail__desc {
+        @include multi_ellipsis(2);
+    
+        margin: 0; margin-top: 4px;
+        padding: 0;
+        color: #555;
+        font-size: 14px;
+        line-height: 1.6em;
+
+        @include tablet {
+            min-height: 44px;
+        }
+    }
+}

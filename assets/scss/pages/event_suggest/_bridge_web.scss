@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+.bridge__guide {
+    display: none;
+    width: 338px;
+    background-color: #fef364;
+    margin: 0 auto 60px;
+    padding: 5px 0 3px;
+    color: #000;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.93em;
+    letter-spacing: -0.77px;
+    text-align: center;
+
+    p {margin: 0; padding: 0;}
+    .fa {margin-right: 5px; font-size: 15px;}
+}
+
+.pc {
+    background-color: #f4f7f7;
+
+    #app {
+        width: 768px;
+        margin: 0 auto;
+        font-size: 0;
+        text-align: center;
+    }
+    .bridge__message {
+        position: static;
+        margin: 100px auto 13px;
+        transform: translateX(0);
+    }
+    .bridge__visual,
+    .bridge__detail {
+        position: static;
+        display: inline-block;
+        width: 320px; height: 480px;
+        margin: 0 12px;
+        box-sizing: border-box;
+        vertical-align: top;
+        transform: translate(0);
+    }
+    .bridge__visual {
+        padding-top: 0;
+        background-position: 50% 0;
+        border-radius: 10px;
+
+        .visual__vod {
+            display: none;
+        }
+    }
+    .bridge__notice {
+        margin-top: 40px;
+        text-align: left;
+    }
+    .bridge__guide {
+        display: block;
+    }
+}

@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+.ontact-point {
+	padding-top: 60px;
+	background-color: #fff;
+	color: #333;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 26px;
+	letter-spacing: -1px;
+	text-align: center;
+
+	.description {
+		margin-bottom: 26px;
+
+		@media (min-width: 1200px) {
+			margin-bottom: 2px;
+
+			br {display: none;}
+		}
+	}
+	.point__image {
+		overflow: hidden;
+		width: 120px; height: 90px;
+		margin: 0 auto;
+		color: transparent;
+		background: url("//res.tutoring.co.kr/res/images/evt/202012/pesta/pesta_tudal_img.png") no-repeat 50% 0;
+		background-size: 100% auto;
+
+		@media (min-width: 1200px) {
+			margin-top: 26px;
+		}
+	}
+}

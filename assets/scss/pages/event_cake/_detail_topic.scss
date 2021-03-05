@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+.detail-topic {
+    margin-top: 25px;
+    text-align: center;
+
+    @include tablet {
+        float: right;
+        margin-top: -30px;
+        padding-bottom: 150px;
+    }
+
+    .box {
+        width: 308px;
+        margin: 25px auto 90px;
+        background-color: #fff;
+        text-align: left;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px -2px rgba(0,0,0,0.16);
+
+        @include tablet {
+            margin: 0;
+        }
+    }
+    .topic-image, .topic-image img {
+        border-radius: 10px 10px 0 0;
+    }
+    .topic-text {
+        padding: 20px;
+        padding-top: 13px;
+        font-size: 14px;
+        line-height: 1.43em;
+
+        li {
+            padding: 6px 0 6px 13px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 5px; height: 5px;
+                margin-top: 8px;
+                margin-left: -12px;
+                background-color: #ff4452;
+                border-radius: 50%;
+            }
+        }
+    }
+}

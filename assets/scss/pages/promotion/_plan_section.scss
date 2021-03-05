@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+@media (min-width: 1200px) {
+	.plan__section {
+		padding-top: 100px;
+		padding-bottom: 100px;
+
+		.section__heading {
+			font-size: 25px;
+			line-height: 32px;
+		}
+	}
+	.plan__tutor {
+		height: 530px;
+	}
+	.plan__summary {
+		width: 600px;
+		margin: 0 auto;
+		flex-direction: row;
+		justify-content: space-between;
+		font-size: 14px;
+		line-height: 21px;
+
+		.summary__text {
+			font-size: 50px;
+			line-height: 60px;
+		}
+	}
+	.circle-effect {
+		transform: scale(.73) translate(-50%,-50%);
+	}
+}

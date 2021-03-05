@@ -1,0 +1,798 @@
+@charset "utf-8";
+
+.eventPage {
+    //width: 100%;
+    min-height: 100%;
+    padding-bottom: 60px;
+    .banner {
+        display: block;
+        width: 100%;
+        padding-bottom: 31px;
+        background-image: linear-gradient(to bottom, #f7f8f6 70%, #3c3937 70%);
+        text-align: center;
+        &__img {
+            max-height: 536px;
+            width: auto;
+            margin: auto;
+        }
+        &__title {
+            margin: 3px auto 8px auto;
+            color: #ffde00;
+            font-family: SpoqaHanSans;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        &__barWrap {
+            height: 1px;
+            width: 70%;
+            max-width: 206px;
+            margin: 0 auto 6px auto;
+            background-color: #93908F;
+        }
+        &__bar {
+            height: 100%;
+            width: 30%;
+            background-color: #ffffff;
+        }
+        &__duration {
+            color: #ffffff;
+            font-family: SpoqaHanSans;
+            font-size: 14px;
+            font-weight: bold;
+            vertical-align: middle;
+            letter-spacing: -0.4px;
+            &Title {
+                color: #ffffff;
+                font-family: SpoqaHanSans;
+                font-size: 14px;
+                margin-right: 8.5px;
+                font-weight: normal;
+                letter-spacing: -0.4px;
+                vertical-align: middle;
+            }
+            &Bar{
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 3px;
+                width: 10px;
+            }
+        }
+    }
+    .summery {
+        width: 100%;
+        background-color: #544c49;
+        text-align: center;
+        &__card {
+            position: relative;
+            top: 27px;
+            width: 88.4%;
+            max-width: 312px;
+            //margin: 0 5.8% 0 5.8%;
+            margin: auto;
+            padding: 27px 0;
+            background-color: #ffffff;
+        }
+        &__title {
+            font-family: SpoqaHanSans;
+            font-weight: bold;
+            font-size: 16px;
+            color: #4a322e;
+            letter-spacing: -0.5px;
+        }
+        &__desc {
+            font-family: SpoqaHanSans;
+            font-weight: 300;
+            font-size: 16px;
+            color: #4a322e;
+            letter-spacing: -0.5px;
+
+        }
+    }
+    .packageBanner {
+        width: 100%;
+        padding: 100px 0 26px;
+        background-color: #f4f4f1;
+        &__card {
+            position: relative;
+            padding-bottom: 20px;
+            width: 88.4%;
+            max-width: 312px;
+            margin: auto;
+            background-color: #ffffff;
+            text-align: center;
+
+            &:before {
+                position: absolute;
+                top: -1px;
+                left: -13%;
+                content: "";
+                width: 30%;
+                border-top: 1px solid #000000;
+            }
+            &:after {
+                position: absolute;
+                bottom: -25px;
+                right: -6%;
+                content: "";
+                width: 30%;
+                border-top: 1px solid #000000;
+            }
+        }
+        &__badge{
+            position: absolute;
+            top: -16px;
+            right: -16px;
+            width: 72px;
+            height: 76px;
+        }
+        &__img {
+            position: relative;
+            margin-top: 20px;
+            width: 270px;
+            height: auto;
+            &6{
+                left: 0;
+                top: -14px;
+                padding-top: 20px;
+                width: 75%;
+            }
+        }
+
+        &__title {
+            position: relative;
+            top: -23px;
+            width: 141px;
+            height: auto;
+        }
+    }
+    .configuration {
+        width: 88.4%;
+        max-width: 312px;
+        margin: 50px auto 16px auto;
+        font-size: 16px;
+        color: #393939;
+        &__indexWrap {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 21px;
+        }
+        &__index {
+            font-family: SpoqaHanSans;
+            font-weight: bold;
+            line-height: 1.5;
+            letter-spacing: -0.7px;
+            font-size: 16px;
+        }
+        &__titleWrap {
+            display: inline-block;
+        }
+        &__title {
+            font-size: 14px;
+            font-weight: 300;
+            color: #393939;
+            line-height: 2.14;
+            &--bold{
+                font-family: SpoqaHanSans;
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 1.5;
+                letter-spacing: -0.7px;
+                color: #393939;
+            }
+        }
+        &:after {
+            clear: both;
+            display: block;
+            content: "";
+        }
+    }
+    .eventPaymentInfo {
+        width: 100%;
+        background-color: #f5f5f2;
+        &--black {
+            background-color: #000000;
+        }
+        &--empty{
+            width: 100%;
+            height: 48px;
+            background-color: #ffffff;
+        }
+        &__content {
+            position: relative;
+            width: 88.4%;
+            max-width: 312px;
+            margin: auto;
+        }
+        &__badge {
+            position: absolute;
+            top: 0;
+            display: table;
+            width: 32px;
+            height: 32px;
+            text-align: center;
+            color: #ffffff;
+            font-size: 10px;
+            font-weight: bold;
+            & > span {
+                display: table-cell;
+                vertical-align: middle;
+            }
+            &--second {
+                left: 32px;
+            }
+            &--blue {
+                background-color: #664ef1;
+            }
+            &--red {
+                background-color: #f94b54;
+            }
+            &--grey {
+                background-color: #b8b8ae;
+            }
+        }
+        &__ticketImg {
+            max-width: 80%;
+            height: auto;
+            margin-top: 32px;
+            margin-left: 20%;
+        }
+        &__phoneImg {
+            position: absolute;
+            right: -9%;
+            top: 8%;
+            max-width: 46%;
+            height: auto;
+        }
+        &__millieImg {
+            margin-top: 77px;
+            max-width: 50%;
+            height: auto;
+        }
+        &__budsImg {
+            width: 100%;
+            max-width: 360px;
+            height: auto;
+        }
+        &__desc {
+            width: 75%;
+            margin-left: 25%;
+            padding-bottom: 25px;
+            word-break: break-all;
+            font-size: 14px;
+            font-stretch: normal;
+            line-height: 2;
+            letter-spacing: -1px;
+            color: #393939;
+            &--write {
+                color: #ffffff;
+            }
+            &--red {
+                color: #ff5958;
+            }
+            &--dimmed {
+                color: #979797;
+            }
+        }
+        &__descRight {
+            width: 60%;
+            padding-bottom: 25px;
+            word-break: break-all;
+            font-size: 14px;
+            line-height: 2;
+            letter-spacing: -0.8px;
+            color: #393939;
+        }
+    }
+    .eventPaymentPriceHeader {
+        background-color: #f4f4f1;
+        &__content {
+            width: 88.4%;
+            max-width: 312px;
+            margin: auto;
+            padding: 20px 0 12px;
+            position: relative;
+            &:after {
+                position: absolute;
+                content: "";
+                bottom: 26px;
+                right: -5px;
+                width: 45%;
+                border-top: 1px solid #000000;
+            }
+        }
+        &__desc {
+            position: relative;
+            font-size: 16px;
+            line-height: 32px;
+            color: #4f3f3a;
+            letter-spacing: -0.6px;
+        }
+    }
+    .eventPaymentPrice {
+        &__wrap {
+            position: relative;
+            width: 100%;
+            background-color: #f4f4f1;
+        }
+        &__done{
+            &Wrap{
+                z-index: 10;
+                background-color: #d8d8d8;
+                opacity: .4;
+                text-align: left;
+            }
+            &Img{
+                z-index: 11;
+                width: 300px;
+                height: auto;
+                position: absolute;
+                top: 38%;
+                left: calc(50% - 150px);
+            }
+        }
+        width: 88.4%;
+        max-width: 324px;
+        margin: auto;
+        margin-bottom: 30px;
+
+        border-radius: 8px;
+        box-shadow: 0 20px 20px -10px rgba(30, 25, 24, 0.2);
+        background-color: #ffffff;
+        color: #000;
+        &__header {
+            position: relative;
+            padding: 19px 20px 0;
+            margin-bottom: 26px;
+            * > * {
+                vertical-align: middle;
+            }
+        }
+        &__lang {
+            padding: 0 3px;
+            margin-right: 8px;
+            border-radius: 13.5px;
+            border: solid 1.2px #6f8fd2;
+            color: #6f8fd2;
+            font-size: 11px;
+            font-weight: 600;
+            &--cn{
+                border: solid 1.2px #f93e5e;
+                color: #f93e5e;
+            }
+        }
+        &__langText {
+            color: #303030;
+            font-weight: bold;
+            font-size: 18px;
+            letter-spacing: -0.6px;
+
+        }
+        &__term {
+            position: absolute;
+            right: 86px;
+            color: #303030;
+            font-weight: bold;
+            font-size: 18px;
+            letter-spacing: -0.6px;
+        }
+        &__sailBadge {
+            display: flex;
+            position: absolute;
+            top: -16px;
+            right: -16px;
+            width: 72px;
+            height: 72px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 42.2px;
+            box-shadow: 0 12px 10px -4px rgba(203, 34, 0, 0.3);
+            background-image: linear-gradient(139deg, #f93e5e, #f96e3e);
+            text-align: center;
+        box-sizing: border-box;
+
+            &Title {
+                opacity: 0.6;
+                color: #ffffff;
+                font-family: SpoqaHanSans;
+                font-size: 10px;
+                font-weight: bold;
+            }
+            &DiscountRate {
+                font-family: SpoqaHanSans;
+                font-size: 27.1px;
+                font-weight: bold;
+                line-height: 1;
+                color: #ffffff;
+                &--small {
+                    font-size: 17.1px;
+                }
+            }
+            &--most{
+                border: 4px double transparent;
+                border-radius: 80px;
+                background-image: -webkit-gradient(linear,left top,left bottom,from(#f93e5e),to(#f96e3e)),radial-gradient(at top, #ffd100,#ffd9d9);
+                background-image: -webkit-linear-gradient(#f93e5e,#f96e3e),-webkit-radial-gradient(at top,#ffd100,#ffd9d9);
+                background-image: -o-linear-gradient(#f93e5e,#f96e3e),-o-radial-gradient(at top,#ffd100,#ffd9d9);
+                background-image: linear-gradient(#f93e5e,#f96e3e),radial-gradient(at top,#ffd100,#ffd9d9);
+                background-origin: border-box;
+                background-clip: content-box,border-box;
+            }
+        }
+        &__body {
+            padding: 0 20px;
+        }
+        &__itemList {
+        }
+        &__item {
+            display: table;
+            width: 100%;
+            margin-bottom: 12px;
+            &Title {
+                display: table-cell;
+                width: 40%;
+                font-size: 14px;
+                color: #858585;
+                line-height: 1.86;
+                letter-spacing: -0.6px;
+            }
+            &SalePrice {
+                display: table-cell;
+                width: 30%;
+                font-family: SpoqaHanSans;
+                font-size: 14px;
+                color: #858585;
+                text-align: right;
+                text-decoration: line-through;
+                line-height: 1.86;
+                letter-spacing: -0.6px;
+            }
+            &Price {
+                display: table-cell;
+                width: 30%;
+                font-family: SpoqaHanSans;
+                font-size: 14px;
+                color: #858585;
+                font-weight: bold;
+                text-align: right;
+
+                line-height: 1.86;
+                letter-spacing: -0.6px;
+            }
+        }
+        &__footer {
+            position: relative;
+            text-align: right;
+            padding: 10px 20px 19px;
+            border-top: 1px dashed rgba(151, 151, 151, 0.2);
+        }
+        &__installment {
+            font-family: SpoqaHanSans;
+            font-size: 10px;
+            font-weight: bold;
+            color: #b6b6b6;
+            text-align: right;
+            letter-spacing: -0.5px;
+        }
+        &__aNetPrice {
+            float: left;
+            line-height: 53px;
+            vertical-align: middle;
+            font-family: SpoqaHanSans;
+            font-size: 18px;
+            color: #b6b6b6;
+            text-decoration: line-through;
+            letter-spacing: -0.7px;
+        }
+        &__payPrice{
+            display: inline-block;
+            vertical-align: middle;
+            height: 45px;
+            line-height: 45px;
+            text-align: right;
+            float: right;
+
+        }
+        &:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        &__sailPrice {
+            font-family: SpoqaHanSans;
+            font-size: 30px;
+            color: #f3153b;
+            text-align: right;
+            &--small {
+                font-size: 24px;
+            }
+        }
+        &__monthlyUnit {
+            font-family: SpoqaHanSans;
+            font-size: 14px;
+            color: #858585;
+            text-align: right;
+        }
+    }
+    .eventPaymentPriceFooter {
+        padding-bottom: 21px;
+        &__content {
+            width: 88.4%;
+            max-width: 324px;
+            margin: auto;
+            text-align: center;
+        }
+        &__title {
+            margin-bottom: 11px;
+            font-size: 12px;
+            color: #5e5653;
+            letter-spacing: -0.6px;
+            text-align: center;
+        }
+        &__desc {
+            vertical-align: middle;
+            font-size: 12px;
+            font-weight: bold;
+            color: #5e5653;
+            letter-spacing: -0.8px;
+        }
+        &__icon {
+            display: inline-block;
+            vertical-align: middle;
+            background: url("//res.tutoring.co.kr/res/images/evt/201904/img_jobpack_08_arrow.png") no-repeat;
+            background-size: contain;
+            width: 13px;
+            height: 13px;
+        }
+    }
+    .warringInfo {
+        width: 100%;
+        padding-top: 21px;
+        padding-bottom: 21px;
+        background-color: #3c3937;
+        &__card {
+            width: 88.4%;
+            max-width: 324px;
+            margin: 0 auto 20px;
+            background-color: #ececec;
+            border-radius: 10px;
+        }
+        &__content {
+            padding: 21px;
+        }
+        &__title {
+            padding-bottom: 5px;
+            margin-bottom: 9px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #f93e5e;
+            line-height: 14px;
+            vertical-align: middle;
+            border-bottom: 1px solid #d8d8d8;
+            &Icon {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                margin-right: 4px;
+                background: url("//res.tutoring.co.kr/res/images/common/ico_comm.png") no-repeat;
+                background-position-x: -140px;
+                background-position-y: -104px;
+                background-size: 220px 188px;
+                vertical-align: middle;
+
+            }
+        }
+        &__desc {
+            position: relative;
+            width: calc(100% - 15px);
+            margin-left: 15px;
+            font-size: 12px;
+            font-weight: 300;
+            color: #555555;
+            &:before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: 9px;
+                left: -9px;
+                width: 3px;
+                height: 3px;
+                margin-right: 9px;
+                background-color: #919191;
+                border-radius: 1.5px;
+            }
+        }
+    }
+    .lessonTicketInfo {
+        width: 88.4%;
+        max-width: 327px;
+        margin: auto;
+        padding-bottom: 31px;
+        &__title {
+            padding-bottom: 11px;
+            margin-bottom: 8px;
+            padding-top: 28px;
+            border-bottom: 1px solid #d8d8d8;
+            font-size: 14px;
+            color: #555555;
+        }
+        &__desc {
+            position: relative;
+            margin-left: 15px;
+            width: calc(100% - 15px);
+            font-size: 12px;
+            font-weight: 300;
+            color: #555555;
+            &Icon {
+                display: inline-block;
+                width: 3px;
+                height: 3px;
+                margin-top: 8px;
+                margin-right: 9px;
+                background-color: #919191;
+                border-radius: 1.5px;
+                vertical-align: top;
+            }
+            &:before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: 9px;
+                left: -9px;
+                width: 3px;
+                height: 3px;
+                margin-right: 9px;
+                background-color: #919191;
+                border-radius: 1.5px;
+            }
+        }
+    }
+    .footer {
+        z-index: 15;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 15px 0;
+        background-color: #5e5653;
+        &__content {
+            position: relative;
+            width: 88.4%;
+            max-width: 327px;
+            margin: auto;
+        }
+        &__bedge {
+            position: absolute;
+            top: -24px;
+            left: 0;
+            width: 74px;
+            height: auto;
+        }
+        &__text {
+            margin-left: 33px;
+            font-size: 19px;
+            font-weight: bold;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+            text-align: center;
+        }
+        &__arrow {
+            display: inline-block;
+            margin-left: 10px;
+            background: url("//res.tutoring.co.kr/res/images/common/ico_arrow.png") no-repeat;
+            background-size: 24px 188px;
+            background-position-x: 0;
+            background-position-y: -120px;
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 22px;
+    left: 0;
+    right: 0;
+    bottom: 72px;
+    overflow: hidden;
+    width: 88.4%;
+    max-width: 327px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 11px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+    &__wrap {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-top: 20px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(51, 51, 51, 0.3);
+    }
+    &__content{
+        width: 100%;
+        max-height: calc(100% - 59px);
+        overflow-y:scroll;
+        overflow-x:hidden;
+    }
+    &__info {
+        padding: 30px 20px 0 24px;
+        border-bottom: 1px solid #efefef;
+    }
+    &__title {
+        padding-bottom: 12px;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: -0.5px;
+        line-height: 1.5;
+        color: #333333;
+        vertical-align: middle;
+    }
+    &__icon {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+        background: url("//res.tutoring.co.kr/res/images/common/ico_comm.png") no-repeat;
+        background-position-x: -160px;
+        background-position-y: -104px;
+        background-size: 220px 188px;
+        vertical-align: middle;
+    }
+    &__desc {
+        padding-bottom: 16px;
+        font-size: 16px;
+        line-height: 1.56;
+        letter-spacing: -0.5px;
+        color: #777777;
+        &--bold {
+            font-weight: bold;
+        }
+    }
+    &__tutors {
+        padding: 24px 6px 0 24px;
+        border-bottom: 1px solid #efefef;
+    }
+    &__tutorInfo {
+    }
+    &__tutorImg {
+        margin-right: 8px;
+        width: 40px;
+        height: 40px;
+        border: solid 0.8px #e7e7e7;
+        border-radius: 20px;
+        vertical-align: middle;
+    }
+    &__tutorName {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: -0.5px;
+        color: #333333;
+    }
+    &__career {
+        padding: 20px 20px 0 28px;
+    }
+    &__buttonWrap {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 16px 0;
+        text-align: center;
+        border-top: 1px solid #efefef;
+        background-color: #fff;
+    }
+    &__button {
+        &Text {
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: -0.5px;
+            color: #333333;
+        }
+    }
+}

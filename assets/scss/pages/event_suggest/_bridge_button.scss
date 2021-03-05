@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+.bridge__btn-wrap {
+    padding-bottom: 32px;
+
+    @media (min-width: 1024px) {
+        padding-top: 16px;
+    }
+
+    .landing__button {
+        width: 312px;
+        margin: 0 auto 8px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+        -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+    }
+}

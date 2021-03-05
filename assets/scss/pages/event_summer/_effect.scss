@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+.summer-friends .effect {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media (min-width: 1200px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    &__title {
+        @include noteBGTitle-yellow;
+    }
+    &__process {
+        width: 320px; height: 410px;
+        margin: 40px auto;
+        padding-top: 40px;
+        background: url("//cdn.tutoring.co.kr/uploads/page/summersummer/process_bar_img_360w.png") no-repeat 50% 0;
+        background-size: 59px 410px;
+        box-sizing: border-box;
+
+        @media (min-width: 1200px) {
+            width: 680px; height: 884px;
+            padding-top: 90px;
+            background-image: url("//cdn.tutoring.co.kr/uploads/page/summersummer/process_bar_img_1600w.png");
+            background-size: 118px 884px;
+
+            .process__thumb {
+                width: 312px;
+            }
+        }
+
+        .process__item {
+            display: flex;
+            padding-top: 7px;
+            justify-content: center;
+            align-items: center;
+
+            @media (min-width: 1200px) {
+                padding-top: 14px;
+            }
+
+            &:after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+
+            &:nth-child(odd) img {margin-right: 30px;}
+            &:nth-child(even) img {margin-left: 30px;}
+            &:nth-child(2) .process__text b {color: #fb6666;}
+            &:nth-child(3) .process__text b {color: #fe3434;}
+
+            @media (min-width: 1200px) {
+                &:nth-child(odd) img {margin-right: 90px;}
+                &:nth-child(even) img {margin-left: 110px;}
+                &:nth-child(odd) {padding-right: 50px;}
+                &:nth-child(even) {padding-left: 30px;}
+            }
+        }
+        .process__text {
+            width: 143px;
+            padding: 0 12px;
+            color: #444;
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: -0.5px;
+            box-sizing: border-box;
+
+            @media (min-width: 1200px) {
+                width: 244px;
+                padding: 0;
+                font-size: 20px;
+                line-height: 26px;
+                letter-spacing: -1px;
+            }
+
+            b {
+                display: block;
+                padding-bottom: 9px;
+                color: #fc9c9c;
+                font-size: 16px;
+                font-weight: 500;
+
+                @media (min-width: 1200px) {
+                    font-size: 28px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    &__desc {
+        width: 300px;
+        margin: 0 auto;
+        color: #a1a1a1;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: -0.2px;
+
+        @media (min-width: 1200px) {
+            width: 680px;
+            margin-top: 60px;
+            font-size: 16px;
+            line-height: 18px;
+        }
+
+        .point-text {
+            display: block;
+            padding-bottom: 5px;
+            font-size: 12px;
+
+            @media (min-width: 1200px) {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.summer-friends .review {
+    padding-top: 34px;
+    padding-bottom: 34px;
+    background-color: #fff6df;
+
+    &__title {
+        @include noteBGTitle-white;
+
+        margin-bottom: 30px;
+    }
+    &__wrapper {
+        overflow: hidden;
+        overflow-x: auto;
+        margin-top: 34px;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        
+        &::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera*/
+        }
+    }
+    &__list {
+        display: inline-block;
+        padding-right: 22px;
+        padding-left: 22px;
+        // padding: 34px 22px;
+        font-size: 0;
+        vertical-align: top;
+        white-space: nowrap;
+
+        .list__item {
+            display: inline-block;
+            width: 251px; height: 210px;
+            margin: 0 8px;
+            padding: 39px 32px;
+            border-radius: 4px;
+            text-align: center;
+            background-color: #fff;
+            vertical-align: top;
+            white-space: normal;
+            box-sizing: border-box;
+        }
+        .list__inner {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .list__desc {
+            color: #818181;
+            font-size: 16px;
+            line-height: 30px;
+
+            b {color: #7961f7;}
+        }
+        .list__summary {
+            display: block;
+            padding-top: 15px;
+            color: #333;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+        }
+    }
+}

@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+.lesson-ticket__home {
+    .coupon {
+        padding: 9px 0;
+        background-color: #ececec;
+    }
+    .coupon__content {
+        width: 336px;
+        margin-right: auto;
+        margin-left: auto;
+    
+        @include small_mobile {
+            width: 100%;
+        }
+    
+        &:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    }
+    .coupon__title {
+        float: left;
+        display: table;
+        width: 154px; height: 62px;
+        margin-right: 7px;
+        margin-left: 7px;
+        table-layout: fixed;
+    
+        @include small_mobile {
+            height: 60px;
+            margin-right: 3px;
+            margin-left: 3px;
+        }
+    
+        .title__text {
+            display: table-cell;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.6em;
+            letter-spacing: -0.5px;
+            vertical-align: middle;
+        }
+    }
+    
+    .coupon__ticket {
+        float: left;
+        position: relative;
+        display: table;
+        width: 154px; height: 62px;
+        margin-right: 7px;
+        margin-left: 7px;
+        color: #777;
+        font-size: 12px;
+        line-height: 1.5em;
+        letter-spacing: -0.5px;
+        border-radius: 5px;
+        background-image: url('//res.tutoring.co.kr/res/images/pay/home3.0/coupon.png');
+        background-size: 100% auto;
+        box-sizing: border-box;
+    
+        @include small_mobile {
+            height: 60px;
+            margin-right: 3px;
+            margin-left: 3px;
+        }
+    
+        .ticket__item {
+            display: table-cell;
+            padding-right: 34px;
+            padding-left: 16px;
+            vertical-align: middle;
+        }
+        .ticket__point {
+            display: block;
+            color: #ff1959;
+            font-weight: 600;
+        }
+    
+        &--download {
+            &:before {
+                content: "";
+                position: absolute; top: 50%; right: 34px;
+                width: 1px; height: 36px;
+                background-color: #ececec;
+                transform: translateY(-50%);
+            }
+            &:after {
+                @include spriteIcoHome;
+    
+                content: "";
+                position: absolute; top: 50%; right: 11px;
+                background-position: -80px 0;
+                transform: translateY(-50%);
+            }
+        }
+        &--timer {
+            .ticket__item {padding-right: 16px;}
+            .ticket__point {display: inline; padding-left: 5px;}
+            .ticket__title:before {
+                @include spriteIcoHome;
+                
+                content: "";
+                display: inline-block;
+                margin: -1px 2px 1px 0;
+                vertical-align: middle;
+                background-position: -40px 0;
+            }
+        }
+    }
+}

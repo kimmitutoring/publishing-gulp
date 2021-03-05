@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+.ipad-wrap {
+	.certificate-first {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding: 26px calc((100vw - 320px) / 2);
+		background-color: #374169;
+
+		@include desktop {
+			padding: 66px calc((100vw - 700px) / 2) 43px;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0px;
+			left: calc(50% + 105px);
+			width: 80px;
+			height: 90px;
+			background-image: url(//res.tutoring.co.kr/res/images/evt/202008/shooting/shooting_universe_tudal.png);
+			background-size: cover;
+
+			@include desktop {
+				left: calc(50% + 250px);
+				width: 222px;
+				height: 232px;
+				background-image: url(//res.tutoring.co.kr/res/images/evt/202008/shooting/shooting_universe_tudal_1600w.png);
+			}
+		}
+
+		.courses-card {
+			width: 89px;
+			height: 113px;
+			background-image: url(//res.tutoring.co.kr/res/images/evt/202008/shooting/shooting_coursescard.png);
+			background-size: cover;
+			@include desktop {
+				width: 168px;
+				height: 213px;
+			}
+		}
+		.certificate__content {
+			position: relative;
+			top: -5px;
+			margin-left: 13px;
+			font-size: 20px;
+			color: #fff;
+			line-height: 1.1;
+			letter-spacing: -1px;
+
+			@include desktop {
+				font-size: 40px;
+				letter-spacing: -2px;
+				line-height: 0.81;
+			}
+
+			&.certificate__content--em {
+				background-image: linear-gradient(#fff, #4ccaff);
+				margin-top: 4px;
+				font-size: 28px;
+				font-weight: 700;
+				background-clip: text;
+				-webkit-background-clip: text;
+				color: transparent;
+
+				@include desktop {
+					margin-top: 18px;
+					letter-spacing: -2px;
+					font-size: 54px;
+					line-height: 1.2;
+				}
+			}
+		}
+	}
+}

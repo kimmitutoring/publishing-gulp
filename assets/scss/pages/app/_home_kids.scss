@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.lesson-ticket__home {
+    .kids {
+        @include mainDivisonInfo;
+        margin-bottom: $card-item-vspace;
+    
+        &__title {
+            @include templateHeadingBox;
+        }
+    }
+    
+    .kids__inner {
+        @include templateCardScrollWrap;
+     }
+    
+    .kids__list {
+        @include templateCardList;
+        @include templateCardItem;
+    }
+}

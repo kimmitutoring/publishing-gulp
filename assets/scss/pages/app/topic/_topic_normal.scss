@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+// 지금 뜨는 토픽, 새로 나온 토픽
+.topic__normal {
+    padding-bottom: 40px;
+
+    .topic__list {
+        padding: 16px 12px 0;
+
+        .list__item {
+            width: 82px;
+            margin-right: 8px;
+            margin-left: 8px;
+            box-sizing: border-box;
+        }
+    }
+    .topic__image {
+        width: 82px; height: 118px;
+        background-color: #919191;
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+        border-radius: 8px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+    }
+    .topic__title {
+        display: block;
+        margin-top: 8px;
+        margin-bottom: 4px;
+        color: #333;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 16px;
+        white-space: normal;
+    }
+    .topic__desc {
+        display: block;
+        color: #555;
+        font-size: 11px;
+        line-height: 16px;
+        white-space: normal;
+    }
+}

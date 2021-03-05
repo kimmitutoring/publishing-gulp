@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+.summer-friends .award {
+    padding-top: 65px;
+    padding-bottom: 58px;
+    text-align: center;
+    background-color: #1e1e1e;
+    letter-spacing: -0.5px;
+
+    @media (min-width: 1200px) {
+        padding: 27px 0;
+    }
+
+    &__title {
+        color: #fff;
+        font-size: 19px;
+        line-height: 23px;
+
+        @media (min-width: 1200px) {
+            display: none;
+        }
+    }
+    &__image {
+        display: block;
+        margin: 32px auto 0;
+
+        @media (min-width: 1200px) {
+            display: none;
+        }
+    }
+    &__desc {
+        margin-top: 12px;
+        margin-bottom: 10px;
+        color: #eac773;
+        font-size: 12px;
+        line-height: 26px;
+
+        @media (min-width: 1200px) {
+            position: relative;
+            display: inline-block;
+            width: 155px;
+            margin: 0;
+            padding-right: 174px;
+            font-size: 18px;
+            line-height: 30px;
+            text-align: left;
+            letter-spacing: -1px;
+            vertical-align: top;
+
+            &:after {
+                content: "";
+                position: absolute; top: 10px; right: 0;
+                width: 164px; height: 104px;
+                background: url("//cdn.tutoring.co.kr/uploads/page/summersummer/medal_img_1600w.png") no-repeat 0 0;
+                background-size: 100% auto;
+            }
+        }
+
+        b {
+            display: block;
+            font-size: 24px;
+
+            @media (min-width: 1200px) {
+                font-size: 28px;
+                line-height: 48px;
+            }
+        }
+    }
+    &__list .list__item {padding-top: 17px;}
+
+    @media (min-width: 1200px) {
+        &__list {
+            display: inline-block;
+            margin-top: 20px;
+            vertical-align: top;
+
+            .list__item {
+                display: inline-block;
+                width: 186px; height: 64px;
+                margin-left: 13px;
+                padding-top: 0;
+                vertical-align: top;
+                background: no-repeat 0 0;
+                background-size: 100% auto;
+
+                &:nth-child(1) {background-image: url("//cdn.tutoring.co.kr/uploads/page/summersummer/medal_text1_img_1600w.png");}
+                &:nth-child(2) {background-image: url("//cdn.tutoring.co.kr/uploads/page/summersummer/medal_text2_img_1600w.png");}
+                &:nth-child(3) {background-image: url("//cdn.tutoring.co.kr/uploads/page/summersummer/medal_text3_img_1600w.png");}
+
+                img {display: none;}
+            }
+        }
+    }
+    
+}

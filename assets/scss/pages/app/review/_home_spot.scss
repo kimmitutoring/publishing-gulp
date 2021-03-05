@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+.review-home {
+	padding-top: $header-height-fixed;
+
+	@media (max-width: $desktop_maximum_width) {
+		padding-top: 0;
+	}
+}
+.review-home__spot {
+    overflow: hidden;
+    position: relative; z-index: 30;
+    max-width: $layoutMaxWidth;
+    height: 280px;
+    margin: 0 auto;
+    padding-top: 20px;
+
+    @include desktop {
+        &:before,
+        &:after {
+            content: "";
+            position: absolute; top: 0; bottom: 0; z-index: 50;
+            width: 100px;
+            background-image: linear-gradient(90deg, #f5f5f5 60%, rgba(245, 245, 245, 0));
+        }
+        &:before {left: 0;}
+        &:after {right: 0; transform: rotate(180deg);}
+    }
+
+    .spot__heading {
+        position: absolute;
+        margin: 0; padding: 0;
+        clip: rect(0, 0, 0, 0);
+        color: transparent;
+    }
+    .spot__scroll {
+        overflow-y: scroll;
+        height: 300px;
+    }
+    .spot__list {
+        display: inline-block;
+        padding-right: $card-item-hspace;
+        padding-left: $card-item-hspace;
+        font-size: 0;
+        white-space: nowrap;
+        vertical-align: top;
+
+        @include desktop {
+            padding-right: (($layoutMaxWidth - $layoutMinWidth) / 2);
+            padding-left: (($layoutMaxWidth - $layoutMinWidth) / 2);
+        }
+
+        .list__item {
+            display: inline-block;
+            white-space: normal;
+            vertical-align: top;
+
+            & + .list__item {padding-left: 16px;}
+        }
+    }
+    .spot__thumb,
+    .spot__video {
+        overflow: hidden;
+        position: relative;
+        padding-top: 56.25%;
+        border-radius: 10px 10px 0 0;
+    }
+    .spot__thumb {
+        background-color: #ebebeb;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 100% auto;
+    }
+    .spot__video {
+        background-color: #000;
+        border-radius: 10px 10px 0 0;
+
+        .video__inner {
+            overflow: hidden;
+            position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+
+            iframe {
+                display: block;
+                width: 100%; height: 100%;
+                border: none;
+            }
+        }
+    }
+    .spot__detail {
+        padding: 15px 20px;
+        letter-spacing: -0.5px;
+
+        .detail__user {
+            display: block;
+            color: #919191;
+            font-size: 12px;
+        }
+        .detail__title {
+            overflow: hidden;
+            display: block;
+            color: #333;
+            font-size: 16px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .detail__hash {
+            margin-top: 5px;
+            color: #c3c3c3;
+            font-size: 12px;
+        }
+    }
+    .spot__item {
+        @include contentShadowBox;
+
+        width: 260px; height: 240px;
+    }
+}

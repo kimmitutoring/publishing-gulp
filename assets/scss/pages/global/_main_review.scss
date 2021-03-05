@@ -1,0 +1,309 @@
+@charset "utf-8";
+
+// 영어인생을 바꾼 사람들
+.item_review {
+    background-color: #f5f5fa;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8em;
+    text-align: left;
+    letter-spacing: -1px;
+
+    @include all_desktop {
+        margin-top: -100px;
+        padding-top: 220px;
+    }
+    @include big_desktop {
+        margin-top: -100px;
+        padding: 186px 0 178px;
+    }
+
+    .bg_slice {
+        z-index: 3;
+    }
+
+    .inner_item {
+        position: relative;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .tit_item {
+        display: block;
+        font-size: 32px;
+        font-weight: 600;
+
+        @include all_desktop {
+            font-size: 48px;
+            padding-bottom: 62px;
+        }
+        @include big_desktop {
+            width: 600px;
+            line-height: 64px;
+        }
+    }
+
+    .desc_story {
+        position: relative; z-index: 2;
+        padding: 0 30px;
+
+        @media (min-width: $tablet_minimum_width) and (max-width: $desktop_maximum_width) {
+            br {display: none;}
+        }
+
+        @include all_desktop {
+            padding: 0 60px;
+            font-size: 24px;
+            line-height: 40px;
+        }
+        @include big_desktop {
+            position: relative; z-index: 2;
+            width: 530px;
+            padding: 0;
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
+    .tit_sub {
+        padding: 0 30px;
+        color: $point-color;
+        font-size: 20px;
+        font-weight: 500;
+
+        @include all_desktop {
+            padding: 0 60px 20px;
+        }
+        @include big_desktop {
+            padding-right: 0;
+            padding-bottom: 12px;
+            padding-left: 0;
+        }
+    }
+    .txt_writer {
+        margin-bottom: 20px;
+        color: #333;
+        font-size: 16px;
+        line-height: 1.4em;
+
+        @include all_desktop {
+            font-size: 28px;
+        }
+        @include big_desktop {
+            font-size: 16px;
+        }
+    }
+    .link_more {
+        margin-top: 30px;
+    }
+    .img_writer {
+        position: absolute; top: 0; left: 0; z-index: 1;
+        width: 100%; height: 100%;
+        background-color: #f6f6fb;
+        background-repeat: no-repeat;
+        background-position: 50% 100%;
+        background-size: 90% auto;
+
+        &.img_writer01 {background-image: url('//cdn.tutoring.co.kr/uploads/home/img/tutoringgo/zhHome/global_tablet_review_user1.png');}
+        &.img_writer02 {background-image: url('//cdn.tutoring.co.kr/uploads/home/img/tutoringgo/zhHome/global_tablet_review_user2.png');}
+        &.img_writer03 {background-image: url('//cdn.tutoring.co.kr/uploads/home/img/tutoringgo/zhHome/global_tablet_review_user3.png');}
+
+        @media (min-width: $tablet_minimum_width) and (max-width: $desktop_maximum_width) {
+            width: 95%;
+            background-position: 100% 100%;
+            background-size: 528px auto;
+        }
+
+        @include big_desktop {
+            top: 100px; left: 450px;
+            width: 794px; height: 835px;
+            background-position: 0 0;
+
+            &.img_writer01 {background-image:url('//cdn.tutoring.co.kr/uploads/home/img/tutoringgo/zhHome/global_web_review_user1_.png');background-size: 526px auto;}
+            &.img_writer02 {background-image:url('//cdn.tutoring.co.kr/uploads/home/img/tutoringgo/zhHome/global_web_review_user2_.png');background-size: 525px auto;}
+            &.img_writer03 {top: 40px; left: 490px; background-image:url('//cdn.tutoring.co.kr/uploads/home/img/tutoringgo/zhHome/global_web_review_user3_.png');background-size: 782px auto;}
+        }
+    }
+
+    // swiper
+    .btn_swiper {
+        position: absolute; top: 507px;
+        display: flex;
+        width: 50px; height: 50px;
+        text-align: center;
+        background-color: $point-color;
+        background-image: none;
+        outline: none;
+
+        @include all_desktop {
+            top: 697px;
+            width: 90px; height: 90px;
+        }
+        @include big_desktop {
+            top: 505px;
+            width: 50px; height: 50px;
+        }
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 12px; height: 22px;
+            margin: auto;
+            vertical-align: top;
+
+            @include all_desktop {
+                width: 22px; height: 40px;
+            }
+            @include big_desktop {
+                width: 12px; height: 22px;
+            }
+        }
+    }
+    .swiper {
+        &-container {
+            overflow: visible;
+            width: 100%; height: 860px;
+
+            @media (min-width: $tablet_minimum_width) and (max-width: $desktop_maximum_width) {
+                height: 1100px;
+            }
+        }
+        &-slide {
+            background-color: #f5f5fa;
+            opacity: 0;
+        }
+        &-pagenation {
+            display: none;
+        }
+        &-button-prev {left: 30px;}
+        &-button-next {left: 80px;}
+        &-button-prev:after {background-position: -350px -70px;}
+        &-button-next:after {background-position: -366px -70px;}
+        &-button-disabled:after {opacity: 0.5;}
+
+        @include all_desktop {
+            &-button-prev {left: 60px;}
+            &-button-next {left: 150px;}
+            &-button-prev:after {background-position: -296px -50px;}
+            &-button-next:after {background-position: -326px -50px;}
+        }
+        @include big_desktop {
+            &-button-prev {left: 0;}
+            &-button-next {left: 50px;}
+            &-button-prev:after {background-position: -350px -70px;}
+            &-button-next:after {background-position: -366px -70px;}
+        }
+    }
+}
+.bundle_review {
+    position: relative; z-index: 20;
+    padding: 37px 30px 0;
+    text-align: center;
+    background-color: #f5f5fa;
+
+    @include all_desktop {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+    @include big_desktop {
+        margin-top: -280px;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .emph_g {
+        display: block;
+        color: $point-color;
+        font-weight: 500;
+        font-size: 16px;
+        text-align: left;
+
+        @include all_desktop {
+            font-size: 28px;
+        }
+        @include big_desktop {
+            font-size: 20px;
+            line-height: 29px;
+        }
+    }
+}
+.list_review {
+    @include clear;
+
+    text-align: left;
+
+    li {
+        margin-top: 20px;
+        padding: 30px 20px;
+        background-color: #fbfbff;
+        border-radius: 5px;
+        word-break: break-all;
+
+        @include all_desktop {
+            margin-top: 30px;
+            padding: 35px 40px;
+        }
+        @include big_desktop {
+            float: left;
+            position: relative;
+            width: 247px; height: 522px;
+            padding: 30px 24px;
+            margin-left: 19px;
+
+            &:first-child {margin-left: 0;}
+        }
+    }
+
+    .tit_review {
+        display: block;
+        margin-bottom: 20px;
+        color: #333;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+        word-break: keep-all;
+
+        @include all_desktop {
+            font-size: 28px;
+            line-height: 46px;
+        }
+        @include big_desktop {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    .txt_info {
+        margin-top: 20px;
+        line-height: 22px;
+
+        @include all_desktop {
+            margin-top: 50px;
+        }
+        @include big_desktop {
+            position: absolute; bottom: 30px; left: 24px;
+            margin-top: 0;
+        }
+
+        span + span:before {
+            content: "";
+            display: inline-block;
+            width: 1px; height: 11px;
+            margin: 6px 4px 0 5px;
+            background-color: #dee1eb;
+            vertical-align: top;
+
+            @include all_desktop {
+                width: 2px; height: 20px;
+                margin: 2px 10px;
+            }
+
+            @include big_desktop {
+                width: 1px; height: 11px;
+                margin: 6px 5px 0 6px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .cont_home .bundle_review {margin-top: -310px;}
+}

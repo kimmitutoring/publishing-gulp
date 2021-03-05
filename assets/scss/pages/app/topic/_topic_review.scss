@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+.topic__review {
+    .review__item {
+        overflow: hidden;
+        margin: 16px 20px 32px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .review__thumb {
+        padding-top: 33.12%;
+        background-color: #919191;
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+    }
+    .review__detail {
+        padding: 20px;
+
+        .detail__title {
+            overflow: hidden;
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 18px;
+            line-height: 24px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .detail__desc {
+            overflow: hidden;
+            display: -webkit-box;
+            color: #555;
+            font-size: 14px;
+            line-height: 21px;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+    }
+
+}

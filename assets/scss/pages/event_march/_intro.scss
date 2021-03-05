@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+.event-intro {
+	position: relative;
+	background-color: #1e6aff;
+	color: transparent;
+
+	.intro__summary {
+		position: absolute; bottom: 50px; left: 50%;
+		width: 320px;
+		margin-right: auto;
+		margin-left: auto;
+		color: #fff;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: -0.5px;
+		text-align: center;
+		transform: translateX(-50%);
+
+		@media (min-width: 1200px) {
+			bottom: 150px;
+			width: 1000px;
+			font-size: 25px;
+			font-weight: 300;
+			line-height: 36px;
+
+			br {display: none;}
+		}
+
+		.heading {
+			margin-bottom: 8px;
+			font-size: 16px;
+			font-weight: 900;
+			line-height: 1em;
+			letter-spacing: -1px;
+
+			@media (min-width: 1200px) {
+				font-size: 25px;
+				line-height: 30px;
+			}
+		}
+		.description + .description {
+			margin-top: 20px;
+
+			@media (min-width: 1200px) {
+				margin-top: 30px;
+			}
+		}
+		.description + .heading {
+			margin-top: 30px;
+			padding-top: 30px;
+			border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+			@media (min-width: 1200px) {
+				margin-top: 40px;
+				padding-top: 40px;
+			}
+		}
+		.description--small {
+			font-size: 12px;
+			line-height: 16px;
+			opacity: 0.7;
+
+			@media (min-width: 1200px) {
+				font-size: 25px;
+				line-height: 36px;
+			}
+		}
+	}
+
+	&--first {
+		height: 663px; 
+		background-image: url('//res.tutoring.co.kr/res/images/evt/202103/oneone/oneone_event01_mo.png');
+		background-repeat: no-repeat;
+		background-position: 50% 50px;
+		background-size: auto 1033px;
+
+		@media (min-width: 1200px) {
+			height: 1035px;
+			background-image: url('//res.tutoring.co.kr/res/images/evt/202103/oneone/oneone_event01_pc.png');
+			background-position: 50% 100px;
+			background-size: auto 1472px;
+		}
+	}
+	&--second {
+		height: 1650px;
+		background-image: url('//res.tutoring.co.kr/res/images/evt/202103/oneone/oneone_event02_mo.png');
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		background-size: auto 1033px;
+
+		@media (min-width: 1200px) {
+			height: 2240px;
+			background-image: url('//res.tutoring.co.kr/res/images/evt/202103/oneone/oneone_event02_pc.png');
+			background-size: auto 1260px;
+		}
+	}
+}

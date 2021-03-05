@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+.worker-choice {
+	width: 320px;
+	margin: 0 auto 15px;
+	border: 1px solid #d5d5d5;
+	background-color: #fff;
+	border-radius: 15px;
+	box-sizing: border-box;
+
+	@media (min-width: 1200px) {
+		display: flex;
+		width: 816px;
+		margin-bottom: 25px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		align-items: center;
+	}
+
+	.choice__item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		color: #333;
+
+		& ~ .choice__item {
+			border-top: 1px solid #efefef;
+		}
+
+		@media (min-width: 1200px) {
+			width: 33.33%;
+			flex-direction: column;
+
+			& ~ .choice__item {
+				border-top: 0;
+				border-left: 1px solid #efefef;
+			}
+		}
+	}
+	.choice__title {
+		width: 50%;
+		font-size: 16px;
+		font-weight: 600;
+		letter-spacing: -1px;
+
+		@media (min-width: 1200px) {
+			width: 100%;
+			margin-bottom: 40px;
+		}
+	}
+	.choice__choice {
+		width: 50%;
+		margin: auto;
+		padding: 5px 0;
+
+		@media (min-width: 1200px) {
+			display: flex;
+			width: 100%;
+			padding: 0;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	.choice__group {
+		overflow: hidden;
+		position: relative;
+		margin: 10px 0;
+		text-align: left;
+
+		@media (min-width: 1200px) {
+			margin: 0 20px;
+		}
+	}
+	.choice__label {
+		display: block;
+		padding: 5px 0 5px 27px;
+		font-size: 14px;
+		font-weight: 600;
+		letter-spacing: -1px;
+		cursor: pointer;
+
+		&:before {
+			content: "";
+			position: absolute; top: 50%; left: 0; z-index: 10;
+			display: inline-block;
+			width: 16px; height: 16px;
+			border-radius: 50%;
+			background-color: #ccc;
+			transform: translateY(-50%);
+		}
+		&:after {
+			content: "";
+			position: absolute; top: 50%; left: 1px; z-index: 20;
+			display: inline-block;
+			width: 14px; height: 14px;
+			border: 3px solid #fff;
+			background-color: #fff;
+			border-radius: 50%;
+			vertical-align: middle;
+			box-sizing: border-box;
+			transform: translateY(-50%);
+		}
+	}
+	.choice__radio {
+		position: absolute; top: -50px; left: 0;
+
+		&:checked ~ label:before,
+		&:checked ~ label:after {background-color: #7063f9}
+	}
+}

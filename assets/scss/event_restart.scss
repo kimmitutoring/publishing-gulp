@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+// common
+@import 'utils/variables';
+@import 'utils/mixin';
+
+// font
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+// pages
+@import 'pages/event_restart/all';
+@import 'pages/event_restart/spot';
+@import 'pages/event_restart/recomm';
+@import 'pages/event_restart/benefit';
+@import 'pages/event_restart/intro';
+@import 'pages/event_restart/special';
+@import 'pages/event_restart/award';
+@import 'pages/event_restart/allpass';
+@import 'pages/event_restart/plan';
+@import 'pages/event_restart/goods';
+@import 'pages/event_restart/package';
+@import 'pages/event_restart/certificate';
+@import 'pages/event_restart/guide';
+@import 'pages/event_restart/notice';
+@import 'pages/event_restart/review';
+@import 'pages/event_restart/cta';

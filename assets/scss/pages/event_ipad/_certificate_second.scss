@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+.ipad-wrap {
+	.certificate-second {
+		position: relative;
+		background-color: #f6f6f6;
+		padding-bottom: 16px;
+		margin: 0 auto;
+
+		@include desktop {
+			padding-bottom: 120px;
+		}
+
+		.award-item-list {
+			display: none;
+			padding: 52px 0 43px;
+			background-color: #eaeaea;
+			@include desktop {
+				display: flex;
+				justify-content: center;
+			}
+
+			.award-item {
+				flex: 0 1 259px;
+
+				&__image {
+					display: block;
+					max-width: 100%;
+					vertical-align: top;
+				}
+
+				& + .award-item {
+					margin-left: 76px;
+				}
+			}
+		}
+
+		.awards {
+			display: block;
+			width: 292px;
+			padding-top: 45px;
+			margin: 0 auto;
+
+			@include desktop {
+				display: none;
+			}
+		}
+
+		.certificate-header {
+			display: none;
+			margin-top: 120px;
+
+			@include desktop {
+				display: block;
+			}
+
+			.certificate-subtitle {
+				color: #555;
+				font-size: 30px;
+				letter-spacing: -3px;
+				line-height: 1.5;
+				text-align: center;
+			}
+			.certificate-title {
+				color: $main-color;
+				letter-spacing: -3px;
+				text-align: center;
+				line-height: 54px;
+				font-size: 40px;
+				font-weight: 700;
+			}
+		}
+
+		.speech-bubble {
+			display: block;
+			width: 330px;
+			margin: 50px auto 0;
+
+			@include desktop {
+				display: none;
+			}
+		}
+
+		.certificate {
+			@include desktop {
+				margin-top: 50px;
+			}
+			.certificate__description {
+				font-size: 12px;
+				opacity: 0.5;
+				font-weight: 700;
+				line-height: 1.42;
+				letter-spacing: -0.5px;
+				text-align: center;
+				color: #000;
+
+				@include desktop {
+					letter-spacing: -1.5px;
+					font-size: 28px;
+					line-height: 52px;
+				}
+			}
+
+			.certificate__image {
+				margin: 15px auto 0;
+				width: 300px;
+				height: 131px;
+				background-image: url(//cdn.tutoring.co.kr/uploads/home/img/plans/career/10job_papers.png);
+				background-size: cover;
+
+				@include desktop {
+					width: 919px;
+					height: 401px;
+					margin-top: 46px;
+					background-image: url(//res.tutoring.co.kr/res/images/evt/202008/shooting/shooting_coursecard_paaper_1600w.png);
+				}
+			}
+		}
+	}
+}

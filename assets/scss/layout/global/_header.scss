@@ -1,0 +1,408 @@
+@charset "UTF-8";
+
+// TODO : 공통으로 분리 필요
+.label_g {
+    overflow: hidden;
+    color: transparent;
+    background-image: url(//cdn.tutoring.co.kr/uploads/home/img/plans/career/label_g.png);
+    background-repeat: no-repeat;
+    background-position: 100px 100px;
+    background-size: 46px 40px;
+}
+
+.headerArea {
+    position: fixed; top:0; left: 0; z-index: 50;
+    width: 100%;
+
+    .label_hot {
+        display: inline-block;
+        width: 46px; height: 14px;
+        background-position: 0 -20px;
+        vertical-align: top;
+    }
+
+    .link_free {
+        display: none;
+        position: absolute; top: 17px; left: 52%; z-index:10;
+        width: 171px; height: 40px;
+        margin-left: 376px;
+        padding-top: 16px;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 18px;
+        line-height: 24px;
+        background-color: #6759ef;
+        letter-spacing: -1px;
+        text-align: center;
+        box-sizing: content-box;
+        cursor: pointer;
+
+        @include big_desktop {
+            @at-root .gnb_open .link_free {display: block;}
+            @at-root .fixed_on .link_free {display: block;}
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .btn_menu {
+        position: absolute; top: 0; right: 12px; z-index: 10;
+        width: 90px; height: 90px;
+
+        @include big_desktop {
+            display: none;
+        }
+        @include all_mobile {
+            display: block;
+            right: 10px;
+            width: 50px; height: 50px;
+        }
+
+        .ico_menu {
+            overflow: hidden;
+            display: block;
+            width: 22px; height: 16px;
+            margin: 0 auto;
+            color: transparent;
+            background: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/ico_home_190402.png) no-repeat -120px -110px;
+            background-size: 420px 400px;
+
+            @at-root .fixed_on .btn_menu .ico_menu {background-position: -160px -110px;}
+
+            @include all_desktop {
+                width: 36px; height: 26px;
+                background-position: -120px -80px;
+
+                @at-root .fixed_on .btn_menu .ico_menu {
+                    background-position: -160px -80px;
+                }
+            }
+        }
+    }
+}
+.logo_wrap {
+    overflow: hidden;
+    position: relative; z-index: 10;
+    height: 50px;
+
+    @include all_desktop {
+        height: 90px;
+    }
+
+    @at-root .fixed_on & {
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: inset 0px -1px 0px #d8d8d8;
+    }
+    @at-root .gnb_open & {
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: inset 0px -1px 0px #d8d8d8;
+    }
+
+    .logo {
+        position: absolute; top: 28px; left: 40px;
+        width: 170px; height: 40px;
+
+        @include big_desktop {
+            top: 22px; left: 50%;
+            margin-left: -585px;
+        }
+        @include all_mobile {
+            top: 13px; left: 24px;
+            width: 94px; height: 24px;
+            margin-left: 0;
+        }
+
+        a {
+            display: block;
+            width: 100%; height: 100%;
+            color: transparent;
+            background: url(//cdn.tutoring.co.kr/uploads/home/img/common/img_logo_en_wh.png) no-repeat 0 50%;
+            background-size: 100% auto;
+
+            @at-root .fixed_on & {
+                background-image: url(//cdn.tutoring.co.kr/uploads/home/img/common/img_logo_en_default.png);
+            }
+            @at-root .gnb_open & {
+                background-image: url(//cdn.tutoring.co.kr/uploads/home/img/common/img_logo_en_default.png);
+            }
+        }
+    }
+    .logo_subtxt {
+        display: none;
+        position: absolute; top: 34px; left: 50%;
+        margin-left: -398px;
+        color: #fff;
+        font-size: 13px;
+        line-height: 22px;
+        letter-spacing: 0;
+
+        @include big_desktop {
+            display: block;
+        }
+
+        @at-root .fixed_on & {color: #333;}
+        @at-root .gnb_open & {color: #333;}
+    }
+}
+
+.list_gnb {
+    display: none;
+    overflow: hidden;
+    position: absolute; top: 0; left: 45%; z-index: 11;
+    margin-left: -170px;
+    font-size: 0;
+
+    @include big_desktop {
+        display: block;
+        margin-left: -50px;
+    }
+
+    & > li {
+        float: left;
+        display: inline-block;
+        margin-right: 36px;
+        padding: 32px 0 29px;
+        color: #fff;
+        font-size: 18px;
+        line-height: 27px;
+        vertical-align: top;
+
+        &.current,
+        &:hover {
+            border-bottom: 2px solid #6759ef;
+            color: #6759ef !important;
+        }
+
+        @at-root .fixed_on & {color: #333;}
+        @at-root .gnb_open & {color: #333;}
+    }
+    .arrow-toggle {
+        display: inline-block;
+        width: 13px; height: 7px;
+        margin: -1px 0 1px 7px;
+        background: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/ico_home_3_190402.png) no-repeat -187px -86px;
+        background-size: 327px 312px;
+        vertical-align: middle;
+
+        &.on {
+            background-position: -187px -93px;
+        }
+    }
+}
+
+.gnb_box {
+    overflow: hidden;
+    position: absolute; top: 90px; left: 0;
+    width: 100%; height: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+
+    &.open {
+        height: 212px;
+        opacity: 1;
+
+        .out_area {display: block;}
+    }
+
+    .out_area {
+        display: none;
+        position: fixed; top: 302px; left: 0; z-index: 0;
+        width: 100%; height: 100%;
+    }
+}
+.list_subgnb {
+    overflow: visible;
+    position: absolute; top: 0; left: 45%; z-index: 2;
+    width: 721px; height: 194px;
+    margin-left: -50px;
+    padding-top: 20px;
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    li {
+        display: none;
+        float: left;
+        width: 133px;
+
+        &:first-child {
+            width: 148px;
+        }
+        &.selected {
+            display: block;
+        }
+    }
+    a {
+        display: block;
+        position: relative;
+        color: #666;
+        font-size: 16px;
+        line-height: 34px;
+        letter-spacing: -1px;
+
+        &:hover {
+            color: #6759ef;
+        }
+    }
+    .label_hot {
+        margin-top: 10px;
+        margin-left: 3px;
+    }
+    .tudal_gnb {
+        position: absolute; bottom: 0; left: 50%;
+        width: 236px; height: 150px;
+        margin-left: 100px;
+    }
+}
+
+// 반응형 메뉴
+.nav_menu {
+    display: none;
+    position: fixed; top: 0; left: 0; z-index: 100;
+    width: 100%; height: 100%;
+    opacity: 0;
+
+    @at-root .nav_open & {
+        display: block;
+        opacity: 1;
+    }
+
+    .dimmed {
+        width: 100%; height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .inner_nav {
+        overflow-y: scroll;
+        position: fixed; top: 0; right: 0;
+        width: 84.2%; height: 100%;
+        padding-top: 30px;
+        background-color: #fff;
+        border-top-left-radius: 20px;
+        box-sizing: border-box;
+
+        @include tablet {
+            width: 568px;
+        }
+
+        &:after {
+            content: '';
+            position: fixed; bottom: -12px; right: -10px;
+            width: 140px; height: 140px;
+            background: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/tudal_nav_m.png) 0 0 no-repeat;
+            background-size: 100%;
+
+            @include tablet {
+                bottom: -50px;
+                width: 238px; height: 238px;
+            }
+        }
+    }
+    .menu_cont {
+        margin: 0 60px;
+        padding: 30px 0;
+        border-top: 1px solid #f3f2f9;
+        letter-spacing: -1px;
+
+        @include all_mobile {
+            margin: 0 30px;
+            padding: 14px 0;
+        }
+
+        &.fst {border-top: 0;}
+    }
+    .menu_cont_bottom {
+        position: absolute; bottom: 0; left: 30px; right: 30px;
+        padding: 25px 0 75px;
+        border-top: 1px solid #f3f2f9;
+        letter-spacing: -1px;
+
+        @include all_mobile {
+            right: 140px;
+            padding: 14px 0 18px;
+        }
+
+        a {
+            display: block;
+            padding: 5px 0;
+            color: #333;
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 1.5em;
+
+            @include all_mobile {
+                padding: 5px 0;
+                font-size: 16px;
+            }
+        }
+        .on a {color: #6759ef;}
+    }
+    .tit_menu {
+        display: block;
+        color: #333;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1em;
+
+        @include all_mobile {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    .btn_close {
+        position: fixed; top: 15px; right: 26px;
+        width: 50px; height: 50px;
+
+        @include all_mobile {
+            top: 0; right: 8px;
+        }
+
+        .ico_close {
+            overflow: hidden;
+            display: inline-block;
+            width: 21px; height: 26px;
+            color: transparent;
+            background-image: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/ico_home_190402.png);
+            background-position: -200px -80px;
+            background-size: 420px 400px;
+            vertical-align: top;
+
+            @include all_mobile {
+                width: 16px; height: 16px;
+                background-position: -200px -110px;
+            }
+        }
+    }
+}
+.list_nav {
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: -15px;
+
+    @include all_mobile {
+        margin-top: 6px;
+        margin-bottom: -6px;
+    }
+
+    a {
+        display: block;
+        padding: 15px 10px;
+        color: #777;
+        font-size: 24px;
+
+        @include all_mobile {
+            padding: 6px 10px;
+            font-size: 15px;
+        }
+    }
+    .label_hot {
+        margin-top: 4px;
+        margin-left: 5px;
+    }
+}

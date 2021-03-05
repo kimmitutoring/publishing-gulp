@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+.faq {
+    @include defaultText;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f4f4f1;
+    text-align: center;
+}
+
+.faq__heading {
+    @include bubbleBox;
+
+    margin: 0;
+    padding: 0;
+    height: 36px;
+    line-height: 36px;
+
+    .bold {
+        font-weight: 600;
+    }
+}
+
+.faq__list {
+    width: 300px;
+    margin: 35px auto 0;
+    padding: 0;
+    border-top: 1px solid #3c3937;
+    border-bottom: 1px solid #3c3937;
+    color: $point-color-dark;
+    list-style: none;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.71em;
+    letter-spacing: -1px;
+
+    .list__title {
+        position: relative;
+        display: block;
+        padding: 12px 0;
+        border-top: 1px solid #3c3937;
+        font-weight: 600;
+
+        &:before {
+            content: "";
+            position: absolute; top: 50%; right: 0;
+            width: 10px; height: 2px;
+            background-color: $point-color-dark;
+            transform: translateY(-50%);
+        }
+        &:after {
+            content: "";
+            position: absolute; top: 50%; right: 4px;
+            width: 2px; height: 10px;
+            background-color: $point-color-dark;
+            transform: translateY(-50%);
+        }
+    }
+    .list__description {
+        display: none;
+        position: relative;
+        margin-top: -1px;
+        padding-top: 12px;
+        padding-bottom: 40px;
+        border-top: 1px solid #3c3937;
+        background-color: #f4f4f1;
+    }
+    .list__text {
+        margin: 0;
+        padding: 0;
+    }
+    .list__item:last-child .list__description {
+        margin-bottom: -40px;
+    }
+    .list__item--active {
+        .list__title:after {
+            display: none;
+        }
+        .list__description {
+            display: block;
+            margin-bottom: -1px;
+        }
+    }
+}

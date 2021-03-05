@@ -1,0 +1,259 @@
+@charset "utf-8";
+
+.#{$content_prefix}_advantage {
+    padding-top: 134px;
+
+    @include all_mobile {
+        display: none;
+    }
+
+    .b2bProgram_inner_tab {
+        width: $width-advantage-content;
+        margin: 0 auto;
+    }
+}
+.#{$content_prefix}_advantage_container {
+    $content-arrow-size: 48px;
+    
+    position: relative;
+    width: $width-advantage-content + 80;
+    margin: 60px auto 100px;
+    text-align: left;
+
+    @include tablet {
+        width: 500px;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .slide_arrow {
+        position: absolute; top: 50%;
+        width: $content-arrow-size; height: $content-arrow-size;
+        margin-top: -$content-arrow-size;
+        background-image: url($b2b-cdn-url + 'ico_arrow--BG.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 100% auto;
+
+        span {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+        }
+
+        &.prev { left: -$content-arrow-size * 2 }
+        &.next { right: -$content-arrow-size * 2; transform: rotate(180deg) }
+    }
+
+    // slick
+    .slick-arrow {
+        overflow: hidden;
+        position: absolute; top: 50%;
+        width: $content-arrow-size; height: $content-arrow-size;
+        margin-top: -$content-arrow-size;
+        background-image: url($b2b-cdn-url + 'ico_arrow--BG.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 100% auto;
+        color: transparent;
+    }
+    .slick-prev { left: -$content-arrow-size * 2 }
+    .slick-next { right: -$content-arrow-size * 2; transform: rotate(180deg) }
+
+    .slick-dots {
+        position: absolute; top: -129px; left: 40px;
+        display: flex !important;
+        width: 920px;
+        margin: 0 auto;
+        justify-content: space-between;
+
+        @include tablet {
+            width: auto;
+            left: 50%;
+            transform: translate(-50%, 0);
+
+            li { margin: 0 !important}
+        }
+
+        li {
+            flex: 1;
+
+            button {
+                display: block;
+                width: 288px;
+                padding: 17px 0;
+                border-bottom: 2px solid #ededef;
+                color: transparent;
+                font-size: 0;
+
+                @include tablet {
+                    width: 250px;
+                }
+
+                &:before {
+                    color: #333;
+                    font-size: 22px;
+                    font-weight: 300;
+                    letter-spacing: -1px;
+                }
+            }
+            &:nth-child(2) { margin: 0 27px; }
+            &:nth-child(1) button:before { content: '바쁜 직장인 최적화 시스템'; }
+            &:nth-child(2) button:before { content: '실무중심 커리큘럼'; }
+            &:nth-child(3) button:before { content: '최상의 교육, 전문 튜터'; }
+
+            &.slick-active {
+                button {
+                    border-color: #6759ef;
+
+                    &:before {
+                        font-weight: 600;
+                    }
+                } 
+            }
+        }
+    }
+}
+.#{$content_prefix}_advantage_content {
+    display: none;
+    position: relative;
+    float: left;
+    width: 100%; height: 100%;
+    margin-left: 40px;
+    background-color: #fff;
+    outline: none;
+
+    &.selected {
+        display: block;
+    }
+
+    .title {
+        display: block;
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 1.75em;
+    }
+    .listing {
+        color: #666;
+        font-size: 18px;
+        line-height: 1.78em;
+
+        li {
+            &:before {
+                content: '';
+                position: absolute;
+                margin-top: 12px;
+                margin-left: -16px;
+                width: 4px; height: 4px;
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.6);
+            }
+        }
+    }
+
+    .talk_box {
+        @include b2bTalkBox(480, 200, 20);
+
+        border: 1px solid #ededef;
+    }
+    .title + .listing { margin-top: 14px; }
+    .listing + .title { margin-top: 82px; }
+    .listing + .talk_box { margin-top: 100px; }
+
+    @include tablet {
+        .listing + .title { margin-top: 46px; }
+        .listing + .talk_box { margin-top: 50px; margin-left: -30px; }
+    }
+
+    // 수동 컨텐츠
+    .type_desktop {
+        position: absolute; right: 0; bottom: 0;
+    }
+    .type_tablet {
+        margin-left: -30px;
+        margin-bottom: -15px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// 모바일 디바이스 전용 컨텐츠
+.#{$content_prefix}_small_advantage {
+    display: none;
+    position: relative;
+    margin: 60px auto 0;
+
+    @include all_mobile {
+        display: block;
+    }
+
+    &:before {
+        content: '';
+        position: absolute; top: 46px; right: 0; left: 0;
+        z-index: 10;
+        height: 2px;
+        background-color: #ededef;
+    }
+
+    &_container {
+        overflow: hidden;
+        position: relative;
+        height: 460px;
+        z-index: 20;
+
+        .slick-arrow,
+        .slick-dots {
+            display: none !important;
+        }
+    }
+    &_content {
+        float: left;
+        width: 100%; height: 100%;
+
+        .inner {
+            background-color: #fff;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+
+        .title {
+            width: 55%;
+            margin: 0 auto 20px;
+            padding: 0 8px;
+            border-bottom: 2px solid #fff;
+            box-sizing: border-box;
+
+            span {
+                display: block;
+                margin-bottom: -2px;
+                padding: 8px 0;
+                border-bottom: 2px solid #6759ef;
+                background-color: #fff;
+                color: #333;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 1.88em;
+            }
+        }
+        .text {
+            margin-bottom: 23px;
+            color: #333;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.75em;
+            letter-spacing: -1px;
+        }
+    }
+}

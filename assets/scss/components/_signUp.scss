@@ -1,0 +1,246 @@
+@charset "utf-8";
+
+.signupWelcome {
+    width: 100%;
+    height: 100%;
+    & > div {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        padding-top: 1.375rem;
+        text-align: center;
+    }
+    &__tudal {
+        height: 8.575rem;
+        margin: 0 auto 1.563rem auto;
+
+    }
+    &__desc {
+
+    }
+    &__title {
+        margin-bottom: 88px;
+
+        color: #000;
+        font-size: 26px;
+        font-weight: 700;
+    }
+    &__btn__desc {
+        letter-spacing: -0.7px;
+        color: #00abff;
+        font-weight: 700;
+        margin-bottom: 13px;
+    }
+    &__btn {
+        display: inline-block;
+        width: 220px;
+        height: 50px;
+        padding: 0;
+        border-radius: 26.4px;
+        background-color: #34bcff;
+        border: none;
+        color: white;
+        line-height: 48px;
+        margin: auto;
+        font-weight: 700;
+        transform: translateY(0px);
+        opacity: 1;
+        cursor: pointer;
+        & > span {
+            line-height: 48px;
+            font-weight: 700;
+        }
+    }
+    &__login {
+        padding-top: 18px;
+        color: #818181;
+        font-size: 12px;
+        b {
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
+    &__logo {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 1.375rem;
+        width: 6.25rem;
+        height: 0.9375rem;
+        margin: 0 auto;
+    }
+}
+
+.signupGreeting {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .content {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        right: 0;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        &__bubble {
+            transform: translateY(20px);
+            min-height: 8.575rem;
+            margin: 0 auto 1.563rem auto;
+            background: url(//res.tutoring.co.kr/res/img/bubble_greeting_20180220.png) no-repeat center;
+            background-size: contain;
+
+        }
+        &__tudal {
+            transform: translateY(20px);
+            min-height: 8.575rem;
+            margin: 0 auto 1.563rem auto;
+            background: url(//res.tutoring.co.kr/res/img/tudal_cheerup_20180219.png) no-repeat center;
+            background-size: contain;
+
+        }
+    }
+}
+
+.signupLanguage {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    .content {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        right: 0;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        z-index: 1;
+        &__title {
+            font-size: 1.375rem;
+        }
+        &__sub_title {
+            font-family: initial;
+            font-weight: 100;
+            font-size: 0.78125rem;
+            padding: 0.5rem 0 1.5rem;
+        }
+        &__input_box {
+            min-height: 8.575rem;
+            margin: 0 auto 1.563rem auto;
+            display: block;
+
+            &__item {
+
+                display: inline-block;
+                &__text {
+                    margin-top: 10px;
+                    font-weight: bold;
+                    letter-spacing: -0.9px;
+                    color: #303030;
+                }
+                #eng-back {
+                    background-image: linear-gradient(140deg, #6dceff, #4fb3ff);
+                }
+                #ch-back {
+                    background-image: linear-gradient(140deg, #ff5648, #f6321d);
+                }
+                &__image {
+                    position: relative;
+                    width: 6.25rem;
+                    height: 6.25rem;
+                    margin: 10px;
+                    border-radius: 100px;
+                    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.14);
+                    opacity: 0.3;
+                    #eng-mode {
+                        background: url(//res.tutoring.co.kr/res/img/icon_english_20171031.png) center center /70% no-repeat;
+                    }
+                    #ch-mode {
+                        background: url(//res.tutoring.co.kr/res/img/icon_chinese_20171031.png) center center /40% no-repeat;
+                    }
+                    &__mode {
+                        display: block;
+                        width: 6.25rem;
+                        height: 6.25rem;
+                    }
+                    &__checkbox {
+                        display: block;
+                        position: absolute;
+                        bottom: -5px;
+                        right: -10px;
+                        width: 2.25rem;
+                        height: 2.25rem;
+                        border-radius: 100%;
+                        background: #ededed url(//res.tutoring.co.kr/res/img/icon_check_20171031.png) center center /65% no-repeat;
+                        border: solid 4.1px #ffffff;
+                    }
+                }
+                &__text {
+                    font-weight: bold;
+                    letter-spacing: -0.9px;
+                    color: #303030;
+                }
+                &__input {
+                    display: none;
+                }
+                &-click {
+                    .content__input_box__item__image {
+                        opacity: 1;
+                        &__checkbox {
+                            background-color: #ffde00;
+                        }
+                    }
+                }
+            }
+
+        }
+        &__desc {
+            font-size: 0.87rem;
+            letter-spacing: -0.8px;
+            line-height: 20px;
+            color: #727272;
+            .star {
+                color: #ff6969;
+                padding-right: 5px;
+            }
+
+        }
+        .more {
+            width: 3.125rem;
+            height: 3.125rem;
+            background-image: url(//res.tutoring.co.kr/res/img/comment_en_20171121.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            left: 40%;
+            right: 60%;
+        }
+    }
+    .submit {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 1.25rem 0;
+        color: #FFF;
+        cursor: pointer;
+        z-index: 1;
+        transition: all 0.3s ease-in-out;
+        background: #d8d8d8;
+        &-click {
+            background: #01b1fe;
+        }
+    }
+}

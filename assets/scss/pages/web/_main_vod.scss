@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+// 영어인생을 바꾼 튜터링
+.item_vod {
+    z-index: 20;
+    padding: 80px 30px 74px;
+    color: #fff;
+    background: url('//cdn.tutoring.co.kr/uploads/home/img/main/version3/bg_vod_m.png') 0 0 no-repeat;
+    background-size: 100% auto;
+
+    @include all_desktop {
+        height: 1000px;
+        padding: 120px 0;
+        background-image: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/bg_vod_t_200515.png);
+        background-position: 50% 0;
+        background-size: 100% auto;
+    }
+    @include big_desktop {
+        height: auto;
+        padding: 80px 0 100px;
+        background-image: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/bg_vod_pc_200515.png);
+        background-position: 50% 0;
+        background-size: 100% auto;
+
+        .link_more {display: none;}
+    }
+
+    .tit_sub {
+        color: #ffe812;
+    }
+    .tit_item,
+    .link_more {
+        color: #fff;
+    }
+    .play_vod {
+        iframe {
+            display: block;
+            width: 100%; height: 100%;
+        }
+        @include all_desktop {
+            width: 540px; height: 302px;
+        }
+        @include big_desktop {
+            float: left;
+            width: 740px; height: 416px;
+        }
+    }
+    .inner_item {
+        @include clear;
+
+        @include all_desktop {
+            width: 540px;
+            margin: 0 auto;
+        }
+        @include big_desktop {
+            width: 960px;
+        }
+    }
+    
+    @include all_desktop {
+        .txt_b_m {
+            display: block;
+        }
+    }
+    @include big_desktop {
+        .tit_item {
+            padding-bottom: 50px;
+        }
+        .txt_b_m {
+            display: inline;
+        }
+    }
+}
+.list_vod {
+    @include big_desktop {
+        float: left;
+        position: relative;
+        width: 208px; height: 416px;
+        margin-left: 12px;
+    }
+
+    ul {
+        overflow: hidden;
+        height: 261px;
+
+        @include all_desktop {
+            height: 421px;
+        }
+        @include big_desktop {
+            overflow-y: scroll;
+            height: 416px;
+        }
+    }
+    li {
+        margin-top: 16px;
+
+        @include big_desktop {
+            margin-top: 0;
+        }
+
+        &.on {
+            .link_vod {color: #ffe812;}
+        }
+    }
+    .area_arr {
+        display: none;
+        position: absolute; left: 0; bottom: 0;
+        width: 100%; height: 68px;
+        text-align: center;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,.7) 100%);
+
+        @include big_desktop {
+            display: block;
+        }
+
+        .ico_g_main {
+            width: 33px; height: 18px;
+            margin-top: 29px;
+            background-position: -240px -134px;
+        }
+    }
+    .link_vod {
+        display: flex;
+        position: relative;
+        height: 67px;
+        color: #fff;
+        font-size: 15px;
+        line-height: 25px;
+        text-align: left;
+
+        @include all_desktop {
+            height: 120px;
+            font-size: 28px;
+            line-height: 46px;
+        }
+        @include big_desktop {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+    .thumb_g {
+        position: absolute; top: 0; left: 0;
+        flex: none;
+        width: 120px; height: 67px;
+        background-size: 100% auto;
+
+        @include all_desktop {
+            width: 214px; height: 120px;
+        }
+        @include big_desktop {
+            width: 100%; height: 100%;
+        }
+
+        &:after {
+            content: "";
+            position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+        }
+    }
+    .txt_clamp {
+        @include multi_ellipsis(2);
+        padding-bottom: 4px;
+
+        @include all_desktop {
+            margin-left: 0;
+        }
+        @include big_desktop {
+            position: absolute; bottom: 0; left: 0;
+            width: 100%;
+            margin-left: 0;
+            padding: 10px 9px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .cont_home .item_vod .inner_item {width: 320px;}
+    .cont_home .list_vod .link_vod {display: block; padding-left: 140px;}
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+    .cont_home .list_vod .link_vod {display: block; padding-left: 234px;}
+}

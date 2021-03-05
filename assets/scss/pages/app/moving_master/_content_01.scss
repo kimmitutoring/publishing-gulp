@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+.moving_master .content01 {
+    .content__heading {
+        padding-bottom: 16px;
+        color: $gray-01;
+        font-weight: 600;
+
+        @media (min-width: 768px) {
+            br {display: none;}
+        }
+
+        b {color: $purple-01;}
+    }
+
+    &__wrapper:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    @media (min-width: 768px) {
+        &__wrapper {
+            position: relative;
+            padding-left: 50%;
+        }
+    }
+    &__inner {
+        overflow: hidden;
+        position: relative;
+        float: left;
+        width: 100%;
+        padding: 30px;
+        background-color: $gray-03;
+        box-sizing: border-box;
+
+        @media (min-width: 768px) {
+            padding: 50px 40px;
+
+            &:first-child {
+                position: absolute; top: 0; right: 50%;
+                width: 384px;
+            }
+        }
+
+        &:before {
+            content: "";
+            position: absolute; bottom: 40px; right: 20px;
+            width: 160px; height: 160px;
+            background-image: url("//res.tutoring.co.kr/res/images/pay/movie/same/full_sad_tudal copy.png");
+            background-size: 100% auto;
+            background-position: 50% 0;
+
+            @media (max-width: 320px) {
+                display: none;
+            }
+
+            @media (min-width: 768px) {
+                bottom: 20px;
+            }
+        }
+
+        &--best {
+            padding-top: 45px;
+            background-color: #fff;
+
+            @media (min-width: 768px) {
+                padding-top: 50px;
+            }
+
+            &:before {
+                top: 0;
+                background-image: url("//res.tutoring.co.kr/res/images/pay/movie/same/full_happy_tudal copy.png");
+
+                @media (min-width: 768px) {
+                    top: auto;
+                    right: auto;
+                    bottom: 0;
+                    left: 245px;
+                }
+            }
+
+            &:after {
+                content: "";
+                position: absolute; top: -15px; left: 77px;
+                width: 30px; height: 30px;
+                background-color: $gray-03;
+                transform: rotate(-53deg) skew(-15deg);
+
+                @media (min-width: 768px) {
+                    top: 50px; left: -15px;
+                    transform: rotate(-143deg) skew(-15deg);
+                }
+            }
+
+            .list__item b {color: $purple-01;}
+        }
+    }
+    &__list {
+        @media (min-width: 768px) {
+            width: 280px;
+        }
+
+        .list__item {
+            padding-top: 16px;
+            padding-bottom: 16px;
+            border-top: 1px solid rgba(51, 51, 51, 0.2);
+            color: $gray-02;
+            font-size: 16px;
+            line-height: 1.9em;
+
+            @media (min-width: 768px) {
+                height: 80px;
+                padding-top: 10px;
+                padding-bottom: 0;
+                border-top: 0;
+                line-height: 1.4em;
+            }
+        }
+    }
+}

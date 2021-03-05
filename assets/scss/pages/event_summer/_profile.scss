@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+.summer-friends .profile {
+    padding-bottom: 10px;
+    background-color: #f7f7f7;
+
+    &__title {
+        position: absolute;
+        color: transparent;
+        font-size: 10px;
+    }
+
+    &__wrapper {
+        position: relative;
+        width: 360px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 122px 0 25px 198px;
+        font-size: 12px;
+        font-family: $font-HGGGothicssi;
+        line-height: 1.42em;
+        letter-spacing: -0.5px;
+        box-sizing: border-box;
+        background: url("//cdn.tutoring.co.kr/uploads/page/summersummer/profile_text_img_360w.png") no-repeat 100% 100%;
+        background-size: 48px auto;
+
+        @media (min-width: 1200px) {
+            width: 933px;
+            background-image: url("//cdn.tutoring.co.kr/uploads/page/summersummer/profile_text_img_1600w.png");
+            background-size: 106px auto;
+            padding: 220px 0 108px 475px;
+            font-size: 28px;
+            line-height: 38px;
+            background-position: 100% 50%;
+        }
+
+        &:before {
+            content: "";
+            position: absolute; bottom: 25px; left: 20px;
+            width: 146px; height: 182px;
+            background: url("//cdn.tutoring.co.kr/uploads/page/summersummer/profile_summer_img_360w.png") no-repeat 0 0;
+            background-size: 100% auto;
+
+            @media (min-width: 1200px) {
+                bottom: 90px; left: 133px;
+                width: 249px; height: 320px;
+            }
+        }
+        &:after {
+            content: "";
+            position: absolute; top: 73px; left: 132px;
+            width: 67px; height: 30px;
+            background: url("//cdn.tutoring.co.kr/uploads/page/summersummer/line_img2_360w.png") no-repeat 0 0;
+            background-size: 100% auto;
+
+            @media (min-width: 1200px) {
+                top: 130px; left: 310px;
+                width: 151px; height: 60px;
+            }
+        }
+    }
+
+    .profile__name {
+        display: inline-block;
+        margin-bottom: 8px;
+        color: #ff6c6c;
+        font-size: 20px;
+        font-weight: 800;
+
+        @media (min-width: 1200px) {
+            margin-bottom: 18px;
+            font-size: 40px;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            width: 100%; height: 1px;
+            margin-top: 2px;
+            background-color: #ff4646;
+
+            @media (min-width: 1200px) {
+                height: 2px;
+                margin-top: 8px;
+            }
+        }
+    }
+    .profile__link {
+        display: inline-block;
+        margin-top: 17px;
+        color: #8b8b8b;
+        font-size: 12px;
+        line-height: 17px;
+
+        @media (min-width: 1200px) {
+            margin-top: 30px;
+            font-size: 20px;
+            line-height: 1em;
+        }
+    }
+}

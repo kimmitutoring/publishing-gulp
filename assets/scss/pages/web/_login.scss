@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+.login-con {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    letter-spacing: -0.7px;
+
+    @include all_desktop {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .login_title {
+        display: inline-block;
+        margin: 0 auto;
+        border-bottom: 2px solid #333;
+        color: #333;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 36px;
+        vertical-align: top;
+    }
+    .sns_login_box {
+        margin-top: 120px;
+
+        li {
+            width: 300px;
+            margin: 0 auto 8px;
+        }
+
+        a {
+            overflow: hidden;
+            position: relative;
+            display: block;
+            height: 56px;
+            color: #fff;
+            font-size: 16px;
+            line-height: 56px;
+            border-radius: 5px;
+        }
+
+        i {
+            position: absolute; top: 50%; left: 0;
+            width: 50px; height: 50px;
+            transform: translateY(-50%);
+        }
+
+        .kakao_login {
+            a {color: #333; font-weight: 600; background-color: #ffdc00;}
+            i {background-image: url('//res.tutoring.co.kr/res/img/icon/login-kakao.svg');}
+        }
+        .naver_login {
+            a {background-color: #00c73c;}
+            i {background-image: url('//res.tutoring.co.kr/res/img/icon/login-naver.svg');}
+        }
+        .facebook_login {
+            a {background-color: #3b6cc5;}
+            i {background-image: url('//res.tutoring.co.kr/res/img/icon/login-facebook.svg');}
+        }
+        .google_login {
+            a {background-color: #ff5a5c;}
+            i {background-image: url('//res.tutoring.co.kr/res/img/icon/login-google.svg');}
+        }
+    } // .sns_login_box
+    .anchor {
+        margin: 40px 0;
+        color: #797979;
+        font-size: 14px;
+        line-height: (14 * 1.86) + px;
+    }
+    .form_area {
+        width: 300px;
+        margin: 0 auto;
+    }
+    .input_box {
+        display: block;
+        width: 100%; height: 56px;
+        margin: 4px 0;
+        padding: 0 13px;
+        border: 2px solid #ededef;
+        color: #666;
+        font-size: 16px;
+        border-radius: 5px;
+        box-sizing: border-box;
+
+        &::placeholder {color: rgba(102, 102, 102, 0.6)}
+    }
+    .login-btn {
+        width: 100%; height: 56px;
+        margin-top: 30px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: #6759ef;
+        border-radius: 5px;
+        box-sizing: border-box;
+
+        i {font-style: normal;}
+    }
+}

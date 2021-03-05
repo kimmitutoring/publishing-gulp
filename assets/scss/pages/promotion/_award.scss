@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+.promotion-award {
+	padding-top: 60px;
+	padding-bottom: 80px;
+	color: #C79D54;
+	text-align: center;
+	background-color: #000;
+
+	@media (min-width: 1200px) {
+		padding-top: 70px;
+	}
+
+	.heading {
+		font-size: 37px;
+		font-weight: 600;
+		line-height: 1em;
+		letter-spacing: -1px;
+
+		&:before {
+			content: "";
+			display: block;
+			width: 111px; height: 195px;
+			margin: 0 auto 42px;
+			background: url("//res.tutoring.co.kr/res/images/evt/com/award_2021_img.png") no-repeat 50% 0;
+			background-size: 100% auto;
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 50px;
+
+			&:before {display: none;}
+		}
+	}
+	.description {
+		margin-top: 6px;
+		margin-bottom: 45px;
+		font-size: 14px;
+		line-height: 19px;
+		letter-spacing: -0.5px;
+		opacity: 0.5;
+
+		@media (min-width: 1200px) {
+			margin-top: 20px;
+			margin-bottom: 85px;
+			font-size: 16px;
+			line-height: 22px;
+			opacity: 1;
+		}
+	}
+	.award__item {
+		display: flex;
+		position: relative;
+		width: 160px; height: 54px;
+		margin: 15px auto 0;
+		font-size: 13px;
+		font-weight: 600;
+		line-height: 16px;
+		letter-spacing: -0.5px;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute; top: 50%; left: 0;
+			width: 20px; height: 44px;
+			background: url("//res.tutoring.co.kr/res/images/evt/202012/pesta/pesta_leaf_left.png") no-repeat 50% 0;
+			background-size: 100% auto;
+			transform: translateY(-50%);
+		}
+		&:after {
+			left: auto; right: 0;
+			transform: translateY(-50%) scaleX(-1);
+		}
+
+		b {
+			display: block;
+			margin-bottom: 2px;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		.award__list {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.list__item {position: relative;}
+			.list__item:nth-child(1) {order: 2;}
+			.list__item:nth-child(2) {order: 3;}
+			.list__item:nth-child(3) {order: 1;}
+		}
+		.award__item {
+			width: auto; height: 69px;
+			margin: 0;
+			padding: 0 44px;
+			font-size: 15px;
+			font-weight: 500;
+			line-height: 20px;
+
+			&:before,
+			&:after {
+				width: 30px; height: 69px;
+			}
+
+			b {
+				font-size: 19px;
+				line-height: 20px;
+			}
+		}
+		.list__item--recent {
+			&:before {
+				content: "";
+				position: absolute; top: 0; left: 50%;
+				width: 60px; height: 100px;
+				background: url("//res.tutoring.co.kr/res/images/evt/com/award_2021_img.png") no-repeat 50% 0;
+				background-size: 100% auto;
+				transform: translateX(-50%);
+			}
+			&:after {
+				content: "약 80만 소비자 투표 참여";
+				position: absolute; bottom: 6px; left: 50%;
+				font-size: 11px;
+				letter-spacing: -0.5px;
+				transform: translateX(-50%);
+			}
+			.award__item {
+				margin: 0 30px;
+				padding: 94px 68px 0;
+				font-weight: 600;
+
+				&:before,
+				&:after {
+					width: 43px; height: 100px;
+				}
+				b {display: none;}
+			}
+		}
+	}
+}

@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+@mixin tablet($minimum_width: 768px) {
+    @media (min-width: 768px) {
+        @content;
+    }
+}

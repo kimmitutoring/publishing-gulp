@@ -1,0 +1,198 @@
+@charset "utf-8";
+
+// media query 기준은 mobile, all_desktop, big_desktop 순서
+$point-color: #6759ef;
+
+// content common
+.txt_b_m {
+    display: block;
+
+    @include all_desktop {
+        display: inline;
+    }
+}
+.txt_b_p {
+    display: inline;
+
+    @include all_desktop {
+        display: block;
+    }
+}
+.bg_slice {
+    position: absolute; bottom: 0; left: 0;
+    width: 100%;
+
+    &.bg_slice_pc {display: none;}
+
+    @include all_desktop {
+        bottom: -1px;
+        height: 100px;
+        z-index: 10;
+    }
+    @include big_desktop {
+        &.bg_slice_m {display: none;}
+        &.bg_slice_pc {display: block;}
+    }
+}
+.ico_g_main,
+.label_hot,
+.ico_banner {
+    overflow: hidden;
+    display: inline-block;
+    font-size: 1px;
+    vertical-align: top;
+    color: transparent;
+    background: url(https://cdn.tutoring.co.kr/uploads/home/img/main/version3/ico_home_3_190402.png) no-repeat 0 0;
+    background-size: 420px 400px;
+}
+
+// content template
+.item_home {
+    position: relative;
+    padding: 80px 0 140px;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6em;
+    letter-spacing: -1px;
+    text-align: center;
+
+    @include all_desktop {
+        padding: 100px 0 70px;
+        font-size: 22px;
+    }
+    @include big_desktop {
+        font-size: 16px;
+        line-height: 1.8em;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    .tit_sub {
+        display: block;
+        color: $point-color;
+        font-size: 16px;
+
+        @include all_desktop {
+            font-size: 26px;
+        }
+        @include big_desktop {
+            font-size: 20px;
+        }
+    }
+    .tit_item {
+        display: block;
+        padding-top: 3px;
+        padding-bottom: 23px;
+        color: #333;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 1.43em;
+        letter-spacing: -2px;
+
+        @include all_desktop {
+            font-size: 58px;
+            font-weight: 600;
+        }
+        @include big_desktop {
+            padding-top: 0;
+            font-size: 48px;
+        }
+
+        & + .thumb_item {
+            padding-top: 20px;
+        }
+    }
+    .tit_g {
+        color: #222;
+        font-weight: 500;
+    }
+    .txt_g {
+        margin-top: 17px;
+        font-weight: 300;
+
+        @include all_desktop {
+            margin-right: 100px;
+            margin-left: 100px;
+        }
+
+        b {
+            font-weight: 500;
+        }
+    }
+    .thumb_item {
+        position: relative;
+        padding: 40px;
+        color: #919191;
+        font-weight: 300;
+
+        @include all_desktop {
+            padding: 50px 122px;
+        }
+        @include big_desktop {
+            padding: 0;
+        }
+
+        img + span {
+            display: inline-block;
+            padding-top: 20px;
+        }
+        .txt_info {
+            display: block;
+            margin-top: -6px;
+            font-size: 13px;
+        }
+    }
+    .inner_item {
+        @include clear;
+
+        position: relative;
+        margin: 0 auto;
+        padding: 0 10px;
+
+        @include big_desktop {
+            width: 960px;
+            text-align: left;
+        }
+    }
+    .link_more {
+        display: inline-block;
+        margin-bottom: -10px;
+        padding: 10px 20px;
+        text-decoration: underline;
+    }
+    @include big_desktop {
+        .fl_r {float: right;}
+        .fl_l {float: left;}
+    }
+}
+
+// 일대일 영어공부
+.item_home.item_match {
+    background-color: #f5f5fa;
+
+    @include all_desktop {
+        .tit_g,
+        .txt_g {font-size: 28px; line-height: 1.64em;}
+        .txt_b_m {display: block;}
+        .txt_b_m b {color: #222;}
+    }
+    @include big_desktop {
+        height: 552px;
+        padding: 100px 0;
+
+        .thumb_item {
+            position: absolute; top: -10px; left: 50%;
+            width: 550px;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        .tit_g {font-size: 22px;}
+        .txt_g {width:377px;margin-top: 30px;margin-left: 0;font-size: 18px;}
+        .txt_b_m {display: inline;}
+        .txt_b_m b {color: #222;}
+    }
+}
+

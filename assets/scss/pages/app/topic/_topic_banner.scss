@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+// 배너 이미지
+.topic__banner {
+    padding: 18px 20px;
+
+    .banner__image {
+        display: block;
+        width: 100%;
+        max-width: 640px;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+}

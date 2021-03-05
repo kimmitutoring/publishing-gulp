@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+$template_prefix: 'b2bProgram_inner';
+
+.#{$template_prefix} {
+    padding-top: 87px;
+    text-align: center;
+    letter-spacing: -1px;
+
+    @include all_mobile {
+        padding-top: 39px;
+    }
+}
+
+.#{$template_prefix}_title {
+    display: block;
+    color: #333;
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 1.5em;
+
+    @include all_mobile {
+        font-size: 28px;
+    }
+
+    &.small {
+        font-size: 28px;
+        line-height: 1.79em;
+
+        @include all_mobile {
+            font-size: 16px;
+            line-height: 3.13em;
+        }
+    }
+
+    & + p {
+        padding-top: 23px;
+
+        @include all_mobile {
+            padding-top: 9px;
+        }
+    }
+}
+.#{$template_prefix}_description {
+    color: #666;
+    font-size: 22px;
+    line-height: 1.36em;
+
+    @include desktop {
+        br { display: none; }
+    }
+    @include big_desktop {
+        br { display: none; }
+    }
+    @include tablet {
+        line-height: 40px;
+    }
+    @include all_mobile {
+        font-size: 16px;
+        line-height: 1.75em;
+    }
+
+    b {
+        font-weight: 600;
+    }
+}
+
+.#{$template_prefix}_line {
+    width: 920px; height: 2px;
+    margin: 60px auto;
+    border: 0;
+    background-color: #ededef;
+    // border: 1px solid #ededef;
+    // box-sizing: border-box;
+
+    @include tablet {
+        width: auto;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    @include all_mobile {
+        width: auto;
+        margin: 40px 30px;
+    }
+}
+
+.#{$template_prefix}_tab {
+    display: flex;
+    justify-content: space-between; 
+
+    .link {
+        display: block;
+        width: 288px;
+        padding: 17px 0;
+        border-bottom: 2px solid #ededef;
+        color: #333;
+        font-size: 22px;
+        font-weight: 300;
+
+        @include all_mobile {
+            width: 200px;
+            padding: 7px 0;
+            font-size: 16px;
+            line-height: 1.88em;
+        }
+    }
+    .selected {
+        .link {
+            border-color: $color-purple;
+            font-weight: 600;
+        }
+    }
+}
+
+.#{$template_prefix}_content {
+    [class^=type] {
+        display: none;
+    }
+    @include big_desktop {
+        .type_desktop {
+            display: block;
+        }
+    }
+    @include desktop {
+        .type_desktop {
+            display: block;
+        }
+    }
+    @include tablet {
+        .type_tablet {
+            display: block;
+        }
+    }
+    @include all_mobile {
+        .type_mobile {
+            display: block;
+        }
+    }
+
+    .link {
+        @include b2bButton(#fff, $color-purple);
+
+        &:after {
+            background-image: url($b2b-cdn-url + 'ico_arrow--white.png');
+        }
+    }
+}
+
+.#{$template_prefix}_paginate {
+    display: none;
+    padding-top: 24px;
+    text-align: center;
+
+    @include all_mobile {
+        display: block;
+    }
+    
+    .dot {
+        overflow: hidden;
+        display: inline-block;
+        width: 6px; height: 6px;
+        margin: 0 3px;
+        background-color: #d8d8d8;
+        border-radius: 50%;
+        vertical-align: top;
+
+        &.selected {
+            background-color: #4a322e;
+        }
+    }
+}

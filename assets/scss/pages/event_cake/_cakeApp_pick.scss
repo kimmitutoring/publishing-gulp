@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+.cakeApp-pick {
+    margin-top: -70px;
+    padding-top: 43px;
+    background-color: #fff;
+
+    .pick-spot {
+        min-height: 460px;
+        background-image: url($withCake-cdn-url + 'cake_main.jpg');
+        background-repeat: no-repeat;
+        background-position: 50% 100%;
+        background-size: 544px 460px;
+    }
+    .pick-title {
+        padding-top: 43px;
+        color: #000;
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 1.28em;
+        text-align: center;
+        letter-spacing: -1px;
+    }
+    .talk_box {
+        max-width: 320px;
+        margin: 0 auto;
+        background-color: #fff;
+        border-color: #ff4452;
+        color: #ff4452;
+        font-size: 32px;
+        font-weight: 300;
+
+        &:before {
+            border-color: #ff4452;
+        }
+    }
+}

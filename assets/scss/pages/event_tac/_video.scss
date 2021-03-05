@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+.event-video {
+	padding-bottom: 34px;
+	background-color: #fff;
+
+	@media (min-width: 1200px) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		background-color: #333;
+	}
+	
+	.video__title {
+		overflow: hidden;
+		width: 301px; height: 159px;
+		margin: 0 auto;
+		color: transparent;
+		background: url("//res.tutoring.co.kr/res/images/evt/202102/tac/tac_mvtitle_mo_img.png") no-repeat 50% 0;
+		background-size: 100%;
+
+		@media (min-width: 1200px) {
+			width: 789px; height: 98px;
+			background-image: url("//res.tutoring.co.kr/res/images/evt/202102/tac/tac_mvtitle_pc_img.png");
+		}
+	}
+	.video__inner {
+		width: 300px; height: 168px;
+		margin: 0 auto;
+		background-color: #000;
+
+		@media (min-width: 1200px) {
+			width: 1000px; height: 560px;
+			margin-top: 60px;
+		}
+
+		iframe {
+			display: block;
+			width: 100%; height: 100%;
+			border: 0;
+		}
+	}
+}

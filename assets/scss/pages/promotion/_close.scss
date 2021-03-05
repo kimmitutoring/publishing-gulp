@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+.dimmed-close {
+	position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+	z-index: 25;
+	background: rgba(0,0,0,0.5) url("//res.tutoring.co.kr/res/images/evt/202102/tac/tac_close_img.png") no-repeat 50% 50%;
+	background-size: 280px auto;
+}

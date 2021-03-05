@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+.landing__notice {
+    padding-top: 28px;
+    padding-bottom: 130px;
+    background-color: #f8f7fb;
+    font-family: $font-default;
+}
+.notice__wrap {
+    width: 316px;
+    margin: 0 auto;
+}
+.notice__heading {
+    margin: 0 0 10px 0; padding: 0 0 7px 0;
+    border-bottom: 0.5px solid #d8d8d8;
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.7px;
+}
+.notice__list {
+    margin: 0; padding: 0;
+    list-style: none;
+
+    .list__item {
+        padding-left: 12px;
+        color: rgba(85, 85, 85, 0.7);
+        font-size: 12px;
+        line-height: 1.7em;
+
+        @at-root :lang(zh) & {
+            font-size: 13px;
+            letter-spacing: -0.5px;
+        }
+
+        &:before {
+            content: "•";
+            position: absolute;
+            margin-left: -12px;
+            color: #919191;
+            vertical-align: top;
+        }
+    }
+}

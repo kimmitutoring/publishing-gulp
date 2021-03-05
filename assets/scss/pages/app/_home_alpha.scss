@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+.lesson-ticket__home {
+    .alpha {
+        @include mainDivisonInfo;
+        margin-bottom: $card-item-vspace;
+    
+        &__title {
+            @include templateHeadingBox;
+        }
+        &__link {
+            position: absolute; top: 7px; right: 0;
+            height: 32px;
+            padding-right: 12px;
+            padding-left: 12px;
+            border: 1px solid #ededed;
+            color: #777;
+            font-size: 14px;
+            background-color: transparent;
+            outline: none;
+            border-radius: 32px;
+        }
+        &__content {
+            .hash-box {
+                position: relative;
+                margin-bottom: 12px;
+                color: #919191;
+                font-size: 12px;
+                line-height: 1.5em;
+                
+    
+                &:before {
+                    content: "";
+                    display: block;
+                    width: 43px; height: 1px;
+                    margin-bottom: 12px;
+                    background-color: rgba(151, 151, 151, 0.4);
+                }
+    
+                &__inner {
+                    overflow: hidden;
+                    display: inline-block;
+                    max-width: 100%;
+                    padding-right: 12px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    box-sizing: border-box;
+                }
+    
+                &__more {
+                    position: absolute; top: 15px;
+                    display: inline-block;
+                    margin-left: -7px;
+                    padding: 0;
+                    background-color: transparent;
+                    border: none;
+                    outline: 0;
+                    vertical-align: middle;
+    
+                    .more__text {
+                        @include spriteIcoHome;
+        
+                        overflow: hidden;
+                        display: block;
+                        color: transparent;
+                        background-position: -60px 0;
+                    }
+                }
+            }
+    
+            .hash-item {
+                display: inline-block;
+                vertical-align: top;
+    
+                & + .hash-item {padding-left: 7px;}
+            }
+        }
+    }
+    
+    .alpha__inner {
+       @include templateCardScrollWrap;
+    }
+    
+    .alpha__list {
+        @include templateCardList;
+        @include templateCardItem;
+    }
+}

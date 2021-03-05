@@ -1,0 +1,225 @@
+@charset "utf-8";
+
+.lang-cn,
+.lang-en {
+    header,
+    footer {
+        display: none;
+    }
+}
+
+.bnr_count {
+    position: fixed; left: 0; bottom: 0; z-index: 3;
+    width: 100%;
+    padding: 20px 30px;
+    background-color: rgba(51, 51, 51, 0.9);
+    border-radius: 27px 27px 0 0;
+    box-sizing: border-box;
+
+    .txt_banner {
+        color: #fff;
+        font-size: 14px;
+        letter-spacing: -0.5px;
+    }
+    .link_direct {
+        overflow: hidden;
+        position: absolute; top: 50%; right: 30px;
+        height: 40px;
+        padding: 0 28px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 40px;
+        text-align: center;
+        letter-spacing: -1px;
+        background-color: #ff4165;
+        box-shadow: 0 15px 16px -12px rgba(251, 56, 93, 0.7);
+        border-radius: 40px;
+        transform: translateY(-50%);
+
+        .ico_arr {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin: -2px 0 2px 5px;
+            border-top: 3px solid #fff;
+            border-right: 3px solid #fff;
+            vertical-align: middle;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);;
+        }
+    }
+}
+
+.layer_modal_m {
+    display: none;
+    position: fixed; top: 0; left: 0; z-index: 100;
+    width: 100%; height: 100%;
+
+    &.open {display: block;}
+    &.show {display: block;}
+
+    .view_iframe {display:block}
+    .dark_background {
+        width: 100%; height:100%;
+        background-color: rgba(0,0,0,0.50);
+    }
+    .inner_layer {
+        position: fixed; top: 10%; left: 0;
+        padding-top: 65px;
+        background-color: #fff;
+        border-radius: 11px;
+        text-align: center;
+
+        .tit_txt {
+            position: relative;
+            margin: 20px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.5em;
+            letter-spacing: -0.5px;
+
+            &:after {
+                content: "";
+                position: absolute; top: 50px; left: 0;
+                width: 100%; height: 1px;
+                background-color: #efefef;
+            }
+        }
+        .count_g {
+            position: relative;
+            width: 204px; height: 70px;
+            margin: 0 auto;
+            border-radius: 40px;
+            color:#fff;
+            background-color: #ff4165;
+            background: linear-gradient(135deg, #ff0a3b 0%, #ff0a3b 24%, #ff4065 55%);
+            box-shadow: 0 15px 16px -12px rgba(251, 56, 93, 0.7);
+        }
+        .count_time {
+            position: absolute; right: 30px; top: 13px;
+            font-weight: 600;
+            font-size: 25.2px;
+            line-height:28px;
+            letter-spacing: -1.26px;
+        }
+        .ico_time {
+            position: absolute; top: 22px;
+            width: 26px; height: 26px;
+            margin-left: -82px;
+            background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/career/ico_banner_2.png');
+            background-position: -120px -40px;
+            background-size:200px 120px;
+        }
+        .ico_tail {
+            position:absolute; bottom:-16px; left: 92px;
+            width: 22px; height: 18px;
+            background-position: -172px 0;
+            background-size: 200px 120px;
+            background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/career/ico_banner_2.png');
+        }
+        .time-txt-box {
+            position: relative; top: 40px;left: 60px;
+            width: fit-content;
+        }
+        .time-txt {
+            margin: 0 10px;
+            color: #fff;color: #ffffff;
+            font-size: 12px;
+            font-weight: 600;
+            opacity: 0.5;
+        }
+    }
+    .btn_close {
+        position: absolute; top: 0; right: 0;
+        width: 16px; height: 16px;
+        padding: 17px;
+
+        .ico_close {
+            display: inherit;
+            width: 20px; height: 20px;
+            text-indent: -9999px;
+            background-image: url('//cdn.tutoring.co.kr/uploads/home/img/main/version3/ico_home_3_190402.png');
+            background-position: -177px -73px;
+            background-size: 375px 357px;
+            opacity: 0.2;
+        }
+    }
+    .inner_layer {
+        overflow: hidden;
+        top: 50%; left: -160px;
+        width: 324px;
+        margin-top: -200px;
+        margin-left: 50%;
+
+        .btn_box {
+            position: relative;
+            margin: 61px auto 0;
+            padding: 15px 0 15px 75px;
+            background-color: #34bcff;
+        }
+        .tudal-img {
+            position: absolute; top: -55px; left: -18px;
+            width: 120px; height: auto;
+        }
+        .downLoadBtn {
+            padding: 10px 25px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            text-align: center;
+            background: #34bcff;
+            border-radius: 53.6px;
+
+            .arrow_icon {
+                overflow: hidden;
+                display: inline-block;
+                width: 9px;height: 15px;
+                margin: 1px 0 0 15px;
+                color: transparent;
+                font-size: 1px;
+                line-height: 1px;
+                text-indent: -9999px;
+                background-image: url('//cdn.tutoring.co.kr/uploads/home/img/plans/career/ico_banner_2.png');
+                background-repeat: no-repeat;
+                background-position: -74px 0;
+                background-size: 100px 60px;
+                vertical-align: top;
+            }
+        }
+        .benefit-txt-box {
+            padding: 14px 40px 0;
+            text-align: left;
+
+            li {
+                padding-top: 8px;
+                list-style: none;
+
+                .benefit-txt {
+                    color: #777;
+                    font-size: 16px;
+                    font-weight: bold;
+                    line-height: 1.56em;
+                    letter-spacing: -1px;
+                    vertical-align: top;
+                }
+                .benefit-cont {
+                    display: inline-block;
+                    margin-left: 8px;
+                    color: #777;
+                    font-size: 16px;
+                    line-height: 1.56em;
+                    letter-spacing: -1px;
+
+                    i {
+                        color: #34bcff;
+                        font-weight: bold;
+                        font-style: normal;
+                    }
+                }
+            } // .benefit-txt-box
+            
+        }
+    } // .inner_layer
+}

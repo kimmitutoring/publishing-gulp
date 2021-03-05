@@ -1,0 +1,597 @@
+@charset "UTF-8";
+
+.ipad-wrap {
+	.package-detail {
+		background-color: #fff;
+		padding: 60px 0;
+
+		@include desktop {
+			padding: 120px 0;
+		}
+
+		&__subtitle {
+			font-size: 24px;
+			color: #555;
+			line-height: 1.2em;
+			text-align: center;
+
+			@include desktop {
+				font-size: 30px;
+			}
+		}
+
+		&__title {
+			font-size: 24px;
+			color: #555;
+			line-height: 1.2em;
+			text-align: center;
+			font-weight: 700;
+			color: $main-color;
+
+			@include desktop {
+				font-size: 40px;
+			}
+		}
+
+		.product-item-list {
+			display: flex;
+			margin: 44px auto 0;
+			justify-content: center;
+
+			@include desktop {
+				padding-top: 75px;
+			}
+
+			.product-item {
+				display: flex;
+				width: 100px;
+				margin-right: 5px;
+				margin-left: 5px;
+				align-items: center;
+				justify-content: center;
+				box-sizing: border-box;
+				color: #bebebe;
+				font-size: 11px;
+				line-height: 16px;
+				padding: 8px 0 9px;
+				border: 1px solid #bebebe;
+				border-radius: 4.5px;
+				cursor: pointer;
+
+				@include desktop {
+					width: 300px;
+					padding: 15px 0;
+					font-size: 16px;
+				}
+
+				&.product-item--selected {
+					border: 2px solid $main-color;
+					color: #259acb;
+					font-weight: 700;
+					background-color: #e7f8ff;
+				}
+			}
+		}
+
+		.month-item-list {
+			display: flex;
+			margin: 22px auto 0;
+			justify-content: center;
+
+			.month-item {
+				display: flex;
+				width: 155px;
+				margin-right: 5px;
+				margin-left: 5px;
+				align-items: center;
+				justify-content: center;
+				padding: 15px 0 17px;
+				border: 1px solid #bebebe;
+				font-size: 14px;
+				line-height: 18px;
+				border-radius: 5.3px;
+				box-sizing: border-box;
+				cursor: pointer;
+
+				@include desktop {
+					width: 455px;
+					padding: 15px 0;
+					font-size: 16px;
+				}
+
+				&.month-item--selected {
+					border: 2px solid $main-color;
+					color: #259acb;
+					font-weight: 700;
+					background-color: #e7f8ff;
+				}
+			}
+		}
+
+		.package-detail-content {
+			&__title {
+				font-size: 16px;
+				letter-spacing: -0.8px;
+				text-align: center;
+				color: #6b6b6b;
+				font-weight: 700;
+
+				@include desktop {
+					padding: 16px 0;
+					font-size: 26px;
+				}
+			}
+		}
+
+		.package-detail-content {
+			padding-top: 21px;
+
+			&__title {
+				text-align: center;
+				font-weight: 700;
+				line-height: 29px;
+				letter-spacing: -0.8px;
+				color: #6b6b6b;
+			}
+
+			.package-item-list {
+				display: none;
+				margin: 22px auto 0;
+				justify-content: center;
+
+				&.selected {display: flex;}
+
+				.package-item {
+					width: 155px;
+
+					@include desktop {
+						width: 455px;
+					}
+
+					& + .package-item {
+						margin-left: 10px;
+					}
+
+					.package-item-tutor {
+						display: flex;
+						padding: 10px 0;
+						letter-spacing: -0.7px;
+						color: #fff;
+						font-size: 14px;
+						flex-direction: column;
+						align-items: center;
+						background-color: #4ccaff;
+						border-top-left-radius: 5px;
+						border-top-right-radius: 5px;
+
+						@include desktop {
+							padding: 20px 0;
+							font-size: 22px;
+						}
+
+						&__icon {
+							width: 15px;
+
+							@include desktop {
+								width: 25px;
+								margin-bottom: 3px;
+							}
+						}
+						&__title {
+							font-weight: 700;
+							
+						}
+						&__subtitle {
+							font-size: 0.7em;
+						}
+					}
+				}
+
+				.package-item-ticket {
+					position: relative;
+					padding-top: 18px;
+					background-color: #f6f6f8;
+
+					@include desktop {
+						padding-top: 34px;
+					}
+
+					&::after {
+						content: "";
+						position: absolute;
+						bottom: -30px;
+						left: 50%;
+						width: 38px;
+						height: 38px;
+						background-image: url(//res.tutoring.co.kr/res/images/evt/202008/shooting/plus_label.png);
+						background-size: cover;
+						transform: translateX(-50%);
+
+						@include desktop {
+							bottom: -40px;
+							width: 55px;
+							height: 55px;
+						}
+					}
+
+					&__image {
+						display: block;
+						width: 143px;
+						margin: 0 auto 16px;
+
+						@include desktop {
+							width: 286px;
+							margin-bottom: 30px;
+						}
+					}
+
+					&__count {
+						position: absolute;
+						left: 78px;
+						top: 84px;
+						font-weight: 700;
+						color: #5828DF;
+						font-size: 21px;
+						letter-spacing: -0.5;
+
+						@include desktop {
+							top: 173px; left: 50%;
+							font-size: 40px;
+						}
+					}
+
+					.package-item-ticket-price {
+						background-color: #e2f7ff;
+						padding: 7px 0 14px;
+						border-bottom-left-radius: 5px;
+						border-bottom-right-radius: 5px;
+						font-size: 20px;
+						text-align: center;
+
+						@include desktop {
+							padding: 12px 0 30px;
+							font-size: 36px;
+							line-height: 1em;
+						}
+
+						&__regular {
+							color: #8d8d8d;
+							letter-spacing: -1px;
+							font-size: 0.6em;
+
+							@include desktop {
+								font-weight: 300;
+							}
+						}
+
+						&__discount {
+							margin-top: -5px;
+							color: #787878;
+							letter-spacing: -2.3px;
+							font-weight: 700;
+						}
+					}
+				}
+
+				.package-item-product {
+					padding-top: 19px;
+					background-color: #f6f6f8;
+					margin-top: 13px;
+					border-top-left-radius: 5px;
+					border-top-right-radius: 5px;
+
+					&__image {
+						max-width: 100%;
+						margin-bottom: 6px;
+						vertical-align: top;
+
+						@include desktop {
+							display: block;
+							width: 320px;
+							margin: 0 auto 6px;
+						}
+					}
+
+					.package-item-product-price {
+						background-color: #e2f7ff;
+						padding: 7px 0 14px;
+						text-align: center;
+
+						@include desktop {
+							padding: 12px 0 30px;
+							font-size: 36px;
+							line-height: 1em;
+						}
+
+						&__regular {
+							color: #8d8d8d;
+							letter-spacing: -1px;
+							font-size: 0.6em;
+
+							@include desktop {
+								font-weight: 300;
+							}
+						}
+
+						&__discount {
+							margin-top: -5px;
+							color: #787878;
+							letter-spacing: -2.3px;
+							font-weight: 700;
+						}
+					}
+				}
+
+				.package-item-stock {
+					padding: 10px 0 14px;
+					background-color: #f6f6f8;
+
+					@include desktop {
+						padding: 20px 0 30px;
+					}
+
+					&__title {
+						color: #505050;
+						font-size: 12px;
+						line-height: 18px;
+						text-align: center;
+
+						@include desktop {
+							padding-bottom: 5px;
+							font-size: 22px;
+							line-height: 34px;
+						}
+					}
+
+					.stock-count-list {
+						margin-top: 4px;
+						display: flex;
+						margin: 0 auto;
+						justify-content: center;
+
+						.stock-count-item {
+							display: flex;
+							width: 21px; height: 29px;
+							margin: 0 2px;
+							background-color: #686868;
+							color: #fff;
+							text-align: center;
+							font-size: 18px;
+							font-weight: 700;
+							align-items: center;
+							justify-content: center;
+
+							@include desktop {
+								width: 40px; height: 55px;
+								margin: 0 4px;
+								font-size: 34px;
+							}
+						}
+					}
+
+					.divider {
+						width: 123px;
+						height: 1px;
+						margin: 10px auto 0;
+						background-color: #cfcfcf;
+
+						@include desktop {
+							width: 195px;
+							margin: 20px auto 0;
+						}
+					}
+
+					&__sold-out {
+						display: block;
+						width: 78px;
+						margin: 0 auto;
+
+						@include desktop {
+							width: 150px;
+						}
+					}
+
+					&__color {
+						display: block;
+						width: 103px;
+						margin: 10px auto 0px;
+
+						@include desktop {
+							width: 195px;
+						}
+					}
+				}
+
+				.package-item-price {
+					position: relative;
+					background-color: #0b1f3c;
+					padding: 8px 0 10px;
+					border-bottom-left-radius: 5px;
+					border-bottom-right-radius: 5px;
+
+					@include desktop {
+						padding: 16px 0 20px;
+					}
+
+					.package-price__percent {
+						position: absolute;
+						right: -10px;
+						top: -27px;
+						width: 54px;
+						height: 54px;
+						text-indent: 3px;
+						background-image: linear-gradient(138.68deg, #f93e5e 5.66%, #f96e3e 100%);
+						border-radius: 50%;
+						text-align: center;
+						line-height: 40px;
+						letter-spacing: -1px;
+						font-weight: 700;
+						color: #fff;
+						font-size: 21px;
+						box-sizing: border-box;
+
+						@include desktop {
+							top: -51px; right: 16px;
+							width: 102px; height: 102px;
+							padding-top: 8px;
+							font-size: 40px;
+							line-height: 60px;
+						}
+
+						&::before {
+							content: "";
+							position: absolute;
+							left: 50%;
+							top: 25px;
+							width: 23px;
+							height: 23px;
+							background-image: url(//cdn.tutoring.co.kr/uploads/home/img/plans/career/10job_arrow.png);
+							background-size: 100% auto;
+							transform: translateX(-50%);
+
+							@include desktop {
+								top: 55px;
+								width: 43px; height: 43px;
+							}
+						}
+
+						small {
+							font-size: 12px;
+							line-height: 18px;
+							vertical-align: baseline;
+						}
+					}
+
+					&__regular {
+						color: #7b7b7b;
+						font-size: 10px;
+						letter-spacing: -1px;
+						position: relative;
+						left: -4px;
+						text-align: center;
+						text-decoration: line-through;
+
+						@include desktop {
+							font-size: 18px;
+						}
+					}
+
+					&__month {
+						margin-top: 2px;
+						color: #4ccaff;
+						font-size: 25px;
+						line-height: 1;
+						font-weight: 700;
+						letter-spacing: -2.5px;
+						text-align: center;
+
+						@include desktop {
+							padding: 3px 0;
+							font-size: 34px;
+						}
+
+						.price-unit {
+							font-size: 0.72em;
+							vertical-align: bottom;
+						}
+
+						.per-month {
+							color: #fff;
+							font-size: 0.36em;
+							line-height: 18.2px;
+							margin-left: 4px;
+							letter-spacing: -0.4px;
+							vertical-align: bottom;
+						}
+					}
+
+					&__discount {
+						width: 103px;
+						margin: 5px auto 0;
+						padding: 1px 0;
+						font-size: 12px;
+						background-color: #fff;
+						color: #265294;
+						text-align: center;
+						font-weight: 700;
+						line-height: 18px;
+						border-radius: 40px;
+
+						@include desktop {
+							width: 195px;
+							padding: 0;
+							font-size: 18px;
+							line-height: 38px;
+						}
+
+						small {
+							font-weight: 400;
+							font-size: 0.8em;
+							line-height: 15px;
+							vertical-align: baseline;
+						}
+					}
+				}
+			}
+		}
+
+		.package-detail-footer {
+			margin-top: 28px;
+
+			@include desktop {
+				margin-top: 72px;
+			}
+			
+			&__description {
+				color: #5c5c5c;
+				text-align: center;
+				font-size: 12px;
+				line-height: 24px;
+
+				@include desktop {
+					font-size: 16px;
+				}
+			}
+			
+			.more-info-list {
+				display: flex;
+				justify-content: center;
+				margin-top: 11px;
+
+				.more-info {
+					display: flex;
+					align-items: center;
+					text-align: center;
+					letter-spacing: -0.8px;
+					font-size: 12px;
+					font-weight: 700;
+					cursor: pointer;
+					color: #5e5653;
+
+					@include desktop {
+						font-size: 16px;
+					}
+
+					& + .more-info {
+						margin-left: 30px;
+					}
+
+					.dot {
+						position: relative;
+						top: 1px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 15px;
+						height: 15px;
+						background-color: #ddd;
+						border-radius: 50%;
+						text-align: center;
+						margin-left: 4px;
+						line-height: 15px;
+					}
+				}
+			}
+		}
+	}
+}

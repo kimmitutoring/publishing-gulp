@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+.ipad-wrap {
+	.package-review {
+		background-color: #f6f6f6;
+		padding: 71px 0 20px; 
+
+		@include desktop {
+			padding: 100px 0 70px;
+		}
+		
+		&__subtitle {
+			text-align: center;
+			font-size: 24px;
+			letter-spacing: -1.4px;
+			line-height: 1.2em;
+			color: #676767;
+
+			@include desktop {
+				font-size: 30px;
+			}
+		}
+		&__title {
+			text-align: center;
+			font-size: 24px;
+			font-weight: 700;
+			letter-spacing: -1.4px;
+			line-height: 1.2em;
+			color: $main-color;
+
+			@include desktop {
+				font-size: 40px;
+			}
+		}
+
+		.package-review-list {
+			display: flex;
+			margin: 25px auto 0;
+			overflow-y: scroll;
+			max-width: 930px;
+
+			@include desktop {
+				margin-top: 81px;
+			}
+
+			.package-review-item {
+				flex: 0 0 198px;
+
+				&__image {
+					display: block;
+					max-width: 100%;
+				}
+
+				@include desktop {
+					flex: 0 0 232.5px;
+				}
+
+			}
+		}
+	}
+}

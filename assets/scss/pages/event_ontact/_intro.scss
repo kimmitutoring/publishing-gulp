@@ -1,0 +1,400 @@
+@charset "utf-8";
+
+.ontact-intro {
+	padding-top: 70px;
+    color: #fff;
+    background-color: $dark-blue;
+    letter-spacing: -1px;
+	text-align: center;
+	
+	@media (min-width: 1200px) {
+		padding-top: 100px;
+	}
+
+    .point {color: $dark-yellow;}
+
+    .text-large {
+        font-size: 25px;
+        line-height: 34px;
+    }
+    .text-small {
+        display: block;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: -1px;
+		opacity: 0.8;
+		
+		@media (min-width: 1200px) {
+			font-size: 14px;
+			line-height: 20px;
+		}
+    }
+
+    .heading {
+        font-size: 24px;
+        font-weight: 600;
+		line-height: 32px;
+		
+		@media (min-width: 1200px) {
+			font-size: 28px;
+			line-height: 36px;
+			
+			br {display: none;}
+		}
+    }
+    .description {
+        font-size: 14px;
+        line-height: 24px;
+		opacity: 0.5;
+		word-break: keep-all;
+		
+		@media (min-width: 1200px) {
+			font-size: 16px;
+			line-height: 26px;
+		}
+    }
+
+    .intro-step {
+        display: flex;
+        align-items: center;
+		justify-content: center;
+		margin-top: 24px;
+		margin-bottom: 20px;
+		counter-reset: step-list-counter;
+		
+		@media (min-width: 1200px) {
+			margin-top: 40px;
+			margin-bottom: 30px;
+		}
+
+        .list__item {
+            display: flex;
+            margin-right: 1px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 106px; height: 106px;
+            border: 1px solid $dark-yellow;
+            border-radius: 50%;
+            font-size: 14px;
+			line-height: 18px;
+			
+			@media (min-width: 1200px) {
+				width: 156px; height: 156px;
+				font-size: 18px;
+				line-height: 24px;
+			}
+    
+            &:before {
+                content: "STEP " counter(step-list-counter);
+                margin-bottom: 6px;
+                color: $dark-yellow;
+                font-size: 12px;
+                font-weight: 600;
+				counter-increment: step-list-counter;
+				
+				@media (min-width: 1200px) {
+					margin-bottom: 10px;
+					font-size: 14px;
+					line-height: 18px;
+				}
+            }
+        }
+	}
+	.tip {
+		margin-bottom: 70px;
+		color: rgba(255, 255, 255, 0.5);
+		font-size: 12px;
+		line-height: 20px;
+
+		@media (min-width: 1200px) {
+			font-size: 14px;
+			line-height: 22px;
+		}
+	}
+	.intro-qna {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		@media (min-width: 1200px) {
+			flex-direction: row;
+		}
+
+		.list__item {
+			width: 330px;
+			margin: 0 20px;
+			color: rgba(255, 255, 255, 0.5);
+			font-size: 14px;
+			line-height: 24px;
+			word-break: keep-all;
+		}		
+
+		.title {
+			display: block;
+			margin-top: 30px;
+			margin-bottom: 10px;
+			color: $dark-yellow;
+			font-size: 18px;
+			font-weight: 600;
+			line-height: 24px;
+			
+			@media (min-width: 1200px) {
+				font-size: 20px;
+				line-height: 26px;
+			}
+		}
+	}
+
+    .flag-event {
+        overflow: hidden;
+        display: block;
+        width: 218px; height: 60px;
+        margin: 100px auto 30px;
+        color: transparent;
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: 100% auto;
+    }
+
+    .intro-circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 280px; height: 280px;
+        margin: 30px auto;
+        color: #0E042A;
+        font-size: 14px;
+        font-family: $font-roboto;
+        line-height: 20px;
+		background: $dark-yellow url("//res.tutoring.co.kr/res/images/evt/202012/pesta/3rd/pesta_moon_img.png") no-repeat 50% 0;
+		background-size: 100% auto;
+        border-radius: 50%;
+
+        .division {
+            display: block;
+            width: 176px; height: 1px;
+            margin: 24px auto;
+            background-color: #0E042A;
+            border-collapse: collapse;
+            border: 0;
+            outline: 0;
+        }
+        .price {
+            font-size: 70px;
+            font-weight: 700;
+            line-height: 1em;
+            letter-spacing: -1px;
+        }
+        .min {
+            display: inline-block;
+            font-size: 40px;
+            font-weight: 300;
+            vertical-align: top;
+        }
+        .unit {
+            display: inline-block;
+            padding-bottom: 5px;
+            font-size: 40px;
+            line-height: 1em;
+            vertical-align: bottom;
+        }
+	}
+	.intro-ribbon {
+		position: relative;
+		padding-bottom: 64px;
+
+		&:before {
+			content: "";
+			position: absolute; top: -25px; right: 0; left: 0;
+			height: 360px;
+			background: url("//res.tutoring.co.kr/res/images/evt/202012/pesta/3rd/pesta_pc_mac_acc_img.png") no-repeat 50% 0;
+			background-size: 488px 360px;
+		}
+	}
+    .intro-discount {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+		line-height: 20px;
+		
+		@media (min-width: 1200px) {
+			font-size: 18px;
+			line-height: 22px;
+		}
+
+        .list__item {
+            width: 110px;
+            padding: 3px 0;
+            box-sizing: border-box;
+
+            &:nth-child(even) {
+                border-right: 1px solid rgba(255, 255, 255, 0.2);
+                border-left: 1px solid rgba(255, 255, 255, 0.2);
+            }
+        }
+        .price {
+            padding-top: 10px;
+            color: $dark-yellow;
+            font-size: 30px;
+            font-family: $font-roboto;
+            line-height: 30px;
+            letter-spacing: -1px;
+
+            .min {
+                display: inline-block;
+                padding-right: 3px;
+                font-size: 18px;
+                font-weight: 500;
+                vertical-align: top;
+            }
+            .unit {
+                display: inline-block;
+                padding-left: 3px;
+                padding-bottom: 2px;
+                font-size: 18px;
+                line-height: 1em;
+                vertical-align: bottom;
+            }
+        }
+    }
+    .intro-summary {
+		@media (min-width: 1200px) {
+			width: 505px;
+			margin: 66px auto 85px;
+			text-align: left;
+
+			br {display: none;}
+		}
+
+		.list__item {
+			position: relative;
+			font-size: 14px;
+			line-height: 24px;
+			color: rgba(255, 255, 255, 0.5);
+
+			@media (min-width: 1200px) {
+				padding: 7px 0 8px 135px;
+				font-size: 16px;
+			}
+		}
+
+        .title {
+			display: block;
+            padding-top: 30px;
+			padding-bottom: 10px;
+			color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+			line-height: 20px;
+			
+			@media (min-width: 1200px) {
+				position: absolute; top: 7px; left: 0;
+				width: 135px;
+				padding: 0;
+				line-height: 24px;
+				text-align: left;
+			}
+        }
+	}
+	.intro-benefit {
+		width: 320px;
+		margin: 20px auto;
+
+		@media (min-width: 1200px) {
+			width: 700px;
+			margin-top: 45px;
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		& ~ .text-small {color: rgba(255, 255, 255, 0.5);}
+
+		.list__item {
+			float: left;
+			width: 50%; height: 240px;
+			padding: 30px 0;
+			border-top: 1px solid rgba(255, 255, 255, 0.1);
+			color: rgba(255, 255, 255, 0.5);
+			font-size: 14px;
+			line-height: 18px;
+			box-sizing: border-box;
+
+			@media (min-width: 1200px) {
+				width: 33.33%;
+
+				&--wide {
+					width: 100%; height: auto;
+					padding-top: 0;
+					border-top: 0;
+
+					img {
+						width: 200px;
+						margin-bottom: -13px;
+					}
+	
+					.badge {right: 10px;}
+				}
+			}
+		}
+		.title {
+			display: block;
+			margin-top: 5px;
+			margin-bottom: 10px;
+			color: #fff;
+			font-size: 16px;
+			font-weight: 600;
+			letter-spacing: -0.5px;
+			line-height: 20px;
+		}
+		.image {
+			position: relative;
+			display: inline-block;
+		}
+		.badge {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute; top: 0; right: 0;
+			width: 50px; height: 50px;
+			color: #0E042A;
+			font-size: 12px;
+			font-weight: 600;
+			letter-spacing: -0.5px;
+			line-height: 18px;
+			background-color: $dark-yellow;
+			border-radius: 50%;
+		}
+	}
+}
+
+.ontact-intro2 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    text-align: center;
+
+    .heading {
+		color: #333;
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 32px;
+        letter-spacing: -2px;
+    }
+    .description {
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: -1px;
+    }
+    .image-circle {
+        margin-top: 30px;
+        margin-bottom: 36px;
+    }
+}

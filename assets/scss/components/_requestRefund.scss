@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+.requestRefund{
+    display: table;
+    &__content{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+    &__img{
+
+    }
+    &__title{
+        font-weight: bold;
+    }
+    &__desc{
+        margin-bottom: 15px;
+        color: #777777;
+    }
+}

@@ -1,0 +1,304 @@
+@charset "UTF-8";
+
+// media query breakpoint variables
+$small_mobile_maximum_width: 576px;
+$mobile_minimum_width: 577px;
+$mobile_maximum_width: 767px;
+$tablet_minimum_width: 768px;
+$tablet_maximum_width: 991px;
+$desktop_minimum_width: 992px;
+$desktop_maximum_width: 1199px;
+$big_desktop_minimum_width: 1200px;
+
+// media query breakpoint mixin
+@mixin small_mobile($width: $small_mobile_maximum_width) {
+    @media (max-width: #{$width}) {
+        @content;
+    }
+}
+
+@mixin mobile($minimum_width: $mobile_minimum_width, $maximum_width: $mobile_maximum_width) {
+    @media (min-width: #{$minimum_width}) and (max-width: #{$maximum_width}) {
+        @content;
+    }
+}
+
+@mixin all_mobile($width: $mobile_maximum_width) {
+    @media (max-width: #{$width}) {
+        @content;
+    }
+}
+
+@mixin tablet($minimum_width: $tablet_minimum_width, $maximum_width: $tablet_maximum_width) {
+    @media (min-width: #{$minimum_width}) and (max-width: #{$maximum_width}) {
+        @content;
+    }
+}
+
+@mixin only_tablet($minimum_width: $tablet_minimum_width, $maximum_width: 1024px){
+    @media (min-width: 768px) and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin desktop($minimum_width: $desktop_minimum_width, $maximum_width: $desktop_maximum_width) {
+    @media (min-width: #{$minimum_width}) and (max-width: #{$maximum_width}) {
+        @content;
+    }
+}
+
+@mixin big_desktop($width: $big_desktop_minimum_width) {
+    @media (min-width: #{$width}) {
+        @content;
+    }
+}
+
+@mixin all_desktop($width: $tablet_minimum_width) {
+    @media (min-width: #{$width}) {
+        @content;
+    }
+}
+
+// bullet icon variables
+$sqrt_2: 1.41421356237;
+
+// bullet icon SCSS mixin (출처 : https://wit.nts-corp.com/2017/10/31/4972)
+@mixin iconBullet($direction: 'up', $width: 50px, $height: 25px, $thick: 2px, $color: #222, $display: inline-block, $position: relative){
+	position: $position;
+	display: $display;
+	width: $width;
+	height: $height;
+	overflow: hidden;
+
+	@if ($direction == 'up' or $direction == 'down') {
+		$size: floor($width/$sqrt_2 - 2*$thick);
+		$rate: 2*$height/$width;
+		$margin-top : round($rate*$size/(2*$sqrt_2));
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: $size;
+			height: $size;
+			@if ($rate == 1) {
+				-webkit-transform: translate(-50%, -50%) rotate(45deg);
+				transform: translate(-50%, -50%) rotate(45deg);
+			} @else {
+				-webkit-transform: translate(-50%, -50%) scale(1, $rate) rotate(45deg);
+				transform: translate(-50%, -50%) scale(1, $rate) rotate(45deg);
+			}
+
+			@if ($direction == 'up') {
+				margin-top: $margin-top;
+				border-top: $thick solid $color;
+				border-left: $thick solid $color;
+			} @else if ($direction == 'down') {
+				margin-top: - $margin-top;
+				border-right: $thick solid $color;
+				border-bottom: $thick solid $color;
+			}
+		}
+	}  @else if ($direction == 'left' or $direction == 'right') {
+		$size: floor($height/$sqrt_2 - 2*$thick);
+		$rate: 2*$width/$height;
+		$margin-left : round($rate*$size/(2*$sqrt_2));
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: $size;
+			height: $size;
+
+			@if ($rate == 1) {
+				-webkit-transform: translate(-50%, -50%) rotate(45deg);
+				transform: translate(-50%, -50%) rotate(45deg);
+			} @else {
+				-webkit-transform: translate(-50%, -50%) scale($rate, 1) rotate(45deg);
+				transform: translate(-50%, -50%) scale($rate, 1) rotate(45deg);
+			}
+
+			@if ($direction == 'left') {
+				margin-left: $margin-left;
+				border-left: $thick solid $color;
+				border-bottom: $thick solid $color;
+			}  @else if ($direction == 'right') {
+				margin-left: - $margin-left;
+				border-top: $thick solid $color;
+				border-right: $thick solid $color;
+			}
+		}
+	}
+}
+
+// mixin
+@mixin multi_ellipsis($line) {
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+}
+
+@mixin one_line($width) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: normal;
+    width: $width;
+}
+
+@mixin multi_line($width, $line, $font_size: 1rem) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Internet Explorer 10 */
+    display: -ms-flexbox;
+    /* Firefox */
+    display: -moz-box;
+    /* Safari, Chrome, and Opera */
+    display: -webkit-box;
+    /* W3C */
+    //display: box;
+    max-height: $font_size * $line;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+    line-height: $font_size;
+}
+
+// b2bProgram mixin
+@mixin b2bButton($font-color, $background-color) {
+    overflow: hidden;
+    display: block;
+    width: 260px; height: 80px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: $background-color;
+    border-radius: 40px;
+    color: $font-color;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 80px;
+    text-align: center;
+
+    &:after {
+        content: '';
+        display: inline-block;
+        width: 12px; height: 21px;
+        margin: -2px 0 2px 15px;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        vertical-align: middle;
+    }
+}
+
+@mixin b2bTalkBox($content-width, $content-height, $content-horizontal-space) {
+    position: relative;
+    display: table;
+    width: $content-width + px;
+    height: $content-height + px;
+    padding: $content-horizontal-space + px;
+    background-color: #fff;
+    box-sizing: border-box;
+    table-layout: fixed;
+    color: #666;
+    font-size: 18px;
+    line-height: 1.78em;
+    text-align: center;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute; top: 50%; left: $content-horizontal-space + px;
+        width: 30px; height: 48px;
+        margin-top: -23px;
+        background-image: url($b2b-cdn-url + 'shape_quotes.png');
+        background-repeat: no-repeat;
+        background-size: 540px 50px;
+        background-position: 0 0;
+        transform: translate(0, -50%);
+    }
+    &:after {
+        left: auto; right: $content-horizontal-space + px;
+        background-position: 100% 0;
+    }
+    .inner {
+        display: table-cell;
+        width: 100%;
+        padding: 0;
+        vertical-align: middle;
+
+        b {
+            font-weight: 600;
+        }
+    }
+    .message_tag {
+        display: block;
+        margin-top: 5px;
+        opacity: 0.7;
+        font-size: 16px;
+    }
+}
+
+@mixin clear {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+// 2020 renewal mixin
+@mixin classContentTitle {
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 42px;
+	letter-spacing: -0.7px;
+
+	@media (min-width: 1200px) {
+		font-size: 50px;
+		line-height: 80px;
+	}
+}
+@mixin classContentDesc {
+	display: block;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 25px;
+	letter-spacing: -0.5px;
+
+	@media (min-width: 1200px) {
+		font-size: 28px;
+		line-height: 52px;
+	}
+}
+
+@mixin btnViewCertificate {
+	position: relative;
+	display: block;
+	width: 100%; height: 45px;
+	margin-right: auto;
+	margin-left: auto;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 600;
+	background-color: #333;
+	border-radius: 8px;
+
+	&:after {
+		content: "";
+		position: absolute; top: 50%; right: 20px;
+		width: 8px; height: 8px;
+		margin: -1px 0 1px 13px;
+		border-top: 2px solid #fff;
+		border-right: 2px solid #fff;
+		vertical-align: middle;
+		box-sizing: border-box;
+		transform: rotate(45deg) translateY(-50%);
+	}
+}

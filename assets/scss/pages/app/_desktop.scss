@@ -1,0 +1,207 @@
+@charset "utf-8";
+
+@mixin all_mobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+.app_desktop {
+    margin: 0 auto;
+    padding-top: $header-height-fixed;
+    background-color: #f5f5f5;
+
+    strong,
+    b {
+        font-weight: 600;
+    }
+
+    @media (max-width: $desktop_maximum_width) {
+        padding-top: 0;
+    }    
+}
+.headerArea {
+    z-index: 50;
+}
+.alpha__home,
+.alpha__detail {
+	padding-top: 0;	
+}
+.alpha-detail__notice {
+    padding-bottom: 50px;
+}
+.moving_master {
+    @media (max-width: 767px) {
+        .content09__spot .spot__number {height: 190px;}
+        .content09__wrapper {overflow: visible; width: 100%; background-color: #fff;border-radius: 0;}
+        .content09__banner {margin: 0 auto; padding: 10px 0 5px; background-color: #f6f6f8;}
+    }
+}
+@media (min-width: 1200px) {
+    // 최대 width값 지정
+    .alpha-home__spot .spot__title,
+    .alpha-home__spot .spot__content,
+    .alpha-home__intro,
+    .alpha-home__course,
+    .alpha-detail__spot,
+    .alpha-detail__summary,
+    .alpha-detail__tab,
+    .alpha-detail__review .review__title,
+    .alpha-detail__intro,
+    .alpha-detail__order .order__title,
+    .alpha-detail__order .order__list,
+    .alpha-detail__order .order__content,
+    .alpha-detail__topic .topic__inner,
+    .alpha-detail__price .price__title,
+    .alpha-detail__price .price__content,
+    .alpha-detail__basic,
+    .alpha-detail__package,
+    .alpha-detail__guide,
+    .alpha-detail__notice .notice__title,
+    .alpha-detail__notice .notice__list,
+    .alpha-detail__sidebar .sidebar__content,
+    .jiayou-home__spot .spot__title,
+    .jiayou-home__spot .spot__content,
+    .review-home__recommend,
+	.review-home__store,
+	.pass__spot,
+	.pass__summary {
+        max-width: 768px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .alpha-detail__spot {margin-top: 50px;}
+    .alpha-detail__spot .spot__bg {display: none;}
+	.alpha-detail__spot .spot__image,
+	.pass__spot {margin-top: 40px; padding: 0;}
+    .alpha-detail__spot .spot__info {margin: 0;}
+    .alpha-detail__review {padding-top: 50px;}
+    .alpha-detail__review .review__title {padding-right: 0; padding-left: 0;}
+    .alpha-detail__order .order__content {max-width: 728px;}
+    .alpha-detail__topic .topic__list {margin: 0 -20px;}
+    .alpha-detail__spot .spot__badge {top: 36px; right: 36px;}
+    .alpha-detail__notice {padding-bottom: 50px;}
+    .alpha-home__spot .spot__content,
+    .alpha-detail__basic .basic__content--video {height: 369px; padding-top: 0;}
+}
+
+// 알파 상세
+.alpha-detail__review {
+    max-width: $layoutMaxWidth;
+
+    @include desktop {
+        &:before,
+        &:after {
+            content: "";
+            position: absolute; top: 0; bottom: 0; z-index: 50;
+            width: 100px;
+            background-image: linear-gradient(90deg, #f5f5f5 60%, rgba(245, 245, 245, 0));
+        }
+        &:before {left: 0;}
+        &:after {right: 0; transform: rotate(180deg);}
+
+        .review__inner {
+            max-width: 1200px;
+        }
+        .review__list {
+            padding-right: (($layoutMaxWidth - $layoutMinWidth) / 2);
+            padding-left: (($layoutMaxWidth - $layoutMinWidth) / 2);
+        }
+    }
+}
+.alpha-detail__sidebar .sidebar__title {display: none;}
+.alpha-detail__guide {width: auto;}
+
+
+// modal.css (https://tutoring.co.kr/home/template/home/css/modal.css)
+
+.layer_modal_f {
+    display: none;
+    position: fixed; top: 0; left: 0; z-index: 100;
+    width: 100%; height: 100%;
+
+    &.open {display: block;}
+
+    .dark_background {
+        width: 100%; height: 100%;
+        background-color: #000;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+    }
+    .btn_box {
+        position: absolute; bottom: 0; left: 0;
+        width: 100%;
+        padding: 15px 0;
+        background-color: #f93e5e;
+        cursor: pointer;
+
+        .modal_button {
+            padding: 10px 25px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            text-align: center;
+            border-radius: 53px;
+        }
+        .arrow-img {
+            display: inline-block;
+            width: 10px; height: 22px;
+            margin-left: 16px;
+            background-image: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/ico_home_3_190402.png);
+            background-repeat: no-repeat;
+            background-position: -274px -51px;
+            background-size: 315px 300px;vertical-align: middle;
+        }
+    }
+    .inner_layer {
+        overflow: hidden;
+        position: fixed; top: 50%; left: 50%;
+        width: 324px;
+        margin-top: -200px;
+        margin-left: -188px;
+        padding: 65px 26px;
+        background-color: #fff;
+        border-radius: 11px;
+        text-align: center;
+
+        &.details {text-align: left;}
+        &.details .tit_txt {margin-top: 0;}
+        &.details .desc_txt li {
+            position: relative;
+            margin-bottom: 10px;
+            padding-left: 15px;
+
+            &:before {
+                content: "";
+                position: absolute; left: 0;
+            }
+        }
+
+        .modal_main_img {width: 240px;}
+        .tit_txt {
+            margin-top: 30px;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.5em;
+            letter-spacing: -0.5px;
+        }
+    }
+    .desc_txt {
+        margin: 36px 0;
+        color: #777;
+        font-size: 16px;
+        line-height: 1.56em;
+        letter-spacing: -0.5px;
+    }
+}
+
+// 365 수강권
+#tutoringWrap [class^='cover_PageWorker'] {
+    margin-top: 50px;
+
+    @media (min-width: 768px) {
+        margin-top: 90px;
+    }
+}

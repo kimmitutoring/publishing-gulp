@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+.ontact-award {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	color: #E5C273;
+	text-align: center;
+	background-color: #000;
+
+	.heading {
+		font-size: 29px;
+		font-weight: 600;
+		line-height: 1em;
+		letter-spacing: -1px;
+
+		&:before {
+			content: "";
+			display: block;
+			width: 90px; height: 66px;
+			margin: 0 auto 10px;
+			background: url("//res.tutoring.co.kr/res/images/evt/202012/pesta/pesta_medal_img.png") no-repeat 50% 0;
+			background-size: 100% auto;
+		}
+	}
+	.description {
+		margin-top: 6px;
+		margin-bottom: 45px;
+		font-size: 10px;
+		line-height: 1em;
+		letter-spacing: -0.5px;
+	}
+	.award__item {
+		display: flex;
+		position: relative;
+		width: 180px; height: 54px;
+		margin: 20px auto 0;
+		font-size: 13px;
+		line-height: 16px;
+		letter-spacing: -0.5px;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute; top: 50%; left: 0;
+			width: 20px; height: 44px;
+			background: url("//res.tutoring.co.kr/res/images/evt/202012/pesta/pesta_leaf_left.png") no-repeat 50% 0;
+			background-size: 100% auto;
+			transform: translateY(-50%);
+		}
+		&:after {
+			left: auto; right: 0;
+			transform: translateY(-50%) scaleX(-1);
+		}
+
+		b {
+			display: block;
+			margin-bottom: 4px;
+		}
+	}
+}

@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+.promotion-certificate {
+	width: 300px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 70px;
+	text-align: center;
+	color: #999;
+	font-size: 12px;
+	line-height: 19px;
+	letter-spacing: -1px;
+
+	@media (min-width: 1200px) {
+		width: 996px;
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 17px;
+	}
+
+	.heading {
+		margin-bottom: 10px;
+		color: #333;
+		font-size: 30px;
+		font-weight: 600;
+		line-height: 38px;
+		letter-spacing: -2px;
+	}
+	.certificate__image {
+		display: block;
+		margin: 15px auto 20px;
+	}
+	.certificate__tip {
+		margin: 30px auto 10px;
+		padding: 16px;
+		color: #666;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 21px;
+		letter-spacing: -0.5px;
+		background-color: #e6e6e6;
+		border-radius: 10px;
+		box-sizing: border-box;
+	}
+
+	.button {
+		@include btnViewCertificate;
+	}
+}

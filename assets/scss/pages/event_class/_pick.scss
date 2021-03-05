@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+.pick {
+    @include defaultText;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    background-color: #f4f4f1; 
+}
+
+.pick__bubble {
+    @include bubbleBox;
+}
+
+.pick__heading {
+    color: $point-color-dark;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: -1px;
+
+    .bold {
+        font-weight: 600;
+    }
+}
+
+.pick__image {
+    position: relative;
+    z-index: 20;
+    margin-bottom: -10px;
+    vertical-align: top;
+}
+
+.pick__description {
+    @include bubbleBoxBorder;
+
+    &:before {
+        background-color: #f4f4f1;
+    }
+}
+
+.pick__text {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.pick__tip {
+    margin: 0;
+    padding: 15px 0 0 0;
+    color: rgba(60,57,55,.5);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: -.75px;
+}

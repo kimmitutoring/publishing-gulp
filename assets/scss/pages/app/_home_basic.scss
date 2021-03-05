@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+.lesson-ticket__home {
+    .basic {
+        @include mainDivisonInfo;
+        margin-top: ($card-item-vspace - 20);
+        margin-bottom: $card-item-vspace;
+    
+        .price {
+            color: #333;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.5em;
+        }
+    
+        &__title {
+            @include templateHeadingBox;
+        }
+        &__content {
+            overflow: hidden;
+            background-color: #fff;
+            border-radius: 10px;
+            color: #333;
+            font-size: 14px;
+            line-height: 1.57em;
+            text-align: center;
+            letter-spacing: -0.5px;
+            box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
+    
+            &:before {
+                content: "";
+                display: block;
+                height: 8px;
+                background-color: $main-color;
+            }
+    
+            .content__box {
+                padding-top: 28px;
+                padding-bottom: 28px;
+            }
+        }
+    }
+}

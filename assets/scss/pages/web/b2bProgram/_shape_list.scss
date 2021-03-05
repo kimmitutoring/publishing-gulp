@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+.#{$content_prefix}_shape_list {
+    margin: 0 -46px;
+    padding-top: 65px;
+
+    @include all_mobile {
+        padding-top: 0;
+    }
+
+    li {
+        display: inline-block;
+        position: relative;
+        min-height: 122px;
+        margin: 0 46px;
+        padding: 7px 45px 0;
+        box-sizing: border-box;
+        color: #333;
+        vertical-align: top;
+
+        @include tablet {
+            margin: 0 10px;
+        }
+        @include all_mobile {
+            min-height: 41px;
+            margin: 0 3px;
+            padding: 0 16px;
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute; top: 0; left: 0;
+            width: 42px; height: 122px;
+            background: url($b2b-cdn-url + 'shape_leaf.png') no-repeat 0 0;
+            background-size: 100% auto;
+
+            @include all_mobile {
+                top: 2px;
+                width: 14px; height: 41px;
+            }
+        }
+        &:after {
+            left: auto; right: 0;
+            transform: scaleX(-1);
+        }
+    }
+
+    .title {
+        display: block;
+        font-size: 36px;
+        font-weight: 300;
+        line-height: 1.5em;
+
+        @include tablet {
+            margin-top: 10px;
+            font-size: 30px;
+        }
+
+        @include all_mobile {
+            font-size: 14px;
+        }
+    }
+    .description {
+        display: table;
+        width: 100%;
+        height: 48px;
+        color: #6f6f6f;
+        font-size: 16px;
+        line-height: 1.5em;
+
+        @include all_mobile {
+            height: 24px;
+            font-size: 10px;
+            line-height: 1.2em;
+        }
+
+        span {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+}

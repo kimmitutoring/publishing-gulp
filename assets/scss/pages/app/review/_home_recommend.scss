@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+.review-home__recommend {
+    padding-top: 20px;
+    padding-right: $alpha-detail-hspace;
+    padding-left: $alpha-detail-hspace;
+
+    .recommend__heading {
+        margin: 0;
+        padding: 0;
+        padding: 0;
+        color: #333;
+        font-size: 34px;
+        font-weight: 300;
+        letter-spacing: -.5px;
+        line-height: 1.47em;
+    }
+    .recommend__description {
+        display: block;
+        color: #919191;
+        font-size: 14px;
+        letter-spacing: -.5px;
+    }
+    .recommend__hash {
+        position: relative;
+        margin-top: 33px;
+        margin-bottom: 18px;
+        color: #919191;
+        font-size: 12px;
+        line-height: 1.5em;
+
+        .hash__inner {
+            overflow: hidden;
+            display: inline-block;
+            max-width: 100%;
+            padding-right: 12px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            box-sizing: border-box;
+        }
+        .hash__more {
+            position: absolute; top: 0;
+            display: inline-block;
+            margin-left: -7px;
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            outline: 0;
+            border-radius: 12px;
+            vertical-align: middle;
+
+            .more__text {
+                @include spriteIcoHome;
+
+                overflow: hidden;
+                display: block;
+                color: transparent;
+                background-position: -60px 0;
+            }
+        }
+    } //.recommend__hash
+    .recommend__content {
+        position: relative;
+        padding-bottom: 50px;
+
+        .content__more {
+            @include contentMoreItem(-20px);
+        }
+    }
+    .recommend__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @include tablet {
+            margin: 0 -8px;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .list__item {
+            float: left;
+            width: 50%;
+            margin-top: 16px;
+            padding: 0 8px;
+            box-sizing: border-box;
+
+            @include small_mobile {
+                float: left;
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+    .recommend__item {
+        @include contentShadowBox;
+    }
+    .recommend__thumb,
+    .recommend__video {
+        overflow: hidden;
+        position: relative;
+        padding-top: 31.25%;
+        border-radius: 10px 10px 0 0;
+    }
+    .recommend__thumb {
+        background-color: #ebebeb;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 100% auto;
+    }
+    .recommend__video {
+        background-color: #000;
+        border-radius: 10px 10px 0 0;
+
+        .video__inner {
+            overflow: hidden;
+            position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+
+            iframe {
+                display: block;
+                width: 100%; height: 100%;
+                border: none;
+            }
+        }
+    }
+    .recommend__detail {
+        padding: 16px 24px;
+        letter-spacing: -0.5px;
+        word-break: keep-all;
+        word-wrap: break-word;
+
+        .detail__user {
+            display: block;
+            color: #919191;
+            font-size: 14px;
+        }
+        .detail__title {
+            overflow: hidden;
+            display: block;
+            color: #333;
+            font-size: 16px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .detail__description {
+            overflow: hidden;
+            display: -ms-flexbox;
+            display: -moz-box;
+            display: -webkit-box;
+            margin: 8px 0;
+            padding: 0;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6em;
+            word-break: break-all;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+
+            @include tablet {
+                min-height: 44px;
+            }
+        }
+        .detail__hash {
+            color: #c3c3c3;
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+$main-color: #6759ef;
+$font-default: "Noto Sans", "Apple SD Gothic Neo", "Helvetica Neue", sans-serif;
+
+
+@mixin defaultText {
+    color: #333;
+    font-family: $font-default;
+    font-weight: 500;
+    line-height: 1.71em;
+    letter-spacing: -0.67px;
+}
+
+@mixin headingBox($bgColor) {
+    position: relative;
+    width: 108px; height: 50px;
+    margin: 0 auto 20px;
+    border: 2px solid $main-color;
+    color: $main-color;
+    font-family: $font-default;
+    font-size: 14px;
+    line-height: 46px;
+    text-align: center;
+    border-radius: 15px;
+    box-sizing: border-box;
+    vertical-align: top;
+
+    &:after {
+        content: "";
+        position: absolute; top: 38px; left: 50%;
+        width: 12px; height: 12px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: transparent $main-color  $main-color transparent;
+        background-color: $bgColor;
+        transform: translateX(-50%) rotate(45deg);
+    }
+}
+
+@mixin roundBox($bgColor, $useShadow: true) {
+    background-color: $bgColor;
+    border-radius: 17px;
+    box-sizing: border-box;
+
+    @if $useShadow {
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+}
+
+@mixin bubbleBox {
+    position: absolute;
+    padding: 10px 14px;
+    color: #fff;
+    font-family: $font-default;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.7px;
+    line-height: 1.5em;
+    background-color: $main-color;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 7px 0 rgba(4,59,173,.1);
+
+    &:before {
+        content: "";
+        position: absolute; bottom: -6px; left: 28px;
+        width: 12px; height: 12px;
+        background-color: $main-color;
+        border-width: 2px;
+        border-style: solid;
+        border-color: transparent $main-color $main-color transparent;
+        transform: rotate(45deg);
+    }
+
+    b {font-weight: 700;}
+}
+
+@mixin tablet($minimum_width: 768px) {
+    @media (min-width: 768px) {
+        @content;
+    }
+}

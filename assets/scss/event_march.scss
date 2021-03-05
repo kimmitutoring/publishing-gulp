@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+// common
+@import 'utils/variables';
+@import 'utils/mixin';
+
+// font
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+// pages
+@import 'pages/event_march/all';
+@import 'pages/event_march/spot';
+@import 'pages/event_march/summary';
+@import 'pages/event_march/intro';
+
+@import 'pages/promotion/plan2';
+@import 'pages/promotion/plan_section';
+@import 'pages/promotion/option';
+@import 'pages/promotion/special';
+@import 'pages/promotion/award';
+@import 'pages/promotion/allpass';
+@import 'pages/promotion/review';
+@import 'pages/promotion/notice';
+@import 'pages/promotion/certificate';
+@import 'pages/promotion/guide';
+@import 'pages/promotion/cta';
+@import 'pages/promotion/close';

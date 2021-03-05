@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+// pages
+.signUp__sns {
+    margin-top: 39px;
+
+    .signUp__inner {
+        max-width: 280px;
+        margin-top: 13px;
+        margin-bottom: 13px;
+    }
+    .signUp__button {
+        overflow: hidden;
+        position: relative;
+        height: 35px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 35px;
+    }
+    .signUp__tooltip {
+        position: absolute; right: 0;
+        margin-top: -30px;
+        margin-right: 30px;
+    }
+}
+
+.signUp__form {
+    .signUp__inner {
+        position: absolute; bottom: $bottom-button-height; left: 0;
+        width: 100%;
+        padding-bottom: 5px;
+        text-align: left;
+    }
+    .signUp__button {
+        position: absolute; bottom: 0; left: 0;
+    }
+    .signUp__check:last-child {margin-bottom: 45px;}
+}
+.signUp__sns + .signUp__form {margin-top: 53px;}
+.signUp__desc + .signUp__form {margin-top: 50px;}
+.signUp__title + .signUp__form {margin-top: 44px;}
+.signUp__input + .signUp__input .input__guide {position: relative; top: 0;}

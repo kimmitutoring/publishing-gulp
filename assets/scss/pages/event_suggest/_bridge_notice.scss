@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.bridge__notice {
+    padding-bottom: 20px;
+
+    .notice__heading {
+        position: absolute;
+        margin: 0; padding: 0;border: 0;
+        color: transparent;
+    }
+}

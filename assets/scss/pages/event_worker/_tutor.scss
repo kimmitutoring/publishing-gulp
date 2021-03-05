@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+.worker-tutor {
+	display: none;
+
+	&--active {display: block;}
+
+	.tutor__talk {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: left;
+	}
+
+	.tutor__image {
+		display: block;
+		width: 66px; height: auto;
+		margin-right: 10px;
+	}
+
+	.tutor__desc {
+		color: #999;
+		font-size: 12px;
+		line-height: 17px;
+		letter-spacing: -1px;
+	}
+
+	.tutor__link {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		width: 127px; height: 40px;
+		padding-right: 15px;
+		padding-left: 15px;
+		background-color: #ddd;
+		border-radius: 8px;
+		color: #333;
+		font-size: 12px;
+		font-weight: 600;
+		vertical-align: top;
+		text-align: left;
+		box-sizing: border-box;
+
+		&:before {
+			content: "";
+			position: absolute; top: 50%; right: 15px;
+			width: 5px; height: 5px;
+			margin-top: -3px;
+			border-top: 2px solid #aaa;
+			border-left: 2px solid #aaa;
+			transform: rotate(135deg);
+		}
+	}
+
+	.heading {
+		margin-bottom: 20px;
+		color: #666;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 22px;
+		letter-spacing: -0.5px;
+	}
+}

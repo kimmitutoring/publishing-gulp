@@ -1,0 +1,298 @@
+@charset "UTF-8";
+
+.ipad-wrap {
+	.alpha {
+		position: relative;
+		padding: 34px 20px 480px;
+
+		@media (min-width: 1201px) {
+			padding-left: 0;
+			padding-right: 0;
+			max-width: 768px;
+			margin: 0 auto;
+		}
+
+		&__question {
+			text-align: center;
+			line-height: 28px;
+			color: #9a9a9a;
+
+			@include desktop {
+				font-size: 20px;
+			}
+		}
+
+		&__title {
+			text-align: center;
+			font-size: 24px;
+			line-height: 28px;
+			letter-spacing: -1px;
+			color: #555;
+
+			@include desktop {
+				font-size: 30px;
+				line-height: 44px;
+				letter-spacing: -1px;
+			}
+
+			&.alpha__title--em {
+				font-weight: 700;
+				color: #4ccaff;
+
+				@include desktop {
+					font-size: 40px;
+					line-height: 54px;
+					letter-spacing: -1px;
+				}
+			}
+		}
+
+		.content__box {
+			max-width: 768px;
+			margin: 34px auto 32px;
+			padding: 20px;
+			color: #4c4c4c;
+			font-size: 14px;
+			line-height: 1.6em;
+			letter-spacing: -1px;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+
+			&--center {
+				text-align: center;
+			}
+			& + .content__box {
+				margin-top: 16px;
+			}
+
+			.alpha-content__tab {
+				padding-top: 25px;
+				padding-bottom: 10px;
+				text-align: center;
+
+				.tab__keyword {
+					display: inline-block;
+					margin-top: 10px;
+					margin-bottom: 10px;
+					padding-right: 1px;
+					padding-left: 1px;
+					border-bottom: 2px solid transparent;
+					color: #c5c5c5;
+					font-size: 14px;
+					font-weight: 600;
+					vertical-align: middle;
+					cursor: pointer;
+
+					&--active {
+						color: $main-color;
+						border-color: $main-color;
+					}
+				}
+				.tab__bar {
+					display: inline-block;
+					width: 1px;
+					height: 16px;
+					margin-right: 16px;
+					margin-left: 16px;
+					background-color: #ececec;
+					vertical-align: middle;
+
+					@include mobile {
+						margin-right: 6px;
+						margin-left: 6px;
+					}
+				}
+			} //.alpha-content__tab
+
+			.alpha-content__list {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				color: #4c4c4c;
+				font-size: 14px;
+				line-height: 1.6em;
+				text-align: center;
+				letter-spacing: -1px;
+
+				.list__item {
+					display: none;
+
+					&--active {
+						display: block;
+					}
+				}
+				.list__keyword {
+					position: absolute;
+					color: transparent;
+				}
+
+				.list__image {
+					position: absolute;
+					top: -320px;
+					left: 50%;
+					width: 171px;
+					height: 358px;
+					padding: 40px 4px 0;
+					background-color: #f6f6f6;
+					border-radius: 22px;
+					box-sizing: border-box;
+					box-shadow: 18px 12px 18px 0 rgba(0, 0, 0, 0.08), -18px -12px 18px 0 rgba(255, 255, 255, 0.9);
+					transform: translateX(-50%);
+
+					&:before {
+						content: "";
+						position: absolute;
+						top: 18px;
+						left: 50%;
+						width: 33px;
+						height: 5px;
+						background-color: #eaeaea;
+						border-radius: 5px;
+						box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+						opacity: 0.5;
+						transform: translateX(-50%);
+
+						@include tablet {
+							top: 27px;
+							width: 50px;
+							height: 7px;
+						}
+					}
+
+					img {
+						display: block;
+						width: 100%;
+						border-radius: 10px;
+					}
+				}
+				.list__description {
+					margin: 0;
+					padding: 20px 0 0 0;
+					border-top: 1px solid #ececec;
+				}
+			}
+		}
+
+		.intro__content--first {
+			position: relative;
+			margin-top: 360px;
+		}
+
+		.alpha__content {
+			position: relative;
+			width: 320px;
+			margin: 0 auto;
+			padding: 24px 20px 26px;
+			background-color: #fff;
+			margin-top: 310px;
+			border-radius: 5px;
+			box-sizing: border-box;
+
+			@include desktop {
+				margin-top: 450px;
+				width: 656px;
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: -260px;
+				width: 360px;
+				height: 300px;
+				background-image: url(//res.tutoring.co.kr/res/images/evt/202008/shooting/shooting_topiccard.png);
+				background-size: cover;
+				background-position: center;
+				transform: translateX(-50%);
+
+				@include desktop {
+					width: 571px;
+					height: 461px;
+					top: -400px;
+					background-image: url(//res.tutoring.co.kr/res/images/evt/202008/shooting/shooting_topiccard_1600w.png);
+				}
+			}
+
+			.alpha__description {
+				text-align: center;
+				letter-spacing: -1px;
+				color: #d03035;
+				line-height: 22px;
+
+				br {
+					display: none;
+				}
+
+				& + .alpha__description {
+					margin-top: 12px;
+					color: #000;
+
+					@include desktop {
+						font-size: 14px;
+
+						br {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+
+		.alpha-topics {
+			width: 360px;
+			height: 370px;
+			margin: 30px auto 0;
+			background-image: url(//res.tutoring.co.kr/res/images/evt/202008/shooting/shooting_topic_theme.png);
+			background-size: cover;
+
+			@include tablet {
+				position: absolute; left: 50%; bottom: 70px;
+				transform: translateX(-50%);
+			}
+
+			@include desktop {
+				width: 100%;
+				max-width: 800px;
+				height: 400px;
+				background-image: url(//res.tutoring.co.kr/res/images/evt/202008/shooting/shooting_topic_theme_1600w.png);
+				background-position-x: center;
+			}
+		}
+
+		.cta-button {
+			position: absolute;
+			bottom: 40px;
+			left: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: $main-color;
+			color: #fff;
+			width: 180px;
+			height: 40px;
+			border-radius: 20px;
+			font-weight: 700;
+			font-size: 15px;
+			line-height: 22px;
+			transform: translateX(-50%);
+			box-shadow: 0 4px 12px 4px rgba(52, 188, 255, 0.5);
+			letter-spacing: -1px;
+			
+			&::after {
+				content: "";
+				position: relative;
+				top: 3px;
+				left: -7px;
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				margin: -3px 0 3px 8px;
+				border-bottom: 2.2px solid #fff;
+				border-left: 2.2px solid #fff;
+				transform: rotate(-135deg);
+				vertical-align: middle;
+			}
+		}
+	}
+}

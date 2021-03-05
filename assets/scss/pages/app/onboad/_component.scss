@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+.tutorial-step {
+    $wrapperHeight: 17px;
+
+    .step-wrapper {
+        overflow: hidden;
+        display: inline-block;
+        height: $wrapperHeight;
+        background-color: #ececec;
+        vertical-align: top;
+        border-radius: $wrapperHeight;
+    }
+    .step-item {
+        float: left;
+        position: relative;
+        display: block;
+        width: $wrapperHeight; height: $wrapperHeight;
+        margin-left: 6px;
+        color: #c3c3c3;
+        font-size: 12px;
+        line-height: $wrapperHeight;
+        text-align: center;
+        border-radius: $wrapperHeight;
+
+        &:first-child {margin-left: 0;}
+
+        i {
+            position: relative;
+            z-index: 1;
+            font-style: normal;
+        }
+
+        &--active {
+            color: #1ca3e5;
+            background-color: #34bcff;
+
+            &:before {
+                content: "";
+                position: absolute; top: 0; right: 50%;
+                width: 200%; height: $wrapperHeight;
+                background-color: #34bcff;
+            }
+        }
+    }
+    b:last-of-type {color: #fff;}
+}
+
+.welcome-modal {
+    $modalWidth: 324;
+    $modalHeignt: 214;
+
+    position: relative;
+
+    .modal-image {
+        display: block;
+        width: 100%;
+    }
+    .star {
+        position: absolute;
+        animation-iteration-count: infinite;
+
+        &-01 {
+            top: percentage(49 / $modalHeignt);
+            left: percentage(43 / $modalWidth);
+            opacity: 1;
+            transform: rotate(-10deg);
+            animation-name: twinkle-01;
+            animation-duration: 1s;
+        }
+        &-02 {
+            top: percentage(85 / $modalHeignt);
+            left: percentage(97 / $modalWidth);
+            transform: rotate(10deg);
+            animation-name: twinkle-02;
+            animation-duration: 1s;
+        }
+        &-03 {
+            top: percentage(60 / $modalHeignt);
+            left: percentage(203 / $modalWidth);
+            animation-name: twinkle-03;
+            animation-duration: 1.2s;
+        }
+    }
+}
+
+@keyframes twinkle-01 {
+    50% {
+        transform: rotate(-10deg) scale(1.5);
+        opacity: 0.9;
+    }
+}
+@keyframes twinkle-02 {
+    50% {
+        transform: rotate(10deg) scale(0.5);
+        opacity: 0.7;
+    }
+}
+@keyframes twinkle-03 {
+    50% {
+        transform: rotate(10deg) scale(1.5);
+    }
+}

@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+.#{$service-assess-page-prefix}-feedback {
+    .#{$service-assess-page-prefix}-inner--line ~ .#{$service-assess-page-prefix}-inner {
+        position: relative;
+        padding-top: 10px;
+    }
+
+    &--input {
+        position: relative; z-index: 20;
+        width: 100%;
+        min-height: 230px;
+        border: 1px solid rgba(255, 255, 255, 0);
+        background-color: rgba(255, 255, 255, 0);
+        font-size: 16px;
+        line-height: 1.56em;
+        letter-spacing: -0.5px;
+        resize: none;
+    }
+
+    &--guide {
+        position: absolute; top: 0; right: 0; left: 0; z-index: 10;
+        margin: 10px 25px;
+        border: 1px solid rgba(255, 255, 255, 0);
+        color: rgba(51, 51, 51, 0.2);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.56em;
+        letter-spacing: -0.5px;
+    }
+
+    &--image {
+        position: fixed; bottom: 58px; left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &--button {
+        @include assess-button(58px, #fff, #34bcff);
+
+        position: fixed; bottom: 0; left: 0;
+        width: 100%;
+        font-size: 18px;
+        border-radius: 0;
+    }
+
+    &__focus {
+        .#{$service-assess-page-prefix}-feedback--guide,
+        & ~ .#{$service-assess-page-prefix}-feedback--image { display: none; }
+    }
+}

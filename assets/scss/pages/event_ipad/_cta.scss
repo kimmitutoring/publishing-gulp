@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+.ipad-wrap .cta {
+	position: fixed; bottom: 0; right: 0; left: 0;
+	z-index: 100;
+	background-color: #333;
+
+	&__wrapper {
+		position: relative;
+		display: flex;
+		width: 300px;
+		margin: 0 auto;
+		padding: 10px;
+		justify-content: space-between;
+		align-items: center;
+
+		@include desktop {
+			width: 910px;
+			padding: 8px 0;
+		}
+	}
+	&__badge {
+		position: absolute; top: 0; left: 0;
+		color: transparent;
+		width: 48px; height: 48px;
+		margin-top: -30px;
+		background: url("//res.tutoring.co.kr/res/images/evt/202001/soldout_bg_365.png") no-repeat 0 0;
+		background-size: 100% auto;
+
+		@include desktop {
+			width: 100px; height: 100px;
+			margin-top: -50px;
+		}
+	}
+	&__count {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		font-size: 16px;
+		font-weight: 600;
+		letter-spacing: -0.7px;
+
+		@include desktop {
+			padding-left: 76px;
+			font-size: 20px;
+		}
+
+		.number {
+			display: flex;
+			width: 17px; height: 22px;
+			margin: 0 4px;
+			border: 1px solid #D6D6D6;
+			color: #333;
+			font-size: 18px;
+			font-weight: 600;
+			justify-content: center;
+			align-items: center;
+			box-sizing: border-box;
+			background-color: #fff;
+			
+			&:nth-child(2) {margin: 0;}
+
+			@include desktop {
+				width: 47px; height: 60px;
+				margin: 0 8px;
+				font-size: 36px;
+				background-image: linear-gradient(#D6D6D6 2px,#fff 0);
+				background-repeat: no-repeat;
+				background-size: 100% 50%;
+				background-position: 0 100%;
+			}
+		}
+	}
+	&__price {
+		display: none;
+		padding-left: 60px;
+		color: #fff;
+		font-weight: 600;
+
+		@include desktop {
+			display: block;
+		}
+
+		.origin-price {
+			display: block;
+			margin-left: 7px;
+			margin-bottom: -5px;
+			font-size: 16px;
+			line-height: 1.5em;
+			letter-spacing: -0.5px;
+			text-decoration: line-through;
+			opacity: 0.6;
+		}
+		.sales-price {
+			display: inline-block;
+			font-size: 42px;
+			line-height: 1.2em;
+			letter-spacing: -1px;
+
+			&:after {
+				content: "원~";
+				display: inline-block;
+				margin-left: 2px;
+				margin-bottom: 9px;
+				line-height: 1em;
+				font-size: 18px;
+				vertical-align: bottom;
+			}
+		}
+		.unit {
+			display: inline-block;
+			margin-bottom: 5px;
+			font-size: 15px;
+			vertical-align: bottom;
+			opacity: 0.6;
+		}
+		
+	}
+	&__button {
+		display: flex;
+		width: 133px; height: 40px;
+		background: linear-gradient(0deg, #4CCAFF, #4CCAFF);
+		box-shadow: 0 56px 32px -16px rgba(155, 106, 0, 0.2);
+		border-radius: 2px;
+		color: #fff;
+		font-size: 14px;
+		font-weight: 600;
+		justify-content: center;
+		align-items: center;
+
+		@include desktop {
+			width: 286px; height: 72px;
+			font-size: 28px;
+		}
+
+		.icon,
+		.icon:after {
+			content: "";
+			position: relative;
+			display: inline-block;
+			width: 8px; height: 14px;
+			margin-left: 10px;
+			font-size: 0;
+			line-height: 0;
+			background: url(//res.tutoring.co.kr/res/images/evt/202001/arrow_floating_naver.png) no-repeat 0 50%;
+			background-size: 8px auto;
+			vertical-align: top;
+
+			@include desktop {
+				width: 16px; height: 27px;
+				margin-left: 20px;
+				padding-left: 12px;
+				background-size: 16px auto;
+			}
+		}
+		.icon:after {
+			display: none;
+			width: 16px; 
+			margin-left: 0;
+			padding-left: 0;
+
+			@include desktop {
+				display: block;
+			}
+		}
+	}
+}

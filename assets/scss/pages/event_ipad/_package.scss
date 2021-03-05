@@ -1,0 +1,397 @@
+@charset "UTF-8";
+
+.ipad-wrap {
+	.package {
+		padding-top: 30px;
+		background-color: #0b1f3c;
+		@include desktop {
+			padding-top: 90px;
+		}
+		&__description {
+			color: #fff;
+			font-size: 20px;
+			text-align: center;
+			line-height: 21px;
+			letter-spacing: -0.02em;
+
+			@include desktop {
+				font-size: 40px;
+				line-height: 41px;
+			}
+
+			span {
+				color: #4bcaff;
+				font-weight: 700;
+			}
+		}
+		.choice-month {
+			display: flex;
+			width: 320px;
+			margin: 32px auto 0;
+
+			@include desktop {
+				width: 958px;
+			}
+
+			.choice-item {
+				flex: 1 1;
+				padding: 6px 0 8px;
+				border: 1px solid #fff;
+				border-radius: 5px;
+				font-size: 14px;
+				text-align: center;
+				line-height: 128%;
+				color: #fff;
+				opacity: 0.8;
+				cursor: pointer;
+
+				&.selected {
+					font-weight: 700;
+					border-color: #4ccaff;
+					background-color: rgba(76, 202, 255, 0.5);
+				}
+
+				@include desktop {
+					padding: 11px 0;
+					font-size: 20px;
+
+					br {display: none;}
+				}
+			}
+
+			.choice-item + .choice-item {
+				margin-left: 10px;
+			}
+		}
+		.choice-product {
+			display: flex;
+			max-width: 918px;
+			margin: 20px auto 0;
+
+			@include desktop {
+				margin-top: 80px;
+			}
+
+			.choice-item {
+				flex: 1 1;
+				padding: 9px 0 8px;
+				text-align: center;
+				color: #fff;
+				letter-spacing: -0.5px;
+				line-height: 14px;
+				font-size: 13px;
+				cursor: pointer;
+
+				@include desktop {
+					padding: 18px 0 21px;
+					font-size: 24px;
+					line-height: 14px;
+				}
+
+				&.selected {
+					border-top-left-radius: 7px;
+					border-top-right-radius: 7px;
+					background-color: #f0f3f3;
+					color: #333;
+					font-weight: 700;
+				}
+			}
+		}
+		// flynn: @kimmi 웹용 퍼플리싱 필요 start
+		.package-view {
+			display: none;
+			margin: 0 auto;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			background-color: #f0f3f3;
+
+			@include desktop {
+				padding-top: 60px;
+				padding-bottom: 80px;
+			}
+
+			&.selected {
+				display: block;
+			}
+
+			&__title {
+				font-size: 32px;
+				font-weight: 700;
+				line-height: 47px;
+				text-align: center;
+				color: #4ccaff;
+
+				@include desktop {
+					font-size: 60px;
+					line-height: 90px;
+				}
+			}
+
+			&__description {
+				position: relative;
+				top: -8px;
+				font-size: 14px;
+				font-weight: 500;
+				line-height: 21px;
+				text-align: center;
+				color: #a4a4a4;
+
+				@include desktop {
+					font-size: 34px;
+					line-height: 50px;
+				}
+			}
+
+			.package-item-list {
+				position: relative;
+				display: flex;
+				width: 320px;
+				margin: 20px auto 0;
+
+				@include desktop {
+					width: 455px;
+					margin-top: 50px;
+				}
+
+				&::before {
+					content: "";
+					position: absolute;
+					top: 50px;
+					left: 50%;
+					width: 35px;
+					height: 35px;
+					background-image: url(//res.tutoring.co.kr/res/images/evt/202008/shooting/plus_label.png);
+					background-repeat: no-repeat;
+					background-position: 50% 0;
+					background-size: 100% auto;
+					transform: translateX(-50%);
+
+					@include desktop {
+						top: 73px;
+						width: 55px; height: 55px;
+					}
+				}
+
+				.package-item {
+					border-radius: 5px;
+					flex: 1 1 50%;
+					overflow: hidden;
+
+					&__content {
+						height: 140px;
+						background-color: #fff;
+						padding: 21px 10px 13px;
+
+						img {
+							display: block;
+							width: 100%;
+							margin: 0 auto;
+
+							@include desktop {
+								width: 165px;
+							}
+						}
+					}
+
+					&__price {
+						background-color: #e1e1e1;
+						padding: 4px 0 8px;
+
+						@include desktop {
+							padding: 13px 0;
+						}
+
+						.price__original {
+							position: relative;
+							font-size: 10px;
+							line-height: 12px;
+							letter-spacing: -0.01em;
+							color: rgba(151, 151, 151, 0.76);
+							text-align: center;
+
+							@include desktop {
+								font-size: 14px;
+								line-height: 16px;
+							}
+
+							&::before {
+								content: "";
+								position: absolute;
+								top: 6px;
+								left: 60px;
+								width: 81px;
+								height: 14px;
+								background-image: url(//res.tutoring.co.kr/res/images/evt/202008/shooting/direction.png);
+								background-size: cover;
+							}
+						}
+
+						.price__discount {
+							margin-top: 3px;
+							color: #8c8c8c;
+							text-align: center;
+							line-height: 19px;
+							font-weight: 700;
+
+							@include desktop {
+								margin-top: 5px;
+								font-size: 22px;
+								line-height: 26px;
+							}
+						}
+					}
+				}
+
+				.package-item + .package-item {
+					margin-left: 10px;
+				}
+			}
+
+			.package-price {
+				position: relative;
+				display: flex;
+				width: 320px;
+				margin: 0 auto;
+				align-items: center;
+				margin-top: 10px;
+				padding: 18px 12px;
+				border-radius: 5px;
+				background: linear-gradient(180deg, rgba(235, 235, 235, 0) 0%, rgba(11, 31, 60, 0) 100%), #0b1f3c;
+				box-sizing: border-box;
+
+				@include desktop {
+					width: 455px;
+					padding: 28px 17px;
+				}
+
+				.package-price__percent-wrap {
+					position: absolute;
+					background-image: linear-gradient(to bottom, #fff069 5.66%, #f58d6b 100%);
+					border-radius: 50%;
+					right: 0;
+					top: -27px;
+
+					@include desktop {
+						right: -38px;
+					}
+
+					.package-price__percent {
+						width: 45px;
+						height: 45px;
+						margin: 5px;
+						text-indent: 3px;
+						background-image: linear-gradient(138.68deg, #f93e5e 5.66%, #f96e3e 100%);
+						border-radius: 50%;
+						text-align: center;
+						line-height: 34px;
+						letter-spacing: -1px;
+						font-weight: 700;
+						color: #fff;
+						font-size: 21px;
+						box-sizing: border-box;
+
+						@include desktop {
+							width: 66px; height: 66px;
+							margin: 6px;
+							font-size: 30px;
+							line-height: 44px;
+						}
+
+						&::before {
+							content: "";
+							position: absolute;
+							left: 50%; bottom: 7px;
+							width: 23px;
+							height: 23px;
+							background-image: url(//cdn.tutoring.co.kr/uploads/home/img/plans/career/10job_arrow.png);
+							background-size: 100% auto;
+							background-position: 50% 0;
+							transform: translateX(-50%);
+
+							@include desktop {
+								width: 34px; height: 34px;
+							}
+						}
+
+						small {
+							font-size: 12px;
+							line-height: 18px;
+							vertical-align: baseline;
+						}
+					}
+				}
+
+				.package-price__total {
+					flex: 0 0 135px;
+
+					@include desktop {
+						flex: 0 0 192px;
+					}
+
+					.package-price__original {
+						color: rgba(255, 255, 255, 0.8);
+						font-size: 15px;
+						line-height: 22px;
+						text-align: center;
+
+						@include desktop {
+							font-size: 21px;
+							line-height: 31px;
+						}
+					}
+
+					.package-price__discount {
+						font-size: 14px;
+						margin-top: 7px;
+						background-color: #fff;
+						color: #265294;
+						border-radius: 28px;
+						text-align: center;
+						line-height: 23px;
+
+						@include desktop {
+							font-size: 19px;
+							line-height: 37px;
+						}
+					}
+				}
+
+				.package-price__monthly {
+					flex: 1 1;
+					text-align: right;
+					color: #4ccaff;
+					font-size: 38px;
+					line-height: 30px;
+					font-weight: 700;
+					letter-spacing: -4px;
+
+					@include desktop {
+						font-size: 50px;
+						line-height: 55px;
+					}
+
+					.unit {
+						font-size: 24px;
+						margin-right: 4px;
+					}
+					.month {
+						margin-left: 4px;
+						font-size: 14px;
+						font-weight: 400;
+						line-height: 28px;
+						letter-spacing: 3px;
+						color: #fff;
+						opacity: 0.57;
+						font-weight: 700;
+						vertical-align: baseline;
+
+						@include desktop {
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}
+		// flynn: @kimmi 웹용 퍼플리싱 필요 end
+	}
+}

@@ -1,0 +1,509 @@
+@charset "utf-8";
+// 아이패드 프로 앱에서 접근시 desktop 가이드로 보이지 않도록 breakpoint를 1600 이상으로 한다.
+
+@mixin mainFixedSprite {
+    background-image: url('//cdn.tutoring.co.kr/res/images/spr/ico_course_200514@2x.png');
+    background-repeat: no-repeat;
+    background-size: 106px 55px;
+}
+
+.fixed-ticket {
+    position: fixed; bottom: 0; right: 0; left: 0; z-index: 60;
+    letter-spacing: -0.5px;
+
+    // @media (min-width: 3000px) {
+    //     padding-top: 16px;
+    //     padding-bottom: 16px;
+    //     background-color: #1E1E1E;
+    // }
+
+    .close__button {
+        position: absolute; top: -15px; left: 0; z-index: 2;
+        color: transparent;
+        font-size: 0;
+
+        // @media (min-width: 1600px) {
+        //     display: none;
+        // }
+
+        &:before {
+            @include mainFixedSprite;
+    
+            content: "";
+            display: block;
+            width: 24px; height: 24px;
+            margin: 15px 20px;
+            background-position: -23.5px -16.5px;
+        }   
+    }
+
+    &__button {
+        display: block;
+        width: 100%; height: 56px;
+        margin-right: auto;
+        margin-left: auto;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 56px;
+        background-color: #6759EF;
+
+        // @media (min-width: 1600px) {
+        //     width: 657px; height: 64px;
+        //     font-size: 24px;
+        //     font-weight: 600;
+        //     line-height: 64px;
+        //     border-radius: 5px;
+
+        //     &:after {
+        //         @include mainFixedSprite;
+
+        //         content: "";
+        //         display: inline-block;
+        //         width: 24px; height: 24px;
+        //         margin: -2px 0 2px 25px;
+        //         background-position: -24px -16px;
+        //         vertical-align: middle;
+        //         transform: rotate(-180deg);
+        //     }
+        // }
+
+        &:before {
+            @include mainFixedSprite;
+    
+            content: "";
+            position: absolute; top: -8px; left: 50%;
+            width: 80px; height: 8px;
+            background-position: -2.5px -2.5px;
+            transform: translate(-50%);
+
+            // @media (min-width: 1200px) {
+            //     display: none;
+            // }
+        }
+    }
+
+    &__title {
+        padding-bottom: 15px;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+        text-align: center;
+
+        // @media (min-width: 1600px) {
+        //     color: #C4C4C4;
+        // }
+
+        .text-big {
+            display: block;
+            padding-top: 4px;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 28px;
+
+            // @media (min-width: 1600px) {
+            //     color: #333;
+            // }
+        }
+    }
+
+    .wrapper {
+        display: none;
+        padding-top: 15px;
+        background-color: #6759EF;
+        box-sizing: border-box;
+
+        // @media (min-width: 1600px) {
+        //     overflow: hidden;
+        //     position: absolute; bottom: 80px; left: 50%;
+        //     width: 657px;
+        //     margin: 0 auto;
+        //     padding-top: 24px;
+        //     padding-bottom: 24px;
+        //     background-color: #fff;
+        //     border-radius: 5px 5px 0 0;
+        //     transform: translateX(-50%);
+
+        //     &:before {
+        //         content: "";
+        //         position: absolute; top: 16px; bottom: 24px; left: 50%;
+        //         width: 1px;
+        //         background-color: #E9E9E9;
+        //     }
+        // }
+
+        &:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        @media (max-width: 1599px) {
+            &__scroll {
+                overflow: auto;
+                position: relative;
+                max-height: 600px;
+                // max-height: 100%;
+                margin-right: auto;
+                margin-left: auto;
+                padding-bottom: 15px;
+                box-sizing: border-box;
+            }
+        }
+        @media (max-height: 570px) {
+			&__scroll {
+				max-height: 500px;
+			}
+		}
+        @media (min-width: 768px) {
+            &__scroll {
+                padding-right: 64px;
+                padding-left: 64px;
+            }
+        }
+    }
+    
+    &--open {
+        .wrapper {display: block;}
+
+        @media (max-width: 1599px) {
+            .fixed-ticket__button {display: none;}
+        }
+        // @media (min-width: 1600px) {
+        //     .fixed-ticket__button {border-radius: 0 0 5px 5px;}
+        //     .fixed-ticket__button:after {transform: rotate(0);}
+        // }
+    }
+}
+.fixed-head {
+    position: relative;
+    text-align: center;
+
+    // @media (min-width: 1600px) {
+    //     display: none;
+    //     background-color: #6759EF;
+    // }
+    .ticket {
+        display: flex;
+        width: 168px; height: 60px;
+        padding-right: 40px;
+        color: #333;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: -0.5px;
+        background: url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/img_coupon_inactive.png") no-repeat 0 0;
+        background-size: 100% auto;
+        box-shadow: 0 3px 15px rgba(0,0,0,.2);
+        border-radius: 3px;
+        box-sizing: border-box;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+
+        b {
+            display: block;
+            padding-top: 4px;
+            color: #FF4165;
+            font-size: 14px;
+        }
+
+        &--disabled {
+            background-image: url("//cdn.tutoring.co.kr/uploads/home/img/main/version3/img_coupon_active.png");
+        }
+    }
+
+    &__ticket {
+        display: inline-block;
+        margin: 20px auto;
+        vertical-align: top;
+    }
+
+    &__title {
+        display: block;
+        margin-bottom: 30px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 20px;
+        text-align: center;
+
+        // @media (min-width: 1600px) {
+        //     display: inline-block;
+        // }
+    }
+    &__desc {
+        color: #fff;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    &__button {
+        overflow: hidden;
+        display: block;
+        width: 200px; height: 48px;
+        margin: 16px auto 24px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 48px;
+        text-align: center;
+        background-color: #333;
+        border-radius: 48px;
+    }
+}
+.fixed-pass {
+    .fixed-ticket__title {display: none;}
+
+    // @media (min-width: 1600px) {
+    //     float: left;
+    //     width: 50%;
+    //     padding: 0 24px;
+    //     box-sizing: border-box;
+
+    //     .fixed-ticket__title {display: block;}
+    // }
+
+    .pass__list {
+        padding: 0 16px 24px;
+
+        // @media (min-width: 1600px) {
+        //     padding: 0;
+        // }
+    }
+    .pass__link {
+        position: relative;
+        display: block;
+        margin-top: 8px;
+        padding: 16px 35px 16px 24px;
+        background-color: #fff;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+
+        // @media (min-width: 1600px) {
+        //     border: 1px solid #E9E9E9;
+        //     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+        // }
+
+        &:before {
+            content: "";
+            position: absolute; top: 50%; right: 20px;
+            width: 8px; height: 8px;
+            border-top: 2px solid #878787;
+            border-right: 2px solid #878787;
+            transform: rotate(45deg) translateY(-50%);
+            box-sizing: border-box;
+        }
+    }
+    .pass__title {
+        display: block;
+        padding-bottom: 4px;
+        color: #333;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    .pass__desc {
+        overflow: hidden;
+        display: block;
+        color: #9E9E9E;
+        font-size: 14px;
+        line-height: 20px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .pass__tag {
+        overflow: hidden;
+        display: inline-block;
+        height: 20px;
+        margin: -2px 0 2px 2px;
+        padding-right: 8px;
+        padding-left: 8px;
+        border: 1px solid #FF4165;
+        color:#FF4165;
+        font-size: 11px;
+        line-height: 18px;
+        border-radius: 20px;
+        vertical-align: middle;
+        box-sizing: border-box;
+    }
+} // .fixed-pass
+.fixed-promotion {
+    // @media (min-width: 1600px) {
+    //     float: left;
+    //     width: 50%;
+    //     padding: 0 24px;
+    //     box-sizing: border-box;
+    // }
+
+    .promotion__list {
+        margin-top: -8px;
+        padding: 0 16px;
+
+        &--single,
+        &--double {display: none;}
+    }
+    .promotion__item {
+        margin-top: 8px;
+    }
+    .promotion__link {
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        box-sizing: border-box;
+        align-items: center;
+
+        &:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    }
+    .promotion__thumb {
+        width: 82px; height: 109px;
+        background-color: #919191;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        flex: none;
+    }
+    .promotion__detail {
+        overflow: hidden;
+        padding-right: 12px;
+        padding-left: 16px;
+        flex: 1;
+    }
+    .promotion__text {
+        display: block;
+        margin-bottom: 6px;
+        color: #5A50E7;
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 11px;
+
+        &--active {color: #FF4165;}
+    }
+    .promotion__label {
+        position: absolute; top: 16px; right: 16px;
+        height: 20px;
+        padding-right: 8px;
+        padding-left: 8px;
+        border: 1px solid #FF4165;
+        color: #FF4165;
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 18px;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+    .promotion__title {
+        display: block;
+        margin-bottom: 4px;
+        color: #333;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 18px;
+    }
+    .promotion__desc {
+        overflow: hidden;
+        display: -webkit-box;
+        color: #9e9e9e;
+        font-size: 14px;
+        line-height: 20px;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+
+        // @media (min-width: 1600px) {
+        //     font-size: 12px;
+        //     line-height: 18px;
+        // }
+
+        // &__list {
+        //     margin-top: 8px;
+        //     margin-bottom: 18px;
+
+        //     .list__item {
+        //         padding-top: 2px;
+        //         padding-bottom: 2px;
+        //         font-size: 14px;
+        //         line-height: 20px;
+        //     }
+        //     .list__item:before {
+        //         content: "";
+        //         display: inline-block;
+        //         width: 4px; height: 4px;
+        //         margin: -2px 6px 2px 3px;
+        //         border-radius: 4px;
+        //         background-color: #6759EF;
+        //         vertical-align: middle;
+        //     }
+        // }
+    }
+    .promotion__price {
+        display: flex;
+        margin-right: 16px;
+        margin-left: 16px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        border-top: 1px solid #E9E9E9;
+        justify-content: space-between;
+
+        .origin-price {
+            color: #9E9E9E;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 24px;
+            text-decoration: line-through;
+        }
+        .price {
+            color: #5A50E7;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 24px;
+        }
+    }
+}
+
+// 서브페이지에서 사용할 하단 fixed 버튼
+.fixed__sidebar {
+    position: fixed; bottom: 0; right: 0; left: 0; z-index: 20;
+
+    @media (min-width: 768px) {
+        background-color: #1E1E1E;
+    }
+
+    &--primary {background-color: #6759EF;}
+
+    .sidebar__link {
+        display: block;
+        width: 100%; height: 56px;
+        margin-right: auto;
+        margin-left: auto;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 56px;
+        text-align: center;
+        background-color: #1E1E1E;
+
+        @media (min-width: 768px) {
+            height: 80px;
+            font-size: 24px;
+            line-height: 80px;
+        }
+    }
+
+    .common-special__coupon {
+        margin-top: 6px;
+        margin-bottom: 6px;
+
+        .coupon__wrapper {margin-bottom: 0;}
+        .coupon__heading {color: #fff;}
+    }
+}

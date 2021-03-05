@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+$onboardFootWidth: 312px;
+$onboardFootHeight: 130px;
+
+@mixin onboardSpriteImg {
+    overflow: hidden;
+    background-image: url('//res.tutoring.co.kr/res/images/img/onboarding/ico_onboarding.png');
+    background-repeat: no-repeat;
+    background-size: 232px 40px;
+}
+
+.onboard {
+    position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+    min-width: 320px;
+}
+
+.onboard-footer {
+    position: absolute; bottom: 0; left: 50%; z-index: 1;
+    width: $onboardFootWidth;
+    height: $onboardFootHeight;
+    padding: 16px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 40px 40px 0 0;
+    box-sizing: border-box;
+    transform: translateX(-50%);
+}
+
+.onboard-kakao {
+    $buttonHeight: 50px;
+
+    display: block;
+    width: 100%;
+    height: $buttonHeight;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: $buttonHeight;
+    letter-spacing: -0.5px;
+    background-color: #ffdc00;
+    border-radius: $buttonHeight;
+    box-shadow: 0 10px 14px -6px rgba(253, 128, 0, 0.3);
+
+    &:before {
+        @include onboardSpriteImg;
+
+        content: "";
+        display: inline-block;
+        width: 40px; height: 40px;
+        margin: -2px 0 2px -14px;
+        background-position: -94px 0;
+        vertical-align: middle;
+    }
+}
+.onboard-link {
+    padding-top: 8px;
+    padding-bottom: 5px;
+
+    .link-item {
+        display: inline-block;
+        margin: 0 5px;
+        padding: 8px 6px;
+        color: #919191;
+        font-size: 12px;
+        vertical-align: top;
+    
+        span {
+            display: inline-block;
+            line-height: 18px;
+            border-bottom: 1px solid #919191;
+        }
+    }
+}
+
+.onboard-video {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+
+    video {
+        display: block;
+        height: 100%;
+        transform: translateX(-50%);
+    }
+
+    &-mute {
+        position: absolute; bottom: ($onboardFootHeight + 20); right: 0; left: 0;
+        padding: 0 22px;
+        text-align: right;
+
+        .mute-icon {
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            width: 40px; height: 40px;
+            background-color: rgba(94, 86, 83, 0.3);
+            vertical-align: top;
+            border-radius: 50%;
+
+            i {
+                @include onboardSpriteImg;
+                
+                position: absolute; top: 0; left: 0;
+                display: block;
+                width: 100%; height: 100%;
+                background-position: -48px 0;
+                color: transparent;
+                transition: opacity 0.2s ease-in-out;
+                transition-delay: 0.25s;
+                opacity: 1;
+
+                &.on {opacity: 0;}
+                &.off {background-position: 0 0;}
+            }
+        }
+    }
+}
+
+.onboard-content {
+    position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+    padding: 81px 32px 0;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+
+    &--off {
+        background-color: rgba(0, 0, 0, 0);
+
+        .onboard-title,
+        .onboard-description {
+            opacity: 0;
+        }
+        .onboard-video-mute .mute-icon .on {opacity: 1;}
+        .onboard-video-mute .mute-icon .off {opacity: 0;}
+    }
+}
+.onboard-title {
+    display: block;
+    padding-bottom: 19px;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: (26 * 1.67) + px;
+    letter-spacing: -1px;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+}
+.onboard-description {
+    font-size: 12px;
+    line-height: (12 * 1.67) + px;
+    letter-spacing: -0.5px;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 40px; height: 1px;
+        margin-bottom: 19px;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+}

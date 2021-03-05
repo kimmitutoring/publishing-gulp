@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+.summer-friends .content14 {
+    letter-spacing: -1px;
+
+    .content__text {
+        margin-bottom: 5px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 12px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &__head {
+        margin-bottom: 45px;
+        padding-top: 37px;
+        padding-bottom: 40px;
+        text-align: center;
+        background-color: #2a2a2a;
+
+        .content__text {
+            width: auto;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 30px;
+            text-align: center;
+
+            &--small {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+            }
+
+            br {display: block;}
+        }
+    }
+
+    .content__heading {
+        overflow: visible;
+        position: relative;
+        width: 300px;
+        margin: 0 auto 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 1px solid #3c3937;
+        font-size: 26px;
+        letter-spacing: -2px;
+        line-height: (26 * 1.54) + px;
+        box-sizing: border-box;
+        text-align: center;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute; bottom: -7px; left: 50%;
+            width: 12px; height: 10px;
+            margin-left: -6px;
+            background-color: #fff;
+            border-left: 1px solid #000;
+            border-bottom: 1px solid #000;
+            -webkit-transform: rotate(-60deg) skew(-35deg);
+            transform: rotate(-60deg) skew(-35deg);
+        }
+    }
+
+    .content__image {
+        display: block;
+        margin: 0 auto 16px;
+    }
+
+    &__guide {
+        width: 320px;
+        margin: 25px auto 0;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #ececec;
+        letter-spacing: -0.5px;
+        box-sizing: border-box;
+    
+        .guide__title {
+            display: block;
+            margin-bottom: 12px;
+            padding-bottom: 5px;
+            border-bottom: 0.5px solid #d8d8d8;
+            color: #f93e5e;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+    
+            &:before {
+                content: "";
+                display: inline-block;
+                width: 16px; height: 16px;
+                margin: -1px 4px 1px 0;
+                background-image: url('//res.tutoring.co.kr/res/images/common/ico_comm.png');
+                background-repeat: no-repeat;
+                background-size: 220px 188px;
+                background-position: -140px -104px;
+                vertical-align: middle;
+            }
+        }
+        .guide__description {
+            margin: 0; padding: 0 0 0 12px;
+            color: rgba(85, 85, 85, 0.7);
+            font-size: 12px;
+            line-height: 1.7em;
+    
+            &:before {
+                content: "•";
+                position: absolute;
+                margin-left: -12px;
+                color: #919191;
+                vertical-align: top;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            width: 100%;
+
+            .guide__title,
+            .guide__description {
+                width: 280px;
+                margin-right: auto;
+                margin-left: auto;
+                box-sizing: border-box;
+            }
+        }
+    }
+}

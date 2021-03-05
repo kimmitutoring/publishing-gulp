@@ -1,0 +1,540 @@
+@charset "UTF-8";
+
+@mixin navItemLabel {
+    &.hot:after,
+    &.zzayo:after,
+    &.recommend:after {
+        // !important는 common.css 제거시 삭제한다.
+        position: relative !important;
+        top: 0 !important; right: 0 !important; left: 0 !important;
+        display: inline-block;
+        width: auto !important;
+        height: 19px !important;
+        margin: -2px 0 2px 6px !important;
+        padding-right: 6px !important;
+        padding-left: 6px !important;
+        border: solid 2px #ff8fa2;
+        color: #f93e5e;
+        font-size: 11px !important;
+        font-weight: 600;
+        line-height: 15px !important;
+        background-color: #fff;
+        border-radius: 20px;
+        vertical-align: middle;
+        box-sizing: border-box;
+    }
+    &.hot:after {content: "HOT";}
+    &.zzayo:after {content: "신규 코스 런칭";}
+    &.recommend:after {content: "추천";}
+}
+
+.headerArea {
+    position: fixed; top:0; left: 0; z-index: 100;
+    width: 100%;
+
+    .label_hot {
+        display: inline-block;
+        width: 46px; height: 14px;
+        background-image: url(//cdn.tutoring.co.kr/uploads/home/img/plans/career/label_g.png);
+        background-repeat: no-repeat;
+        background-position: 0 -20px;
+        background-size: 46px 40px;
+        vertical-align: top;
+    }
+
+    .link_free {
+        display: none;
+        position: absolute; top: 17px; left: 52%; z-index:10;
+        width: 171px; height: 40px;
+        margin-left: 376px;
+        padding-top: 16px;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 18px;
+        line-height: 24px;
+        background-color: #6759ef;
+        letter-spacing: -1px;
+        text-align: center;
+        box-sizing: content-box;
+        cursor: pointer;
+
+        @include big_desktop {
+            @at-root .gnb_open .link_free {display: block;}
+            @at-root .fixed_on .link_free {display: block;}
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .btn_menu {
+        position: absolute; top: 0; right: 12px; z-index: 10;
+        width: 90px; height: 90px;
+
+        @include big_desktop {
+            display: none;
+        }
+        @include all_mobile {
+            display: block;
+            right: 10px;
+            width: 50px; height: 50px;
+        }
+
+        .ico_menu {
+            overflow: hidden;
+            display: block;
+            width: 22px; height: 16px;
+            margin: 0 auto;
+            color: transparent;
+            background: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/ico_home_190402.png) no-repeat -120px -110px;
+            background-size: 420px 400px;
+
+            @at-root .fixed_on .btn_menu .ico_menu {background-position: -160px -110px;}
+
+            @include all_desktop {
+                width: 36px; height: 26px;
+                background-position: -120px -80px;
+
+                @at-root .fixed_on .btn_menu .ico_menu {
+                    background-position: -160px -80px;
+                }
+            }
+        }
+    }
+
+    // 쿠폰등록
+    .user_area {
+        display: none;
+        position: absolute; top: 0; left: 50%; z-index: 10;
+        width: 380px;
+        margin: 0;
+        text-align: right;
+
+        @include big_desktop {
+            display: block;
+        }
+
+        .txt_copyright {
+            display: inline-block;
+            margin-left: 8px;
+            padding: 37px 0 29px;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: -0.67px;
+            text-decoration: underline;
+
+            a {color: #fff;}
+
+            @at-root 
+            .fixed_on .user_area .txt_copyright a,
+            .gnb_open .user_area .txt_copyright a {color: #333;}
+        }
+    }
+}
+.logo_wrap {
+    overflow: hidden;
+    position: relative; z-index: 10;
+    height: 50px;
+
+    @include all_desktop {
+        height: 90px;
+    }
+
+    @at-root .fixed_on & {
+        background-color: #fff;
+        box-shadow: inset 0px -1px 0px #d8d8d8;
+    }
+    @at-root .gnb_open & {
+        background-color: #fff;
+        box-shadow: inset 0px -1px 0px #d8d8d8;
+    }
+
+    .logo {
+        position: absolute; top: 25px; left: 40px;
+        width: 96px; height: 40px;
+
+        @include big_desktop {
+            left: 50%;
+            margin-left: -562px;
+        }
+        @include all_mobile {
+            top: 13px; left: 24px;
+            width: 58px; height: 24px;
+            margin-left: 0;
+        }
+
+        @media (min-width: 2000px) {
+            margin-left: -700px;
+        }
+
+        a {
+            display: block;
+            width: 100%; height: 100%;
+            color: transparent;
+            background: url(//cdn.tutoring.co.kr/uploads/home/img/common/TutoringLogo.png) no-repeat 0 50%;
+            background-size: 100% auto;
+
+            @at-root .fixed_on & {
+                background-image: url(//cdn.tutoring.co.kr/uploads/home/img/common/logo_tutoring.png);
+            }
+            @at-root .gnb_open & {
+                background-image: url(//cdn.tutoring.co.kr/uploads/home/img/common/logo_tutoring.png);
+            }
+        }
+    }
+    .logo_subtxt {
+        display: none;
+        position: absolute; top: 34px; left: 50%;
+        margin-left: -446px;
+        color: #fff;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 0;
+
+        @media (min-width: 2000px) {
+            margin-left: -575px;
+        }
+
+        @include big_desktop {
+            display: block;
+        }
+
+        @at-root .fixed_on & {color: #333;}
+        @at-root .gnb_open & {color: #333;}
+    }
+}
+
+.list_gnb {
+    display: none;
+    overflow: hidden;
+    position: absolute; top: 0; left: 45%; z-index: 11;
+    margin-left: -170px;
+    font-size: 0;
+    font-weight: 500;
+    letter-spacing: -0.89px;
+
+    @include big_desktop {
+        display: block;
+    }
+
+    & > li {
+        float: left;
+        display: inline-block;
+        margin-right: 36px;
+        padding: 32px 0 29px;
+        color: #fff;
+        font-size: 18px;
+        line-height: 27px;
+        vertical-align: top;
+
+        &.current,
+        &:hover {
+            border-bottom: 2px solid #6759ef;
+            color: #6759ef !important;
+        }
+
+        @at-root .fixed_on & {color: #333;}
+        @at-root .gnb_open & {color: #333;}
+    }
+}
+
+.gnb_box {
+    overflow: hidden;
+    position: absolute; top: 90px; left: 0;
+    width: 100%; height: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+
+    &.open {
+        height: 212px;
+        opacity: 1;
+
+        // .out_area {display: block;}
+    }
+
+    .out_area {
+        display: none;
+        position: fixed; top: 302px; left: 0; z-index: 0;
+        width: 100%; height: 100%;
+    }
+}
+.list_subgnb {
+    overflow: visible;
+    position: absolute; top: 0; left: 45%; z-index: 2;
+    width: 721px; height: 194px;
+    margin-left: -168px;
+    padding-top: 20px;
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    li {
+        display: none;
+        float: left;
+        width: 133px;
+
+        &:first-child {
+            width: 100%;
+        }
+        &.selected {
+            display: block;
+        }
+    }
+    a {
+        @include navItemLabel;
+
+        display: block;
+        position: relative;
+        color: #666;
+        font-size: 16px;
+        line-height: 34px;
+        letter-spacing: -1px;
+
+        &:hover {
+            color: #6759ef;
+        }
+    }
+    .label_hot {
+        margin-top: 10px;
+        margin-left: 3px;
+    }
+    .tudal_gnb {
+        position: absolute; bottom: 0; left: 50%;
+        width: 236px; height: 150px;
+        margin-left: 210px;
+    }
+
+    .plan_group {
+        display: inline-block;
+        margin-right: 57px;
+        vertical-align: top;
+    }
+    .represent_plan_tit {
+        display: inline-block;
+        padding-bottom: 3px;
+        color: rgba(153,153,153,0.6);
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .sub_cont_02{margin-left:178px}
+    .sub_cont_03{margin-left:245px}
+    .sub_cont_04{margin-left:313px}
+    .sub_cont_05{margin-left:313px}
+
+    
+}
+
+// 반응형 메뉴
+.nav_menu {
+    display: none;
+    position: fixed; top: 0; left: 0; z-index: 20;
+    width: 100%; height: 100%;
+    opacity: 0;
+
+    @at-root .nav_open & {
+        display: block;
+        opacity: 1;
+    }
+
+    .dimmed {
+        width: 100%; height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .inner_nav {
+        overflow-y: scroll;
+        position: fixed; top: 0; right: 0;
+        width: 84.2%; height: 100%;
+        padding: 30px;
+        background-color: #fff;
+        border-top-left-radius: 20px;
+        box-sizing: border-box;
+
+        &:after {
+            content: '';
+            position: fixed; bottom: -12px; right: -10px;
+            width: 140px; height: 140px;
+            background: url('//cdn.tutoring.co.kr/uploads/home/img/main/version3/tudal_nav_m.png') 0 0 no-repeat;
+            background-size: 100%;
+
+            @include tablet {
+                bottom: -50px;
+                width: 238px; height: 238px;
+            }
+        }
+
+        li {
+            padding: 0 !important; // common.css
+            border-bottom: 1px solid #f3f2f9;
+            border-top: 0 !important;  // common.css
+
+            &:after {
+                display: none !important; // common.css
+            }
+
+            & > a,
+            .toggle_menu {
+                display: block;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                color: #333;
+                font-size: 16px;
+                letter-spacing: -1px;
+
+                @include tablet {
+                    padding-top: 18px;
+                    padding-bottom: 18px;
+                    font-size: 20px;
+                }
+            }
+
+            .arrow {
+                display: inline-block;
+                width: 13px; height: 7px;
+                margin: -2px 7px 2px;
+                background-image: url('//cdn.tutoring.co.kr/uploads/home/img/main/version3/ico_home_3_190402.png') !important;
+                background-repeat: no-repeat;
+                background-position: -259px -41px !important;
+                background-size: 283px 240px !important;
+                vertical-align: middle;
+
+                &.up {transform: rotate(180deg)}
+            }
+        }
+
+        @include tablet {
+            width: 568px;
+        }
+
+        .title {
+            display: inline-block;
+            margin: 0 0 6px 0 !important; // common.css
+            margin-bottom: 6px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #f3f2f9;
+            color: rgba(153, 153, 153, 0.6);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+
+            @include tablet {
+                padding-top: 8px;
+                padding-bottom: 8px;
+                font-size: 14px;
+            }
+        }
+        .items {display: none; padding-bottom: 20px;}
+        .items.on {display: block; margin-bottom: 0 !important;}
+        .item_group + .item_group {padding-top: 20px;}
+
+        .item {
+            @include navItemLabel;
+
+            display: block;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            color: #999;
+            font-size: 14px;
+            letter-spacing: -0.8px;
+
+            @include tablet {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                font-size: 17px;
+            }
+        }
+
+        .view_coupon {
+            border-bottom: 0;
+
+            .login_m {
+                display: inline-block;
+                margin-right: 12px;
+                color: #777;
+                font-size: 12px;
+                text-decoration: underline !important;
+            }
+        }
+    }
+    .menu_cont {
+        margin: 0 60px;
+        padding: 30px 0;
+        border-top: 1px solid #f3f2f9;
+        letter-spacing: -1px;
+
+        @include all_mobile {
+            margin: 0 30px;
+            padding: 14px 0;
+        }
+
+        &.fst {border-top: 0;}
+    }
+    .tit_menu {
+        display: block;
+        color: #333;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1em;
+
+        @include tablet {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    .btn_close {
+        position: fixed; top: 15px; right: 26px;
+        width: 50px; height: 50px;
+
+        @include all_mobile {
+            top: 0; right: 8px;
+        }
+
+        .ico_close {
+            overflow: hidden;
+            display: inline-block;
+            width: 21px; height: 26px;
+            color: transparent;
+            background-image: url(//cdn.tutoring.co.kr/uploads/home/img/main/version3/ico_home_190402.png);
+            background-position: -200px -80px;
+            background-size: 420px 400px;
+            vertical-align: top;
+
+            @include all_mobile {
+                width: 16px; height: 16px;
+                background-position: -200px -110px;
+            }
+        }
+    }
+}
+.list_nav {
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: -15px;
+
+    @include all_mobile {
+        margin-top: 6px;
+        margin-bottom: -6px;
+    }
+
+    a {
+        display: block;
+        padding: 15px 10px;
+        color: #777;
+        font-size: 24px;
+
+        @include all_mobile {
+            padding: 6px 10px;
+            font-size: 15px;
+        }
+    }
+    .label_hot {
+        margin-top: 4px;
+        margin-left: 5px;
+    }
+}

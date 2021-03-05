@@ -1,0 +1,458 @@
+@charset "utf-8";
+
+@mixin subPageTopTitle {
+    position: relative;
+    padding-bottom: 40px;
+    color: #333;
+    font-family: $font-HGGGothicssi;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1em;
+    text-align: center;
+	letter-spacing: -1px;
+	
+	@media (min-width: 1200px) {
+		font-size: 40px;
+	}
+
+    &:after {
+        content: "";
+        display: block;
+        width: 80px; height: 4px;
+        margin: 20px auto 0;
+        background-color: #279eff;
+    }
+}
+
+// sub layout
+
+html,
+body,
+.wrap {
+    height: auto;
+}
+
+// 튜터 wrapper
+.sub_con.tt_cmd_con {
+	max-width: 1170px;
+	padding-top: 68px;
+
+    h2 {
+        @include subPageTopTitle;
+    
+        &:after {
+            display: none;
+        }
+    }
+}
+
+// 서브 컨텐츠 wrapper
+.sub_con {
+    @media (min-width: 1200px) {
+		margin: 0 auto;
+		padding-top: $header-height-fixed;
+	}
+
+}
+
+// 수강권 보기 > 유의사항
+.item_notice {
+    padding: 8px 30px 16px;
+    color: #555;
+    letter-spacing: -0.8px;
+    background-color: #f8f7fb;
+
+    b {
+        color: #333;
+        font-weight: 600;
+    }
+
+    .tit_notice {
+        display: block;
+        padding-top: 40px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #d8d8d8;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: -0.5px;
+    }
+
+    .inner_notice {
+        @include big_desktop {
+            width: 922px;
+            margin: 0 auto;
+        }
+
+        li {
+            position: relative;
+            padding-left: 12px;
+            word-break: break-all;
+
+            &:before {
+                content: "∙";
+                position: absolute; top: 0; left: 0;
+                color: #919191;
+                font-weight: 600;
+                font-size: 16px;
+                vertical-align: top;
+            }
+        }
+    }
+
+    .list_notice {
+        padding-top: 5px;
+        font-size: 14px;
+        line-height: 26px;
+    }
+}
+
+// 튜터, 토픽 검색하기
+.tt_top_search {
+    @include clear;
+
+    width: inherit;
+	padding: 0 10px 20px;
+    box-sizing: border-box;
+
+    @include all_mobile {
+        padding-right: 16px;
+		padding-left: 16px;
+    }
+
+    .tab {
+		@media (min-width: 1200px) {
+			float: left;
+		}
+		
+		ul {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+
+			@media (min-width: 1200px) {
+				justify-content: flex-start;
+			}
+		}
+
+		li {padding-right: 10px;}
+		li:last-child {padding-right: 0;}
+        a {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+            min-width: 65px; height: 38px;
+            padding: 0 16px;
+            color: #999;
+            font-size: 14px;
+            font-weight: 600;
+			letter-spacing: -0.5px;
+			text-align: center;
+			border-radius: 100px;
+			box-sizing: border-box;
+            background: #f5f5f5;
+            transition: background-color 0.2s;
+
+            &:hover {background: rgba(229, 229, 229, 0.8);}
+
+            @media (min-width: 1200px) {
+				min-width: 80px; height: 42px;
+				padding: 0 20px;
+				font-size: 14px;
+			}
+        }
+        .on a {
+			color: #fff;
+            font-weight: 700;
+            background: #635FE7;
+        }
+	}
+	.tab-guide {
+		display: none;
+		margin-top: 24px;
+		color: #999;
+		font-size: 14px;
+		line-height: 24px;
+		letter-spacing: -0.5px;
+		text-align: center;
+
+		&--active {display: block;}
+
+		@media (min-width: 1200px) {
+			margin-top: 40px;
+			text-align: left;
+		}
+
+		.point-text {color: #635FE7;}
+	}
+    .search {
+		position: relative;
+		margin-top: 24px;
+		
+		@media (min-width: 1200px) {
+			float: right;
+			width: 25%;
+			margin-top: 0;
+		}
+
+        // @include desktop {
+        //     width: 300px;
+        // }
+        // @include all_mobile {
+        //     float: none;
+        //     width: 100%;
+        //     margin-top: 24px;
+        // }
+
+        &:before {
+            content: "";
+            position: absolute; left: 14px; top: 50%;
+            transform: translate(0, -50%);
+            width: 12px; height: 12px;
+            background: url(//cdn.tutoring.co.kr/uploads/home/img/icon_zoom.png);
+            background-size: 100%;
+        }
+
+        input[type="text"] {
+            width: 100%; height: 40px;
+            padding-right: 15px;
+            padding-left: 35px;
+            border: 1px solid #e5e5e5;
+            color: #666;
+            font-size: 13px;
+            line-height: 40px;
+            transition: all 0.2s;
+            box-sizing: border-box;
+            border-radius: 4px;
+
+            &:focus {
+                border-color: transparent;
+                box-shadow: 0 0 0 3px rgba(41, 162, 232, 0.5);
+            }
+            &::placeholder {
+                color: rgba(0, 0, 0, 0.3)
+            }
+        }
+    }
+}
+
+.main_title {
+    // 튜터, 토픽에서도 사용함.
+    margin-top: $header-height-fixed; // common.css
+    padding-top: 64px;
+    padding-bottom: 64px;
+    color: #fff;
+    text-align: center;
+    background-color: #6759ef;
+
+    @media (max-width: $desktop_maximum_width) {
+        margin-top: 0;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .emph_tit {
+        display: inline-block;
+		height: 32px;
+		margin-bottom: 50px;
+        border-bottom: 2px solid #fff;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: -1px;
+        line-height: 34px;
+
+        @include all_mobile {
+            font-size: 16px;
+        }
+    }
+    .main_tit,
+    .tit_main {
+        font-size: 36px;
+        font-weight: 300;
+        letter-spacing: -2px;
+        line-height: 48px;
+
+        @include all_mobile {
+            font-size: 24px;
+            line-height: 36px;
+        }
+        
+        b {
+            display: block;
+            font-weight: 600;
+        }
+    }
+    .main_desc {
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 1.7em;
+        letter-spacing: -0.5px;
+    }
+}
+
+.item_g.item_merit {
+    padding-top: 80px;
+    text-align: center;
+
+    // 튜터링은 대규모 튜터풀과~
+    .txt_g {
+        padding-bottom: 40px;
+        color: #333;
+        font-size: 16px;
+        line-height: 1.7em;
+        letter-spacing: -1px;
+
+        br {display: none;}
+
+        @include all_mobile {
+            br {display: block;}
+        }
+    }
+    // 줄바꿈 DOM
+    .txt_b {
+        display: block;
+    }
+
+    // slide
+    .slide_box {
+        position: relative;
+        height: 260px;
+
+        .img_g {
+            display: block;
+            width: 100%;
+        }
+        .tit_merit {
+            display:block;
+            position: relative;
+            width: 360px;
+            margin: 0 auto;
+            padding: 0 15px;
+            box-sizing: border-box;
+            opacity: 0.5;
+
+            &:after {
+                display: none;
+            }
+        }
+        .btn_swiper {
+            // display: flex;
+            display: none;
+            position: absolute; top: 0; bottom: 0; right: auto; left: 50%;
+            width: 54px; height: 388px;
+            margin-top: 0;
+            background: none;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+
+            .ico_swiper {
+                overflow: hidden;
+                display: inline-block;
+                width: 12px; height: 21px;
+                color: transparent;
+                background-image: url('//cdn.tutoring.co.kr/uploads/home/img/common/ico_swiper.png');
+                background-repeat: no-repeat;
+                background-size: 28px 45px;
+                background-position: 0 0;
+                opacity: 1;
+            }
+
+            &.swiper-button-prev {margin-left: -384px;}
+            &.swiper-button-next {margin-left: 330px;}
+        }
+        .swiper-button-next .ico_swiper {background-position: -16px 0;}
+
+        .swiper-container {
+            position: absolute; left: 50%;
+            width: 1120px; height: 100%;
+            margin-left: -560px;
+        }
+        
+        .swiper-pagination-bullet-active {background-color: #8d82ff;}
+        .swiper-slide-active {
+            .tit_merit {opacity: 1;}
+            .tit_merit .img_g {box-shadow:0 25px 25px -10px rgba(0,0,0,0.13)}
+        }
+
+        @include all_desktop {
+            height: 470px;
+
+            .swiper-container {
+                position: absolute; left: 50%;
+                width: 2200px; height: 100%;
+                margin-left: -1100px;
+            }
+            .swiper-pagination-bullet {width: 12px; height: 12px; margin: 0 8px;}
+            .btn_swiper {display: flex;}
+            .tit_merit {width: 720px;padding: 0 30px;}
+        }
+	}
+}
+
+// pagination
+.page_type2 {
+    text-align: center;
+
+    .pagination {
+        display: inline-block;
+        margin: 20px 0;
+        border-radius: 4px;
+        font-size: 0;
+        vertical-align: top;
+        background-color: #fff;
+
+        & > li {
+            display: inline-block;
+            vertical-align: top;
+
+            &:first-child {
+                a, span {
+                    border-radius: 4px 0 0 4px;
+                }
+            }
+
+            &:last-child {
+                a, span {
+                    border-radius: 0 4px 4px 0;
+                }
+            }
+
+            a,
+            span {
+                display: block;
+                position: relative; z-index: 10;
+                margin-left: -1px;
+                padding: 7px 13px;
+                border: 1px solid #ddd;
+                color: #337ab7;
+                font-size: 16px;
+                line-height: 1.42em;
+
+                &:hover {
+                    color: #23527c;
+                    background-color: #eee;
+                }
+            }
+        }
+
+        .active {
+            a, a:hover,
+            span, span:hover {
+                z-index: 20;
+                color: #fff;
+                border-color: #337ab7;
+                background-color: #337ab7;
+            }
+        }
+        .disabled {
+            a, a:hover,
+            span, span:hover {
+                color: #777;
+                border-color: #ddd;
+                background-color: #fff;
+            }
+        }
+    }
+}

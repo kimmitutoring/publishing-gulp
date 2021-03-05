@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+.summer-friends .manual {
+    padding-top: 44px;
+    background-color: #f7f7f7;
+
+    @media (min-width: 1200px) {
+        padding-top: 100px;
+    }
+
+    &__title {
+        @include noteBGTitle-yellow;
+
+        margin-bottom: -35px;
+
+        @media (min-width: 1200px) {
+            margin-bottom: 120px;
+        }
+    }
+    &__step {
+        position: relative;
+        width: 300px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 60px;
+        letter-spacing: -0.5px;
+
+        @media (min-width: 1200px) {
+            position: relative;
+            width: 990px; min-height: 320px;
+            padding-top: 140px;
+            box-sizing: border-box;
+        }
+
+        .step__title {
+            display: block;
+            color: #424242;
+            font-size: 16px;
+            font-weight: 600;
+
+            @media (min-width: 1200px) {
+                margin-bottom: 20px;
+                font-size: 36px;
+                line-height: 1em;
+                white-space: nowrap;
+            }
+            
+            i {
+                color: #ff4b4b;
+                font-style: normal;
+            }
+        }
+        .step__desc {
+            margin-top: 8px;
+            margin-bottom: 26px;
+            color: #4a4a4a;
+            font-size: 12px;
+            line-height: 17px;
+
+            @media (min-width: 1200px) {
+                font-size: 20px;
+                line-height: 32px;
+                letter-spacing: -1px;
+            }
+        }
+        .step__image {
+            display: block;
+            margin: 0 auto;
+
+            @media (min-width: 1200px) {
+                position: absolute; bottom: 0; left: 50%;
+                width: 357px;
+            }
+        }
+        .step__subject {
+            position: absolute; left: 50%;
+            margin-top: 40px; margin-left: 50px;
+
+            @media (min-width: 1200px) {
+                top: -55px; left: 115px; z-index: 2;
+                width: 166px;
+                margin: 0;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            &:nth-child(even) {
+                padding-left: 540px;
+    
+                .step__image {margin-left: -337px;}
+            }
+            &:nth-child(odd) {
+                margin-top: 160px;
+                margin-bottom: 160px;
+                padding-right: 540px;
+                text-align: right;
+    
+                .step__image {margin-left: -20px;}
+            }
+        }
+    }
+}
